@@ -2,10 +2,6 @@ package modelo;
 
 import interfaces.IUsuario;
 
-/**
- * Observer concreto: hincha. Recibe una alerta especial cuando el evento
- * involucra a su equipo o a su jugador preferido.
- */
 public class Aficionado implements IUsuario {
 
     private String nombre;
@@ -26,10 +22,11 @@ public class Aficionado implements IUsuario {
     public void actualizar(EventoPartido evento) {
         boolean esMiEquipo = equipo != null
                 && evento.getAutor() != null
-                && evento.getAutor().getEquipo() == equipo;
+                && evento.getAutor().getEquipo() != null
+                && evento.getAutor().getEquipo().getNombre().equals(equipo.getNombre());
 
         if (esMiEquipo) {
-            System.out.println("[ALERTA HINCHA] " + nombre + " 🔔 ¡Vamos " + equipo.getNombre()
+            System.out.println("[ALERTA HINCHA] " + nombre + " - Vamos " + equipo.getNombre()
                     + "! " + evento.getTipo() + " de " + evento.getAutor().getNombreCompleto()
                     + " al minuto " + evento.getMinuto());
         } else {
@@ -38,23 +35,9 @@ public class Aficionado implements IUsuario {
         }
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public Equipo getEquipo() {
-        return equipo;
-    }
-
-    public void setEquipo(Equipo equipo) {
-        this.equipo = equipo;
-    }
-
-    public Jugador getJugadorPreferido() {
-        return jugadorPreferido;
-    }
-
-    public void setJugadorPreferido(Jugador jugadorPreferido) {
-        this.jugadorPreferido = jugadorPreferido;
-    }
+    public String getNombre() { return nombre; }
+    public Equipo getEquipo() { return equipo; }
+    public void setEquipo(Equipo equipo) { this.equipo = equipo; }
+    public Jugador getJugadorPreferido() { return jugadorPreferido; }
+    public void setJugadorPreferido(Jugador jugadorPreferido) { this.jugadorPreferido = jugadorPreferido; }
 }

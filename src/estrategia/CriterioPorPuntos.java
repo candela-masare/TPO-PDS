@@ -6,9 +6,6 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * STRATEGY concreta: ordena los equipos de mayor a menor cantidad de puntos.
- */
 public class CriterioPorPuntos implements CriterioRanking {
 
     @Override

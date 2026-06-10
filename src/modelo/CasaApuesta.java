@@ -2,9 +2,6 @@ package modelo;
 
 import interfaces.IUsuario;
 
-/**
- * Observer concreto: casa de apuestas. Recalcula cuotas ante cada evento.
- */
 public class CasaApuesta implements IUsuario {
 
     private String nombre;
@@ -15,11 +12,9 @@ public class CasaApuesta implements IUsuario {
 
     @Override
     public void actualizar(EventoPartido evento) {
-        System.out.println("[CASA DE APUESTAS] " + nombre + " 💰 recalcula cuotas tras "
+        System.out.println("[CASA DE APUESTAS] " + nombre + " recalcula cuotas tras "
                 + evento.getTipo() + " al minuto " + evento.getMinuto() + ".");
     }
 
-    public String getNombre() {
-        return nombre;
-    }
+    public String getNombre() { return nombre; }
 }

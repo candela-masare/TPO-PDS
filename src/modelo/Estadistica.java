@@ -17,6 +17,10 @@ public class Estadistica {
         this.tarjetasRojas = tarjetasRojas;
     }
 
+    public Estadistica(Equipo equipo) {
+        this(equipo, 0, 0, 0, 0);
+    }
+
     public Equipo getEquipo() {
         return equipo;
     }
@@ -36,6 +40,11 @@ public class Estadistica {
     public int getTarjetasRojas() {
         return tarjetasRojas;
     }
+
+    public void incrementarGoles() { this.goles++; }
+    public void incrementarTarjetasAmarillas() { this.tarjetasAmarillas++; }
+    public void incrementarTarjetasRojas() { this.tarjetasRojas++; }
+    public void setPosesion(int posesion) { this.posesion = posesion; }
 
     @Override
     public String toString() {

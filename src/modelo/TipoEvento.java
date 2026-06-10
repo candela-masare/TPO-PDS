@@ -3,5 +3,7 @@ package modelo;
 public enum TipoEvento {
     GOL,
     TARJETA_AMARILLA,
-    TARJETA_ROJA
+    TARJETA_ROJA,
+    PENAL,
+    SUSTITUCION
 }

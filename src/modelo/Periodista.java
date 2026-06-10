@@ -2,9 +2,6 @@ package modelo;
 
 import interfaces.IUsuario;
 
-/**
- * Observer concreto: periodista. Toma nota para su crónica.
- */
 public class Periodista implements IUsuario {
 
     private String nombre;
@@ -22,15 +19,10 @@ public class Periodista implements IUsuario {
     @Override
     public void actualizar(EventoPartido evento) {
         String autor = evento.getAutor() != null ? evento.getAutor().getNombreCompleto() : "jugador";
-        System.out.println("[PERIODISTA] " + nombre + " ✍️ anota para la crónica: '"
+        System.out.println("[PERIODISTA] " + nombre + " anota para la cronica: '"
                 + evento.getTipo() + " de " + autor + " (min " + evento.getMinuto() + ")'.");
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
+    public String getNombre() { return nombre; }
+    public int getEdad() { return edad; }
 }

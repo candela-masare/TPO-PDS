@@ -8,26 +8,24 @@ import modelo.Partido;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdaptadorCsvLiga implements ProveedorDatosDeportivos {
+public class AdaptadorApiOle implements ProveedorDatosDeportivos {
 
     @Override
     public List<Equipo> obtenerEquipos() {
         List<Equipo> equipos = new ArrayList<>();
 
-        Equipo boca = new Equipo("Boca Juniors", 1905, 30, 25);
+        Equipo boca = new Equipo("Boca Juniors", 1905, 28, 22);
         boca.agregarJugador(new Jugador("Edinson Cavani", "Delantero", boca));
-        boca.agregarJugador(new Jugador("Sergio Romero", "Arquero", boca));
 
-        Equipo river = new Equipo("River Plate", 1901, 34, 28);
+        Equipo river = new Equipo("River Plate", 1901, 32, 26);
         river.agregarJugador(new Jugador("Miguel Borja", "Delantero", river));
-        river.agregarJugador(new Jugador("Franco Armani", "Arquero", river));
 
-        Equipo racing = new Equipo("Racing Club", 1903, 28, 20);
-        racing.agregarJugador(new Jugador("Maximiliano Salas", "Delantero", racing));
+        Equipo sanLorenzo = new Equipo("San Lorenzo", 1908, 20, 18);
+        sanLorenzo.agregarJugador(new Jugador("Adam Bareiro", "Delantero", sanLorenzo));
 
         equipos.add(boca);
         equipos.add(river);
-        equipos.add(racing);
+        equipos.add(sanLorenzo);
         return equipos;
     }
 

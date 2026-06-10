@@ -2,9 +2,6 @@ package modelo;
 
 import interfaces.IUsuario;
 
-/**
- * Observer concreto: analista. Interpreta tácticamente cada evento.
- */
 public class AnalistaDeportivo implements IUsuario {
 
     private String nombre;
@@ -16,12 +13,10 @@ public class AnalistaDeportivo implements IUsuario {
     @Override
     public void actualizar(EventoPartido evento) {
         String autor = evento.getAutor() != null ? evento.getAutor().getNombreCompleto() : "desconocido";
-        System.out.println("[ANÁLISIS] " + nombre + " 📊 evalúa el impacto del evento "
+        System.out.println("[ANALISIS] " + nombre + " evalua el impacto del evento "
                 + evento.getTipo() + " (" + autor + ", min " + evento.getMinuto()
-                + ") en el desarrollo táctico del partido.");
+                + ") en el desarrollo tactico del partido.");
     }
 
-    public String getNombre() {
-        return nombre;
-    }
+    public String getNombre() { return nombre; }
 }

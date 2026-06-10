@@ -10,6 +10,7 @@ public class Equipo {
     private ArrayList<Jugador> listaJugadores;
     private int puntos;
     private int golesAFavor;
+    private int golesEnContra;
 
 
     public Equipo(String nombre, int anioFundacion) {
@@ -18,6 +19,7 @@ public class Equipo {
         this.listaJugadores = new ArrayList<>();
         this.puntos = 0;
         this.golesAFavor = 0;
+        this.golesEnContra = 0;
     }
 
     public Equipo(String nombre, int anioFundacion, int puntos, int golesAFavor) {
@@ -61,6 +63,11 @@ public class Equipo {
     public void setGolesAFavor(int golesAFavor) {
         this.golesAFavor = golesAFavor;
     }
+
+    public int getGolesEnContra() { return golesEnContra; }
+    public void setGolesEnContra(int golesEnContra) { this.golesEnContra = golesEnContra; }
+
+    public int getDiferenciaGoles() { return golesAFavor - golesEnContra; }
 
 
     @Override

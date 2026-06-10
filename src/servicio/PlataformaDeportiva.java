@@ -1,26 +1,25 @@
 package servicio;
 
 import estrategia.CriterioRanking;
+import interfaces.CanalDistribucion;
+import interfaces.IUsuario;
 import interfaces.ProveedorDatosDeportivos;
 import modelo.Equipo;
+import modelo.EventoPartido;
+import modelo.Ranking;
 
+import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Fachada del sistema y CONTEXTO del patrón STRATEGY.
- *
- * - Obtiene los datos a través de un ProveedorDatosDeportivos (ADAPTER), sin
- *   conocer el formato real de la fuente.
- * - Genera rankings delegando en un CriterioRanking (STRATEGY) intercambiable
- *   en tiempo de ejecución.
- */
-public class PlataformaDeportiva {
+public class PlataformaDeportiva implements IUsuario {
 
     private ProveedorDatosDeportivos proveedor;
     private CriterioRanking criterioRanking;
+    private List<CanalDistribucion> canales;
 
     public PlataformaDeportiva(ProveedorDatosDeportivos proveedor) {
         this.proveedor = proveedor;
+        this.canales = new ArrayList<>();
     }
 
     public void setProveedor(ProveedorDatosDeportivos proveedor) {
@@ -31,18 +30,34 @@ public class PlataformaDeportiva {
         this.criterioRanking = criterioRanking;
     }
 
+    public void agregarCanal(CanalDistribucion canal) {
+        canales.add(canal);
+    }
+
+    public void quitarCanal(CanalDistribucion canal) {
+        canales.remove(canal);
+    }
+
+    @Override
+    public void actualizar(EventoPartido evento) {
+        for (CanalDistribucion canal : canales) {
+            canal.publicar(evento);
+        }
+    }
+
     public List<Equipo> obtenerEquipos() {
         return proveedor.obtenerEquipos();
     }
 
-    /**
-     * Aplica el criterio de ranking actual. Lanza una excepción clara si no se
-     * configuró ninguna estrategia.
-     */
-    public List<Equipo> generarRanking(List<Equipo> equipos) {
+    public List<Ranking> generarRanking(List<Equipo> equipos) {
         if (criterioRanking == null) {
-            throw new IllegalStateException("No se configuró un CriterioRanking (Strategy).");
+            throw new IllegalStateException("No se configuro un CriterioRanking (Strategy).");
         }
-        return criterioRanking.ordenar(equipos);
+        List<Equipo> ordenados = criterioRanking.ordenar(equipos);
+        List<Ranking> tabla = new ArrayList<>();
+        for (int i = 0; i < ordenados.size(); i++) {
+            tabla.add(new Ranking(i + 1, ordenados.get(i)));
+        }
+        return tabla;
     }
 }
