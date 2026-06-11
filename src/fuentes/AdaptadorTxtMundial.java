@@ -10,24 +10,32 @@ import java.util.List;
 
 public class AdaptadorTxtMundial implements ProveedorDatosDeportivos {
 
+    private final String[] lineasArchivoTxt = {
+            "Argentina|1893|9|8|3|Lionel Messi/Delantero;Emiliano Martinez/Arquero",
+            "Francia|1919|6|20|9|Kylian Mbappe/Delantero;Antoine Griezmann/Mediocampista",
+            "Croacia|1912|4|14|11|Luka Modric/Mediocampista"
+    };
+
     @Override
     public List<Equipo> obtenerEquipos() {
         List<Equipo> equipos = new ArrayList<>();
-
-        Equipo argentina = new Equipo("Argentina", 1893, 9, 8);
-        argentina.agregarJugador(new Jugador("Lionel Messi", "Delantero", argentina));
-        argentina.agregarJugador(new Jugador("Emiliano Martinez", "Arquero", argentina));
-
-        Equipo francia = new Equipo("Francia", 1919, 6, 20);
-        francia.agregarJugador(new Jugador("Kylian Mbappe", "Delantero", francia));
-        francia.agregarJugador(new Jugador("Antoine Griezmann", "Mediocampista", francia));
-
-        Equipo croacia = new Equipo("Croacia", 1912, 4, 14);
-        croacia.agregarJugador(new Jugador("Luka Modric", "Mediocampista", croacia));
-
-        equipos.add(argentina);
-        equipos.add(francia);
-        equipos.add(croacia);
+        for (String linea : lineasArchivoTxt) {
+            String[] campos = linea.split("\\|");
+            String nombre = campos[0];
+            int anio = Integer.parseInt(campos[1]);
+            int puntos = Integer.parseInt(campos[2]);
+            int golesAFavor = Integer.parseInt(campos[3]);
+            int golesEnContra = Integer.parseInt(campos[4]);
+            Equipo equipo = new Equipo(nombre, anio, puntos, golesAFavor);
+            equipo.setGolesEnContra(golesEnContra);
+            if (campos.length > 5) {
+                for (String j : campos[5].split(";")) {
+                    String[] datos = j.split("/");
+                    equipo.agregarJugador(new Jugador(datos[0], datos[1], equipo));
+                }
+            }
+            equipos.add(equipo);
+        }
         return equipos;
     }
 

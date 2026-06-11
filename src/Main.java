@@ -5,11 +5,10 @@ import factory.AnalistaDeportivoFactory;
 import factory.CasaApuestaFactory;
 import factory.PeriodistaFactory;
 import factory.UsuarioFactory;
-import fuentes.AdaptadorApiOle;
 import fuentes.AdaptadorCsvLiga;
 import fuentes.AdaptadorTxtMundial;
-import interfaces.IUsuario;
 import interfaces.ProveedorDatosDeportivos;
+import modelo.Aficionado;
 import modelo.AppMovil;
 import modelo.DiarioOle;
 import modelo.Equipo;
@@ -30,8 +29,7 @@ public class Main {
     public static void main(String[] args) {
 
         ProveedorDatosDeportivos fuenteMundial = new AdaptadorTxtMundial();
-        ProveedorDatosDeportivos fuenteLiga    = new AdaptadorCsvLiga();
-        ProveedorDatosDeportivos fuenteApiOle  = new AdaptadorApiOle();
+        ProveedorDatosDeportivos fuenteLiga = new AdaptadorCsvLiga();
 
         PlataformaDeportiva plataforma = new PlataformaDeportiva(fuenteMundial);
 
@@ -46,26 +44,33 @@ public class Main {
             System.out.println(" - " + e.getNombre() + " (" + e.getCantidadJugadores() + " jugadores)");
         }
 
-        plataforma.setProveedor(fuenteApiOle);
-        System.out.println("\n=== Equipos desde API Ole (ADAPTER) ===");
-        for (Equipo e : plataforma.obtenerEquipos()) {
-            System.out.println(" - " + e.getNombre() + " (" + e.getCantidadJugadores() + " jugadores)");
-        }
-
         plataforma.setProveedor(fuenteMundial);
-        List<Equipo> equiposMundial = plataforma.obtenerEquipos();
 
-        Torneo torneo = new Torneo("Copa de Campeones");
-        for (Equipo e : equiposMundial) torneo.agregarEquipo(e);
+        Torneo torneo = plataforma.crearTorneo("Copa de Campeones");
+        List<Equipo> equiposMundial = torneo.getEquipos();
 
         System.out.println("\n=== Torneo registrado ===");
         System.out.println(" " + torneo.getNombre() + " | equipos: " + torneo.getEquipos().size());
 
-        ReporteEstadistico reporte = new ReporteEstadistico();
+        List<Partido> partidosEnVivo = plataforma.obtenerPartidosEnVivo();
+        System.out.println("\n=== Partidos en vivo reportados por la fuente ===");
+        for (Partido p : partidosEnVivo) {
+            System.out.println(" - " + p);
+        }
+
+        Equipo local = equiposMundial.get(0);
+        Equipo visitante = equiposMundial.get(1);
+        Jugador autorLocal = local.getListaJugadores().get(0);
+        Jugador autorVisitante = visitante.getListaJugadores().get(0);
+
+        Partido partido = new Partido(local, visitante, "0-0");
+        torneo.agregarPartido(partido);
+
+        ReporteEstadistico reporteCanal = new ReporteEstadistico();
         plataforma.agregarCanal(new DiarioOle());
         plataforma.agregarCanal(new AppMovil("iOS"));
         plataforma.agregarCanal(new PanelInteractivo("Estadio Monumental"));
-        plataforma.agregarCanal(reporte);
+        plataforma.agregarCanal(reporteCanal);
 
         UsuarioFactory[] factories = {
                 new AficionadoFactory(),
@@ -73,23 +78,16 @@ public class Main {
                 new CasaApuestaFactory(),
                 new PeriodistaFactory()
         };
-
-        Equipo local     = equiposMundial.get(0);
-        Equipo visitante = equiposMundial.get(1);
-        Partido partido  = new Partido(local, visitante, "0-0");
-        torneo.agregarPartido(partido);
-
         for (UsuarioFactory factory : factories) {
-            IUsuario usuario = factory.crearUsuario();
-            partido.suscribir(usuario);
+            partido.suscribir(factory.crearUsuario());
         }
+
+        Aficionado hinchaPersonalizado = new Aficionado("Candela", local, autorLocal);
+        partido.suscribir(hinchaPersonalizado);
         partido.suscribir(plataforma);
 
         System.out.println("\n=== Eventos del partido "
                 + local.getNombre() + " vs " + visitante.getNombre() + " ===");
-
-        Jugador autorLocal     = local.getListaJugadores().get(0);
-        Jugador autorVisitante = visitante.getListaJugadores().get(0);
 
         System.out.println("\n>> Minuto 23 - GOL de " + autorLocal.getNombreCompleto());
         partido.agregarEvento(new EventoPartido(23, TipoEvento.GOL, autorLocal));
@@ -124,7 +122,10 @@ public class Main {
         }
 
         System.out.println();
-        reporte.imprimirResumen();
+        reporteCanal.imprimirResumen();
+
+        System.out.println("\n=== Reporte avanzado (DECORATOR) ===");
+        System.out.println(plataforma.generarReporteAvanzado(partido));
 
         System.out.println("\n=== Ranking por PUNTOS (STRATEGY) ===");
         plataforma.setCriterioRanking(new CriterioPorPuntos());

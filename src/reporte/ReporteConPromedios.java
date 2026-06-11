@@ -1,0 +1,22 @@
+package reporte;
+
+import modelo.Partido;
+
+public class ReporteConPromedios extends ReporteDecorator {
+
+    private Partido partido;
+
+    public ReporteConPromedios(Reporte reporte, Partido partido) {
+        super(reporte);
+        this.partido = partido;
+    }
+
+    @Override
+    public String generar() {
+        int totalGoles = partido.getEstadisticaLocal().getGoles()
+                + partido.getEstadisticaVisitante().getGoles();
+        double promedio = totalGoles / 2.0;
+        return reporte.generar()
+                + "\n  + Promedio de goles por equipo: " + String.format("%.1f", promedio);
+    }
+}

@@ -20,14 +20,21 @@ public class Aficionado implements IUsuario {
 
     @Override
     public void actualizar(EventoPartido evento) {
-        boolean esMiEquipo = equipo != null
-                && evento.getAutor() != null
-                && evento.getAutor().getEquipo() != null
-                && evento.getAutor().getEquipo().getNombre().equals(equipo.getNombre());
+        Jugador autor = evento.getAutor();
 
-        if (esMiEquipo) {
+        boolean esMiJugador = jugadorPreferido != null && autor != null
+                && autor.getNombreCompleto().equals(jugadorPreferido.getNombreCompleto());
+
+        boolean esMiEquipo = equipo != null && autor != null && autor.getEquipo() != null
+                && autor.getEquipo().getNombre().equals(equipo.getNombre());
+
+        if (esMiJugador) {
+            System.out.println("[ALERTA HINCHA] " + nombre + " - Tu jugador preferido "
+                    + autor.getNombreCompleto() + ": " + evento.getTipo()
+                    + " al minuto " + evento.getMinuto() + "!");
+        } else if (esMiEquipo) {
             System.out.println("[ALERTA HINCHA] " + nombre + " - Vamos " + equipo.getNombre()
-                    + "! " + evento.getTipo() + " de " + evento.getAutor().getNombreCompleto()
+                    + "! " + evento.getTipo() + " de " + autor.getNombreCompleto()
                     + " al minuto " + evento.getMinuto());
         } else {
             System.out.println("[Hincha] " + nombre + " sigue el partido: " + evento.getTipo()

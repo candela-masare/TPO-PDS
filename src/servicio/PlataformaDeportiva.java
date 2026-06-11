@@ -6,7 +6,13 @@ import interfaces.IUsuario;
 import interfaces.ProveedorDatosDeportivos;
 import modelo.Equipo;
 import modelo.EventoPartido;
+import modelo.Partido;
 import modelo.Ranking;
+import modelo.Torneo;
+import reporte.Reporte;
+import reporte.ReporteBasico;
+import reporte.ReporteConPromedios;
+import reporte.ReporteConTopJugadores;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +53,24 @@ public class PlataformaDeportiva implements IUsuario {
 
     public List<Equipo> obtenerEquipos() {
         return proveedor.obtenerEquipos();
+    }
+
+    public List<Partido> obtenerPartidosEnVivo() {
+        return proveedor.obtenerPartidosEnVivo();
+    }
+
+    public Torneo crearTorneo(String nombre) {
+        Torneo torneo = new Torneo(nombre);
+        for (Equipo equipo : proveedor.obtenerEquipos()) {
+            torneo.agregarEquipo(equipo);
+        }
+        return torneo;
+    }
+
+    public String generarReporteAvanzado(Partido partido) {
+        Reporte reporte = new ReporteConTopJugadores(
+                new ReporteConPromedios(new ReporteBasico(partido), partido), partido);
+        return reporte.generar();
     }
 
     public List<Ranking> generarRanking(List<Equipo> equipos) {
