@@ -5,45 +5,97 @@ import modelo.Equipo;
 import modelo.Jugador;
 import modelo.Partido;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class AdaptadorCsvLiga implements ProveedorDatosDeportivos {
 
-    private final String[] lineasArchivoCsv = {
-            "Boca Juniors,1905,30,25,12,Edinson Cavani:Delantero;Sergio Romero:Arquero",
-            "River Plate,1901,34,28,10,Miguel Borja:Delantero;Franco Armani:Arquero",
-            "Racing Club,1903,28,20,15,Maximiliano Salas:Delantero"
-    };
+    private static final String RUTA_CSV = "data/liga_local.csv";
+    private String rutaArchivo;
+
+    public AdaptadorCsvLiga() {
+        this.rutaArchivo = RUTA_CSV;
+    }
+
+    public AdaptadorCsvLiga(String rutaArchivo) {
+        this.rutaArchivo = rutaArchivo;
+    }
 
     @Override
     public List<Equipo> obtenerEquipos() {
-        List<Equipo> equipos = new ArrayList<>();
-        for (String linea : lineasArchivoCsv) {
-            String[] campos = linea.split(",");
-            String nombre = campos[0];
-            int anio = Integer.parseInt(campos[1]);
-            int puntos = Integer.parseInt(campos[2]);
-            int golesAFavor = Integer.parseInt(campos[3]);
-            int golesEnContra = Integer.parseInt(campos[4]);
-            Equipo equipo = new Equipo(nombre, anio, puntos, golesAFavor);
-            equipo.setGolesEnContra(golesEnContra);
-            if (campos.length > 5) {
-                for (String j : campos[5].split(";")) {
-                    String[] datos = j.split(":");
-                    equipo.agregarJugador(new Jugador(datos[0], datos[1], equipo));
-                }
-            }
-            equipos.add(equipo);
-        }
-        return equipos;
+        return new ArrayList<>(cargarEquiposPorNombre().values());
     }
 
     @Override
     public List<Partido> obtenerPartidosEnVivo() {
-        List<Equipo> equipos = obtenerEquipos();
-        List<Partido> partidos = new ArrayList<>();
-        partidos.add(new Partido(equipos.get(0), equipos.get(1), "0-0"));
-        return partidos;
+        Map<String, Equipo> equipos = cargarEquiposPorNombre();
+
+        return leerFilasCsv().stream()
+                .filter(columnas -> columnas[0].equalsIgnoreCase("PARTIDO"))
+                .map(columnas -> new Partido(
+                        buscarEquipo(equipos, columnas[12]),
+                        buscarEquipo(equipos, columnas[13]),
+                        columnas[14]))
+                .collect(Collectors.toList());
+    }
+
+    private Map<String, Equipo> cargarEquiposPorNombre() {
+        Map<String, Equipo> equipos = new LinkedHashMap<>();
+        List<String[]> filas = leerFilasCsv();
+
+        for (String[] columnas : filas) {
+            if (columnas[0].equalsIgnoreCase("EQUIPO")) {
+                Equipo equipo = new Equipo(
+                        columnas[1],
+                        Integer.parseInt(columnas[2]),
+                        Integer.parseInt(columnas[3]),
+                        Integer.parseInt(columnas[4]));
+                equipos.put(equipo.getNombre(), equipo);
+            }
+        }
+
+        for (String[] columnas : filas) {
+            if (columnas[0].equalsIgnoreCase("JUGADOR")) {
+                Equipo equipo = buscarEquipo(equipos, columnas[5]);
+                equipo.agregarJugador(new Jugador(
+                        columnas[6],
+                        columnas[7],
+                        equipo,
+                        Integer.parseInt(columnas[8]),
+                        Integer.parseInt(columnas[9]),
+                        Integer.parseInt(columnas[10]),
+                        Integer.parseInt(columnas[11])));
+            }
+        }
+
+        return equipos;
+    }
+
+    private List<String[]> leerFilasCsv() {
+        try {
+            return Files.readAllLines(Paths.get(rutaArchivo), StandardCharsets.UTF_8).stream()
+                    .skip(1)
+                    .filter(linea -> !linea.trim().isEmpty())
+                    .map(linea -> linea.split(",", -1))
+                    .filter(columnas -> columnas.length >= 15)
+                    .collect(Collectors.toList());
+        } catch (IOException e) {
+            throw new RuntimeException("No se pudo leer el archivo CSV: " + rutaArchivo, e);
+        }
+    }
+
+    private Equipo buscarEquipo(Map<String, Equipo> equipos, String nombre) {
+        Equipo equipo = equipos.get(nombre);
+        if (equipo == null) {
+            throw new IllegalArgumentException("No existe el equipo en el CSV: " + nombre);
+        }
+        return equipo;
     }
 }
