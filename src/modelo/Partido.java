@@ -9,6 +9,7 @@ public class Partido {
 
     private Equipo equipoLocal;
     private Equipo equipoVisitante;
+    private Arbitro arbitro;
     private String resultado;
     private List<EventoPartido> eventos;
     private List<IUsuario> suscriptores;
@@ -16,8 +17,13 @@ public class Partido {
     private Estadistica estadisticaVisitante;
 
     public Partido(Equipo equipoLocal, Equipo equipoVisitante, String resultado) {
+        this(equipoLocal, equipoVisitante, resultado, null);
+    }
+
+    public Partido(Equipo equipoLocal, Equipo equipoVisitante, String resultado, Arbitro arbitro) {
         this.equipoLocal = equipoLocal;
         this.equipoVisitante = equipoVisitante;
+        this.arbitro = arbitro;
         this.resultado = resultado;
         this.eventos = new ArrayList<>();
         this.suscriptores = new ArrayList<>();
@@ -85,6 +91,8 @@ public class Partido {
 
     public Equipo getEquipoLocal() { return equipoLocal; }
     public Equipo getEquipoVisitante() { return equipoVisitante; }
+    public Arbitro getArbitro() { return arbitro; }
+    public void setArbitro(Arbitro arbitro) { this.arbitro = arbitro; }
     public String getResultado() { return resultado; }
     public void setResultado(String resultado) { this.resultado = resultado; }
     public List<EventoPartido> getEventos() { return eventos; }
@@ -96,6 +104,7 @@ public class Partido {
         return "Partido{" +
                 "equipoLocal=" + (equipoLocal != null ? equipoLocal.getNombre() : "?") +
                 ", equipoVisitante=" + (equipoVisitante != null ? equipoVisitante.getNombre() : "?") +
+                ", arbitro=" + (arbitro != null ? arbitro.getNombreCompleto() : "sin arbitro") +
                 ", resultado='" + resultado + '\'' +
                 ", eventos=" + eventos.size() +
                 '}';

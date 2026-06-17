@@ -5,6 +5,7 @@ public class Jugador {
     private String nombreCompleto;
     private String posicion;
     private Equipo equipo;
+    private int partidosJugados;
     private int goles;
     private int tarjetasAmarillas;
     private int tarjetasRojas;
@@ -14,9 +15,21 @@ public class Jugador {
         this.nombreCompleto = nombreCompleto;
         this.posicion = posicion;
         this.equipo = equipo;
+        this.partidosJugados = 0;
         this.goles = 0;
         this.tarjetasAmarillas = 0;
         this.tarjetasRojas = 0;
+    }
+
+    public Jugador(String nombreCompleto, String posicion, Equipo equipo, int partidosJugados, int goles,
+                   int tarjetasAmarillas, int tarjetasRojas) {
+        this.nombreCompleto = nombreCompleto;
+        this.posicion = posicion;
+        this.equipo = equipo;
+        this.partidosJugados = partidosJugados;
+        this.goles = goles;
+        this.tarjetasAmarillas = tarjetasAmarillas;
+        this.tarjetasRojas = tarjetasRojas;
     }
 
     public String getNombreCompleto() {
@@ -29,6 +42,10 @@ public class Jugador {
 
     public Equipo getEquipo() {
         return equipo;
+    }
+
+    public int getPartidosJugados() {
+        return partidosJugados;
     }
 
     public int getGoles() { return goles; }
@@ -45,6 +62,7 @@ public class Jugador {
                 "nombreCompleto='" + nombreCompleto + '\'' +
                 ", posicion='" + posicion + '\'' +
                 ", equipo=" + (equipo != null ? equipo.getNombre() : "sin equipo") +
+                ", partidosJugados=" + partidosJugados +
                 ", goles=" + goles +
                 ", tarjetasAmarillas=" + tarjetasAmarillas +
                 ", tarjetasRojas=" + tarjetasRojas +
