@@ -10,15 +10,8 @@ public class Jugador {
     private int tarjetasAmarillas;
     private int tarjetasRojas;
 
-
     public Jugador(String nombreCompleto, String posicion, Equipo equipo) {
-        this.nombreCompleto = nombreCompleto;
-        this.posicion = posicion;
-        this.equipo = equipo;
-        this.partidosJugados = 0;
-        this.goles = 0;
-        this.tarjetasAmarillas = 0;
-        this.tarjetasRojas = 0;
+        this(nombreCompleto, posicion, equipo, 0, 0, 0, 0);
     }
 
     public Jugador(String nombreCompleto, String posicion, Equipo equipo, int partidosJugados, int goles,
@@ -48,13 +41,29 @@ public class Jugador {
         return partidosJugados;
     }
 
-    public int getGoles() { return goles; }
-    public int getTarjetasAmarillas() { return tarjetasAmarillas; }
-    public int getTarjetasRojas() { return tarjetasRojas; }
+    public int getGoles() {
+        return goles;
+    }
 
-    public void registrarGol() { this.goles++; }
-    public void registrarTarjetaAmarilla() { this.tarjetasAmarillas++; }
-    public void registrarTarjetaRoja() { this.tarjetasRojas++; }
+    public int getTarjetasAmarillas() {
+        return tarjetasAmarillas;
+    }
+
+    public int getTarjetasRojas() {
+        return tarjetasRojas;
+    }
+
+    public void registrarGol() {
+        this.goles++;
+    }
+
+    public void registrarTarjetaAmarilla() {
+        this.tarjetasAmarillas++;
+    }
+
+    public void registrarTarjetaRoja() {
+        this.tarjetasRojas++;
+    }
 
     @Override
     public String toString() {
@@ -68,6 +77,4 @@ public class Jugador {
                 ", tarjetasRojas=" + tarjetasRojas +
                 '}';
     }
-
-
 }

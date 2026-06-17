@@ -7,8 +7,8 @@ import factory.PeriodistaFactory;
 import factory.UsuarioFactory;
 import fuentes.AdaptadorCsvLiga;
 import fuentes.AdaptadorTxtMundial;
-import interfaces.ProveedorDatosDeportivos;
 import interfaces.IUsuario;
+import interfaces.ProveedorDatosDeportivos;
 import interfaces.Repositorio;
 import interfaces.VistaTiempoReal;
 import modelo.Arbitro;
@@ -74,9 +74,10 @@ public class Main {
         };
 
         // ---------- OBSERVER + VISTA EN TIEMPO REAL ----------
-        Partido partido = partidos.get(0);
-        Equipo local = partido.getEquipoLocal();
-        Equipo visitante = partido.getEquipoVisitante();
+        Partido partidoBase = partidos.get(0);
+        Equipo local = partidoBase.getEquipoLocal();
+        Equipo visitante = partidoBase.getEquipoVisitante();
+        Partido partido = new Partido(local, visitante, "0-0");
         VistaTiempoReal pantalla = new PantallaPartido("Pantalla principal");
 
         for (UsuarioFactory factory : factories) {
@@ -142,7 +143,8 @@ public class Main {
 
             System.out.println(" - " + partido.getArbitro().getNombreCompleto()
                     + " | Partido: " + partido.getEquipoLocal().getNombre()
-                    + " vs " + partido.getEquipoVisitante().getNombre());
+                    + " vs " + partido.getEquipoVisitante().getNombre()
+                    + " | Resultado: " + partido.getResultado());
         }
     }
 

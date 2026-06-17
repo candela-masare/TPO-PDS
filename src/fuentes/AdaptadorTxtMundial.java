@@ -63,16 +63,16 @@ public class AdaptadorTxtMundial implements ProveedorDatosDeportivos {
             while ((linea = br.readLine()) != null) {
                 linea = linea.trim();
 
-                if (linea.startsWith("PAIS:") || linea.startsWith("PAÍS:") || linea.startsWith("PAÃS:")) {
+                if (linea.startsWith("PAIS:") || linea.startsWith("PAÍS:")) {
                     String nombrePais = valorDespuesDeDosPuntos(linea);
                     equipoActual = new Equipo(nombrePais, 0);
                     equipos.put(clave(nombrePais), equipoActual);
-                } else if (linea.startsWith("Fundacion") || linea.startsWith("Fundación") || linea.startsWith("FundaciÃ³n")) {
+                } else if (linea.startsWith("Fundacion") || linea.startsWith("Fundación")) {
                     int anioFundacion = Integer.parseInt(valorDespuesDeDosPuntos(linea));
                     equipoActual = reemplazarEquipoConFundacion(equipos, equipoActual, anioFundacion);
                 } else if (linea.matches("\\d+\\. .+")) {
                     nombreJugadorActual = linea.substring(linea.indexOf(".") + 1).trim();
-                } else if (linea.startsWith("Posicion:") || linea.startsWith("Posición:") || linea.startsWith("PosiciÃ³n:")) {
+                } else if (linea.startsWith("Posicion:") || linea.startsWith("Posición:")) {
                     String posicion = valorDespuesDeDosPuntos(linea);
                     if (equipoActual != null && nombreJugadorActual != null) {
                         equipoActual.agregarJugador(new Jugador(nombreJugadorActual, posicion, equipoActual));
