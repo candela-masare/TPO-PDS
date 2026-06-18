@@ -6,7 +6,12 @@ import factory.CasaApuestaFactory;
 import factory.PeriodistaFactory;
 import factory.UsuarioFactory;
 import fuentes.AdaptadorCsvLiga;
+import fuentes.AdaptadorCsvTarjetas;
+import fuentes.AdaptadorJsonApuestas;
+import fuentes.AdaptadorJsonEstadisticas;
+import fuentes.AdaptadorJsonPeriodistico;
 import fuentes.AdaptadorTxtMundial;
+import fuentes.AdaptadorTxtPosesion;
 import interfaces.IUsuario;
 import interfaces.ProveedorDatosDeportivos;
 import interfaces.Repositorio;
@@ -34,6 +39,14 @@ public class Main {
     private static final String RUTA_ARBITROS = "data/arbitros.csv";
 
     public static void main(String[] args) {
+        if (args.length > 0 && args[0].equalsIgnoreCase("periodista")) {
+            imprimirDatosParaPeriodista();
+            return;
+        }
+        if (args.length > 0 && args[0].equalsIgnoreCase("apuestas")) {
+            imprimirDatosParaCasaApuestas(args);
+            return;
+        }
 
         // ---------- ADAPTER TXT ----------
         ProveedorDatosDeportivos fuenteMundial = new AdaptadorTxtMundial();
@@ -48,6 +61,35 @@ public class Main {
         ProveedorDatosDeportivos fuenteLiga = new AdaptadorCsvLiga();
         System.out.println("\n=== Equipos cargados desde CSV Liga local (ADAPTER) ===");
         imprimirEquipos(fuenteLiga.obtenerEquipos());
+
+        // ---------- NUEVOS ADAPTERS DE DATOS DEL MUNDIAL ----------
+        AdaptadorJsonEstadisticas fuenteEstadisticas = new AdaptadorJsonEstadisticas();
+        AdaptadorTxtPosesion fuentePosesion = new AdaptadorTxtPosesion();
+        AdaptadorCsvTarjetas fuenteTarjetas = new AdaptadorCsvTarjetas();
+        AdaptadorJsonPeriodistico fuentePeriodistica = new AdaptadorJsonPeriodistico();
+
+        System.out.println("\n=== Datos complementarios del Mundial (ADAPTERS) ===");
+        System.out.println("Partidos desde JSON estadistico: "
+                + fuenteEstadisticas.obtenerPartidosEnVivo().size());
+        System.out.println("Registros de posesion desde TXT: "
+                + fuentePosesion.obtenerPosesiones().size());
+        System.out.println("Tarjetas desde CSV: "
+                + fuenteTarjetas.obtenerTarjetas().size());
+        System.out.println("Informes periodisticos desde JSON: "
+                + fuentePeriodistica.obtenerInformes().size());
+
+        System.out.println("\nEjemplo posesion ARGENTINA vs FRANCIA:");
+        System.out.println(" - " + fuentePosesion.buscarPosesion("ARGENTINA", "FRANCIA"));
+
+        System.out.println("\nEjemplo tarjetas ARGENTINA vs BRASIL:");
+        for (AdaptadorCsvTarjetas.TarjetaPartido tarjeta :
+                fuenteTarjetas.buscarTarjetasPorPartido("ARGENTINA", "BRASIL")) {
+            System.out.println(" - " + tarjeta);
+        }
+
+        System.out.println("\nEjemplo informe periodistico ARGENTINA vs BRASIL:");
+        imprimirInformePeriodistico(
+                fuentePeriodistica.buscarInformePorPartido("ARGENTINA", "BRASIL"));
 
         // ---------- REPOSITORIO ----------
         Repositorio<Equipo> repositorioEquipos = new RepositorioEnMemoria<>();
@@ -130,6 +172,91 @@ public class Main {
         for (Ranking r : tabla) {
             System.out.println(" " + r);
         }
+    }
+
+    private static void imprimirInformePeriodistico(
+            AdaptadorJsonPeriodistico.InformePeriodistico informe) {
+        System.out.println("Resultado: " + informe.getResultado());
+        System.out.println("Posesion: " + informe.getEquipoLocal() + " "
+                + informe.getPosesionLocal() + "% - " + informe.getEquipoVisitante()
+                + " " + informe.getPosesionVisitante() + "%");
+
+        System.out.println("Goles:");
+        for (AdaptadorJsonPeriodistico.EventoPeriodistico gol : informe.getGoles()) {
+            System.out.println(" - Min " + gol.getMinuto() + " | "
+                    + gol.getJugador() + " (" + gol.getEquipo() + ")");
+        }
+
+        System.out.println("Tarjetas:");
+        if (informe.getTarjetas().isEmpty()) {
+            System.out.println(" - Sin tarjetas");
+        } else {
+            for (AdaptadorJsonPeriodistico.EventoPeriodistico tarjeta : informe.getTarjetas()) {
+                System.out.println(" - Min " + tarjeta.getMinuto() + " | "
+                        + tarjeta.getTipo() + " | " + tarjeta.getJugador()
+                        + " (" + tarjeta.getEquipo() + ")");
+            }
+        }
+
+        System.out.println("Resumen: " + informe.getResumenPeriodistico());
+    }
+
+    private static void imprimirDatosParaPeriodista() {
+        AdaptadorJsonPeriodistico fuentePeriodistica = new AdaptadorJsonPeriodistico();
+
+        System.out.println("=== Datos para periodista ===");
+        imprimirInformePeriodistico(
+                fuentePeriodistica.buscarInformePorPartido("ARGENTINA", "BRASIL"));
+    }
+
+    private static void imprimirDatosParaCasaApuestas(String[] args) {
+        AdaptadorJsonApuestas fuenteApuestas = new AdaptadorJsonApuestas();
+
+        System.out.println("=== Datos para casa de apuestas ===");
+
+        if (args.length == 1) {
+            imprimirMercadoApuestas(
+                    fuenteApuestas.buscarMercadoPorPartido("ARGENTINA", "BRASIL"));
+            return;
+        }
+
+        if (args.length == 2) {
+            int cantidad = Integer.parseInt(args[1]);
+            List<AdaptadorJsonApuestas.MercadoApuestas> mercados = fuenteApuestas.obtenerMercados();
+
+            for (int i = 0; i < cantidad && i < mercados.size(); i++) {
+                imprimirMercadoApuestas(mercados.get(i));
+                if (i < cantidad - 1 && i < mercados.size() - 1) {
+                    System.out.println();
+                }
+            }
+            return;
+        }
+
+        String local = args[1];
+        String visitante = args[2];
+        imprimirMercadoApuestas(fuenteApuestas.buscarMercadoPorPartido(local, visitante));
+    }
+
+    private static void imprimirMercadoApuestas(
+            AdaptadorJsonApuestas.MercadoApuestas mercado) {
+        System.out.println("Partido: " + mercado.getEquipoLocal()
+                + " vs " + mercado.getEquipoVisitante());
+        System.out.println("Goles local: " + mercado.getGolesLocal());
+        System.out.println("Goles visitante: " + mercado.getGolesVisitante());
+        System.out.println("Total goles: " + mercado.getTotalGoles());
+        System.out.println("Ambos equipos anotaron: "
+                + (mercado.isAmbosEquiposAnotaron() ? "SI" : "NO"));
+        System.out.println("Tarjetas amarillas: " + mercado.getTarjetasAmarillas());
+        System.out.println("Tarjetas rojas: " + mercado.getTarjetasRojas());
+        System.out.println("Total tarjetas: " + mercado.getTotalTarjetas());
+        System.out.println("Posesion: " + mercado.getEquipoLocal() + " "
+                + mercado.getPosesionLocal() + "% - " + mercado.getEquipoVisitante()
+                + " " + mercado.getPosesionVisitante() + "%");
+        System.out.println("Diferencia posesion: "
+                + Math.abs(mercado.getPosesionLocal() - mercado.getPosesionVisitante()));
+        System.out.println("Hubo roja: " + (mercado.isHuboRoja() ? "SI" : "NO"));
+        System.out.println("Hubo tiempo extra: " + (mercado.isHuboTiempoExtra() ? "SI" : "NO"));
     }
 
     private static void imprimirArbitrosYPartidos(List<Partido> partidos) {
