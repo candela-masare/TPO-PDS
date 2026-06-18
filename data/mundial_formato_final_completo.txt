@@ -12,19 +12,6 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 61: Gol de Argentina - Lionel Messi
 - Minuto 84: Gol de Argentina - Lautaro Martínez
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
-
-- Minuto 26: Edson Álvarez (México)
-- Minuto 49: Rodrigo De Paul (Argentina)
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
-
 ====================================================
 
 PARTIDO: BRASIL vs URUGUAY
@@ -39,18 +26,6 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 22: Gol de Brasil - Vinicius Jr
 - Minuto 73: Gol de Brasil - Rodrygo
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
-
-- Minuto 31: Federico Valverde (Uruguay)
-- Minuto 57: Casemiro (Brasil)
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ====================================================
 
@@ -70,18 +45,6 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 77: Gol de Dinamarca - Eriksen
 - Minuto 88: Gol de Francia - Giroud
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
-
-- Minuto 35: Theo Hernández (Francia)
-- Minuto 71: Christensen (Dinamarca)
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ====================================================
 
@@ -98,18 +61,6 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 52: Gol de Croacia - Kramaric
 - Minuto 81: Gol de España - Nico Williams
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
-
-- Minuto 25: Rodri (España)
-- Minuto 69: Modric (Croacia)
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ====================================================
 
@@ -124,24 +75,6 @@ GOLES EN LOS 90 MINUTOS
 
 - Minuto 33: Gol de Bélgica - Lukaku
 - Minuto 74: Gol de Portugal - Cristiano Ronaldo
-
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
-
-- No hubo amonestados.
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
-
-----------------------------------------
-EVENTOS EN EL TIEMPO EXTRA
-----------------------------------------
-
-- Minuto 108: Tarjeta amarilla - Pepe (Portugal)
 
 ----------------------------------------
 PENALES
@@ -173,18 +106,6 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 29: Gol de Inglaterra - Harry Kane
 - Minuto 70: Gol de Inglaterra - Foden
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
-
-- Minuto 42: Tyler Adams (Estados Unidos)
-- Minuto 67: Declan Rice (Inglaterra)
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ====================================================
 
@@ -203,18 +124,7 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 64: Gol de Japón - Kubo
 - Minuto 86: Gol de Alemania - Fullkrug
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
 
-- Minuto 39: Rudiger (Alemania)
-- Minuto 74: Tomiyasu (Japón)
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ====================================================
 
@@ -232,17 +142,6 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 89: Gol de Países Bajos - Depay
 
 ----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
-
-- Minuto 27: Bastoni (Italia)
-- Minuto 78: Van Dijk (Países Bajos)
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ====================================================
 
@@ -259,17 +158,7 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 47: Gol de Inglaterra - Harry Kane
 - Minuto 78: Gol de Argentina - Lautaro Martínez
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
 
-- No hubo amonestados.
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ====================================================
 
@@ -288,17 +177,7 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 67: Gol de Portugal - Rafael Leão
 - Minuto 88: Gol de Brasil - Endrick
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
 
-- No hubo amonestados.
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ====================================================
 
@@ -314,19 +193,7 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 22: Gol de Francia - Mbappé
 - Minuto 71: Gol de Alemania - Musiala
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
 
-- No hubo amonestados.
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
-
-----------------------------------------
 EVENTOS EN EL TIEMPO EXTRA
 ----------------------------------------
 
@@ -347,17 +214,7 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 39: Gol de España - Pedri
 - Minuto 81: Gol de España - Nico Williams
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
 
-- No hubo amonestados.
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ====================================================
 
@@ -373,17 +230,6 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 18: Gol de Brasil - Vinicius Jr
 - Minuto 63: Gol de Argentina - Lionel Messi
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
-
-- No hubo amonestados.
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ----------------------------------------
 EVENTOS EN EL TIEMPO EXTRA
@@ -406,17 +252,6 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 52: Gol de España - Morata
 - Minuto 89: Gol de Francia - Dembélé
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
-
-- No hubo amonestados.
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ====================================================
 
@@ -435,16 +270,6 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 79: Gol de Francia - Griezmann
 
 ----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
-
-- No hubo amonestados.
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ----------------------------------------
 EVENTOS EN EL TIEMPO EXTRA

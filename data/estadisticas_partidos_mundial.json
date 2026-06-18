@@ -1,0 +1,1020 @@
+﻿{
+    "fuente":  "mundial_formato_final_completo.txt",
+    "totalPartidos":  15,
+    "partidos":  [
+                     {
+                         "id":  1,
+                         "partido":  {
+                                         "local":  "ARGENTINA",
+                                         "visitante":  "MÉXICO"
+                                     },
+                         "fecha":  "28/06/2026",
+                         "estadio":  "Hard Rock Stadium",
+                         "resultado":  {
+                                           "texto":  "Argentina 3 - 1 México",
+                                           "golesLocal":  3,
+                                           "golesVisitante":  1
+                                       },
+                         "estadisticas":  {
+                                              "local":  {
+                                                            "equipo":  "ARGENTINA",
+                                                            "goles":  3,
+                                                            "tarjetasAmarillas":  1,
+                                                            "tarjetasRojas":  0
+                                                        },
+                                              "visitante":  {
+                                                                "equipo":  "MÉXICO",
+                                                                "goles":  1,
+                                                                "tarjetasAmarillas":  1,
+                                                                "tarjetasRojas":  0
+                                                            },
+                                              "totales":  {
+                                                              "goles":  4,
+                                                              "tarjetasAmarillas":  2,
+                                                              "tarjetasRojas":  0
+                                                          }
+                                          },
+                         "eventosEstadisticos":  {
+                                                     "goles":  [
+                                                                   {
+                                                                       "minuto":  14,
+                                                                       "equipo":  "Argentina",
+                                                                       "jugador":  "Julián Álvarez"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  38,
+                                                                       "equipo":  "México",
+                                                                       "jugador":  "Santiago Giménez"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  61,
+                                                                       "equipo":  "Argentina",
+                                                                       "jugador":  "Lionel Messi"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  84,
+                                                                       "equipo":  "Argentina",
+                                                                       "jugador":  "Lautaro Martínez"
+                                                                   }
+                                                               ],
+                                                     "tarjetasAmarillas":  [
+                                                                               {
+                                                                                   "minuto":  26,
+                                                                                   "equipo":  "México",
+                                                                                   "jugador":  "Edson Álvarez"
+                                                                               },
+                                                                               {
+                                                                                   "minuto":  49,
+                                                                                   "equipo":  "Argentina",
+                                                                                   "jugador":  "Rodrigo De Paul"
+                                                                               }
+                                                                           ],
+                                                     "tarjetasRojas":  [
+
+                                                                       ],
+                                                     "tiempoExtra":  [
+
+                                                                     ]
+                                                 }
+                     },
+                     {
+                         "id":  2,
+                         "partido":  {
+                                         "local":  "BRASIL",
+                                         "visitante":  "URUGUAY"
+                                     },
+                         "fecha":  "28/06/2026",
+                         "estadio":  "Levi\u0027s Stadium",
+                         "resultado":  {
+                                           "texto":  "Brasil 2 - 0 Uruguay",
+                                           "golesLocal":  2,
+                                           "golesVisitante":  0
+                                       },
+                         "estadisticas":  {
+                                              "local":  {
+                                                            "equipo":  "BRASIL",
+                                                            "goles":  2,
+                                                            "tarjetasAmarillas":  1,
+                                                            "tarjetasRojas":  0
+                                                        },
+                                              "visitante":  {
+                                                                "equipo":  "URUGUAY",
+                                                                "goles":  0,
+                                                                "tarjetasAmarillas":  1,
+                                                                "tarjetasRojas":  0
+                                                            },
+                                              "totales":  {
+                                                              "goles":  2,
+                                                              "tarjetasAmarillas":  2,
+                                                              "tarjetasRojas":  0
+                                                          }
+                                          },
+                         "eventosEstadisticos":  {
+                                                     "goles":  [
+                                                                   {
+                                                                       "minuto":  22,
+                                                                       "equipo":  "Brasil",
+                                                                       "jugador":  "Vinicius Jr"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  73,
+                                                                       "equipo":  "Brasil",
+                                                                       "jugador":  "Rodrygo"
+                                                                   }
+                                                               ],
+                                                     "tarjetasAmarillas":  [
+                                                                               {
+                                                                                   "minuto":  31,
+                                                                                   "equipo":  "Uruguay",
+                                                                                   "jugador":  "Federico Valverde"
+                                                                               },
+                                                                               {
+                                                                                   "minuto":  57,
+                                                                                   "equipo":  "Brasil",
+                                                                                   "jugador":  "Casemiro"
+                                                                               }
+                                                                           ],
+                                                     "tarjetasRojas":  [
+
+                                                                       ],
+                                                     "tiempoExtra":  [
+
+                                                                     ]
+                                                 }
+                     },
+                     {
+                         "id":  3,
+                         "partido":  {
+                                         "local":  "FRANCIA",
+                                         "visitante":  "DINAMARCA"
+                                     },
+                         "fecha":  "29/06/2026",
+                         "estadio":  "Mercedes-Benz Stadium",
+                         "resultado":  {
+                                           "texto":  "Francia 4 - 2 Dinamarca",
+                                           "golesLocal":  4,
+                                           "golesVisitante":  2
+                                       },
+                         "estadisticas":  {
+                                              "local":  {
+                                                            "equipo":  "FRANCIA",
+                                                            "goles":  4,
+                                                            "tarjetasAmarillas":  1,
+                                                            "tarjetasRojas":  0
+                                                        },
+                                              "visitante":  {
+                                                                "equipo":  "DINAMARCA",
+                                                                "goles":  2,
+                                                                "tarjetasAmarillas":  1,
+                                                                "tarjetasRojas":  0
+                                                            },
+                                              "totales":  {
+                                                              "goles":  6,
+                                                              "tarjetasAmarillas":  2,
+                                                              "tarjetasRojas":  0
+                                                          }
+                                          },
+                         "eventosEstadisticos":  {
+                                                     "goles":  [
+                                                                   {
+                                                                       "minuto":  9,
+                                                                       "equipo":  "Francia",
+                                                                       "jugador":  "Mbappé"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  18,
+                                                                       "equipo":  "Dinamarca",
+                                                                       "jugador":  "Hojlund"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  41,
+                                                                       "equipo":  "Francia",
+                                                                       "jugador":  "Dembélé"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  63,
+                                                                       "equipo":  "Francia",
+                                                                       "jugador":  "Griezmann"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  77,
+                                                                       "equipo":  "Dinamarca",
+                                                                       "jugador":  "Eriksen"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  88,
+                                                                       "equipo":  "Francia",
+                                                                       "jugador":  "Giroud"
+                                                                   }
+                                                               ],
+                                                     "tarjetasAmarillas":  [
+                                                                               {
+                                                                                   "minuto":  35,
+                                                                                   "equipo":  "Francia",
+                                                                                   "jugador":  "Theo Hernández"
+                                                                               },
+                                                                               {
+                                                                                   "minuto":  71,
+                                                                                   "equipo":  "Dinamarca",
+                                                                                   "jugador":  "Christensen"
+                                                                               }
+                                                                           ],
+                                                     "tarjetasRojas":  [
+
+                                                                       ],
+                                                     "tiempoExtra":  [
+
+                                                                     ]
+                                                 }
+                     },
+                     {
+                         "id":  4,
+                         "partido":  {
+                                         "local":  "ESPAÑA",
+                                         "visitante":  "CROACIA"
+                                     },
+                         "fecha":  "29/06/2026",
+                         "estadio":  "AT\u0026T Stadium",
+                         "resultado":  {
+                                           "texto":  "España 2 - 1 Croacia",
+                                           "golesLocal":  2,
+                                           "golesVisitante":  1
+                                       },
+                         "estadisticas":  {
+                                              "local":  {
+                                                            "equipo":  "ESPAÑA",
+                                                            "goles":  2,
+                                                            "tarjetasAmarillas":  1,
+                                                            "tarjetasRojas":  0
+                                                        },
+                                              "visitante":  {
+                                                                "equipo":  "CROACIA",
+                                                                "goles":  1,
+                                                                "tarjetasAmarillas":  1,
+                                                                "tarjetasRojas":  0
+                                                            },
+                                              "totales":  {
+                                                              "goles":  3,
+                                                              "tarjetasAmarillas":  2,
+                                                              "tarjetasRojas":  0
+                                                          }
+                                          },
+                         "eventosEstadisticos":  {
+                                                     "goles":  [
+                                                                   {
+                                                                       "minuto":  11,
+                                                                       "equipo":  "España",
+                                                                       "jugador":  "Pedri"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  52,
+                                                                       "equipo":  "Croacia",
+                                                                       "jugador":  "Kramaric"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  81,
+                                                                       "equipo":  "España",
+                                                                       "jugador":  "Nico Williams"
+                                                                   }
+                                                               ],
+                                                     "tarjetasAmarillas":  [
+                                                                               {
+                                                                                   "minuto":  25,
+                                                                                   "equipo":  "España",
+                                                                                   "jugador":  "Rodri"
+                                                                               },
+                                                                               {
+                                                                                   "minuto":  69,
+                                                                                   "equipo":  "Croacia",
+                                                                                   "jugador":  "Modric"
+                                                                               }
+                                                                           ],
+                                                     "tarjetasRojas":  [
+
+                                                                       ],
+                                                     "tiempoExtra":  [
+
+                                                                     ]
+                                                 }
+                     },
+                     {
+                         "id":  5,
+                         "partido":  {
+                                         "local":  "PORTUGAL",
+                                         "visitante":  "BÉLGICA"
+                                     },
+                         "fecha":  "30/06/2026",
+                         "estadio":  "SoFi Stadium",
+                         "resultado":  {
+                                           "texto":  "Portugal 1 (4) - (3) 1 Bélgica",
+                                           "golesLocal":  1,
+                                           "golesVisitante":  1
+                                       },
+                         "estadisticas":  {
+                                              "local":  {
+                                                            "equipo":  "PORTUGAL",
+                                                            "goles":  1,
+                                                            "tarjetasAmarillas":  0,
+                                                            "tarjetasRojas":  0
+                                                        },
+                                              "visitante":  {
+                                                                "equipo":  "BÉLGICA",
+                                                                "goles":  1,
+                                                                "tarjetasAmarillas":  0,
+                                                                "tarjetasRojas":  0
+                                                            },
+                                              "totales":  {
+                                                              "goles":  2,
+                                                              "tarjetasAmarillas":  0,
+                                                              "tarjetasRojas":  0
+                                                          }
+                                          },
+                         "eventosEstadisticos":  {
+                                                     "goles":  [
+                                                                   {
+                                                                       "minuto":  33,
+                                                                       "equipo":  "Bélgica",
+                                                                       "jugador":  "Lukaku"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  74,
+                                                                       "equipo":  "Portugal",
+                                                                       "jugador":  "Cristiano Ronaldo"
+                                                                   }
+                                                               ],
+                                                     "tarjetasAmarillas":  [
+
+                                                                           ],
+                                                     "tarjetasRojas":  [
+
+                                                                       ],
+                                                     "tiempoExtra":  [
+
+                                                                     ]
+                                                 }
+                     },
+                     {
+                         "id":  6,
+                         "partido":  {
+                                         "local":  "INGLATERRA",
+                                         "visitante":  "ESTADOS UNIDOS"
+                                     },
+                         "fecha":  "30/06/2026",
+                         "estadio":  "Arrowhead Stadium",
+                         "resultado":  {
+                                           "texto":  "Inglaterra 2 - 0 Estados Unidos",
+                                           "golesLocal":  2,
+                                           "golesVisitante":  0
+                                       },
+                         "estadisticas":  {
+                                              "local":  {
+                                                            "equipo":  "INGLATERRA",
+                                                            "goles":  2,
+                                                            "tarjetasAmarillas":  1,
+                                                            "tarjetasRojas":  0
+                                                        },
+                                              "visitante":  {
+                                                                "equipo":  "ESTADOS UNIDOS",
+                                                                "goles":  0,
+                                                                "tarjetasAmarillas":  1,
+                                                                "tarjetasRojas":  0
+                                                            },
+                                              "totales":  {
+                                                              "goles":  2,
+                                                              "tarjetasAmarillas":  2,
+                                                              "tarjetasRojas":  0
+                                                          }
+                                          },
+                         "eventosEstadisticos":  {
+                                                     "goles":  [
+                                                                   {
+                                                                       "minuto":  29,
+                                                                       "equipo":  "Inglaterra",
+                                                                       "jugador":  "Harry Kane"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  70,
+                                                                       "equipo":  "Inglaterra",
+                                                                       "jugador":  "Foden"
+                                                                   }
+                                                               ],
+                                                     "tarjetasAmarillas":  [
+                                                                               {
+                                                                                   "minuto":  42,
+                                                                                   "equipo":  "Estados Unidos",
+                                                                                   "jugador":  "Tyler Adams"
+                                                                               },
+                                                                               {
+                                                                                   "minuto":  67,
+                                                                                   "equipo":  "Inglaterra",
+                                                                                   "jugador":  "Declan Rice"
+                                                                               }
+                                                                           ],
+                                                     "tarjetasRojas":  [
+
+                                                                       ],
+                                                     "tiempoExtra":  [
+
+                                                                     ]
+                                                 }
+                     },
+                     {
+                         "id":  7,
+                         "partido":  {
+                                         "local":  "ALEMANIA",
+                                         "visitante":  "JAPÓN"
+                                     },
+                         "fecha":  "01/07/2026",
+                         "estadio":  "NRG Stadium",
+                         "resultado":  {
+                                           "texto":  "Alemania 3 - 2 Japón",
+                                           "golesLocal":  3,
+                                           "golesVisitante":  2
+                                       },
+                         "estadisticas":  {
+                                              "local":  {
+                                                            "equipo":  "ALEMANIA",
+                                                            "goles":  3,
+                                                            "tarjetasAmarillas":  1,
+                                                            "tarjetasRojas":  0
+                                                        },
+                                              "visitante":  {
+                                                                "equipo":  "JAPÓN",
+                                                                "goles":  2,
+                                                                "tarjetasAmarillas":  1,
+                                                                "tarjetasRojas":  0
+                                                            },
+                                              "totales":  {
+                                                              "goles":  5,
+                                                              "tarjetasAmarillas":  2,
+                                                              "tarjetasRojas":  0
+                                                          }
+                                          },
+                         "eventosEstadisticos":  {
+                                                     "goles":  [
+                                                                   {
+                                                                       "minuto":  16,
+                                                                       "equipo":  "Alemania",
+                                                                       "jugador":  "Musiala"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  28,
+                                                                       "equipo":  "Japón",
+                                                                       "jugador":  "Minamino"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  45,
+                                                                       "equipo":  "Alemania",
+                                                                       "jugador":  "Havertz"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  64,
+                                                                       "equipo":  "Japón",
+                                                                       "jugador":  "Kubo"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  86,
+                                                                       "equipo":  "Alemania",
+                                                                       "jugador":  "Fullkrug"
+                                                                   }
+                                                               ],
+                                                     "tarjetasAmarillas":  [
+                                                                               {
+                                                                                   "minuto":  39,
+                                                                                   "equipo":  "Alemania",
+                                                                                   "jugador":  "Rudiger"
+                                                                               },
+                                                                               {
+                                                                                   "minuto":  74,
+                                                                                   "equipo":  "Japón",
+                                                                                   "jugador":  "Tomiyasu"
+                                                                               }
+                                                                           ],
+                                                     "tarjetasRojas":  [
+
+                                                                       ],
+                                                     "tiempoExtra":  [
+
+                                                                     ]
+                                                 }
+                     },
+                     {
+                         "id":  8,
+                         "partido":  {
+                                         "local":  "PAÍSES BAJOS",
+                                         "visitante":  "ITALIA"
+                                     },
+                         "fecha":  "01/07/2026",
+                         "estadio":  "Gillette Stadium",
+                         "resultado":  {
+                                           "texto":  "Países Bajos 2 - 1 Italia",
+                                           "golesLocal":  2,
+                                           "golesVisitante":  1
+                                       },
+                         "estadisticas":  {
+                                              "local":  {
+                                                            "equipo":  "PAÍSES BAJOS",
+                                                            "goles":  2,
+                                                            "tarjetasAmarillas":  1,
+                                                            "tarjetasRojas":  0
+                                                        },
+                                              "visitante":  {
+                                                                "equipo":  "ITALIA",
+                                                                "goles":  1,
+                                                                "tarjetasAmarillas":  1,
+                                                                "tarjetasRojas":  0
+                                                            },
+                                              "totales":  {
+                                                              "goles":  3,
+                                                              "tarjetasAmarillas":  2,
+                                                              "tarjetasRojas":  0
+                                                          }
+                                          },
+                         "eventosEstadisticos":  {
+                                                     "goles":  [
+                                                                   {
+                                                                       "minuto":  19,
+                                                                       "equipo":  "Italia",
+                                                                       "jugador":  "Chiesa"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  61,
+                                                                       "equipo":  "Países Bajos",
+                                                                       "jugador":  "Gakpo"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  89,
+                                                                       "equipo":  "Países Bajos",
+                                                                       "jugador":  "Depay"
+                                                                   }
+                                                               ],
+                                                     "tarjetasAmarillas":  [
+                                                                               {
+                                                                                   "minuto":  27,
+                                                                                   "equipo":  "Italia",
+                                                                                   "jugador":  "Bastoni"
+                                                                               },
+                                                                               {
+                                                                                   "minuto":  78,
+                                                                                   "equipo":  "Países Bajos",
+                                                                                   "jugador":  "Van Dijk"
+                                                                               }
+                                                                           ],
+                                                     "tarjetasRojas":  [
+
+                                                                       ],
+                                                     "tiempoExtra":  [
+
+                                                                     ]
+                                                 }
+                     },
+                     {
+                         "id":  9,
+                         "partido":  {
+                                         "local":  "ARGENTINA",
+                                         "visitante":  "INGLATERRA"
+                                     },
+                         "fecha":  "04/07/2026",
+                         "estadio":  "MetLife Stadium",
+                         "resultado":  {
+                                           "texto":  "Argentina 2 - 1 Inglaterra",
+                                           "golesLocal":  2,
+                                           "golesVisitante":  1
+                                       },
+                         "estadisticas":  {
+                                              "local":  {
+                                                            "equipo":  "ARGENTINA",
+                                                            "goles":  2,
+                                                            "tarjetasAmarillas":  0,
+                                                            "tarjetasRojas":  0
+                                                        },
+                                              "visitante":  {
+                                                                "equipo":  "INGLATERRA",
+                                                                "goles":  1,
+                                                                "tarjetasAmarillas":  0,
+                                                                "tarjetasRojas":  0
+                                                            },
+                                              "totales":  {
+                                                              "goles":  3,
+                                                              "tarjetasAmarillas":  0,
+                                                              "tarjetasRojas":  0
+                                                          }
+                                          },
+                         "eventosEstadisticos":  {
+                                                     "goles":  [
+                                                                   {
+                                                                       "minuto":  12,
+                                                                       "equipo":  "Argentina",
+                                                                       "jugador":  "Julián Álvarez"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  47,
+                                                                       "equipo":  "Inglaterra",
+                                                                       "jugador":  "Harry Kane"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  78,
+                                                                       "equipo":  "Argentina",
+                                                                       "jugador":  "Lautaro Martínez"
+                                                                   }
+                                                               ],
+                                                     "tarjetasAmarillas":  [
+
+                                                                           ],
+                                                     "tarjetasRojas":  [
+
+                                                                       ],
+                                                     "tiempoExtra":  [
+
+                                                                     ]
+                                                 }
+                     },
+                     {
+                         "id":  10,
+                         "partido":  {
+                                         "local":  "BRASIL",
+                                         "visitante":  "PORTUGAL"
+                                     },
+                         "fecha":  "04/07/2026",
+                         "estadio":  "SoFi Stadium",
+                         "resultado":  {
+                                           "texto":  "Brasil 3 - 2 Portugal",
+                                           "golesLocal":  3,
+                                           "golesVisitante":  2
+                                       },
+                         "estadisticas":  {
+                                              "local":  {
+                                                            "equipo":  "BRASIL",
+                                                            "goles":  3,
+                                                            "tarjetasAmarillas":  0,
+                                                            "tarjetasRojas":  0
+                                                        },
+                                              "visitante":  {
+                                                                "equipo":  "PORTUGAL",
+                                                                "goles":  2,
+                                                                "tarjetasAmarillas":  0,
+                                                                "tarjetasRojas":  0
+                                                            },
+                                              "totales":  {
+                                                              "goles":  5,
+                                                              "tarjetasAmarillas":  0,
+                                                              "tarjetasRojas":  0
+                                                          }
+                                          },
+                         "eventosEstadisticos":  {
+                                                     "goles":  [
+                                                                   {
+                                                                       "minuto":  9,
+                                                                       "equipo":  "Brasil",
+                                                                       "jugador":  "Vinicius Jr"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  31,
+                                                                       "equipo":  "Portugal",
+                                                                       "jugador":  "Bruno Fernandes"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  44,
+                                                                       "equipo":  "Brasil",
+                                                                       "jugador":  "Rodrygo"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  67,
+                                                                       "equipo":  "Portugal",
+                                                                       "jugador":  "Rafael Leão"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  88,
+                                                                       "equipo":  "Brasil",
+                                                                       "jugador":  "Endrick"
+                                                                   }
+                                                               ],
+                                                     "tarjetasAmarillas":  [
+
+                                                                           ],
+                                                     "tarjetasRojas":  [
+
+                                                                       ],
+                                                     "tiempoExtra":  [
+
+                                                                     ]
+                                                 }
+                     },
+                     {
+                         "id":  11,
+                         "partido":  {
+                                         "local":  "FRANCIA",
+                                         "visitante":  "ALEMANIA"
+                                     },
+                         "fecha":  "05/07/2026",
+                         "estadio":  "Mercedes-Benz Stadium",
+                         "resultado":  {
+                                           "texto":  "Francia 2 (4) - (3) 2 Alemania",
+                                           "golesLocal":  2,
+                                           "golesVisitante":  2
+                                       },
+                         "estadisticas":  {
+                                              "local":  {
+                                                            "equipo":  "FRANCIA",
+                                                            "goles":  2,
+                                                            "tarjetasAmarillas":  0,
+                                                            "tarjetasRojas":  0
+                                                        },
+                                              "visitante":  {
+                                                                "equipo":  "ALEMANIA",
+                                                                "goles":  2,
+                                                                "tarjetasAmarillas":  0,
+                                                                "tarjetasRojas":  0
+                                                            },
+                                              "totales":  {
+                                                              "goles":  4,
+                                                              "tarjetasAmarillas":  0,
+                                                              "tarjetasRojas":  0
+                                                          }
+                                          },
+                         "eventosEstadisticos":  {
+                                                     "goles":  [
+                                                                   {
+                                                                       "minuto":  22,
+                                                                       "equipo":  "Francia",
+                                                                       "jugador":  "Mbappé"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  71,
+                                                                       "equipo":  "Alemania",
+                                                                       "jugador":  "Musiala"
+                                                                   }
+                                                               ],
+                                                     "tarjetasAmarillas":  [
+
+                                                                           ],
+                                                     "tarjetasRojas":  [
+
+                                                                       ],
+                                                     "tiempoExtra":  [
+                                                                         {
+                                                                             "minuto":  102,
+                                                                             "tipo":  "gol",
+                                                                             "equipo":  "Francia",
+                                                                             "jugador":  "Griezmann"
+                                                                         },
+                                                                         {
+                                                                             "minuto":  113,
+                                                                             "tipo":  "gol",
+                                                                             "equipo":  "Alemania",
+                                                                             "jugador":  "Havertz"
+                                                                         }
+                                                                     ]
+                                                 }
+                     },
+                     {
+                         "id":  12,
+                         "partido":  {
+                                         "local":  "ESPAÑA",
+                                         "visitante":  "PAÍSES BAJOS"
+                                     },
+                         "fecha":  "05/07/2026",
+                         "estadio":  "AT\u0026T Stadium",
+                         "resultado":  {
+                                           "texto":  "España 2 - 0 Países Bajos",
+                                           "golesLocal":  2,
+                                           "golesVisitante":  0
+                                       },
+                         "estadisticas":  {
+                                              "local":  {
+                                                            "equipo":  "ESPAÑA",
+                                                            "goles":  2,
+                                                            "tarjetasAmarillas":  0,
+                                                            "tarjetasRojas":  0
+                                                        },
+                                              "visitante":  {
+                                                                "equipo":  "PAÍSES BAJOS",
+                                                                "goles":  0,
+                                                                "tarjetasAmarillas":  0,
+                                                                "tarjetasRojas":  0
+                                                            },
+                                              "totales":  {
+                                                              "goles":  2,
+                                                              "tarjetasAmarillas":  0,
+                                                              "tarjetasRojas":  0
+                                                          }
+                                          },
+                         "eventosEstadisticos":  {
+                                                     "goles":  [
+                                                                   {
+                                                                       "minuto":  39,
+                                                                       "equipo":  "España",
+                                                                       "jugador":  "Pedri"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  81,
+                                                                       "equipo":  "España",
+                                                                       "jugador":  "Nico Williams"
+                                                                   }
+                                                               ],
+                                                     "tarjetasAmarillas":  [
+
+                                                                           ],
+                                                     "tarjetasRojas":  [
+
+                                                                       ],
+                                                     "tiempoExtra":  [
+
+                                                                     ]
+                                                 }
+                     },
+                     {
+                         "id":  13,
+                         "partido":  {
+                                         "local":  "ARGENTINA",
+                                         "visitante":  "BRASIL"
+                                     },
+                         "fecha":  "08/07/2026",
+                         "estadio":  "MetLife Stadium",
+                         "resultado":  {
+                                           "texto":  "Argentina 1 (5) - (4) 1 Brasil",
+                                           "golesLocal":  1,
+                                           "golesVisitante":  1
+                                       },
+                         "estadisticas":  {
+                                              "local":  {
+                                                            "equipo":  "ARGENTINA",
+                                                            "goles":  1,
+                                                            "tarjetasAmarillas":  0,
+                                                            "tarjetasRojas":  0
+                                                        },
+                                              "visitante":  {
+                                                                "equipo":  "BRASIL",
+                                                                "goles":  1,
+                                                                "tarjetasAmarillas":  0,
+                                                                "tarjetasRojas":  1
+                                                            },
+                                              "totales":  {
+                                                              "goles":  2,
+                                                              "tarjetasAmarillas":  0,
+                                                              "tarjetasRojas":  1
+                                                          }
+                                          },
+                         "eventosEstadisticos":  {
+                                                     "goles":  [
+                                                                   {
+                                                                       "minuto":  18,
+                                                                       "equipo":  "Brasil",
+                                                                       "jugador":  "Vinicius Jr"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  63,
+                                                                       "equipo":  "Argentina",
+                                                                       "jugador":  "Lionel Messi"
+                                                                   }
+                                                               ],
+                                                     "tarjetasAmarillas":  [
+
+                                                                           ],
+                                                     "tarjetasRojas":  [
+                                                                           {
+                                                                               "minuto":  115,
+                                                                               "equipo":  "Brasil",
+                                                                               "jugador":  "Gabriel Magalhães",
+                                                                               "periodo":  "tiempoExtra"
+                                                                           }
+                                                                       ],
+                                                     "tiempoExtra":  [
+
+                                                                     ]
+                                                 }
+                     },
+                     {
+                         "id":  14,
+                         "partido":  {
+                                         "local":  "FRANCIA",
+                                         "visitante":  "ESPAÑA"
+                                     },
+                         "fecha":  "09/07/2026",
+                         "estadio":  "Mercedes-Benz Stadium",
+                         "resultado":  {
+                                           "texto":  "Francia 2 - 1 España",
+                                           "golesLocal":  2,
+                                           "golesVisitante":  1
+                                       },
+                         "estadisticas":  {
+                                              "local":  {
+                                                            "equipo":  "FRANCIA",
+                                                            "goles":  2,
+                                                            "tarjetasAmarillas":  0,
+                                                            "tarjetasRojas":  0
+                                                        },
+                                              "visitante":  {
+                                                                "equipo":  "ESPAÑA",
+                                                                "goles":  1,
+                                                                "tarjetasAmarillas":  0,
+                                                                "tarjetasRojas":  0
+                                                            },
+                                              "totales":  {
+                                                              "goles":  3,
+                                                              "tarjetasAmarillas":  0,
+                                                              "tarjetasRojas":  0
+                                                          }
+                                          },
+                         "eventosEstadisticos":  {
+                                                     "goles":  [
+                                                                   {
+                                                                       "minuto":  14,
+                                                                       "equipo":  "Francia",
+                                                                       "jugador":  "Mbappé"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  52,
+                                                                       "equipo":  "España",
+                                                                       "jugador":  "Morata"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  89,
+                                                                       "equipo":  "Francia",
+                                                                       "jugador":  "Dembélé"
+                                                                   }
+                                                               ],
+                                                     "tarjetasAmarillas":  [
+
+                                                                           ],
+                                                     "tarjetasRojas":  [
+
+                                                                       ],
+                                                     "tiempoExtra":  [
+
+                                                                     ]
+                                                 }
+                     },
+                     {
+                         "id":  15,
+                         "partido":  {
+                                         "local":  "ARGENTINA",
+                                         "visitante":  "FRANCIA"
+                                     },
+                         "fecha":  "12/07/2026",
+                         "estadio":  "MetLife Stadium",
+                         "resultado":  {
+                                           "texto":  "Argentina 3 - 2 Francia",
+                                           "golesLocal":  3,
+                                           "golesVisitante":  2
+                                       },
+                         "estadisticas":  {
+                                              "local":  {
+                                                            "equipo":  "ARGENTINA",
+                                                            "goles":  3,
+                                                            "tarjetasAmarillas":  0,
+                                                            "tarjetasRojas":  0
+                                                        },
+                                              "visitante":  {
+                                                                "equipo":  "FRANCIA",
+                                                                "goles":  2,
+                                                                "tarjetasAmarillas":  0,
+                                                                "tarjetasRojas":  0
+                                                            },
+                                              "totales":  {
+                                                              "goles":  5,
+                                                              "tarjetasAmarillas":  0,
+                                                              "tarjetasRojas":  0
+                                                          }
+                                          },
+                         "eventosEstadisticos":  {
+                                                     "goles":  [
+                                                                   {
+                                                                       "minuto":  11,
+                                                                       "equipo":  "Francia",
+                                                                       "jugador":  "Mbappé"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  27,
+                                                                       "equipo":  "Argentina",
+                                                                       "jugador":  "Julián Álvarez"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  58,
+                                                                       "equipo":  "Argentina",
+                                                                       "jugador":  "Lautaro Martínez"
+                                                                   },
+                                                                   {
+                                                                       "minuto":  79,
+                                                                       "equipo":  "Francia",
+                                                                       "jugador":  "Griezmann"
+                                                                   }
+                                                               ],
+                                                     "tarjetasAmarillas":  [
+
+                                                                           ],
+                                                     "tarjetasRojas":  [
+
+                                                                       ],
+                                                     "tiempoExtra":  [
+                                                                         {
+                                                                             "minuto":  109,
+                                                                             "tipo":  "gol",
+                                                                             "equipo":  "Argentina",
+                                                                             "jugador":  "Lionel Messi"
+                                                                         }
+                                                                     ]
+                                                 }
+                     }
+                 ]
+}
