@@ -40,6 +40,14 @@ public class Main {
     private static final String RUTA_ARBITROS = "data/arbitros.csv";
 
     public static void main(String[] args) {
+        if (args.length > 0 && args[0].equalsIgnoreCase("servidor")) {
+            try {
+                servidor.ServidorHttp.iniciar();
+            } catch (Exception e) {
+                System.err.println("Error al iniciar el servidor: " + e.getMessage());
+            }
+            return;
+        }
         if (args.length > 0 && args[0].equalsIgnoreCase("periodista")) {
             imprimirDatosParaPeriodista();
             return;
@@ -62,6 +70,7 @@ public class Main {
             System.out.println("\n=== INICIO ===");
             System.out.println("1. Abrir menu interactivo");
             System.out.println("2. Ejecutar demo completa");
+            System.out.println("3. Iniciar servidor web (http://localhost:8080)");
             System.out.println("0. Salir");
 
             opcion = scanner.nextInt();
@@ -74,6 +83,14 @@ public class Main {
 
                 case 2:
                     ejecutarDemoCompleta();
+                    break;
+
+                case 3:
+                    try {
+                        servidor.ServidorHttp.iniciar();
+                    } catch (Exception e) {
+                        System.err.println("Error al iniciar el servidor: " + e.getMessage());
+                    }
                     break;
             }
 
