@@ -2,515 +2,283 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataforma Deportiva</title>
     <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         :root {
-            --bg:     #0f0f0f;
-            --bg2:    #1a1a1a;
-            --bg3:    #242424;
-            --red:    #c41e3a;
-            --red2:   #9e1830;
-            --text:   #ffffff;
-            --text2:  #aaaaaa;
-            --text3:  #555555;
-            --border: #2a2a2a;
-            --radius: 12px;
-            --nav-h:  64px;
+            --bg: #0f0f0f; --bg2: #1a1a1a; --bg3: #252525; --bg4: #2f2f2f;
+            --red: #c41e3a; --red2: #e02347;
+            --text: #f0f0f0; --text2: #999; --border: #2e2e2e;
         }
-
         body {
-            background: var(--bg);
-            color: var(--text);
+            background: var(--bg); color: var(--text);
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            max-width: 480px;
-            margin: 0 auto;
-            min-height: 100vh;
+            min-height: 100vh; display: flex; flex-direction: column;
+            max-width: 480px; margin: 0 auto;
         }
-
-        /* ── Header ── */
-        .header {
-            background: var(--bg);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            padding: 14px 16px 0;
+        header {
+            background: var(--bg2); padding: 14px 16px;
             border-bottom: 1px solid var(--border);
-        }
-        .header-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        .app-title   { font-size: 21px; font-weight: 800; letter-spacing: -.5px; }
-        .app-sub     { font-size: 11px; color: var(--text2); margin-top: 1px; }
-
-        /* ── Fuente pills ── */
-        .pills { display: flex; gap: 8px; padding-bottom: 10px; }
-        .pill {
-            padding: 5px 14px;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            background: transparent;
-            color: var(--text2);
-            font-size: 13px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: all .15s;
-        }
-        .pill.active { background: var(--red); border-color: var(--red); color: #fff; }
-
-        /* ── Bottom nav ── */
-        .bottom-nav {
-            position: fixed;
-            bottom: 0;
-            left: 50%; transform: translateX(-50%);
-            width: 100%; max-width: 480px;
-            height: var(--nav-h);
-            background: #111;
-            border-top: 1px solid var(--border);
-            display: flex;
-            z-index: 100;
-        }
-        .nav-btn {
-            flex: 1;
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-            gap: 3px;
-            background: none; border: none;
-            color: var(--text3);
-            cursor: pointer;
-            font-size: 10px; font-weight: 600;
-            transition: color .15s;
-        }
-        .nav-btn .ni { font-size: 22px; }
-        .nav-btn.active { color: var(--red); }
-
-        /* ── Content wrapper ── */
-        .content { padding-bottom: calc(var(--nav-h) + 12px); }
-
-        /* ── Section banner ── */
-        .banner {
-            background: var(--red);
-            padding: 10px 16px;
-        }
-        .banner-sub  { font-size: 10px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; opacity: .85; }
-        .banner-main { font-size: 15px; font-weight: 700; margin-top: 1px; }
-
-        /* ── Match card ── */
-        .match-card {
-            padding: 16px;
-            border-bottom: 1px solid var(--border);
-            cursor: pointer;
-            transition: background .1s;
-        }
-        .match-card:active { background: var(--bg2); }
-        .match-teams { display: flex; align-items: center; justify-content: space-between; }
-        .team-block  { display: flex; align-items: center; gap: 10px; flex: 1; }
-        .team-block.right { flex-direction: row-reverse; }
-        .team-flag {
-            width: 40px; height: 40px; border-radius: 50%;
-            background: var(--bg3);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 22px; flex-shrink: 0;
-        }
-        .team-name  { font-size: 15px; font-weight: 600; }
-        .match-mid  { display: flex; flex-direction: column; align-items: center; padding: 0 10px; min-width: 90px; }
-        .score-row  { display: flex; align-items: center; gap: 8px; }
-        .score-num  { font-size: 28px; font-weight: 800; }
-        .score-dash { font-size: 22px; color: var(--text3); }
-        .match-lbl  { font-size: 10px; color: var(--text2); margin-top: 3px; }
-        .match-meta { font-size: 11px; color: var(--text3); text-align: center; margin-top: 6px; }
-
-        /* ── FAB ── */
-        .fab {
-            position: fixed;
-            bottom: calc(var(--nav-h) + 14px);
-            right: calc(max(50% - 240px, 16px));
-            width: 52px; height: 52px; border-radius: 50%;
-            background: var(--red); border: none; color: #fff;
-            font-size: 26px; cursor: pointer;
-            box-shadow: 0 4px 14px rgba(196,30,58,.45);
-            display: flex; align-items: center; justify-content: center;
-            z-index: 90; transition: transform .15s;
-        }
-        .fab:active { transform: scale(.93); }
-
-        /* ── Team card (Equipos tab) ── */
-        .team-card { margin: 10px 16px; background: var(--bg2); border-radius: var(--radius); overflow: hidden; }
-        .tc-head {
-            padding: 14px 16px;
-            display: flex; align-items: center; gap: 12px;
-            cursor: pointer;
-        }
-        .tc-info { flex: 1; }
-        .tc-name  { font-size: 16px; font-weight: 700; }
-        .tc-sub   { font-size: 12px; color: var(--text2); margin-top: 2px; }
-        .tc-stats { display: flex; gap: 14px; margin-top: 4px; }
-        .tc-stat  { font-size: 11px; color: var(--text2); }
-        .tc-stat b { color: var(--text); }
-        .tc-arrow { color: var(--text3); font-size: 20px; }
-        .tc-players { border-top: 1px solid var(--border); display: none; }
-        .player-row {
-            display: flex; align-items: center;
-            padding: 8px 16px; gap: 10px;
-            border-bottom: 1px solid var(--border);
-        }
-        .player-row:last-child { border-bottom: none; }
-        .p-pos   { width: 90px; font-size: 10px; color: var(--text3); }
-        .p-name  { flex: 1; font-size: 13px; }
-        .p-stats { display: flex; gap: 6px; font-size: 12px; }
-
-        /* ── Ranking table ── */
-        .rtable { margin: 10px 16px; background: var(--bg2); border-radius: var(--radius); overflow: hidden; }
-        .rtable-head, .rtable-row {
-            display: grid;
-            grid-template-columns: 30px 1fr 38px 38px 38px 38px;
-            padding: 10px 14px;
-            align-items: center;
-        }
-        .rtable-head {
-            font-size: 10px; color: var(--text3); font-weight: 700;
-            text-transform: uppercase; letter-spacing: .4px;
-            border-bottom: 1px solid var(--border);
-        }
-        .rtable-row { border-bottom: 1px solid var(--border); }
-        .rtable-row:last-child { border-bottom: none; }
-        .r-pos { font-size: 14px; font-weight: 700; color: var(--text2); }
-        .r-pos.gold   { color: #f5c518; }
-        .r-pos.silver { color: #b0b0b0; }
-        .r-pos.bronze { color: #cd7f32; }
-        .r-team { font-size: 14px; font-weight: 600; }
-        .r-num  { font-size: 13px; text-align: center; color: var(--text2); }
-        .r-pts  { font-size: 14px; font-weight: 700; text-align: center; }
-
-        /* ── Criterio toggle ── */
-        .toggle-row {
-            display: flex; margin: 10px 16px;
-            background: var(--bg2); border-radius: 10px; padding: 4px;
-        }
-        .toggle-btn {
-            flex: 1; padding: 8px; border: none;
-            background: none; color: var(--text2);
-            border-radius: 8px; font-size: 13px; font-weight: 600;
-            cursor: pointer; transition: all .15s;
-        }
-        .toggle-btn.active { background: var(--red); color: #fff; }
-
-        /* ── Reporte layers ── */
-        .rep-card { margin: 10px 16px; background: var(--bg2); border-radius: var(--radius); padding: 14px; }
-        .layer {
-            padding: 12px; border-radius: 8px; margin-bottom: 10px;
-        }
-        .layer:last-child { margin-bottom: 0; }
-        .l1 { background: #131d2e; border-left: 3px solid #5eaeff; }
-        .l2 { background: #1d1330; border-left: 3px solid #b07aff; }
-        .l3 { background: #0f2818; border-left: 3px solid #5eff7a; }
-        .layer-lbl  { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .4px; opacity: .7; margin-bottom: 6px; }
-        .layer-body { font-size: 13px; line-height: 1.5; }
-
-        /* ── Match detail ── */
-        .back-hdr {
-            display: flex; align-items: center; gap: 10px;
-            padding: 13px 16px;
-            background: var(--bg); border-bottom: 1px solid var(--border);
             position: sticky; top: 0; z-index: 100;
         }
-        .back-btn  { background: none; border: none; color: var(--red); font-size: 26px; cursor: pointer; line-height: 1; }
-        .back-ttl  { font-size: 17px; font-weight: 700; }
-        .score-banner {
-            background: var(--red);
-            padding: 22px 16px 18px;
-            text-align: center;
+        header h1 { font-size: 17px; font-weight: 700; color: var(--red); }
+        header p { font-size: 11px; color: var(--text2); margin-top: 2px; }
+        main { flex: 1; overflow-y: auto; padding: 14px 16px 90px; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        nav.bnav {
+            position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+            width: 100%; max-width: 480px; background: var(--bg2);
+            border-top: 1px solid var(--border); display: flex; z-index: 100;
         }
-        .sb-teams  { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 6px; }
-        .sb-team   { display: flex; flex-direction: column; align-items: center; gap: 5px; }
-        .sb-flag   { font-size: 34px; }
-        .sb-name   { font-size: 12px; font-weight: 600; }
-        .sb-scores { display: flex; align-items: center; gap: 10px; }
-        .sb-num    { font-size: 50px; font-weight: 900; line-height: 1; }
-        .sb-dash   { font-size: 34px; font-weight: 300; color: rgba(255,255,255,.5); }
-
-        .stats-band {
-            display: flex; background: var(--bg2);
-            padding: 14px 16px; gap: 8px;
-            border-bottom: 1px solid var(--border);
+        nav.bnav button {
+            flex: 1; background: none; border: none; color: var(--text2);
+            padding: 9px 4px; font-size: 10px; cursor: pointer;
+            display: flex; flex-direction: column; align-items: center; gap: 2px;
         }
-        .sbox      { flex: 1; text-align: center; }
-        .sbox-val  { font-size: 22px; font-weight: 800; }
-        .sbox-lbl  { font-size: 10px; color: var(--text3); text-transform: uppercase; margin-top: 2px; }
-        .sep-vert  { width: 1px; background: var(--border); }
-
-        .events-list { padding: 0; }
-        .ev-item {
-            display: flex; align-items: center;
-            padding: 10px 16px; gap: 12px;
-            border-bottom: 1px solid var(--border);
+        nav.bnav button.active { color: var(--red); }
+        nav.bnav .ico { font-size: 19px; }
+        .badge {
+            display: inline-block; font-size: 10px; font-weight: 600;
+            padding: 2px 6px; border-radius: 4px; vertical-align: middle;
         }
-        .ev-min  { font-size: 12px; color: var(--text3); width: 34px; text-align: right; flex-shrink: 0; }
-        .ev-icon { font-size: 18px; flex-shrink: 0; }
-        .ev-info { flex: 1; }
-        .ev-player { font-size: 14px; font-weight: 600; }
-        .ev-detail { font-size: 11px; color: var(--text2); }
-        .ev-side {
-            font-size: 9px; font-weight: 700;
-            padding: 2px 6px; border-radius: 4px;
-            background: var(--bg3); color: var(--text3);
-        }
-
-        .subs-row { display: flex; flex-wrap: wrap; gap: 6px; padding: 12px 16px; }
-        .chip {
-            padding: 4px 10px; border-radius: 12px;
-            font-size: 11px; font-weight: 600;
-            background: #112233; color: #5eaeff;
-        }
-
-        /* ── Sub-section title ── */
+        .ba { background: rgba(37,99,235,.18); color: #60a5fa; border: 1px solid rgba(37,99,235,.35); }
+        .bf { background: rgba(124,58,237,.18); color: #a78bfa; border: 1px solid rgba(124,58,237,.35); }
+        .bo { background: rgba(5,150,105,.18); color: #34d399; border: 1px solid rgba(5,150,105,.35); }
+        .bs { background: rgba(217,119,6,.18); color: #fbbf24; border: 1px solid rgba(217,119,6,.35); }
+        .bd { background: rgba(219,39,119,.18); color: #f472b6; border: 1px solid rgba(219,39,119,.35); }
         .stitle {
-            padding: 14px 16px 6px;
-            font-size: 12px; font-weight: 700; color: var(--text2);
-            text-transform: uppercase; letter-spacing: .4px;
-            display: flex; align-items: center; justify-content: space-between;
+            font-size: 12px; font-weight: 600; color: var(--text2);
+            text-transform: uppercase; letter-spacing: .7px;
+            margin-bottom: 10px; display: flex; align-items: center; gap: 7px;
         }
-
-        /* ── Buttons ── */
-        .btn {
-            display: block;
-            width: calc(100% - 32px);
-            margin: 10px 16px;
-            padding: 13px;
-            border: none; border-radius: var(--radius);
-            font-size: 15px; font-weight: 700;
-            cursor: pointer; transition: background .15s;
+        .toggle { display: flex; background: var(--bg3); border-radius: 8px; padding: 3px; margin-bottom: 12px; gap: 3px; }
+        .toggle button {
+            flex: 1; background: none; border: none; color: var(--text2);
+            padding: 7px 10px; border-radius: 6px; cursor: pointer;
+            font-size: 12px; font-weight: 500; transition: all .15s;
         }
-        .btn-primary { background: var(--red); color: #fff; }
-        .btn-primary:active { background: var(--red2); }
-        .btn-ghost   { background: var(--bg3); color: var(--text); }
-
-        /* ── Pattern tag ── */
-        .ptag {
-            display: inline-flex; align-items: center; gap: 3px;
-            padding: 3px 8px; border-radius: 6px;
-            font-size: 10px; font-weight: 700;
-            background: rgba(196,30,58,.15); color: #ff7a8a;
+        .toggle button.active { background: var(--bg4); color: var(--text); }
+        .strat-toggle { display: flex; background: var(--bg3); border-radius: 8px; padding: 3px; margin-bottom: 12px; gap: 3px; }
+        .strat-toggle button {
+            flex: 1; background: none; border: 1px solid transparent; color: var(--text2);
+            padding: 7px 10px; border-radius: 6px; cursor: pointer; font-size: 12px; font-weight: 500;
         }
-
-        /* ── Modals ── */
-        .overlay {
-            position: fixed; inset: 0;
-            background: rgba(0,0,0,.75);
-            z-index: 200;
-            display: flex; align-items: flex-end; justify-content: center;
+        .strat-toggle button.active { background: rgba(217,119,6,.15); color: #fbbf24; border-color: rgba(217,119,6,.4); }
+        .src-info {
+            background: var(--bg3); border-left: 3px solid #2563eb;
+            border-radius: 0 6px 6px 0; padding: 8px 10px;
+            font-size: 11px; color: var(--text2); font-family: monospace;
+            margin-bottom: 14px; line-height: 1.5; white-space: pre-line;
         }
-        .overlay.hidden { display: none; }
-        .sheet {
-            background: var(--bg2);
-            border-radius: 20px 20px 0 0;
-            width: 100%; max-width: 480px;
-            padding: 20px 20px 40px;
-            max-height: 88vh; overflow-y: auto;
+        .tcard { background: var(--bg2); border-radius: 10px; margin-bottom: 8px; border: 1px solid var(--border); overflow: hidden; }
+        .tcard-head { padding: 13px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .tcard-head:hover { background: var(--bg3); }
+        .tname { font-weight: 600; font-size: 14px; }
+        .tstats { display: flex; gap: 14px; margin-top: 3px; }
+        .tstat { font-size: 11px; color: var(--text2); }
+        .tstat span { color: var(--text); font-weight: 600; }
+        .tplayers { display: none; padding: 0 13px 13px; border-top: 1px solid var(--border); }
+        .tplayers.open { display: block; }
+        .prow { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
+        .prow:last-child { border-bottom: none; }
+        .prow-stats { color: var(--text2); font-size: 11px; }
+        .mcard { background: var(--bg2); border-radius: 10px; padding: 13px; margin-bottom: 8px; border: 1px solid var(--border); cursor: pointer; transition: border-color .15s; }
+        .mcard:hover { border-color: var(--red); }
+        .mcard.proveedor { cursor: default; border-color: rgba(37,99,235,.35); }
+        .mcard.proveedor:hover { border-color: rgba(37,99,235,.55); }
+        .mteams { display: flex; justify-content: space-between; align-items: center; text-align: center; }
+        .mteam { flex: 1; font-weight: 600; font-size: 13px; }
+        .mscore { font-size: 24px; font-weight: 900; color: var(--red); padding: 0 10px; }
+        .mmeta { display: flex; justify-content: space-between; margin-top: 7px; font-size: 11px; color: var(--text2); }
+        .btn { background: var(--red); color: #fff; border: none; border-radius: 8px; padding: 10px 14px; font-size: 13px; font-weight: 600; cursor: pointer; width: 100%; }
+        .btn:hover { background: var(--red2); }
+        .detail { display: none; margin-top: 14px; }
+        .detail.open { display: block; }
+        .score-banner {
+            background: linear-gradient(135deg, var(--bg3), var(--bg4));
+            border-radius: 12px; padding: 18px; text-align: center;
+            margin-bottom: 14px; border: 1px solid var(--border);
         }
-        .handle {
-            width: 36px; height: 4px;
-            background: var(--border); border-radius: 2px;
-            margin: 0 auto 18px;
+        .sb-teams { display: flex; justify-content: space-between; align-items: center; }
+        .sb-team { flex: 1; font-weight: 700; font-size: 14px; }
+        .sb-score { font-size: 34px; font-weight: 900; color: var(--red); padding: 0 14px; }
+        .sb-meta { font-size: 11px; color: var(--text2); margin-top: 6px; }
+        .sgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 14px; }
+        .sbox { background: var(--bg2); border-radius: 8px; padding: 9px; text-align: center; border: 1px solid var(--border); }
+        .sbox-v { font-size: 20px; font-weight: 700; color: var(--red); }
+        .sbox-l { font-size: 10px; color: var(--text2); margin-top: 1px; }
+        .subs { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
+        .sub-chip { padding: 4px 9px; border-radius: 20px; font-size: 11px; font-weight: 500; border: 1px solid; }
+        .eitem { display: flex; align-items: center; gap: 9px; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 12px; }
+        .eitem:last-child { border-bottom: none; }
+        .emin { font-weight: 700; color: var(--red); width: 38px; font-size: 11px; }
+        .edesc { flex: 1; }
+        .obs-log { margin-top: 14px; }
+        .obs-item { display: flex; gap: 9px; padding: 9px; background: var(--bg3); border-radius: 8px; margin-bottom: 7px; font-size: 11px; border-left: 3px solid; }
+        .obs-name { font-weight: 600; font-size: 12px; margin-bottom: 2px; }
+        .obs-msg { color: var(--text2); font-family: monospace; line-height: 1.4; word-break: break-word; }
+        .rtable { background: var(--bg2); border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+        .rhead { display: grid; grid-template-columns: 28px 1fr 38px 38px 38px 38px; padding: 9px 12px; font-size: 10px; color: var(--text2); text-transform: uppercase; letter-spacing: .5px; border-bottom: 1px solid var(--border); }
+        .rrow { display: grid; grid-template-columns: 28px 1fr 38px 38px 38px 38px; padding: 11px 12px; font-size: 12px; border-bottom: 1px solid var(--border); align-items: center; }
+        .rrow:last-child { border-bottom: none; }
+        .rpos { font-weight: 700; color: var(--red); }
+        .rv { text-align: center; }
+        .dec-arrow { text-align: center; font-size: 11px; color: var(--text2); margin: 3px 0; }
+        .dlayer { border-radius: 10px; padding: 13px; margin-bottom: 4px; }
+        .dl1 { background: rgba(37,99,235,.08); border: 1px solid rgba(37,99,235,.3); }
+        .dl2 { background: rgba(124,58,237,.08); border: 1px solid rgba(124,58,237,.3); }
+        .dl3 { background: rgba(219,39,119,.08); border: 1px solid rgba(219,39,119,.3); }
+        .dlabel { font-size: 11px; font-weight: 600; letter-spacing: .4px; margin-bottom: 7px; }
+        .dcontent { font-family: monospace; font-size: 12px; line-height: 1.6; }
+        .dec-code {
+            font-size: 11px; color: var(--text2); margin-top: 12px; padding: 9px;
+            background: rgba(219,39,119,.05); border-radius: 6px;
+            border: 1px solid rgba(219,39,119,.2); font-family: monospace; line-height: 1.6;
         }
-        .modal-ttl { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
-
-        /* ── Forms ── */
-        .fg { margin-bottom: 14px; }
-        .fl {
-            display: block;
-            font-size: 11px; font-weight: 700; color: var(--text2);
-            text-transform: uppercase; letter-spacing: .4px;
-            margin-bottom: 6px;
+        .mov { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.82); z-index: 1000; align-items: flex-end; }
+        .mov.open { display: flex; }
+        .modal { background: var(--bg2); border-radius: 16px 16px 0 0; padding: 20px 18px; width: 100%; max-height: 80vh; overflow-y: auto; border-top: 1px solid var(--border); }
+        .mtitle { font-size: 15px; font-weight: 700; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; }
+        .mclose { background: none; border: none; color: var(--text2); font-size: 19px; cursor: pointer; }
+        .fg { margin-bottom: 12px; }
+        .fg label { display: block; font-size: 11px; color: var(--text2); margin-bottom: 5px; text-transform: uppercase; letter-spacing: .5px; }
+        .fg select, .fg input {
+            width: 100%; background: var(--bg3); border: 1px solid var(--border);
+            border-radius: 8px; padding: 9px 11px; color: var(--text); font-size: 13px;
         }
-        .fi, .fs {
-            width: 100%;
-            padding: 11px 13px;
-            background: var(--bg3);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            color: var(--text); font-size: 14px;
-        }
-        .fi:focus, .fs:focus { outline: none; border-color: var(--red); }
-        select option { background: #1a1a1a; }
-
-        /* ── Misc ── */
-        .divider   { height: 8px; background: var(--bg); }
-        .empty     { text-align: center; padding: 40px 16px; color: var(--text3); }
-        .empty-ico { font-size: 44px; margin-bottom: 10px; }
-        .empty-txt { font-size: 14px; }
-        .loading   { text-align: center; padding: 32px; color: var(--text3); font-size: 13px; }
-        .hidden    { display: none !important; }
+        .fg select option { background: var(--bg2); }
+        .info-box { border-radius: 8px; padding: 9px 11px; margin-bottom: 13px; font-size: 11px; line-height: 1.5; }
+        .info-factory { background: rgba(124,58,237,.1); border: 1px solid rgba(124,58,237,.3); color: #a78bfa; }
+        .info-observer { background: rgba(5,150,105,.1); border: 1px solid rgba(5,150,105,.3); color: #34d399; }
+        .empty { text-align: center; padding: 28px 14px; color: var(--text2); }
+        .empty-ico { font-size: 36px; margin-bottom: 9px; }
+        .empty-txt { font-size: 13px; }
+        .loading { text-align: center; padding: 18px; color: var(--text2); font-size: 13px; }
+        .toast { position: fixed; top: 64px; left: 50%; transform: translateX(-50%); background: var(--bg3); border: 1px solid #34d399; border-radius: 8px; padding: 9px 14px; font-size: 12px; z-index: 2000; opacity: 0; transition: opacity .25s; white-space: nowrap; }
+        .toast.show { opacity: 1; }
     </style>
 </head>
 <body>
 
-<!-- ════════════════════════════════════════
-     PANTALLA: Partidos
-════════════════════════════════════════ -->
-<div id="sc-partidos">
-    <div class="header">
-        <div class="header-top">
-            <div>
-                <div class="app-title">Plataforma Deportiva</div>
-                <div class="app-sub">TPO · Software Design Patterns</div>
-            </div>
-            <span class="ptag">🔌 Adapter</span>
-        </div>
-        <div class="pills" id="pills-partidos">
-            <button class="pill active" onclick="setFuente('mundial','partidos')">🌍 Mundial</button>
-            <button class="pill"        onclick="setFuente('liga','partidos')">🏟️ Liga</button>
-        </div>
-    </div>
-    <div class="content" id="ct-partidos"></div>
-    <button class="fab" onclick="abrirCrear()" title="Crear partido">＋</button>
-</div>
+<header>
+    <h1>⚽ Plataforma Deportiva</h1>
+    <p>Distribución de información deportiva · Patrones de diseño</p>
+</header>
 
-<!-- ════════════════════════════════════════
-     PANTALLA: Detalle de partido
-════════════════════════════════════════ -->
-<div id="sc-detalle" class="hidden">
-    <div class="back-hdr">
-        <button class="back-btn" onclick="volverPartidos()">‹</button>
-        <span class="back-ttl" id="det-titulo">Partido</span>
-    </div>
-    <div class="content" id="ct-detalle"></div>
-</div>
+<main>
 
-<!-- ════════════════════════════════════════
-     PANTALLA: Equipos
-════════════════════════════════════════ -->
-<div id="sc-equipos" class="hidden">
-    <div class="header">
-        <div class="header-top">
-            <div>
-                <div class="app-title">Equipos</div>
-                <div class="app-sub">Plantillas y estadísticas</div>
-            </div>
-            <span class="ptag">🔌 Adapter</span>
+    <!-- TAB: EQUIPOS -->
+    <section id="tab-equipos" class="tab-content active">
+        <div class="stitle">Fuente de datos <span class="badge ba">🔌 ADAPTER</span></div>
+        <div class="toggle">
+            <button class="active" id="eq-src-mundial" onclick="setEqSrc('mundial')">📄 Mundial (TXT)</button>
+            <button id="eq-src-liga" onclick="setEqSrc('liga')">📊 Liga (CSV)</button>
         </div>
-        <div class="pills" id="pills-equipos">
-            <button class="pill active" onclick="setFuente('mundial','equipos')">🌍 Mundial</button>
-            <button class="pill"        onclick="setFuente('liga','equipos')">🏟️ Liga</button>
-        </div>
-    </div>
-    <div class="content" id="ct-equipos"></div>
-</div>
+        <div class="src-info" id="eq-src-info">AdaptadorTxtMundial lee el formato:
+Nombre|Año|Pts|GF|GC|Jugador/Posicion;Jugador/Posicion</div>
+        <div id="eq-container"><div class="loading">Cargando equipos…</div></div>
+    </section>
 
-<!-- ════════════════════════════════════════
-     PANTALLA: Ranking
-════════════════════════════════════════ -->
-<div id="sc-ranking" class="hidden">
-    <div class="header">
-        <div class="header-top">
-            <div>
-                <div class="app-title">Clasificaciones</div>
-                <div class="app-sub">Tabla de posiciones</div>
-            </div>
-            <span class="ptag">♟️ Strategy</span>
+    <!-- TAB: PARTIDOS -->
+    <section id="tab-partidos" class="tab-content">
+        <div class="stitle">Del proveedor <span class="badge ba">🔌 ADAPTER</span></div>
+        <div class="toggle">
+            <button class="active" id="pv-src-mundial" onclick="setPvSrc('mundial')">📄 Mundial</button>
+            <button id="pv-src-liga" onclick="setPvSrc('liga')">📊 Liga</button>
         </div>
-        <div class="pills" id="pills-ranking">
-            <button class="pill active" onclick="setFuente('mundial','ranking')">🌍 Mundial</button>
-            <button class="pill"        onclick="setFuente('liga','ranking')">🏟️ Liga</button>
-        </div>
-    </div>
-    <div class="toggle-row">
-        <button class="toggle-btn active" id="tog-puntos" onclick="setCriterio('puntos')">Por Puntos</button>
-        <button class="toggle-btn"        id="tog-goles"  onclick="setCriterio('goles')">Por Goles</button>
-    </div>
-    <div class="content" id="ct-ranking"></div>
-</div>
+        <div id="pv-container" style="margin-bottom:22px;"><div class="loading">Cargando…</div></div>
 
-<!-- ════════════════════════════════════════
-     PANTALLA: Reporte
-════════════════════════════════════════ -->
-<div id="sc-reporte" class="hidden">
-    <div class="header">
-        <div class="header-top">
-            <div>
-                <div class="app-title">Reporte</div>
-                <div class="app-sub">Patrón Decorator en acción</div>
-            </div>
-            <span class="ptag">🎨 Decorator</span>
+        <div class="stitle">
+            Mis partidos
+            <span class="badge bf">🏭 FACTORY</span>
+            <span class="badge bo">👁️ OBSERVER</span>
         </div>
-    </div>
-    <div class="content" id="ct-reporte"></div>
-</div>
+        <button class="btn" onclick="abrirCrear()" style="margin-bottom:10px;">+ Crear nuevo partido</button>
+        <div id="mp-container">
+            <div class="empty"><div class="empty-ico">📋</div><div class="empty-txt">No hay partidos creados todavía</div></div>
+        </div>
+        <div id="det-panel" class="detail"><div id="det-content"></div></div>
+    </section>
 
-<!-- ════════════════════════════════════════
-     BOTTOM NAV
-════════════════════════════════════════ -->
-<nav class="bottom-nav">
-    <button class="nav-btn active" id="nav-partidos" onclick="switchTab('partidos')">
-        <span class="ni">🏟️</span>Partidos
-    </button>
-    <button class="nav-btn" id="nav-equipos" onclick="switchTab('equipos')">
-        <span class="ni">👥</span>Equipos
-    </button>
-    <button class="nav-btn" id="nav-ranking" onclick="switchTab('ranking')">
-        <span class="ni">🏆</span>Ranking
-    </button>
-    <button class="nav-btn" id="nav-reporte" onclick="switchTab('reporte')">
-        <span class="ni">📊</span>Reporte
-    </button>
+    <!-- TAB: RANKING -->
+    <section id="tab-ranking" class="tab-content">
+        <div class="stitle">Tabla de posiciones <span class="badge bs">♟️ STRATEGY</span></div>
+        <div class="toggle">
+            <button class="active" id="rk-src-mundial" onclick="setRkSrc('mundial')">📄 Mundial</button>
+            <button id="rk-src-liga" onclick="setRkSrc('liga')">📊 Liga</button>
+        </div>
+        <div class="strat-toggle">
+            <button class="active" id="crit-puntos" onclick="setCriterio('puntos')">♟️ Por Puntos</button>
+            <button id="crit-goles" onclick="setCriterio('goles')">⚽ Por Goles</button>
+        </div>
+        <div id="rk-container"><div class="loading">Calculando ranking…</div></div>
+    </section>
+
+    <!-- TAB: REPORTE -->
+    <section id="tab-reporte" class="tab-content">
+        <div class="stitle">Reporte estadístico <span class="badge bd">🎨 DECORATOR</span></div>
+        <div class="fg" style="margin-bottom:14px;">
+            <label>Seleccionar partido (de Mis Partidos)</label>
+            <select id="rep-select" onchange="cargarReporte()">
+                <option value="">-- Seleccioná un partido --</option>
+            </select>
+        </div>
+        <div id="rep-container">
+            <div class="empty"><div class="empty-ico">📊</div><div class="empty-txt">Primero creá un partido en la pestaña Partidos</div></div>
+        </div>
+    </section>
+
+</main>
+
+<nav class="bnav">
+    <button class="active" onclick="setTab('equipos')"><span class="ico">🛡️</span>Equipos</button>
+    <button onclick="setTab('partidos')"><span class="ico">⚽</span>Partidos</button>
+    <button onclick="setTab('ranking')"><span class="ico">📊</span>Ranking</button>
+    <button onclick="setTab('reporte')"><span class="ico">📋</span>Reporte</button>
 </nav>
 
-<!-- ════════════════════════════════════════
-     MODAL: Crear partido
-════════════════════════════════════════ -->
-<div class="overlay hidden" id="mod-crear">
-    <div class="sheet">
-        <div class="handle"></div>
-        <div class="modal-ttl">Crear Partido</div>
-        <p style="font-size:12px;color:var(--text2);margin-bottom:14px">
-            <span class="ptag" style="margin-right:6px">🏭 Factory</span>
-            <span class="ptag">👁️ Observer</span><br><br>
-            Al crear el partido, se suscribirán automáticamente:<br>
-            <strong>Aficionado, AnalistaDeportivo, CasaApuesta, Periodista</strong>.
-        </p>
-        <div class="fg">
-            <label class="fl">Fuente de datos</label>
-            <div class="pills" style="padding-bottom:0">
-                <button class="pill active" id="mp-mundial" onclick="setFuenteModal('mundial')">🌍 Mundial</button>
-                <button class="pill"        id="mp-liga"    onclick="setFuenteModal('liga')">🏟️ Liga</button>
-            </div>
+<!-- MODAL: CREAR PARTIDO -->
+<div id="mov-crear" class="mov" onclick="closeMov('mov-crear',event)">
+    <div class="modal">
+        <div class="mtitle">Crear partido <button class="mclose" onclick="closeMov('mov-crear')">✕</button></div>
+        <div class="info-box info-factory">
+            🏭 Factory + 👁️ Observer: Al crear el partido se suscribirán automáticamente 4 observadores, uno creado por cada Factory: AficionadoFactory → Hincha Anónimo, AnalistaDeportivoFactory → Analista Pro, CasaApuestaFactory → BetSport, PeriodistaFactory → Reportero.
         </div>
         <div class="fg">
-            <label class="fl">Equipo Local</label>
-            <select class="fs" id="sel-local"></select>
+            <label>Fuente de datos</label>
+            <select id="cr-fuente" onchange="cargarEqModal()">
+                <option value="mundial">📄 Mundial (TXT)</option>
+                <option value="liga">📊 Liga (CSV)</option>
+            </select>
         </div>
         <div class="fg">
-            <label class="fl">Equipo Visitante</label>
-            <select class="fs" id="sel-visitante"></select>
+            <label>Equipo local</label>
+            <select id="cr-local"><option>Cargando…</option></select>
         </div>
-        <button class="btn btn-primary" onclick="crearPartido()">Crear Partido</button>
-        <button class="btn btn-ghost"   onclick="cerrarMod('mod-crear')">Cancelar</button>
+        <div class="fg">
+            <label>Equipo visitante</label>
+            <select id="cr-vis"><option>Cargando…</option></select>
+        </div>
+        <button class="btn" onclick="crearPartido()">Crear partido</button>
     </div>
 </div>
 
-<!-- ════════════════════════════════════════
-     MODAL: Agregar evento
-════════════════════════════════════════ -->
-<div class="overlay hidden" id="mod-evento">
-    <div class="sheet">
-        <div class="handle"></div>
-        <div class="modal-ttl">Agregar Evento</div>
-        <p style="font-size:12px;color:var(--text2);margin-bottom:14px">
-            <span class="ptag">👁️ Observer</span><br><br>
-            El evento notificará a todos los suscriptores del partido.
-        </p>
-        <div class="fg">
-            <label class="fl">Minuto</label>
-            <input class="fi" type="number" id="inp-min" min="1" max="120" value="1">
+<!-- MODAL: AGREGAR EVENTO -->
+<div id="mov-evento" class="mov" onclick="closeMov('mov-evento',event)">
+    <div class="modal">
+        <div class="mtitle">Agregar evento <button class="mclose" onclick="closeMov('mov-evento')">✕</button></div>
+        <div class="info-box info-observer">
+            👁️ Observer: Al confirmar, el partido llamará a <code>agregarEvento()</code> que internamente llama a <code>notificar()</code>, disparando <code>actualizar(EventoPartido)</code> en los 4 suscriptores.
         </div>
         <div class="fg">
-            <label class="fl">Tipo de Evento</label>
-            <select class="fs" id="sel-tipo">
+            <label>Minuto</label>
+            <input type="number" id="ev-min" value="1" min="1" max="120">
+        </div>
+        <div class="fg">
+            <label>Tipo de evento</label>
+            <select id="ev-tipo">
                 <option value="GOL">⚽ Gol</option>
                 <option value="TARJETA_AMARILLA">🟨 Tarjeta Amarilla</option>
                 <option value="TARJETA_ROJA">🟥 Tarjeta Roja</option>
@@ -519,575 +287,384 @@
             </select>
         </div>
         <div class="fg">
-            <label class="fl">Jugador</label>
-            <select class="fs" id="sel-jugador"></select>
+            <label>Jugador (autor del evento)</label>
+            <select id="ev-jugador"><option value="">— Sin autor —</option></select>
         </div>
-        <button class="btn btn-primary" onclick="agregarEvento()">Agregar Evento</button>
-        <button class="btn btn-ghost"   onclick="cerrarMod('mod-evento')">Cancelar</button>
+        <button class="btn" onclick="agregarEvento()">Confirmar → notificar suscriptores</button>
     </div>
 </div>
 
-<!-- ════════════════════════════════════════
-     JAVASCRIPT
-════════════════════════════════════════ -->
+<div id="toast" class="toast"></div>
+
 <script>
 const API = 'http://localhost:8080/api';
+let eqSrc='mundial', pvSrc='mundial', rkSrc='mundial', rkCrit='puntos';
+let misPartidos=[], detId=null, evModalId=null;
+const TABS=['equipos','partidos','ranking','reporte'];
 
-const S = {
-    tab:          'partidos',
-    fuente:       { partidos: 'mundial', equipos: 'mundial', ranking: 'mundial' },
-    criterio:     'puntos',
-    partidoId:    null,
-    fuenteModal:  'mundial',
-};
-
-const FLAGS = {
-    'Argentina':   '🇦🇷', 'Francia':  '🇫🇷', 'Croacia': '🇭🇷',
-    'Boca Juniors':'💛',  'River Plate':'❤️', 'Racing Club':'💙',
-};
-
-const EV_ICON = {
-    GOL:'⚽', TARJETA_AMARILLA:'🟨', TARJETA_ROJA:'🟥', PENAL:'🎯', SUSTITUCION:'🔄'
-};
-const EV_LABEL = {
-    GOL:'Gol', TARJETA_AMARILLA:'Tarjeta Amarilla',
-    TARJETA_ROJA:'Tarjeta Roja', PENAL:'Penal', SUSTITUCION:'Sustitución'
-};
-
-const flag = n => FLAGS[n] || '🏳️';
-
-/* ─── API helpers ─── */
-async function get(path) {
-    const r = await fetch(API + path);
-    if (!r.ok) throw new Error(await r.text());
-    return r.json();
-}
-async function post(path, body) {
-    const r = await fetch(API + path, {
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify(body)
+function setTab(t){
+    TABS.forEach((x,i)=>{
+        document.getElementById('tab-'+x).classList.toggle('active',x===t);
+        document.querySelectorAll('.bnav button')[i].classList.toggle('active',x===t);
     });
-    const json = await r.json();
-    if (!r.ok) throw new Error(json.error || 'Error');
-    return json;
+    if(t==='equipos') cargarEquipos();
+    if(t==='partidos'){ cargarProveedor(); cargarMisPartidos(); }
+    if(t==='ranking') cargarRanking();
+    if(t==='reporte') actualizarRepSelect();
 }
 
-/* ─── Navegación ─── */
-const TABS = ['partidos','equipos','ranking','reporte'];
-
-function switchTab(tab) {
-    S.tab = tab;
-    TABS.forEach(t => {
-        document.getElementById('sc-' + t).classList.toggle('hidden', t !== tab);
-        document.getElementById('nav-' + t).classList.toggle('active', t === tab);
-    });
-    document.getElementById('sc-detalle').classList.add('hidden');
-    renderTab(tab);
+// ── EQUIPOS ──
+const SRC_INFO={
+    mundial:'AdaptadorTxtMundial lee el formato:\nNombre|Año|Pts|GF|GC|Jugador/Posicion;...',
+    liga:   'AdaptadorCsvLiga lee el formato:\nNombre,Año,Pts,GF,GC,Jugador:Posicion;...'
+};
+function setEqSrc(s){
+    eqSrc=s;
+    ['mundial','liga'].forEach(x=>document.getElementById('eq-src-'+x).classList.toggle('active',x===s));
+    document.getElementById('eq-src-info').innerText=SRC_INFO[s];
+    cargarEquipos();
 }
-
-function renderTab(tab) {
-    if (tab === 'partidos') renderPartidos();
-    if (tab === 'equipos')  renderEquipos();
-    if (tab === 'ranking')  renderRanking();
-    if (tab === 'reporte')  renderReporte();
-}
-
-/* ─── Fuente / criterio ─── */
-function setFuente(fuente, ctx) {
-    S.fuente[ctx] = fuente;
-    document.querySelectorAll('#pills-' + ctx + ' .pill')
-        .forEach((p, i) => p.classList.toggle('active', i === (fuente === 'mundial' ? 0 : 1)));
-    renderTab(ctx);
-}
-
-function setCriterio(c) {
-    S.criterio = c;
-    document.getElementById('tog-puntos').classList.toggle('active', c === 'puntos');
-    document.getElementById('tog-goles').classList.toggle('active',  c === 'goles');
-    renderRanking();
-}
-
-/* ═══════════════════════════════════════
-   PARTIDOS
-═══════════════════════════════════════ */
-async function renderPartidos() {
-    const el = document.getElementById('ct-partidos');
-    el.innerHTML = '<div class="loading">Cargando…</div>';
-    try {
-        const fuente = S.fuente.partidos;
-        const [vivo, todos] = await Promise.all([
-            get('/partidos-en-vivo?fuente=' + fuente),
-            get('/partidos')
-        ]);
-
-        const srcLabel = fuente === 'mundial'
-            ? 'AdaptadorTxtMundial — formato TXT'
-            : 'AdaptadorCsvLiga — formato CSV';
-
-        let h = `<div class="banner">
-            <div class="banner-sub">${srcLabel}</div>
-            <div class="banner-main">Partidos en Vivo</div>
-        </div>`;
-
-        if (!vivo.partidos.length) {
-            h += empty('📭','Sin partidos en vivo');
-        } else {
-            vivo.partidos.forEach(p => { h += cardHtml(p, false); });
-        }
-
-        h += '<div class="divider"></div>';
-
-        const mios = todos.partidos.filter(p => p.fuente === fuente);
-        h += `<div class="stitle">
-            <span>Mis Partidos</span>
-            <span style="color:var(--text3);font-size:11px;font-weight:400">${mios.length} partido${mios.length !== 1 ? 's' : ''}</span>
-        </div>`;
-
-        if (!mios.length) {
-            h += empty('⚽','Usá el botón ＋ para crear un partido');
-        } else {
-            mios.forEach(p => { h += cardHtml(p, true); });
-        }
-
-        el.innerHTML = h;
-    } catch(e) {
-        el.innerHTML = empty('⚠️', e.message);
-    }
-}
-
-function cardHtml(p, clickable) {
-    const [gl, gv] = p.resultado.split('-');
-    const tieneGoles = p.resultado !== '0-0';
-    const onClick = clickable ? `onclick="verDetalle(${p.id})"` : '';
-    return `
-    <div class="match-card" ${onClick}>
-        <div class="match-teams">
-            <div class="team-block">
-                <div class="team-flag">${flag(p.local)}</div>
-                <div class="team-name">${p.local}</div>
-            </div>
-            <div class="match-mid">
-                <div class="score-row">
-                    <div class="score-num" ${!tieneGoles ? 'style="color:var(--text3)"':''}>
-                        ${tieneGoles ? gl : '—'}
+async function cargarEquipos(){
+    const c=document.getElementById('eq-container');
+    c.innerHTML='<div class="loading">Cargando equipos…</div>';
+    try{
+        const d=await get('/equipos?fuente='+eqSrc);
+        if(!d.equipos||!d.equipos.length){c.innerHTML=empty('🛡️','Sin equipos');return;}
+        c.innerHTML=d.equipos.map((e,i)=>`
+            <div class="tcard">
+                <div class="tcard-head" onclick="togP(${i})">
+                    <div>
+                        <div class="tname">${e.nombre}</div>
+                        <div class="tstats">
+                            <div class="tstat">Pts <span>${e.puntos}</span></div>
+                            <div class="tstat">GF <span>${e.gf}</span></div>
+                            <div class="tstat">GC <span>${e.gc}</span></div>
+                            <div class="tstat">DG <span>${e.dg>=0?'+':''}${e.dg}</span></div>
+                        </div>
                     </div>
-                    <div class="score-dash">-</div>
-                    <div class="score-num" ${!tieneGoles ? 'style="color:var(--text3)"':''}>
-                        ${tieneGoles ? gv : '—'}
-                    </div>
+                    <div style="font-size:11px;color:var(--text2);">Fundado ${e.anioFundacion} ▾</div>
                 </div>
-                <div class="match-lbl">${tieneGoles ? (clickable ? 'Puntuación final' : 'EN VIVO') : (clickable ? 'Sin eventos' : 'Por jugar')}</div>
-            </div>
-            <div class="team-block right">
-                <div class="team-flag">${flag(p.visitante)}</div>
-                <div class="team-name">${p.visitante}</div>
-            </div>
-        </div>
-        ${p.totalEventos > 0 ? `<div class="match-meta">${p.totalEventos} evento${p.totalEventos!==1?'s':''} · Tocá para ver detalle</div>` : ''}
-    </div>`;
+                <div class="tplayers" id="pl-${i}">
+                    ${e.jugadores&&e.jugadores.length
+                        ?e.jugadores.map(j=>`
+                            <div class="prow">
+                                <div><b>${j.nombre}</b> <span style="color:var(--text2);font-size:11px;">${j.posicion}</span></div>
+                                <div class="prow-stats">${j.goles>0?'⚽'+j.goles:''}${j.amarillas>0?' 🟨'+j.amarillas:''}${j.rojas>0?' 🟥'+j.rojas:''}</div>
+                            </div>`).join('')
+                        :'<div style="color:var(--text2);font-size:12px;padding:8px 0;">Sin jugadores registrados</div>'}
+                </div>
+            </div>`).join('');
+    }catch(e){c.innerHTML=errBox();}
+}
+function togP(i){document.getElementById('pl-'+i).classList.toggle('open');}
+
+// ── PROVEEDOR ──
+function setPvSrc(s){
+    pvSrc=s;
+    ['mundial','liga'].forEach(x=>document.getElementById('pv-src-'+x).classList.toggle('active',x===s));
+    cargarProveedor();
+}
+async function cargarProveedor(){
+    const c=document.getElementById('pv-container');
+    c.innerHTML='<div class="loading">Cargando…</div>';
+    try{
+        const d=await get('/partidos-en-vivo?fuente='+pvSrc);
+        if(!d.partidos||!d.partidos.length){c.innerHTML=empty('📭','Sin partidos en el proveedor');return;}
+        c.innerHTML=d.partidos.map(p=>`
+            <div class="mcard proveedor">
+                <div class="mteams">
+                    <div class="mteam">${p.local}</div>
+                    <div class="mscore">${p.resultado}</div>
+                    <div class="mteam">${p.visitante}</div>
+                </div>
+                <div class="mmeta">
+                    <span>Leído por el adaptador</span>
+                    <span class="badge ba">🔌 Adapter</span>
+                </div>
+            </div>`).join('');
+    }catch(e){c.innerHTML=errBox();}
 }
 
-/* ═══════════════════════════════════════
-   DETALLE
-═══════════════════════════════════════ */
-async function verDetalle(id) {
-    S.partidoId = id;
-    document.getElementById('sc-partidos').classList.add('hidden');
-    document.getElementById('sc-detalle').classList.remove('hidden');
-    document.getElementById('ct-detalle').innerHTML = '<div class="loading">Cargando…</div>';
-    await loadDetalle(id);
+// ── MIS PARTIDOS ──
+async function cargarMisPartidos(){
+    try{
+        const d=await get('/partidos');
+        misPartidos=d.partidos||[];
+        renderMisPartidos();
+    }catch(e){}
 }
-
-async function loadDetalle(id) {
-    const el = document.getElementById('ct-detalle');
-    try {
-        const p = await get('/partidos/' + id);
-        document.getElementById('det-titulo').textContent = p.local + ' vs ' + p.visitante;
-        const [gl, gv] = p.resultado.split('-');
-
-        let h = `
-        <div class="score-banner">
-            <div class="sb-teams">
-                <div class="sb-team">
-                    <div class="sb-flag">${flag(p.local)}</div>
-                    <div class="sb-name">${p.local}</div>
-                </div>
-                <div class="sb-scores">
-                    <div class="sb-num">${gl}</div>
-                    <div class="sb-dash">-</div>
-                    <div class="sb-num">${gv}</div>
-                </div>
-                <div class="sb-team">
-                    <div class="sb-flag">${flag(p.visitante)}</div>
-                    <div class="sb-name">${p.visitante}</div>
-                </div>
+function renderMisPartidos(){
+    const c=document.getElementById('mp-container');
+    if(!misPartidos.length){c.innerHTML=empty('📋','No hay partidos creados todavía');return;}
+    c.innerHTML=misPartidos.map(p=>`
+        <div class="mcard" onclick="verDet(${p.id})">
+            <div class="mteams">
+                <div class="mteam">${p.local}</div>
+                <div class="mscore">${p.resultado}</div>
+                <div class="mteam">${p.visitante}</div>
             </div>
-        </div>
-
-        <div class="stats-band">
-            <div class="sbox">
-                <div class="sbox-val">⚽ ${p.estadisticaLocal.goles}</div>
-                <div class="sbox-lbl">${p.local}</div>
-            </div>
-            <div class="sep-vert"></div>
-            <div class="sbox">
-                <div class="sbox-val" style="font-size:15px">🟨${p.estadisticaLocal.amarillas} 🟥${p.estadisticaLocal.rojas}</div>
-                <div class="sbox-lbl">Tarjetas Local</div>
-            </div>
-        </div>
-        <div class="stats-band" style="background:var(--bg)">
-            <div class="sbox">
-                <div class="sbox-val">⚽ ${p.estadisticaVisitante.goles}</div>
-                <div class="sbox-lbl">${p.visitante}</div>
-            </div>
-            <div class="sep-vert"></div>
-            <div class="sbox">
-                <div class="sbox-val" style="font-size:15px">🟨${p.estadisticaVisitante.amarillas} 🟥${p.estadisticaVisitante.rojas}</div>
-                <div class="sbox-lbl">Tarjetas Visitante</div>
-            </div>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="stitle">
-            <span>Suscriptores</span>
-            <span class="ptag">🏭 Factory + 👁️ Observer</span>
-        </div>
-        <div class="subs-row">
-            ${p.suscriptores.map(s=>`<span class="chip">${s}</span>`).join('')}
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="stitle">
-            <span>Línea de Tiempo</span>
-            <span style="color:var(--text3);font-size:11px;font-weight:400">${p.eventos.length} evento${p.eventos.length!==1?'s':''}</span>
-        </div>`;
-
-        if (!p.eventos.length) {
-            h += `<div class="empty" style="padding:20px">
-                <div class="empty-ico" style="font-size:32px">📋</div>
-                <div class="empty-txt" style="font-size:13px">Sin eventos todavía</div>
-            </div>`;
-        } else {
-            h += '<div class="events-list">';
-            p.eventos.forEach(ev => {
-                const esLocal = ev.equipo === p.local;
-                h += `
-                <div class="ev-item">
-                    <div class="ev-min">${ev.minuto}'</div>
-                    <div class="ev-icon">${EV_ICON[ev.tipo]||'•'}</div>
-                    <div class="ev-info">
-                        <div class="ev-player">${ev.autor||'—'}</div>
-                        <div class="ev-detail">${EV_LABEL[ev.tipo]} · ${ev.equipo||''}</div>
-                    </div>
-                    <div class="ev-side">${esLocal?'LOCAL':'VISIT.'}</div>
-                </div>`;
-            });
-            h += '</div>';
-        }
-
-        h += '<div class="divider"></div>';
-
-        h += `<div class="stitle">${flag(p.local)} ${p.local}</div>`;
-        h += jugadoresHtml(p.jugadoresLocal);
-        h += `<div class="stitle">${flag(p.visitante)} ${p.visitante}</div>`;
-        h += jugadoresHtml(p.jugadoresVisitante);
-
-        h += `<button class="btn btn-primary" onclick="abrirEvento(${id})">＋ Agregar Evento</button>`;
-        h += `<button class="btn btn-ghost"   onclick="irAReporte(${id})">📊 Ver Reporte Avanzado</button>`;
-        h += '<div style="height:8px"></div>';
-
-        el.innerHTML = h;
-    } catch(e) {
-        el.innerHTML = empty('⚠️', e.message);
-    }
-}
-
-function jugadoresHtml(lista) {
-    if (!lista || !lista.length) return '<div style="padding:6px 16px 12px;color:var(--text3);font-size:12px">Sin jugadores registrados</div>';
-    return lista.map(j => `
-        <div class="player-row">
-            <div class="p-pos">${j.posicion}</div>
-            <div class="p-name">${j.nombre}</div>
-            <div class="p-stats">
-                ${j.goles     > 0 ? `<span>⚽${j.goles}</span>`     : ''}
-                ${j.amarillas > 0 ? `<span>🟨${j.amarillas}</span>` : ''}
-                ${j.rojas     > 0 ? `<span>🟥${j.rojas}</span>`     : ''}
-                ${j.goles===0&&j.amarillas===0&&j.rojas===0 ? '<span style="color:var(--text3)">—</span>' : ''}
+            <div class="mmeta">
+                <span>${p.totalEventos} evento${p.totalEventos!==1?'s':''}</span>
+                <span>${p.fuente==='liga'?'📊 Liga':'📄 Mundial'}</span>
             </div>
         </div>`).join('');
 }
 
-function volverPartidos() {
-    S.partidoId = null;
-    document.getElementById('sc-detalle').classList.add('hidden');
-    document.getElementById('sc-partidos').classList.remove('hidden');
+async function verDet(id){
+    detId=id;
+    const panel=document.getElementById('det-panel');
+    const cont=document.getElementById('det-content');
+    panel.classList.add('open');
+    cont.innerHTML='<div class="loading">Cargando…</div>';
+    panel.scrollIntoView({behavior:'smooth'});
+    try{
+        const p=await get('/partidos/'+id);
+        renderDet(p);
+    }catch(e){cont.innerHTML=errBox();}
 }
 
-/* ═══════════════════════════════════════
-   EQUIPOS
-═══════════════════════════════════════ */
-async function renderEquipos() {
-    const el = document.getElementById('ct-equipos');
-    el.innerHTML = '<div class="loading">Cargando…</div>';
-    try {
-        const fuente = S.fuente.equipos;
-        const data = await get('/equipos?fuente=' + fuente);
-        const adaptador = fuente === 'mundial' ? 'AdaptadorTxtMundial' : 'AdaptadorCsvLiga';
+const TIPO_ICO={GOL:'⚽',TARJETA_AMARILLA:'🟨',TARJETA_ROJA:'🟥',PENAL:'🎯',SUSTITUCION:'🔄'};
+const TIPO_LBL={GOL:'Gol',TARJETA_AMARILLA:'Tarjeta Amarilla',TARJETA_ROJA:'Tarjeta Roja',PENAL:'Penal',SUSTITUCION:'Sustitución'};
 
-        let h = `<div class="banner">
-            <div class="banner-sub">${adaptador}</div>
-            <div class="banner-main">${data.equipos.length} Equipos cargados</div>
-        </div>`;
-
-        data.equipos.forEach(e => {
-            h += `
-            <div class="team-card">
-                <div class="tc-head" onclick="togglePlantilla(this)">
-                    <div class="team-flag" style="width:46px;height:46px;font-size:25px">${flag(e.nombre)}</div>
-                    <div class="tc-info">
-                        <div class="tc-name">${e.nombre}</div>
-                        <div class="tc-sub">Fundado ${e.anioFundacion} · ${e.jugadores.length} jugadores</div>
-                        <div class="tc-stats">
-                            <div class="tc-stat">PTS <b>${e.puntos}</b></div>
-                            <div class="tc-stat">GF <b>${e.gf}</b></div>
-                            <div class="tc-stat">GC <b>${e.gc}</b></div>
-                            <div class="tc-stat">DG <b>${e.dg>=0?'+':''}${e.dg}</b></div>
-                        </div>
-                    </div>
-                    <div class="tc-arrow">›</div>
-                </div>
-                <div class="tc-players">
-                    ${!e.jugadores.length
-                        ? '<div style="padding:10px 16px;color:var(--text3);font-size:12px">Sin jugadores</div>'
-                        : e.jugadores.map(j=>`
-                            <div class="player-row">
-                                <div class="p-pos">${j.posicion}</div>
-                                <div class="p-name">${j.nombre}</div>
-                                <div class="p-stats">
-                                    ${j.goles>0?`<span>⚽${j.goles}</span>`:''}
-                                    ${j.amarillas>0?`<span>🟨</span>`:''}
-                                    ${j.rojas>0?`<span>🟥</span>`:''}
-                                </div>
-                            </div>`).join('')}
-                </div>
-            </div>`;
-        });
-
-        el.innerHTML = h;
-    } catch(e) {
-        el.innerHTML = empty('⚠️', e.message);
-    }
-}
-
-function togglePlantilla(hdr) {
-    const body = hdr.nextElementSibling;
-    const arrow = hdr.querySelector('.tc-arrow');
-    const open = body.style.display === 'block';
-    body.style.display = open ? 'none' : 'block';
-    arrow.textContent = open ? '›' : '‹';
-}
-
-/* ═══════════════════════════════════════
-   RANKING
-═══════════════════════════════════════ */
-async function renderRanking() {
-    const el = document.getElementById('ct-ranking');
-    el.innerHTML = '<div class="loading">Cargando…</div>';
-    try {
-        const { fuente, criterio } = { fuente: S.fuente.ranking, criterio: S.criterio };
-        const data = await get(`/ranking?fuente=${fuente}&criterio=${criterio}`);
-        const clsNombre = criterio === 'puntos' ? 'CriterioPorPuntos' : 'CriterioPorGoles';
-        const posClasses = ['gold','silver','bronze'];
-
-        let h = `<div class="banner">
-            <div class="banner-sub">${clsNombre} — Patrón Strategy</div>
-            <div class="banner-main">${fuente === 'mundial' ? 'Copa Mundial' : 'Liga Local'}</div>
-        </div>
-        <div class="rtable">
-            <div class="rtable-head">
-                <div>#</div><div>Equipo</div>
-                <div style="text-align:center">PTS</div>
-                <div style="text-align:center">GF</div>
-                <div style="text-align:center">GC</div>
-                <div style="text-align:center">DG</div>
-            </div>`;
-
-        data.ranking.forEach(r => {
-            const pc = posClasses[r.posicion - 1] || '';
-            const dgColor = r.dg > 0 ? '#5eff7a' : r.dg < 0 ? '#ff6b7a' : 'var(--text3)';
-            h += `
-            <div class="rtable-row">
-                <div class="r-pos ${pc}">${r.posicion}</div>
-                <div class="r-team">${flag(r.equipo)} ${r.equipo}</div>
-                <div class="r-pts">${r.puntos}</div>
-                <div class="r-num">${r.gf}</div>
-                <div class="r-num">${r.gc}</div>
-                <div class="r-num" style="color:${dgColor}">${r.dg>0?'+':''}${r.dg}</div>
-            </div>`;
-        });
-
-        h += '</div>';
-        el.innerHTML = h;
-    } catch(e) {
-        el.innerHTML = empty('⚠️', e.message);
-    }
-}
-
-/* ═══════════════════════════════════════
-   REPORTE
-═══════════════════════════════════════ */
-async function renderReporte() {
-    const el = document.getElementById('ct-reporte');
-    try {
-        const data = await get('/partidos');
-        if (!data.partidos.length) {
-            el.innerHTML = `<div class="empty" style="margin-top:32px">
-                <div class="empty-ico">📊</div>
-                <div class="empty-txt">Creá un partido primero para generar reportes</div>
-            </div>`;
-            return;
-        }
-        el.innerHTML = `
-        <div style="padding:14px 16px">
-            <label class="fl">Seleccionar Partido</label>
-            <select class="fs" id="rep-sel" onchange="cargarReporte(this.value)">
-                <option value="">— elegí un partido —</option>
-                ${data.partidos.map(p=>`<option value="${p.id}">${p.local} vs ${p.visitante} (${p.resultado})</option>`).join('')}
-            </select>
-        </div>
-        <div id="rep-resultado"></div>`;
-    } catch(e) {
-        el.innerHTML = empty('⚠️', e.message);
-    }
-}
-
-async function cargarReporte(id) {
-    if (!id) return;
-    const el = document.getElementById('rep-resultado');
-    el.innerHTML = '<div class="loading">Generando reporte…</div>';
-    try {
-        const data = await get('/reporte/' + id);
-        const lineas = data.reporte.split('\n');
-        const base      = lineas[0] || '';
-        const promedios = lineas.find(l => l.includes('Promedio')) || '';
-        const top       = lineas.find(l => l.includes('Goleador')) || '';
-
-        el.innerHTML = `
-        <div class="rep-card">
-            <p style="font-size:12px;color:var(--text2);margin-bottom:12px">
-                Cada capa del Decorator agrega información al reporte anterior.
-            </p>
-            <div class="layer l1">
-                <div class="layer-lbl">🔵 ReporteBasico</div>
-                <div class="layer-body">${base}</div>
+function renderDet(p){
+    const cont=document.getElementById('det-content');
+    const eventos=p.eventos||[];
+    cont.innerHTML=`
+        <div class="score-banner">
+            <div class="sb-teams">
+                <div class="sb-team">${p.local}</div>
+                <div class="sb-score">${p.resultado}</div>
+                <div class="sb-team">${p.visitante}</div>
             </div>
-            ${promedios ? `<div class="layer l2">
-                <div class="layer-lbl">🟣 + ReporteConPromedios</div>
-                <div class="layer-body">${promedios.trim()}</div>
-            </div>` : ''}
-            ${top ? `<div class="layer l3">
-                <div class="layer-lbl">🟢 + ReporteConTopJugadores</div>
-                <div class="layer-body">${top.trim()}</div>
-            </div>` : ''}
-        </div>`;
-    } catch(e) {
-        el.innerHTML = empty('⚠️', e.message);
-    }
+            <div class="sb-meta">${p.fuente==='liga'?'📊 Liga (CSV)':'📄 Mundial (TXT)'}</div>
+        </div>
+        <div class="sgrid">
+            <div class="sbox"><div class="sbox-v">${p.estadisticaLocal.goles}</div><div class="sbox-l">${p.local} — Goles</div></div>
+            <div class="sbox"><div class="sbox-v">${p.estadisticaVisitante.goles}</div><div class="sbox-l">${p.visitante} — Goles</div></div>
+            <div class="sbox"><div class="sbox-v">${p.estadisticaLocal.amarillas+p.estadisticaVisitante.amarillas}</div><div class="sbox-l">Amarillas</div></div>
+            <div class="sbox"><div class="sbox-v">${p.estadisticaLocal.rojas+p.estadisticaVisitante.rojas}</div><div class="sbox-l">Rojas</div></div>
+        </div>
+        <div class="stitle" style="margin-bottom:8px;">
+            Suscriptores activos <span class="badge bf">🏭 Factory</span> <span class="badge bo">👁️ Observer</span>
+        </div>
+        <div class="subs" style="margin-bottom:14px;">
+            <span class="sub-chip" style="color:#34d399;border-color:rgba(52,211,153,.4);background:rgba(52,211,153,.08);">😊 Hincha Anónimo</span>
+            <span class="sub-chip" style="color:#60a5fa;border-color:rgba(96,165,250,.4);background:rgba(96,165,250,.08);">📈 Analista Pro</span>
+            <span class="sub-chip" style="color:#fbbf24;border-color:rgba(251,191,36,.4);background:rgba(251,191,36,.08);">💰 BetSport</span>
+            <span class="sub-chip" style="color:#f472b6;border-color:rgba(244,114,182,.4);background:rgba(244,114,182,.08);">📰 Reportero</span>
+        </div>
+        <div class="stitle" style="margin-bottom:8px;">Eventos del partido</div>
+        ${eventos.length
+            ?`<div style="margin-bottom:14px;">${eventos.map(e=>`
+                <div class="eitem">
+                    <div class="emin">min.${e.minuto}</div>
+                    <div style="font-size:15px;">${TIPO_ICO[e.tipo]||'•'}</div>
+                    <div class="edesc"><b>${TIPO_LBL[e.tipo]||e.tipo}</b>${e.autor&&e.autor!=='null'?` — <span style="color:var(--text2)">${e.autor}</span>`:''}${e.equipo&&e.equipo!=='null'?` <span style="font-size:10px;color:var(--text2);">(${e.equipo})</span>`:''}</div>
+                </div>`).join('')}</div>`
+            :'<div style="color:var(--text2);font-size:12px;margin-bottom:14px;">Sin eventos aún</div>'}
+        <button class="btn" onclick="abrirEvento(${p.id})" style="margin-bottom:18px;">+ Agregar evento al partido</button>
+        <div id="obs-log"></div>`;
 }
 
-async function irAReporte(id) {
-    switchTab('reporte');
-    await renderReporte();
-    const sel = document.getElementById('rep-sel');
-    if (sel) { sel.value = id; await cargarReporte(id); }
+// ── CREAR PARTIDO ──
+async function cargarEqModal(){
+    const f=document.getElementById('cr-fuente').value;
+    const ls=document.getElementById('cr-local'),vs=document.getElementById('cr-vis');
+    ls.innerHTML=vs.innerHTML='<option>Cargando…</option>';
+    try{
+        const d=await get('/equipos?fuente='+f);
+        const opts=d.equipos.map((e,i)=>`<option value="${i}">${e.nombre}</option>`).join('');
+        ls.innerHTML=opts; vs.innerHTML=opts;
+        if(d.equipos.length>1) vs.selectedIndex=1;
+    }catch(e){ls.innerHTML=vs.innerHTML='<option>Error al cargar</option>';}
+}
+function abrirCrear(){
+    document.getElementById('mov-crear').classList.add('open');
+    cargarEqModal();
+}
+async function crearPartido(){
+    const f=document.getElementById('cr-fuente').value;
+    const li=parseInt(document.getElementById('cr-local').value);
+    const vi=parseInt(document.getElementById('cr-vis').value);
+    if(li===vi){toast('Los equipos deben ser diferentes');return;}
+    try{
+        const p=await post('/partidos',{fuente:f,localIdx:li,visitanteIdx:vi});
+        closeMov('mov-crear');
+        await cargarMisPartidos();
+        actualizarRepSelect();
+        toast('✅ Partido creado con 4 suscriptores (Observer+Factory)');
+        if(p.id) setTimeout(()=>verDet(p.id),350);
+    }catch(e){toast('Error al crear el partido');}
 }
 
-/* ═══════════════════════════════════════
-   MODAL: Crear partido
-═══════════════════════════════════════ */
-async function abrirCrear() {
-    S.fuenteModal = S.fuente.partidos;
-    actualizarPillsModal(S.fuenteModal);
-    await cargarEquiposModal(S.fuenteModal);
-    document.getElementById('mod-crear').classList.remove('hidden');
+// ── AGREGAR EVENTO ──
+async function abrirEvento(id){
+    evModalId=id;
+    const sel=document.getElementById('ev-jugador');
+    sel.innerHTML='<option value="">— Sin autor —</option>';
+    try{
+        const p=await get('/partidos/'+id);
+        const todos=[...(p.jugadoresLocal||[]),...(p.jugadoresVisitante||[])];
+        sel.innerHTML='<option value="">— Sin autor —</option>'+
+            todos.map(j=>`<option value="${j.nombre}">${j.nombre} (${j.posicion})</option>`).join('');
+    }catch(e){}
+    document.getElementById('mov-evento').classList.add('open');
+}
+async function agregarEvento(){
+    const minuto=parseInt(document.getElementById('ev-min').value);
+    const tipo=document.getElementById('ev-tipo').value;
+    const jug=document.getElementById('ev-jugador').value;
+    const body={minuto,tipo};
+    if(jug) body.jugadorNombre=jug;
+    try{
+        const p=await post('/partidos/'+evModalId+'/eventos',body);
+        closeMov('mov-evento');
+        await cargarMisPartidos();
+        renderDet(p);
+        mostrarObsLog({minuto,tipo,jugadorNombre:jug});
+        toast('👁️ 4 suscriptores notificados');
+    }catch(e){toast('Error al agregar el evento');}
+}
+function mostrarObsLog(ev){
+    const log=document.getElementById('obs-log');
+    if(!log) return;
+    const autor=ev.jugadorNombre||'jugador';
+    const t=ev.tipo, m=ev.minuto;
+    const obs=[
+        {col:'#34d399',ico:'😊',clase:'AficionadoFactory → Aficionado',
+         msg:`[Hincha] Hincha Anónimo sigue el partido: ${t} al minuto ${m}`},
+        {col:'#60a5fa',ico:'📈',clase:'AnalistaDeportivoFactory → AnalistaDeportivo',
+         msg:`[ANALISIS] Analista Pro evalua el impacto del evento ${t} (${autor}, min ${m}) en el desarrollo tactico del partido.`},
+        {col:'#fbbf24',ico:'💰',clase:'CasaApuestaFactory → CasaApuesta',
+         msg:`[CASA DE APUESTAS] BetSport recalcula cuotas tras ${t} al minuto ${m}.`},
+        {col:'#f472b6',ico:'📰',clase:'PeriodistaFactory → Periodista',
+         msg:`[PERIODISTA] Reportero anota para la cronica: '${t} de ${autor} (min ${m})'.`}
+    ];
+    log.innerHTML=`
+        <div class="stitle" style="margin-bottom:8px;">Notificaciones Observer <span class="badge bo">👁️</span></div>
+        ${obs.map(o=>`
+            <div class="obs-item" style="border-color:${o.col};">
+                <div style="font-size:18px;">${o.ico}</div>
+                <div>
+                    <div class="obs-name" style="color:${o.col};">${o.clase}</div>
+                    <div class="obs-msg">${o.msg}</div>
+                </div>
+            </div>`).join('')}`;
+    log.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 
-function setFuenteModal(f) {
-    S.fuenteModal = f;
-    actualizarPillsModal(f);
-    cargarEquiposModal(f);
+// ── RANKING ──
+function setRkSrc(s){
+    rkSrc=s;
+    ['mundial','liga'].forEach(x=>document.getElementById('rk-src-'+x).classList.toggle('active',x===s));
+    cargarRanking();
+}
+function setCriterio(c){
+    rkCrit=c;
+    ['puntos','goles'].forEach(x=>document.getElementById('crit-'+x).classList.toggle('active',x===c));
+    cargarRanking();
+}
+async function cargarRanking(){
+    const c=document.getElementById('rk-container');
+    c.innerHTML='<div class="loading">Calculando ranking…</div>';
+    try{
+        const d=await get('/ranking?fuente='+rkSrc+'&criterio='+rkCrit);
+        if(!d.ranking||!d.ranking.length){c.innerHTML=empty('📊','Sin datos de ranking');return;}
+        const clbl=rkCrit==='puntos'
+            ?'Usando CriterioPorPuntos — ordena por puntos (mayor a menor)'
+            :'Usando CriterioPorGoles — ordena por goles a favor (mayor a menor)';
+        c.innerHTML=`
+            <div style="font-size:11px;color:#fbbf24;margin-bottom:10px;padding:7px 10px;background:rgba(217,119,6,.1);border-radius:6px;border:1px solid rgba(217,119,6,.3);">
+                ♟️ ${clbl}
+            </div>
+            <div class="rtable">
+                <div class="rhead"><div>#</div><div>Equipo</div><div class="rv">Pts</div><div class="rv">GF</div><div class="rv">GC</div><div class="rv">DG</div></div>
+                ${d.ranking.map(r=>`
+                    <div class="rrow">
+                        <div class="rpos">${r.posicion}</div>
+                        <div style="font-weight:500;">${r.equipo}</div>
+                        <div class="rv" style="font-weight:700;color:var(--red);">${r.puntos}</div>
+                        <div class="rv">${r.gf}</div>
+                        <div class="rv">${r.gc}</div>
+                        <div class="rv">${r.dg>=0?'+':''}${r.dg}</div>
+                    </div>`).join('')}
+            </div>`;
+    }catch(e){c.innerHTML=errBox();}
 }
 
-function actualizarPillsModal(f) {
-    document.getElementById('mp-mundial').classList.toggle('active', f==='mundial');
-    document.getElementById('mp-liga').classList.toggle('active',    f==='liga');
+// ── REPORTE ──
+async function actualizarRepSelect(){
+    const sel=document.getElementById('rep-select');
+    const prev=sel.value;
+    try{
+        const d=await get('/partidos');
+        const ps=d.partidos||[];
+        sel.innerHTML='<option value="">-- Seleccioná un partido --</option>'+
+            ps.map(p=>`<option value="${p.id}">${p.local} vs ${p.visitante} (${p.resultado})</option>`).join('');
+        if(prev&&ps.find(p=>String(p.id)===prev)){sel.value=prev;cargarReporte();}
+    }catch(e){}
+}
+async function cargarReporte(){
+    const id=document.getElementById('rep-select').value;
+    const c=document.getElementById('rep-container');
+    if(!id){c.innerHTML=empty('📊','Seleccioná un partido para ver su reporte');return;}
+    c.innerHTML='<div class="loading">Generando reporte…</div>';
+    try{
+        const d=await get('/reporte/'+id);
+        const lineas=d.reporte.split('\n').map(l=>l.trim()).filter(l=>l);
+        const c1=lineas[0]||'';
+        const c2=lineas.find(l=>l.includes('Promedio'))||'(sin goles aún)';
+        const c3=lineas.find(l=>l.includes('Goleador'))||'(sin goles aún)';
+        c.innerHTML=`
+            <div style="font-size:12px;color:var(--text2);margin-bottom:12px;">El Decorator apila clases: cada una llama a <code>reporte.generar()</code> del decorado y agrega su propia información.</div>
+            <div class="dlayer dl1">
+                <div class="dlabel" style="color:#60a5fa;">🎨 Capa 1 — ReporteBasico</div>
+                <div class="dcontent">${c1}</div>
+            </div>
+            <div class="dec-arrow">▼ ReporteConPromedios(reporteBasico, partido)</div>
+            <div class="dlayer dl2">
+                <div class="dlabel" style="color:#a78bfa;">🎨 Capa 2 — ReporteConPromedios</div>
+                <div class="dcontent">${c1}<br><span style="color:#a78bfa;">${c2}</span></div>
+            </div>
+            <div class="dec-arrow">▼ ReporteConTopJugadores(reporteConPromedios, partido)</div>
+            <div class="dlayer dl3">
+                <div class="dlabel" style="color:#f472b6;">🎨 Capa 3 — ReporteConTopJugadores</div>
+                <div class="dcontent">${c1}<br><span style="color:#a78bfa;">${c2}</span><br><span style="color:#f472b6;">${c3}</span></div>
+            </div>
+            <div class="dec-code">
+                <b style="color:#f472b6;">PlataformaDeportiva.generarReporteAvanzado():</b><br>
+                new ReporteConTopJugadores(<br>
+                &nbsp;&nbsp;new ReporteConPromedios(<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;new ReporteBasico(partido),<br>
+                &nbsp;&nbsp;partido), partido).generar()
+            </div>`;
+    }catch(e){c.innerHTML=errBox();}
 }
 
-async function cargarEquiposModal(fuente) {
-    try {
-        const data = await get('/equipos?fuente=' + fuente);
-        const opts = data.equipos.map(e=>`<option value="${e.idx}">${flag(e.nombre)} ${e.nombre}</option>`).join('');
-        document.getElementById('sel-local').innerHTML      = opts;
-        document.getElementById('sel-visitante').innerHTML  = opts;
-        if (data.equipos.length > 1) document.getElementById('sel-visitante').selectedIndex = 1;
-    } catch(e) { console.error(e); }
+// ── HELPERS ──
+async function get(path){
+    const r=await fetch(API+path);
+    if(!r.ok) throw new Error(r.status);
+    return r.json();
 }
-
-async function crearPartido() {
-    const li = parseInt(document.getElementById('sel-local').value);
-    const vi = parseInt(document.getElementById('sel-visitante').value);
-    if (li === vi) { alert('El local y el visitante deben ser distintos'); return; }
-    try {
-        await post('/partidos', { fuente: S.fuenteModal, localIdx: li, visitanteIdx: vi });
-        cerrarMod('mod-crear');
-        setFuente(S.fuenteModal, 'partidos');
-    } catch(e) { alert('Error: ' + e.message); }
+async function post(path,body){
+    const r=await fetch(API+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+    if(!r.ok) throw new Error(r.status);
+    return r.json();
 }
-
-/* ═══════════════════════════════════════
-   MODAL: Agregar evento
-═══════════════════════════════════════ */
-async function abrirEvento(id) {
-    S.partidoId = id;
-    try {
-        const p = await get('/partidos/' + id);
-        const jugadores = [...p.jugadoresLocal, ...p.jugadoresVisitante];
-        document.getElementById('sel-jugador').innerHTML =
-            jugadores.map(j=>`<option value="${j.nombre}">${j.nombre} (${j.posicion})</option>`).join('');
-        document.getElementById('inp-min').value = 1;
-        document.getElementById('mod-evento').classList.remove('hidden');
-    } catch(e) { alert('Error cargando jugadores'); }
+function closeMov(id,e){
+    if(e&&e.target!==document.getElementById(id)) return;
+    document.getElementById(id).classList.remove('open');
 }
-
-async function agregarEvento() {
-    const id     = S.partidoId;
-    const minuto = parseInt(document.getElementById('inp-min').value);
-    const tipo   = document.getElementById('sel-tipo').value;
-    const jugadorNombre = document.getElementById('sel-jugador').value;
-    if (!minuto || minuto < 1) { alert('Ingresá un minuto válido'); return; }
-    try {
-        await post('/partidos/' + id + '/eventos', { minuto, tipo, jugadorNombre });
-        cerrarMod('mod-evento');
-        await loadDetalle(id);
-    } catch(e) { alert('Error: ' + e.message); }
+function toast(msg){
+    const t=document.getElementById('toast');
+    t.textContent=msg; t.classList.add('show');
+    setTimeout(()=>t.classList.remove('show'),3000);
 }
+function empty(ico,txt){return`<div class="empty"><div class="empty-ico">${ico}</div><div class="empty-txt">${txt}</div></div>`;}
+function errBox(){return empty('⚠️','No se pudo conectar con el servidor.<br>Inicialo con Ctrl+Shift+P → Run Task → Iniciar Servidor Web');}
 
-/* ─── Utilidades ─── */
-function cerrarMod(id) { document.getElementById(id).classList.add('hidden'); }
-
-function empty(ico, txt) {
-    return `<div class="empty"><div class="empty-ico">${ico}</div><div class="empty-txt">${txt}</div></div>`;
-}
-
-document.querySelectorAll('.overlay').forEach(ov =>
-    ov.addEventListener('click', e => { if (e.target===ov) ov.classList.add('hidden'); })
-);
-
-/* ─── Init ─── */
-renderPartidos();
+window.onload=()=>cargarEquipos();
 </script>
 </body>
 </html>
