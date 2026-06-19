@@ -134,6 +134,8 @@ public class ApiHandler implements HttpHandler {
               .append("\"golesVisitante\":").append(contarGoles(inf.getGoles(), inf.getEquipoVisitante())).append(",")
               .append("\"fecha\":\"").append(escJson(inf.getFecha())).append("\",")
               .append("\"estadio\":\"").append(escJson(inf.getEstadio())).append("\",")
+              .append("\"arbitro\":\"").append(escJson(nombreArbitro(inf.getPartidoId()))).append("\",")
+              .append("\"arbitroNacionalidad\":\"").append(escJson(nacionalidadArbitro(inf.getPartidoId()))).append("\",")
               .append("\"fase\":\"").append(fase(inf.getPartidoId())).append("\",")
               .append("\"huboTiempoExtra\":").append(inf.isHuboTiempoExtra()).append(",")
               .append("\"huboRoja\":").append(inf.isHuboRoja())
@@ -155,6 +157,8 @@ public class ApiHandler implements HttpHandler {
           .append("\"golesVisitante\":").append(contarGoles(inf.getGoles(), inf.getEquipoVisitante())).append(",")
           .append("\"fecha\":\"").append(escJson(inf.getFecha())).append("\",")
           .append("\"estadio\":\"").append(escJson(inf.getEstadio())).append("\",")
+          .append("\"arbitro\":\"").append(escJson(nombreArbitro(inf.getPartidoId()))).append("\",")
+          .append("\"arbitroNacionalidad\":\"").append(escJson(nacionalidadArbitro(inf.getPartidoId()))).append("\",")
           .append("\"fase\":\"").append(fase(inf.getPartidoId())).append("\",")
           .append("\"posesionLocal\":").append(inf.getPosesionLocal()).append(",")
           .append("\"posesionVisitante\":").append(inf.getPosesionVisitante()).append(",")
@@ -377,7 +381,7 @@ public class ApiHandler implements HttpHandler {
           .append("\"estadio\":\"").append(escJson(inf.getEstadio())).append("\",")
           .append("\"fase\":\"").append(fase(id)).append("\",")
           .append("\"totalEventos\":").append(inf.getTotalGoles() + inf.getTotalTarjetas()).append(",")
-          .append("\"promedioGoles\":").append(String.format("%.1f", promedio)).append(",")
+          .append("\"promedioGoles\":").append(String.format(Locale.US, "%.1f", promedio)).append(",")
           .append("\"goleadorPartido\":\"").append(escJson(goleador)).append("\",")
           .append("\"equipoGoleador\":\"").append(escJson(equipoGoleador)).append("\",")
           .append("\"golesGoleador\":").append(maxGoles).append(",")
@@ -413,6 +417,31 @@ public class ApiHandler implements HttpHandler {
     }
 
     // ── HELPERS ───────────────────────────────────────────────────────────────
+
+    private String nombreArbitro(int partidoId) {
+        String[] arbitro = arbitroPorPartido(partidoId);
+        if (arbitro == null) return "Sin arbitro asignado";
+        return arbitro[1] + " " + arbitro[2];
+    }
+
+    private String nacionalidadArbitro(int partidoId) {
+        String[] arbitro = arbitroPorPartido(partidoId);
+        if (arbitro == null) return "";
+        return arbitro[3];
+    }
+
+    private String[] arbitroPorPartido(int partidoId) {
+        try {
+            List<String> lineas = Files.readAllLines(Paths.get("data/arbitros.csv"), StandardCharsets.UTF_8);
+            int indice = partidoId;
+            if (indice <= 0 || indice >= lineas.size()) return null;
+            String[] col = lineas.get(indice).split(",", -1);
+            if (col.length < 4) return null;
+            return new String[] { col[0].trim(), col[1].trim(), col[2].trim(), col[3].trim() };
+        } catch (IOException e) {
+            return null;
+        }
+    }
 
     private InformePeriodistico buscarInforme(int id) {
         for (InformePeriodistico inf : new AdaptadorJsonPeriodistico().obtenerInformes()) {

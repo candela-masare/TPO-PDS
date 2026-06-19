@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -35,7 +35,14 @@
       justify-content: center;
       padding: 24px 16px;
     }
-    .login-logo { font-size: 3rem; margin-bottom: 8px; }
+    .brand-logo {
+      display: block;
+      flex-shrink: 0;
+      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.35));
+    }
+    .brand-logo-login { width: 112px; height: 112px; margin-bottom: 12px; }
+    .brand-logo-header { width: 46px; height: 46px; }
+    .login-logo { margin-bottom: 8px; }
     .login-titulo { font-size: 1.8rem; font-weight: 800; letter-spacing: 1px; }
     .login-titulo span { color: var(--oro); }
     .login-sub {
@@ -87,6 +94,7 @@
       max-width: 700px; margin: 0 auto;
       display: flex; align-items: center; justify-content: space-between;
     }
+    .brand-heading { display: flex; align-items: center; gap: 12px; }
     .header-left h1 { font-size: 1.25rem; font-weight: 700; }
     .header-left h1 span { color: var(--oro); }
     .header-rol {
@@ -157,7 +165,20 @@
     }
     .equipo-local  { display: flex; align-items: center; gap: 10px; }
     .equipo-visitante { display: flex; align-items: center; gap: 10px; justify-content: flex-end; }
-    .bandera { font-size: 1.9rem; line-height: 1; flex-shrink: 0; }
+    .bandera { line-height: 1; flex-shrink: 0; }
+    .flag-img {
+      width: 34px;
+      height: 24px;
+      object-fit: cover;
+      border-radius: 3px;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.18);
+      vertical-align: middle;
+    }
+    .modal-eq-flag .flag-img,
+    .equipo-card-bandera .flag-img {
+      width: 46px;
+      height: 32px;
+    }
     .equipo-nombre { font-size: 0.9rem; font-weight: 600; }
     .equipo-visitante .equipo-nombre { text-align: right; }
     .marcador-centro { display: flex; flex-direction: column; align-items: center; gap: 3px; }
@@ -184,7 +205,6 @@
     .stat-val { font-size: 1.05rem; font-weight: 700; color: var(--oro); }
     .stat-lbl { font-size: 0.58rem; color: var(--gris); text-transform: uppercase; }
     .equipo-card-sub { font-size: 0.68rem; color: var(--gris); margin-top: 5px; }
-
     /* TABLA RANKING */
     .toggle-bar { display: flex; gap: 8px; padding: 12px 16px; background: var(--card2); border-bottom: 1px solid var(--borde); }
     .toggle-btn {
@@ -193,6 +213,8 @@
       transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.5px;
     }
     .toggle-btn.activo { background: var(--rojo); color: #fff; border-color: var(--rojo); }
+    .filtro-fases { overflow-x: auto; }
+    .filtro-fases .toggle-btn { min-width: 96px; white-space: nowrap; }
     .tabla-ranking { width: 100%; border-collapse: collapse; }
     .tabla-ranking thead tr { background: var(--card2); border-bottom: 2px solid var(--rojo); }
     .tabla-ranking th { padding: 10px 8px; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gris); text-align: center; }
@@ -301,6 +323,26 @@
     .tl-icon { font-size: 1.05rem; flex-shrink: 0; }
     .tl-jugador { font-size: 0.86rem; font-weight: 600; }
     .tl-equipo { font-size: 0.7rem; color: var(--gris); }
+    .jugador-titular .tl-jugador { color: #fff; }
+    .titular-pin {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: #2ecc71;
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-left: 8px;
+    }
+    .titular-pin::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #2ecc71;
+      box-shadow: 0 0 10px rgba(46,204,113,0.75);
+    }
 
     /* mercado stats */
     .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
@@ -325,6 +367,23 @@
       background: var(--card2); border-left: 3px solid var(--rojo);
       padding: 11px 13px; border-radius: 4px; font-size: 0.8rem; line-height: 1.55; color: var(--gris);
     }
+    .momento-box {
+      background: linear-gradient(135deg, rgba(243,156,18,0.16), rgba(192,57,43,0.12));
+      border: 1px solid rgba(243,156,18,0.35);
+      border-left: 3px solid var(--oro);
+      border-radius: 8px;
+      padding: 12px 13px;
+      margin-bottom: 14px;
+    }
+    .momento-label {
+      color: var(--oro);
+      font-size: 0.64rem;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+    .momento-texto { color: var(--texto); font-size: 0.84rem; line-height: 1.5; }
 
     .modal-cerrar {
       display: block; width: 100%; padding: 13px;
@@ -332,6 +391,7 @@
       font-size: 0.86rem; cursor: pointer; transition: background 0.2s;
     }
     .modal-cerrar:hover { background: var(--rojo); }
+
   </style>
 </head>
 <body>
@@ -340,7 +400,22 @@
      PANTALLA DE LOGIN
 ═══════════════════════════════════════ -->
 <div id="login-screen">
-  <div class="login-logo">⚽</div>
+  <div class="login-logo">
+    <svg class="brand-logo brand-logo-login" viewBox="0 0 120 120" role="img" aria-label="Mate pelota logo">
+      <circle cx="60" cy="60" r="53" fill="#f4ead9" stroke="#101713" stroke-width="6"/>
+      <path d="M19 44 L39 47 L60 30 L76 44 L99 41" fill="none" stroke="#101713" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M39 47 L47 77 H73 L83 45" fill="none" stroke="#101713" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M47 77 L35 93" fill="none" stroke="#101713" stroke-width="8" stroke-linecap="round"/>
+      <path d="M73 77 L85 93" fill="none" stroke="#101713" stroke-width="8" stroke-linecap="round"/>
+      <path d="M60 30 L74 44 L48 91" fill="none" stroke="#101713" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M76 44 L86 16 L93 14" fill="none" stroke="#101713" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <ellipse cx="60" cy="89" rx="23" ry="8" fill="#101713"/>
+      <ellipse cx="60" cy="89" rx="11" ry="2.6" fill="#f4ead9"/>
+      <circle cx="24" cy="29" r="7" fill="#101713"/>
+      <path d="M16 45 A52 52 0 0 1 101 34" fill="none" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
+      <path d="M23 88 A52 52 0 0 0 97 82" fill="none" stroke="#f39c12" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+  </div>
   <div class="login-titulo">Copa Mundial <span>2026</span></div>
   <div class="login-sub">Plataforma Deportiva · Octavos → Final</div>
   <div class="login-pregunta">¿Con qué perfil ingresás?</div>
@@ -375,8 +450,26 @@
   <div class="header">
     <div class="header-inner">
       <div class="header-left">
-        <h1>Copa Mundial <span>2026</span></h1>
-        <div class="header-rol" id="header-rol-txt"></div>
+        <div class="brand-heading">
+          <svg class="brand-logo brand-logo-header" viewBox="0 0 120 120" role="img" aria-label="Mate pelota logo">
+            <circle cx="60" cy="60" r="53" fill="#f4ead9" stroke="#101713" stroke-width="6"/>
+            <path d="M19 44 L39 47 L60 30 L76 44 L99 41" fill="none" stroke="#101713" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M39 47 L47 77 H73 L83 45" fill="none" stroke="#101713" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M47 77 L35 93" fill="none" stroke="#101713" stroke-width="8" stroke-linecap="round"/>
+            <path d="M73 77 L85 93" fill="none" stroke="#101713" stroke-width="8" stroke-linecap="round"/>
+            <path d="M60 30 L74 44 L48 91" fill="none" stroke="#101713" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M76 44 L86 16 L93 14" fill="none" stroke="#101713" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <ellipse cx="60" cy="89" rx="23" ry="8" fill="#101713"/>
+            <ellipse cx="60" cy="89" rx="11" ry="2.6" fill="#f4ead9"/>
+            <circle cx="24" cy="29" r="7" fill="#101713"/>
+            <path d="M16 45 A52 52 0 0 1 101 34" fill="none" stroke="#c0392b" stroke-width="3" stroke-linecap="round"/>
+            <path d="M23 88 A52 52 0 0 0 97 82" fill="none" stroke="#f39c12" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <h1>Copa Mundial <span>2026</span></h1>
+            <div class="header-rol" id="header-rol-txt"></div>
+          </div>
+        </div>
       </div>
       <button class="btn-cambiar" onclick="volverLogin()">← Cambiar perfil</button>
     </div>
@@ -397,9 +490,53 @@ const BANDERAS = {
   'Argentina':'🇦🇷','México':'🇲🇽','Brasil':'🇧🇷','Uruguay':'🇺🇾',
   'Francia':'🇫🇷','Dinamarca':'🇩🇰','España':'🇪🇸','Croacia':'🇭🇷',
   'Portugal':'🇵🇹','Bélgica':'🇧🇪','Inglaterra':'🏴󠁧󠁢󠁥󠁮󠁧󠁿','Estados Unidos':'🇺🇸',
-  'Alemania':'🇩🇪','Japón':'🇯🇵','Países Bajos':'🇳🇱','Italia':'🇮🇹'
+  'Alemania':'🇩🇪','Japón':'🇯🇵','Países Bajos':'🇳🇱','Italia':'🇮🇹',
+  'ARGENTINA':'🇦🇷','MEXICO':'🇲🇽','BRASIL':'🇧🇷','URUGUAY':'🇺🇾',
+  'FRANCIA':'🇫🇷','DINAMARCA':'🇩🇰','ESPANA':'🇪🇸','CROACIA':'🇭🇷',
+  'PORTUGAL':'🇵🇹','BELGICA':'🇧🇪','INGLATERRA':'🏴','ESTADOS UNIDOS':'🇺🇸',
+  'ALEMANIA':'🇩🇪','JAPON':'🇯🇵','PAISES BAJOS':'🇳🇱','ITALIA':'🇮🇹'
 };
-const bandera = n => BANDERAS[n] || '🏳';
+
+const FLAG_CODES = {
+  'ARGENTINA': 'ar',
+  'MEXICO': 'mx',
+  'BRASIL': 'br',
+  'URUGUAY': 'uy',
+  'FRANCIA': 'fr',
+  'DINAMARCA': 'dk',
+  'ESPANA': 'es',
+  'CROACIA': 'hr',
+  'PORTUGAL': 'pt',
+  'BELGICA': 'be',
+  'INGLATERRA': 'gb-eng',
+  'ESTADOS UNIDOS': 'us',
+  'ALEMANIA': 'de',
+  'JAPON': 'jp',
+  'PAISES BAJOS': 'nl',
+  'ITALIA': 'it',
+  'COLOMBIA': 'co',
+  'VENEZUELA': 've',
+  'CHILE': 'cl',
+  'POLONIA': 'pl',
+  'QATAR': 'qa',
+  'IRAN': 'ir'
+};
+
+function clavePais(nombre) {
+  return String(nombre || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toUpperCase()
+    .trim();
+}
+
+function bandera(nombre) {
+  const codigo = FLAG_CODES[clavePais(nombre)];
+  if (!codigo) {
+    return '<span class="flag-img" aria-label="Bandera no disponible"></span>';
+  }
+  return `<img class="flag-img" src="https://flagcdn.com/${codigo}.svg" alt="Bandera de ${nombre}" loading="lazy">`;
+}
 
 const DIAS  = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
 const MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
@@ -436,11 +573,11 @@ const ROLES = {
   aficionado: { nombre: 'Aficionado',        icono: '🏟️', tabs: [
     { id:'partidos',   label:'⚽ Partidos' },
     { id:'equipos',    label:'🏆 Equipos'  },
-    { id:'rankings',   label:'📊 Rankings' },
-    { id:'arbitros',   label:'⚖️ Árbitros' }
+    { id:'rankings',   label:'📊 Rankings' }
   ]},
   periodista: { nombre: 'Periodista',         icono: '📰', tabs: [
-    { id:'informes',   label:'📰 Informes' }
+    { id:'informes',   label:'📰 Informes' },
+    { id:'arbitros',   label:'⚖️ Árbitros' }
   ]},
   apuestas:   { nombre: 'Casa de Apuestas',   icono: '💰', tabs: [
     { id:'mercados',   label:'💰 Mercados' }
@@ -454,12 +591,15 @@ const ROLES = {
 let rolActual = null;
 let tabActual = null;
 const cache   = {};
+let partidosCache = [];
+let fasePartidosActual = 'TODOS';
 
 // ── LOGIN / LOGOUT ──────────────────────────────────────────────────────────
 function entrar(rol) {
   rolActual = rol;
   tabActual = ROLES[rol].tabs[0].id;
   cache[rol] = {};
+  if (rol === 'aficionado') fasePartidosActual = 'TODOS';
 
   document.getElementById('login-screen').style.display  = 'none';
   const app = document.getElementById('app-screen');
@@ -493,12 +633,22 @@ function activarTab(tabId) {
   document.querySelectorAll('.nav-tab').forEach(b => b.classList.toggle('activo', b.id === 'tab-btn-' + tabId));
 
   const main = document.getElementById('main-content');
+  document.querySelectorAll('.seccion').forEach(s => s.classList.remove('activa'));
+
+  let seccion = sec(tabId);
+  if (!seccion) {
+    seccion = document.createElement('div');
+    seccion.id = 'sec-' + tabId;
+    seccion.className = 'seccion';
+    seccion.innerHTML = '<div class="spinner">Cargando...</div>';
+    main.appendChild(seccion);
+  }
+
+  seccion.classList.add('activa');
+
   if (!cache[rolActual][tabId]) {
     cache[rolActual][tabId] = true;
-    main.innerHTML = `<div id="sec-${tabId}" class="seccion activa"><div class="spinner">Cargando...</div></div>`;
     cargar(tabId);
-  } else {
-    document.querySelectorAll('.seccion').forEach(s => s.classList.toggle('activa', s.id === 'sec-' + tabId));
   }
 }
 
@@ -528,13 +678,21 @@ function sec(id) { return document.getElementById('sec-' + id); }
 // ══════════════════════════════════════════════════════════════════════════════
 async function cargarPartidos() {
   try {
-    const partidos = await fetchJSON(API + '/partidos');
+    partidosCache = await fetchJSON(API + '/partidos');
+    renderPartidos();
+  } catch(e) { sec('partidos').innerHTML = `<div class="error-msg">Error: ${e.message}</div>`; }
+}
+
+function renderPartidos() {
+  const partidos = fasePartidosActual === 'TODOS'
+    ? partidosCache
+    : partidosCache.filter(p => p.fase === fasePartidosActual);
     const grupos = {};
     for (const p of partidos) {
       if (!grupos[p.fase]) grupos[p.fase] = [];
       grupos[p.fase].push(p);
     }
-    let html = '';
+    let html = htmlFiltroFases();
     for (const fase of FASE_ORDEN) {
       if (!grupos[fase]) continue;
       const g = grupos[fase];
@@ -546,7 +704,24 @@ async function cargarPartidos() {
       for (const p of g) html += htmlPartidoCard(p);
     }
     sec('partidos').innerHTML = html;
-  } catch(e) { sec('partidos').innerHTML = `<div class="error-msg">Error: ${e.message}</div>`; }
+}
+
+function htmlFiltroFases() {
+  const opciones = [
+    { id: 'TODOS', label: 'Todos' },
+    { id: 'OCTAVOS DE FINAL', label: 'Octavos' },
+    { id: 'CUARTOS DE FINAL', label: 'Cuartos' },
+    { id: 'SEMIFINALES', label: 'Semis' },
+    { id: 'FINAL', label: 'Final' }
+  ];
+  return `<div class="toggle-bar filtro-fases">${opciones.map(o =>
+    `<button class="toggle-btn ${fasePartidosActual === o.id ? 'activo' : ''}" onclick="filtrarPartidos('${o.id}')">${o.label}</button>`
+  ).join('')}</div>`;
+}
+
+function filtrarPartidos(fase) {
+  fasePartidosActual = fase;
+  renderPartidos();
 }
 
 function htmlPartidoCard(p) {
@@ -655,6 +830,40 @@ async function cargarEquipos() {
   } catch(e) { sec('equipos').innerHTML = `<div class="error-msg">Error: ${e.message}</div>`; }
 }
 
+function posClave(posicion) {
+  return String(posicion || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
+}
+
+function titularesProbables(jugadores) {
+  const titulares = new Set();
+  const elegir = (cantidad, filtro) => {
+    for (let i = 0; i < jugadores.length && cantidad > 0; i++) {
+      if (!titulares.has(i) && filtro(posClave(jugadores[i].posicion))) {
+        titulares.add(i);
+        cantidad--;
+      }
+    }
+  };
+  const defensoresElegidos = () => [...titulares].filter(i => {
+    const p = posClave(jugadores[i].posicion);
+    return p.includes('defensor') || p.includes('lateral');
+  }).length;
+
+  elegir(1, p => p.includes('arquero'));
+  elegir(1, p => p.includes('lateral derecho'));
+  elegir(1, p => p.includes('lateral izquierdo'));
+  elegir(2, p => p.includes('defensor central'));
+  elegir(Math.max(0, 4 - defensoresElegidos()), p => p.includes('defensor') || p.includes('lateral'));
+  elegir(3, p => p.includes('mediocampista') || p.includes('mediapunta'));
+  elegir(3, p => p.includes('delantero') || p.includes('extremo'));
+  elegir(11 - titulares.size, p => !p.includes('arquero'));
+
+  return titulares;
+}
+
 async function abrirEquipo(claveEnc) {
   abrirModal('<div class="spinner" style="padding:40px">Cargando...</div>');
   try {
@@ -662,13 +871,18 @@ async function abrirEquipo(claveEnc) {
     const diff = eq.diferencia >= 0 ? '+'+eq.diferencia : eq.diferencia;
     const dc = eq.diferencia >= 0 ? 'diff-pos' : 'diff-neg';
     const porPos = {};
-    for (const j of eq.jugadores) { if (!porPos[j.posicion]) porPos[j.posicion]=[]; porPos[j.posicion].push(j); }
+    const titulares = titularesProbables(eq.jugadores);
+    eq.jugadores.forEach((j, index) => {
+      if (!porPos[j.posicion]) porPos[j.posicion]=[];
+      porPos[j.posicion].push({...j, titular: titulares.has(index)});
+    });
     let jugHtml = '';
     for (const pos of Object.keys(porPos)) {
       jugHtml += `<div class="tl-titulo" style="margin-top:12px">${pos}</div>`;
       for (const j of porPos[pos]) {
         const stats = [j.goles>0?`⚽ ${j.goles}`:'', j.tarjetasAmarillas>0?`🟨 ${j.tarjetasAmarillas}`:'', j.tarjetasRojas>0?`🟥 ${j.tarjetasRojas}`:''].filter(Boolean).join(' ');
-        jugHtml += `<div class="tl-evento"><div class="tl-jugador" style="flex:1">${j.nombre}</div><span style="color:var(--gris);font-size:.72rem">${stats}</span></div>`;
+        const titular = j.titular ? '<span class="titular-pin">Titular</span>' : '';
+        jugHtml += `<div class="tl-evento ${j.titular ? 'jugador-titular' : ''}"><div class="tl-jugador" style="flex:1">${j.nombre}${titular}</div><span style="color:var(--gris);font-size:.72rem">${stats}</span></div>`;
       }
     }
     setModal(`
@@ -694,6 +908,7 @@ async function abrirEquipo(claveEnc) {
 // ══════════════════════════════════════════════════════════════════════════════
 //  AFICIONADO — RANKINGS
 // ══════════════════════════════════════════════════════════════════════════════
+
 async function cargarRankings(criterio) {
   const url = criterio === 'goles' ? API + '/rankings/goles' : API + '/rankings';
   try {
@@ -736,7 +951,7 @@ async function cargarArbitros() {
     for (const a of arbitros) {
       html += `<div class="arbitro-row">
         <span class="arbitro-num">${a.id}</span>
-        <div><div class="arbitro-nombre">${a.nombre} ${a.apellido}</div><div class="arbitro-nac">🌍 ${a.nacionalidad}</div></div>
+        <div><div class="arbitro-nombre">${a.nombre} ${a.apellido}</div><div class="arbitro-nac">${bandera(a.nacionalidad)} ${a.nacionalidad}</div></div>
       </div>`;
     }
     sec('arbitros').innerHTML = html;
@@ -762,7 +977,7 @@ async function cargarInformes() {
           </div>
           <div class="equipo-visitante"><span class="equipo-nombre">${p.visitante}</span><span class="bandera">${bandera(p.visitante)}</span></div>
         </div>
-        <div class="partido-estadio">🏟 ${p.estadio} &nbsp;·&nbsp; 📅 ${fmtFecha(p.fecha)}</div>
+        <div class="partido-estadio">🏟 ${p.estadio} &nbsp;·&nbsp; 📅 ${fmtFecha(p.fecha)} &nbsp;·&nbsp; ⚖️ ${p.arbitro}</div>
       </div>`;
     }
     sec('informes').innerHTML = html;
@@ -776,6 +991,7 @@ async function abrirInforme(id) {
     const m = parsarMarcador(p.resultado);
     const pen = m.pen ? `<div class="modal-pen-txt">Penales: ${m.pL} – ${m.pV}</div>` : '';
     const tl = [...p.goles.map(g=>({...g,tipo:'GOL'})), ...p.tarjetas].sort((a,b)=>a.minuto-b.minuto);
+    const momento = momentoBisagra(p, m, tl);
     const tlHtml = tl.map(ev => {
       const ic = ev.tipo==='GOL'?'⚽':ev.tipo==='AMARILLA'?'🟨':'🟥';
       return `<div class="tl-evento"><span class="tl-min">${ev.minuto}'</span><span class="tl-icon">${ic}</span><div><div class="tl-jugador">${ev.jugador||'—'}</div><div class="tl-equipo">${ev.equipo||''}</div></div></div>`;
@@ -792,7 +1008,7 @@ async function abrirInforme(id) {
           </div>
           <div class="modal-eq"><div class="modal-eq-flag">${bandera(p.visitante)}</div><div class="modal-eq-name">${p.visitante}</div></div>
         </div>
-        <div class="modal-meta">📅 ${fmtFecha(p.fecha)} &nbsp;|&nbsp; 🏟 ${p.estadio}</div>
+        <div class="modal-meta">📅 ${fmtFecha(p.fecha)} &nbsp;|&nbsp; 🏟 ${p.estadio} &nbsp;|&nbsp; ⚖️ ${p.arbitro} (${p.arbitroNacionalidad})</div>
       </div>
       <div class="modal-body">
         <div class="posesion-row">
@@ -804,6 +1020,10 @@ async function abrirInforme(id) {
           <div class="posesion-visit" style="width:${p.posesionVisitante}%"></div>
         </div>
         <div style="font-size:.75rem;color:var(--gris);margin-bottom:12px">Dominador de posesión: <strong style="color:var(--texto)">${p.dominadorPosesion}</strong></div>
+        <div class="momento-box">
+          <div class="momento-label">Momento bisagra</div>
+          <div class="momento-texto">${momento}</div>
+        </div>
         <div class="tl-titulo">Crónica del partido</div>
         <div style="margin-bottom:14px">${tlHtml}</div>
         <div class="tl-titulo">Resumen periodístico</div>
@@ -817,6 +1037,39 @@ async function abrirInforme(id) {
 // ══════════════════════════════════════════════════════════════════════════════
 //  CASA DE APUESTAS — MERCADOS
 // ══════════════════════════════════════════════════════════════════════════════
+function momentoBisagra(p, marcador, timeline) {
+  const ultimoGol = [...p.goles].sort((a, b) => b.minuto - a.minuto)[0];
+  const roja = [...p.tarjetas]
+    .filter(t => t.tipo === 'ROJA')
+    .sort((a, b) => b.minuto - a.minuto)[0];
+
+  if (marcador.pen) {
+    const ganador = marcador.pL > marcador.pV ? p.local : p.visitante;
+    return `El empate empujó la historia a los penales, donde ${ganador} se impuso ${marcador.pL}-${marcador.pV} y terminó resolviendo una noche cerrada desde los doce pasos.`;
+  }
+
+  if (roja) {
+    const periodo = textoPeriodo(roja.periodo);
+    return `Minuto ${roja.minuto}: la expulsión de ${roja.jugador} condicionó a ${roja.equipo} ${periodo}, cambiando el clima del cierre y el margen de acción del equipo.`;
+  }
+
+  if (ultimoGol) {
+    const diferencia = Math.abs(marcador.gl - marcador.gv);
+    const accion = diferencia === 1 ? 'destrabó el partido' : 'terminó de quebrar el partido';
+    return `Minuto ${ultimoGol.minuto}: ${ultimoGol.jugador} marcó para ${ultimoGol.equipo} y ${accion}. Desde ahí, el resultado empezó a inclinarse definitivamente.`;
+  }
+
+  const dominador = p.dominadorPosesion || (p.posesionLocal >= p.posesionVisitante ? p.local : p.visitante);
+  return `${dominador} sostuvo el control desde la posesión, pero el desarrollo se explicó más por la eficacia y los detalles que por la tenencia de la pelota.`;
+}
+
+function textoPeriodo(periodo) {
+  const p = String(periodo || '').toLowerCase();
+  if (p.includes('extra')) return 'en tiempo extra';
+  if (p.includes('penal')) return 'en la definición por penales';
+  return 'en tiempo reglamentario';
+}
+
 async function cargarMercados() {
   try {
     const mercados = await fetchJSON(API + '/mercados');

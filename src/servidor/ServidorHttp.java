@@ -16,5 +16,6 @@ public class ServidorHttp {
         server.start();
         System.out.println("Servidor iniciado en http://localhost:" + PUERTO);
         System.out.println("Presiona Ctrl+C para detener.");
+        Thread.currentThread().join();
     }
 }

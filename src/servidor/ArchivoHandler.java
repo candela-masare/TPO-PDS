@@ -39,6 +39,9 @@ public class ArchivoHandler implements HttpHandler {
 
         byte[] contenido = Files.readAllBytes(archivo);
         exchange.getResponseHeaders().set("Content-Type", tipoContenido(archivo.toString()));
+        exchange.getResponseHeaders().set("Cache-Control", "no-store, no-cache, must-revalidate");
+        exchange.getResponseHeaders().set("Pragma", "no-cache");
+        exchange.getResponseHeaders().set("Expires", "0");
         exchange.sendResponseHeaders(200, contenido.length);
         try (OutputStream os = exchange.getResponseBody()) {
             os.write(contenido);
