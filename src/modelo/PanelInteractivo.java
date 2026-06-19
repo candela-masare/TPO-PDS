@@ -2,6 +2,7 @@ package modelo;
 
 import interfaces.CanalDistribucion;
 
+// OBSERVER canal: publica eventos del partido en un panel físico identificado por su ubicación.
 public class PanelInteractivo implements CanalDistribucion {
 
     private String ubicacion;

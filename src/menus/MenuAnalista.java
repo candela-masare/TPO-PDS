@@ -12,6 +12,7 @@ import servicio.PlataformaDeportiva;
 import java.util.List;
 import java.util.Scanner;
 
+// Submenú de consola para el perfil Analista Deportivo: rankings por Strategy y reporte avanzado por Decorator.
 public class MenuAnalista {
 
     private AnalistaDeportivo analista;

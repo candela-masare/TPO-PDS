@@ -4,6 +4,7 @@ import modelo.Aficionado;
 
 import java.util.Scanner;
 
+// Submenú de consola para el perfil Aficionado: equipos, rankings, partidos y árbitros.
 public class MenuAficionado {
 
     private Aficionado usuario;

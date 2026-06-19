@@ -6,6 +6,7 @@ import modelo.CasaApuesta;
 import java.util.List;
 import java.util.Scanner;
 
+// Submenú de consola para el perfil Casa de Apuestas: lista y detalle de mercados con riesgo y cuotas.
 public class MenuCasaApuesta {
 
     private CasaApuesta casa;

@@ -5,6 +5,9 @@ import interfaces.IUsuario;
 import java.util.ArrayList;
 import java.util.List;
 
+// OBSERVER: sujeto observable del partido. Mantiene la lista de suscriptores (IUsuario)
+// y les notifica cada vez que se agrega un EventoPartido via agregarEvento().
+// También actualiza automáticamente las estadísticas y el marcador en cada evento.
 public class Partido {
 
     private Equipo equipoLocal;
@@ -55,6 +58,7 @@ public class Partido {
         notificar(evento);
     }
 
+    // Actualiza estadísticas del equipo correspondiente y refleja GOL/PENAL en el marcador.
     private void procesarEstadisticas(EventoPartido evento) {
         Jugador autor = evento.getAutor();
         if (autor == null) return;

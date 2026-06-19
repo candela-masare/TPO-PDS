@@ -7,6 +7,7 @@ import modelo.Partido;
 import java.util.List;
 import java.util.Scanner;
 
+// Submenú de consola que lista los partidos del Mundial y muestra el detalle de uno seleccionado.
 public class MenuPartidos {
 
     private Scanner scanner;

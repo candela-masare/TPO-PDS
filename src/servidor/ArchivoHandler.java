@@ -9,6 +9,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+// Sirve archivos estáticos desde la carpeta frontend/.
+// Si la ruta no existe o es un directorio, devuelve index.html para soportar el enrutado SPA.
 public class ArchivoHandler implements HttpHandler {
 
     private static final String DIRECTORIO = "frontend";
@@ -23,6 +25,7 @@ public class ArchivoHandler implements HttpHandler {
 
         Path archivo = Paths.get(DIRECTORIO + ruta);
 
+        // Fallback a index.html para que el router del frontend pueda manejar la ruta.
         if (!Files.exists(archivo) || Files.isDirectory(archivo)) {
             archivo = Paths.get(DIRECTORIO + "/index.html");
         }

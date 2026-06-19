@@ -2,6 +2,7 @@ package menus;
 
 import java.util.Scanner;
 
+// Submenú de consola para consultar rankings de equipos (opciones pendientes de implementar).
 public class MenuRankings {
 
     private Scanner scanner;

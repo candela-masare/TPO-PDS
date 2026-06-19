@@ -116,6 +116,7 @@ public class AdaptadorJsonApuestas implements ProveedorDatosDeportivos {
         return total;
     }
 
+    // Selecciona el mercado más relevante en orden de prioridad: prórroga > goles > roja > tarjetas > conservador.
     private String calcularMercadoDestacado(AdaptadorJsonPeriodistico.InformePeriodistico informe,
                                             int golesLocal, int golesVisitante) {
         if (informe.isHuboTiempoExtra() && golesLocal > 0 && golesVisitante > 0) {
@@ -133,6 +134,7 @@ public class AdaptadorJsonApuestas implements ProveedorDatosDeportivos {
         return "mercado_conservador";
     }
 
+    // Riesgo alto si hubo incidente grave (roja/prórroga), medio si el partido fue movido, bajo si fue tranquilo.
     private String calcularRiesgoParaCuota(AdaptadorJsonPeriodistico.InformePeriodistico informe) {
         if (informe.isHuboRoja() || informe.isHuboTiempoExtra()) {
             return "alto";

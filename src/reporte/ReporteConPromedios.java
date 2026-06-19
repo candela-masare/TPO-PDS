@@ -2,6 +2,7 @@ package reporte;
 
 import modelo.Partido;
 
+// DECORATOR concreto: agrega al reporte el promedio de goles por equipo en el partido.
 public class ReporteConPromedios extends ReporteDecorator {
 
     private Partido partido;

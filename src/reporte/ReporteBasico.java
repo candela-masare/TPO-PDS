@@ -2,6 +2,7 @@ package reporte;
 
 import modelo.Partido;
 
+// DECORATOR componente concreto: genera el reporte base con equipos, resultado y cantidad de eventos.
 public class ReporteBasico implements Reporte {
 
     private Partido partido;

@@ -182,6 +182,8 @@ public class AdaptadorJsonEstadisticas implements ProveedorDatosDeportivos {
         return jugador;
     }
 
+    // Parser JSON manual sin librerías externas: localiza el array por nombre, luego recorre
+    // carácter a carácter rastreando profundidad de llaves para extraer cada objeto completo.
     private List<String> extraerObjetosDeArray(String json, String nombreArray) {
         int posicionNombre = json.indexOf("\"" + nombreArray + "\"");
         if (posicionNombre == -1) {

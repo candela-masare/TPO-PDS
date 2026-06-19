@@ -5,6 +5,7 @@ import interfaces.CanalDistribucion;
 import java.util.ArrayList;
 import java.util.List;
 
+// OBSERVER canal: acumula todos los eventos del partido para generar un resumen estadístico al final.
 public class ReporteEstadistico implements CanalDistribucion {
 
     private List<EventoPartido> eventos;

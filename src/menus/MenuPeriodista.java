@@ -6,6 +6,7 @@ import modelo.Periodista;
 import java.util.List;
 import java.util.Scanner;
 
+// Submenú de consola para el perfil Periodista: lista y detalle de informes periodísticos.
 public class MenuPeriodista {
 
     private Periodista periodista;

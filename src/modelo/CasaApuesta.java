@@ -2,6 +2,7 @@ package modelo;
 
 import interfaces.IUsuario;
 
+// OBSERVER concreto: recibe eventos del partido y simula un recálculo de cuotas de apuestas.
 public class CasaApuesta implements IUsuario {
 
     private String nombre;

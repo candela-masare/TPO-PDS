@@ -53,6 +53,8 @@ public class AdaptadorTxtMundial implements ProveedorDatosDeportivos {
         return cargarPartidos(equipos);
     }
 
+    // Lee el TXT de convocados línea a línea: detecta PAÍS → crea Equipo, Fundación → reemplaza
+    // el equipo con año correcto, número+nombre → guarda nombre del jugador, Posición → crea Jugador.
     private Map<String, Equipo> cargarEquiposPorClave() {
         Map<String, Equipo> equipos = new LinkedHashMap<>();
         Equipo equipoActual = null;
@@ -166,6 +168,8 @@ public class AdaptadorTxtMundial implements ProveedorDatosDeportivos {
         }
     }
 
+    // El regex captura el marcador normal (3-1) y también el de penales (1 (4) - (3) 1),
+    // tomando solo los goles del tiempo reglamentario para sumar puntos y diferencia.
     private int[] extraerGoles(String resultado, String local, String visitante) {
         Pattern patronMarcador = Pattern.compile("(\\d+)\\s*(?:\\(\\d+\\))?\\s*-\\s*(?:\\(\\d+\\))?\\s*(\\d+)");
         java.util.regex.Matcher matcher = patronMarcador.matcher(resultado);

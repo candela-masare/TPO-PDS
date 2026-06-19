@@ -13,6 +13,8 @@ import modelo.Periodista;
 
 import java.util.Scanner;
 
+// Punto de entrada al menú interactivo por consola. Usa FACTORY METHOD para crear
+// el usuario del tipo seleccionado y delega en el submenú correspondiente.
 public class Menu {
 
     private Scanner scanner = new Scanner(System.in);

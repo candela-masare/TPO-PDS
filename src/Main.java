@@ -35,6 +35,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+// Punto de entrada principal. Acepta argumentos de línea de comandos para distintos modos:
+//   "servidor"   → arranca el servidor HTTP (VS Code: config "Servidor Web")
+//   "periodista" → imprime datos periodísticos de Argentina vs Brasil por consola
+//   "apuestas"   → imprime mercados de apuestas (opcional: cantidad o equipo local/visitante)
+//   (sin args)   → muestra el menú interactivo por consola
 public class Main {
 
     private static final String RUTA_ARBITROS = "data/arbitros.csv";

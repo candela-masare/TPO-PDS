@@ -3,6 +3,8 @@ package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
+// Representa un equipo del torneo. Los campos puntos, golesAFavor y golesEnContra
+// se acumulan a medida que se procesan los partidos desde los adaptadores.
 public class Equipo {
 
     private String nombre;
