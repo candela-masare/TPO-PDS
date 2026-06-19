@@ -17,6 +17,10 @@ import reporte.ReporteConTopJugadores;
 import java.util.ArrayList;
 import java.util.List;
 
+// Orquestador central de la plataforma. Combina tres patrones:
+//   OBSERVER   – actúa como suscriptor que reenvía eventos a los CanalDistribucion registrados.
+//   STRATEGY   – usa un CriterioRanking intercambiable para ordenar la tabla de posiciones.
+//   DECORATOR  – construye reportes avanzados encadenando capas sobre ReporteBasico.
 public class PlataformaDeportiva implements IUsuario {
 
     private ProveedorDatosDeportivos proveedor;
@@ -67,12 +71,14 @@ public class PlataformaDeportiva implements IUsuario {
         return torneo;
     }
 
+    // Cadena Decorator: ReporteBasico → ReporteConPromedios → ReporteConTopJugadores.
     public String generarReporteAvanzado(Partido partido) {
         Reporte reporte = new ReporteConTopJugadores(
                 new ReporteConPromedios(new ReporteBasico(partido), partido), partido);
         return reporte.generar();
     }
 
+    // Requiere que se haya llamado a setCriterioRanking() antes; de lo contrario lanza excepción.
     public List<Ranking> generarRanking(List<Equipo> equipos) {
         if (criterioRanking == null) {
             throw new IllegalStateException("No se configuro un CriterioRanking (Strategy).");

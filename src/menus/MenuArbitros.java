@@ -2,6 +2,7 @@ package menus;
 
 import java.util.Scanner;
 
+// Submenú de consola para consultar árbitros y asignaciones (opciones pendientes de implementar).
 public class MenuArbitros {
 
     private Scanner scanner;

@@ -1,5 +1,6 @@
 package modelo;
 
+// OBSERVER: payload que se envía a todos los suscriptores cuando ocurre algo en el partido.
 public class EventoPartido {
 
     private int minuto;

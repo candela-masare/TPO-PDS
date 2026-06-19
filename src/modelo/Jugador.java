@@ -1,5 +1,7 @@
 package modelo;
 
+// Jugador de un equipo. El constructor simple (3 args) se usa al cargar desde TXT/JSON;
+// el constructor completo (7 args) se usa al cargar desde CSV con estadísticas ya calculadas.
 public class Jugador {
 
     private String nombreCompleto;

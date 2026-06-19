@@ -1,5 +1,7 @@
 package modelo;
 
+// Acumulador de estadísticas en vivo para un equipo dentro de un único partido.
+// Partido mantiene una instancia por local y una por visitante.
 public class Estadistica {
 
     private Equipo equipo;

@@ -2,6 +2,7 @@ package modelo;
 
 import interfaces.IUsuario;
 
+// OBSERVER concreto: recibe eventos del partido y los registra como anotaciones de crónica.
 public class Periodista implements IUsuario {
 
     private String nombre;

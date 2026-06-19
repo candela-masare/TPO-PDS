@@ -30,8 +30,22 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+// Handler REST de la API. Construye JSON manualmente (sin librerías externas, coherente con el resto del proyecto).
+// Rutas disponibles:
+//   GET /api/partidos              – lista de 15 partidos
+//   GET /api/partidos/{id}         – detalle con goles, tarjetas, posesión y resumen
+//   GET /api/equipos               – todos los equipos ordenados por puntos
+//   GET /api/equipos/{clave}       – detalle de un equipo con plantilla completa
+//   GET /api/rankings              – tabla por puntos (Strategy: CriterioPorPuntos)
+//   GET /api/rankings/goles        – tabla por goles (Strategy: CriterioPorGoles)
+//   GET /api/goleadores            – tabla de goleadores agregada de todos los partidos
+//   GET /api/mercados              – mercados de apuestas (todos los partidos)
+//   GET /api/mercados/{id}         – detalle del mercado de un partido
+//   GET /api/reporte/{id}          – reporte analítico equivalente a la cadena Decorator
+//   GET /api/arbitros              – lista de árbitros desde data/arbitros.csv
 public class ApiHandler implements HttpHandler {
 
+    // Tabla de normalización de nombres: clave sin tilde en mayúsculas → nombre con formato correcto.
     private static final Map<String, String> NOMBRES = new HashMap<>();
 
     static {
@@ -466,12 +480,14 @@ public class ApiHandler implements HttpHandler {
         return count;
     }
 
+    // Convierte la clave normalizada al nombre con tildes y mayúsculas/minúsculas correctas.
     private String nombre(String clave) {
         if (clave == null) return "";
         String resultado = NOMBRES.get(norm(clave));
         return resultado != null ? resultado : clave;
     }
 
+    // Normaliza a mayúsculas sin tildes para comparaciones insensibles a acentos.
     private String norm(String s) {
         if (s == null) return "";
         return s.toUpperCase(Locale.ROOT)
@@ -480,6 +496,7 @@ public class ApiHandler implements HttpHandler {
                 .trim();
     }
 
+    // Los IDs de partido van del 1 al 15 y reflejan el orden cronológico del torneo.
     private String fase(int id) {
         if (id <= 8)  return "OCTAVOS DE FINAL";
         if (id <= 12) return "CUARTOS DE FINAL";
@@ -487,6 +504,7 @@ public class ApiHandler implements HttpHandler {
         return "FINAL";
     }
 
+    // Escapa caracteres especiales para que el string sea válido dentro de un valor JSON.
     private static String escJson(String s) {
         if (s == null) return "";
         return s.replace("\\", "\\\\")

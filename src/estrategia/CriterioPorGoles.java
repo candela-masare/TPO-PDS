@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+// STRATEGY concreta: ordena equipos de mayor a menor según goles a favor.
 public class CriterioPorGoles implements CriterioRanking {
 
     @Override

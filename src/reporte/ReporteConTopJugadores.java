@@ -6,6 +6,7 @@ import modelo.Partido;
 import java.util.ArrayList;
 import java.util.List;
 
+// DECORATOR concreto: agrega al reporte el goleador del partido con su cantidad de goles.
 public class ReporteConTopJugadores extends ReporteDecorator {
 
     private Partido partido;

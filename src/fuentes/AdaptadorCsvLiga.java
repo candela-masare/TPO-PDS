@@ -15,6 +15,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+/**
+ * ADAPTER: adapta datos de liga local en formato CSV a la interfaz común
+ * ProveedorDatosDeportivos. Una sola pasada por el archivo distingue filas
+ * de tipo EQUIPO, JUGADOR y PARTIDO según el valor de la primera columna.
+ */
 public class AdaptadorCsvLiga implements ProveedorDatosDeportivos {
 
     private static final String RUTA_CSV = "data/liga_local.csv";
