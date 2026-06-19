@@ -1,0 +1,849 @@
+﻿{
+    "fuente":  "datos_periodisticos_mundial",
+    "archivosRelacionados":  [
+                                 "estadisticas_partidos_mundial.json",
+                                 "posesion_balon_mundial.txt",
+                                 "tarjetas_mundial.csv"
+                             ],
+    "totalPartidos":  15,
+    "informes":  [
+                     {
+                         "partidoId":  1,
+                         "partido":  {
+                                         "local":  "ARGENTINA",
+                                         "visitante":  "MÉXICO"
+                                     },
+                         "fecha":  "28/06/2026",
+                         "estadio":  "Hard Rock Stadium",
+                         "resultado":  "Argentina 3 - 1 México",
+                         "posesion":  {
+                                          "equipoLocal":  "ARGENTINA",
+                                          "posesionLocal":  58,
+                                          "equipoVisitante":  "MEXICO",
+                                          "posesionVisitante":  42
+                                      },
+                         "goles":  [
+                                       {
+                                           "minuto":  14,
+                                           "equipo":  "Argentina",
+                                           "jugador":  "Julián Álvarez",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  38,
+                                           "equipo":  "México",
+                                           "jugador":  "Santiago Giménez",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  61,
+                                           "equipo":  "Argentina",
+                                           "jugador":  "Lionel Messi",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  84,
+                                           "equipo":  "Argentina",
+                                           "jugador":  "Lautaro Martínez",
+                                           "periodo":  "tiempo_reglamentario"
+                                       }
+                                   ],
+                         "tarjetas":  [
+                                          {
+                                              "minuto":  26,
+                                              "tipo":  "AMARILLA",
+                                              "equipo":  "MEXICO",
+                                              "jugador":  "Edson Alvarez",
+                                              "periodo":  "tiempo_reglamentario"
+                                          },
+                                          {
+                                              "minuto":  49,
+                                              "tipo":  "AMARILLA",
+                                              "equipo":  "ARGENTINA",
+                                              "jugador":  "Rodrigo De Paul",
+                                              "periodo":  "tiempo_reglamentario"
+                                          }
+                                      ],
+                         "clavesPeriodisticas":  {
+                                                     "totalGoles":  4,
+                                                     "totalTarjetas":  2,
+                                                     "dominadorPosesion":  "ARGENTINA",
+                                                     "huboRoja":  false,
+                                                     "huboTiempoExtra":  false
+                                                 },
+                         "resumenPeriodistico":  "ARGENTINA vs MÉXICO: Argentina 3 - 1 México. Dominio de posesion: ARGENTINA (58%-42%). Goles: 4. Tarjetas: 2."
+                     },
+                     {
+                         "partidoId":  2,
+                         "partido":  {
+                                         "local":  "BRASIL",
+                                         "visitante":  "URUGUAY"
+                                     },
+                         "fecha":  "28/06/2026",
+                         "estadio":  "Levi\u0027s Stadium",
+                         "resultado":  "Brasil 2 - 0 Uruguay",
+                         "posesion":  {
+                                          "equipoLocal":  "BRASIL",
+                                          "posesionLocal":  61,
+                                          "equipoVisitante":  "URUGUAY",
+                                          "posesionVisitante":  39
+                                      },
+                         "goles":  [
+                                       {
+                                           "minuto":  22,
+                                           "equipo":  "Brasil",
+                                           "jugador":  "Vinicius Jr",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  73,
+                                           "equipo":  "Brasil",
+                                           "jugador":  "Rodrygo",
+                                           "periodo":  "tiempo_reglamentario"
+                                       }
+                                   ],
+                         "tarjetas":  [
+                                          {
+                                              "minuto":  31,
+                                              "tipo":  "AMARILLA",
+                                              "equipo":  "URUGUAY",
+                                              "jugador":  "Federico Valverde",
+                                              "periodo":  "tiempo_reglamentario"
+                                          },
+                                          {
+                                              "minuto":  57,
+                                              "tipo":  "AMARILLA",
+                                              "equipo":  "BRASIL",
+                                              "jugador":  "Casemiro",
+                                              "periodo":  "tiempo_reglamentario"
+                                          }
+                                      ],
+                         "clavesPeriodisticas":  {
+                                                     "totalGoles":  2,
+                                                     "totalTarjetas":  2,
+                                                     "dominadorPosesion":  "BRASIL",
+                                                     "huboRoja":  false,
+                                                     "huboTiempoExtra":  false
+                                                 },
+                         "resumenPeriodistico":  "BRASIL vs URUGUAY: Brasil 2 - 0 Uruguay. Dominio de posesion: BRASIL (61%-39%). Goles: 2. Tarjetas: 2."
+                     },
+                     {
+                         "partidoId":  3,
+                         "partido":  {
+                                         "local":  "FRANCIA",
+                                         "visitante":  "DINAMARCA"
+                                     },
+                         "fecha":  "29/06/2026",
+                         "estadio":  "Mercedes-Benz Stadium",
+                         "resultado":  "Francia 4 - 2 Dinamarca",
+                         "posesion":  {
+                                          "equipoLocal":  "FRANCIA",
+                                          "posesionLocal":  54,
+                                          "equipoVisitante":  "DINAMARCA",
+                                          "posesionVisitante":  46
+                                      },
+                         "goles":  [
+                                       {
+                                           "minuto":  9,
+                                           "equipo":  "Francia",
+                                           "jugador":  "Mbappé",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  18,
+                                           "equipo":  "Dinamarca",
+                                           "jugador":  "Hojlund",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  41,
+                                           "equipo":  "Francia",
+                                           "jugador":  "Dembélé",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  63,
+                                           "equipo":  "Francia",
+                                           "jugador":  "Griezmann",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  77,
+                                           "equipo":  "Dinamarca",
+                                           "jugador":  "Eriksen",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  88,
+                                           "equipo":  "Francia",
+                                           "jugador":  "Giroud",
+                                           "periodo":  "tiempo_reglamentario"
+                                       }
+                                   ],
+                         "tarjetas":  [
+                                          {
+                                              "minuto":  35,
+                                              "tipo":  "AMARILLA",
+                                              "equipo":  "FRANCIA",
+                                              "jugador":  "Theo Hernandez",
+                                              "periodo":  "tiempo_reglamentario"
+                                          },
+                                          {
+                                              "minuto":  71,
+                                              "tipo":  "AMARILLA",
+                                              "equipo":  "DINAMARCA",
+                                              "jugador":  "Christensen",
+                                              "periodo":  "tiempo_reglamentario"
+                                          }
+                                      ],
+                         "clavesPeriodisticas":  {
+                                                     "totalGoles":  6,
+                                                     "totalTarjetas":  2,
+                                                     "dominadorPosesion":  "FRANCIA",
+                                                     "huboRoja":  false,
+                                                     "huboTiempoExtra":  false
+                                                 },
+                         "resumenPeriodistico":  "FRANCIA vs DINAMARCA: Francia 4 - 2 Dinamarca. Dominio de posesion: FRANCIA (54%-46%). Goles: 6. Tarjetas: 2."
+                     },
+                     {
+                         "partidoId":  4,
+                         "partido":  {
+                                         "local":  "ESPAÑA",
+                                         "visitante":  "CROACIA"
+                                     },
+                         "fecha":  "29/06/2026",
+                         "estadio":  "AT\u0026T Stadium",
+                         "resultado":  "España 2 - 1 Croacia",
+                         "posesion":  {
+                                          "equipoLocal":  "ESPANA",
+                                          "posesionLocal":  63,
+                                          "equipoVisitante":  "CROACIA",
+                                          "posesionVisitante":  37
+                                      },
+                         "goles":  [
+                                       {
+                                           "minuto":  11,
+                                           "equipo":  "España",
+                                           "jugador":  "Pedri",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  52,
+                                           "equipo":  "Croacia",
+                                           "jugador":  "Kramaric",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  81,
+                                           "equipo":  "España",
+                                           "jugador":  "Nico Williams",
+                                           "periodo":  "tiempo_reglamentario"
+                                       }
+                                   ],
+                         "tarjetas":  [
+                                          {
+                                              "minuto":  25,
+                                              "tipo":  "AMARILLA",
+                                              "equipo":  "ESPANA",
+                                              "jugador":  "Rodri",
+                                              "periodo":  "tiempo_reglamentario"
+                                          },
+                                          {
+                                              "minuto":  69,
+                                              "tipo":  "AMARILLA",
+                                              "equipo":  "CROACIA",
+                                              "jugador":  "Modric",
+                                              "periodo":  "tiempo_reglamentario"
+                                          }
+                                      ],
+                         "clavesPeriodisticas":  {
+                                                     "totalGoles":  3,
+                                                     "totalTarjetas":  2,
+                                                     "dominadorPosesion":  "ESPANA",
+                                                     "huboRoja":  false,
+                                                     "huboTiempoExtra":  false
+                                                 },
+                         "resumenPeriodistico":  "ESPAÑA vs CROACIA: España 2 - 1 Croacia. Dominio de posesion: ESPANA (63%-37%). Goles: 3. Tarjetas: 2."
+                     },
+                     {
+                         "partidoId":  5,
+                         "partido":  {
+                                         "local":  "PORTUGAL",
+                                         "visitante":  "BÉLGICA"
+                                     },
+                         "fecha":  "30/06/2026",
+                         "estadio":  "SoFi Stadium",
+                         "resultado":  "Portugal 1 (4) - (3) 1 Bélgica",
+                         "posesion":  {
+                                          "equipoLocal":  "PORTUGAL",
+                                          "posesionLocal":  52,
+                                          "equipoVisitante":  "BELGICA",
+                                          "posesionVisitante":  48
+                                      },
+                         "goles":  [
+                                       {
+                                           "minuto":  33,
+                                           "equipo":  "Bélgica",
+                                           "jugador":  "Lukaku",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  74,
+                                           "equipo":  "Portugal",
+                                           "jugador":  "Cristiano Ronaldo",
+                                           "periodo":  "tiempo_reglamentario"
+                                       }
+                                   ],
+                         "tarjetas":  [
+
+                                      ],
+                         "clavesPeriodisticas":  {
+                                                     "totalGoles":  2,
+                                                     "totalTarjetas":  0,
+                                                     "dominadorPosesion":  "PORTUGAL",
+                                                     "huboRoja":  false,
+                                                     "huboTiempoExtra":  false
+                                                 },
+                         "resumenPeriodistico":  "PORTUGAL vs BÉLGICA: Portugal 1 (4) - (3) 1 Bélgica. Dominio de posesion: PORTUGAL (52%-48%). Goles: 2. Tarjetas: 0."
+                     },
+                     {
+                         "partidoId":  6,
+                         "partido":  {
+                                         "local":  "INGLATERRA",
+                                         "visitante":  "ESTADOS UNIDOS"
+                                     },
+                         "fecha":  "30/06/2026",
+                         "estadio":  "Arrowhead Stadium",
+                         "resultado":  "Inglaterra 2 - 0 Estados Unidos",
+                         "posesion":  {
+                                          "equipoLocal":  "INGLATERRA",
+                                          "posesionLocal":  57,
+                                          "equipoVisitante":  "ESTADOS UNIDOS",
+                                          "posesionVisitante":  43
+                                      },
+                         "goles":  [
+                                       {
+                                           "minuto":  29,
+                                           "equipo":  "Inglaterra",
+                                           "jugador":  "Harry Kane",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  70,
+                                           "equipo":  "Inglaterra",
+                                           "jugador":  "Foden",
+                                           "periodo":  "tiempo_reglamentario"
+                                       }
+                                   ],
+                         "tarjetas":  [
+                                          {
+                                              "minuto":  42,
+                                              "tipo":  "AMARILLA",
+                                              "equipo":  "ESTADOS UNIDOS",
+                                              "jugador":  "Tyler Adams",
+                                              "periodo":  "tiempo_reglamentario"
+                                          },
+                                          {
+                                              "minuto":  67,
+                                              "tipo":  "AMARILLA",
+                                              "equipo":  "INGLATERRA",
+                                              "jugador":  "Declan Rice",
+                                              "periodo":  "tiempo_reglamentario"
+                                          }
+                                      ],
+                         "clavesPeriodisticas":  {
+                                                     "totalGoles":  2,
+                                                     "totalTarjetas":  2,
+                                                     "dominadorPosesion":  "INGLATERRA",
+                                                     "huboRoja":  false,
+                                                     "huboTiempoExtra":  false
+                                                 },
+                         "resumenPeriodistico":  "INGLATERRA vs ESTADOS UNIDOS: Inglaterra 2 - 0 Estados Unidos. Dominio de posesion: INGLATERRA (57%-43%). Goles: 2. Tarjetas: 2."
+                     },
+                     {
+                         "partidoId":  7,
+                         "partido":  {
+                                         "local":  "ALEMANIA",
+                                         "visitante":  "JAPÓN"
+                                     },
+                         "fecha":  "01/07/2026",
+                         "estadio":  "NRG Stadium",
+                         "resultado":  "Alemania 3 - 2 Japón",
+                         "posesion":  {
+                                          "equipoLocal":  "ALEMANIA",
+                                          "posesionLocal":  65,
+                                          "equipoVisitante":  "JAPON",
+                                          "posesionVisitante":  35
+                                      },
+                         "goles":  [
+                                       {
+                                           "minuto":  16,
+                                           "equipo":  "Alemania",
+                                           "jugador":  "Musiala",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  28,
+                                           "equipo":  "Japón",
+                                           "jugador":  "Minamino",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  45,
+                                           "equipo":  "Alemania",
+                                           "jugador":  "Havertz",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  64,
+                                           "equipo":  "Japón",
+                                           "jugador":  "Kubo",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  86,
+                                           "equipo":  "Alemania",
+                                           "jugador":  "Fullkrug",
+                                           "periodo":  "tiempo_reglamentario"
+                                       }
+                                   ],
+                         "tarjetas":  [
+                                          {
+                                              "minuto":  39,
+                                              "tipo":  "AMARILLA",
+                                              "equipo":  "ALEMANIA",
+                                              "jugador":  "Rudiger",
+                                              "periodo":  "tiempo_reglamentario"
+                                          },
+                                          {
+                                              "minuto":  74,
+                                              "tipo":  "AMARILLA",
+                                              "equipo":  "JAPON",
+                                              "jugador":  "Tomiyasu",
+                                              "periodo":  "tiempo_reglamentario"
+                                          }
+                                      ],
+                         "clavesPeriodisticas":  {
+                                                     "totalGoles":  5,
+                                                     "totalTarjetas":  2,
+                                                     "dominadorPosesion":  "ALEMANIA",
+                                                     "huboRoja":  false,
+                                                     "huboTiempoExtra":  false
+                                                 },
+                         "resumenPeriodistico":  "ALEMANIA vs JAPÓN: Alemania 3 - 2 Japón. Dominio de posesion: ALEMANIA (65%-35%). Goles: 5. Tarjetas: 2."
+                     },
+                     {
+                         "partidoId":  8,
+                         "partido":  {
+                                         "local":  "PAÍSES BAJOS",
+                                         "visitante":  "ITALIA"
+                                     },
+                         "fecha":  "01/07/2026",
+                         "estadio":  "Gillette Stadium",
+                         "resultado":  "Países Bajos 2 - 1 Italia",
+                         "posesion":  {
+                                          "equipoLocal":  "PAISES BAJOS",
+                                          "posesionLocal":  55,
+                                          "equipoVisitante":  "ITALIA",
+                                          "posesionVisitante":  45
+                                      },
+                         "goles":  [
+                                       {
+                                           "minuto":  19,
+                                           "equipo":  "Italia",
+                                           "jugador":  "Chiesa",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  61,
+                                           "equipo":  "Países Bajos",
+                                           "jugador":  "Gakpo",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  89,
+                                           "equipo":  "Países Bajos",
+                                           "jugador":  "Depay",
+                                           "periodo":  "tiempo_reglamentario"
+                                       }
+                                   ],
+                         "tarjetas":  [
+                                          {
+                                              "minuto":  27,
+                                              "tipo":  "AMARILLA",
+                                              "equipo":  "ITALIA",
+                                              "jugador":  "Bastoni",
+                                              "periodo":  "tiempo_reglamentario"
+                                          },
+                                          {
+                                              "minuto":  78,
+                                              "tipo":  "AMARILLA",
+                                              "equipo":  "PAISES BAJOS",
+                                              "jugador":  "Van Dijk",
+                                              "periodo":  "tiempo_reglamentario"
+                                          }
+                                      ],
+                         "clavesPeriodisticas":  {
+                                                     "totalGoles":  3,
+                                                     "totalTarjetas":  2,
+                                                     "dominadorPosesion":  "PAISES BAJOS",
+                                                     "huboRoja":  false,
+                                                     "huboTiempoExtra":  false
+                                                 },
+                         "resumenPeriodistico":  "PAÍSES BAJOS vs ITALIA: Países Bajos 2 - 1 Italia. Dominio de posesion: PAISES BAJOS (55%-45%). Goles: 3. Tarjetas: 2."
+                     },
+                     {
+                         "partidoId":  9,
+                         "partido":  {
+                                         "local":  "ARGENTINA",
+                                         "visitante":  "INGLATERRA"
+                                     },
+                         "fecha":  "04/07/2026",
+                         "estadio":  "MetLife Stadium",
+                         "resultado":  "Argentina 2 - 1 Inglaterra",
+                         "posesion":  {
+                                          "equipoLocal":  "ARGENTINA",
+                                          "posesionLocal":  56,
+                                          "equipoVisitante":  "INGLATERRA",
+                                          "posesionVisitante":  44
+                                      },
+                         "goles":  [
+                                       {
+                                           "minuto":  12,
+                                           "equipo":  "Argentina",
+                                           "jugador":  "Julián Álvarez",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  47,
+                                           "equipo":  "Inglaterra",
+                                           "jugador":  "Harry Kane",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  78,
+                                           "equipo":  "Argentina",
+                                           "jugador":  "Lautaro Martínez",
+                                           "periodo":  "tiempo_reglamentario"
+                                       }
+                                   ],
+                         "tarjetas":  [
+
+                                      ],
+                         "clavesPeriodisticas":  {
+                                                     "totalGoles":  3,
+                                                     "totalTarjetas":  0,
+                                                     "dominadorPosesion":  "ARGENTINA",
+                                                     "huboRoja":  false,
+                                                     "huboTiempoExtra":  false
+                                                 },
+                         "resumenPeriodistico":  "ARGENTINA vs INGLATERRA: Argentina 2 - 1 Inglaterra. Dominio de posesion: ARGENTINA (56%-44%). Goles: 3. Tarjetas: 0."
+                     },
+                     {
+                         "partidoId":  10,
+                         "partido":  {
+                                         "local":  "BRASIL",
+                                         "visitante":  "PORTUGAL"
+                                     },
+                         "fecha":  "04/07/2026",
+                         "estadio":  "SoFi Stadium",
+                         "resultado":  "Brasil 3 - 2 Portugal",
+                         "posesion":  {
+                                          "equipoLocal":  "BRASIL",
+                                          "posesionLocal":  53,
+                                          "equipoVisitante":  "PORTUGAL",
+                                          "posesionVisitante":  47
+                                      },
+                         "goles":  [
+                                       {
+                                           "minuto":  9,
+                                           "equipo":  "Brasil",
+                                           "jugador":  "Vinicius Jr",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  31,
+                                           "equipo":  "Portugal",
+                                           "jugador":  "Bruno Fernandes",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  44,
+                                           "equipo":  "Brasil",
+                                           "jugador":  "Rodrygo",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  67,
+                                           "equipo":  "Portugal",
+                                           "jugador":  "Rafael Leão",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  88,
+                                           "equipo":  "Brasil",
+                                           "jugador":  "Endrick",
+                                           "periodo":  "tiempo_reglamentario"
+                                       }
+                                   ],
+                         "tarjetas":  [
+
+                                      ],
+                         "clavesPeriodisticas":  {
+                                                     "totalGoles":  5,
+                                                     "totalTarjetas":  0,
+                                                     "dominadorPosesion":  "BRASIL",
+                                                     "huboRoja":  false,
+                                                     "huboTiempoExtra":  false
+                                                 },
+                         "resumenPeriodistico":  "BRASIL vs PORTUGAL: Brasil 3 - 2 Portugal. Dominio de posesion: BRASIL (53%-47%). Goles: 5. Tarjetas: 0."
+                     },
+                     {
+                         "partidoId":  11,
+                         "partido":  {
+                                         "local":  "FRANCIA",
+                                         "visitante":  "ALEMANIA"
+                                     },
+                         "fecha":  "05/07/2026",
+                         "estadio":  "Mercedes-Benz Stadium",
+                         "resultado":  "Francia 2 (4) - (3) 2 Alemania",
+                         "posesion":  {
+                                          "equipoLocal":  "FRANCIA",
+                                          "posesionLocal":  49,
+                                          "equipoVisitante":  "ALEMANIA",
+                                          "posesionVisitante":  51
+                                      },
+                         "goles":  [
+                                       {
+                                           "minuto":  22,
+                                           "equipo":  "Francia",
+                                           "jugador":  "Mbappé",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  71,
+                                           "equipo":  "Alemania",
+                                           "jugador":  "Musiala",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  102,
+                                           "equipo":  "Francia",
+                                           "jugador":  "Griezmann",
+                                           "periodo":  "tiempo_extra"
+                                       },
+                                       {
+                                           "minuto":  113,
+                                           "equipo":  "Alemania",
+                                           "jugador":  "Havertz",
+                                           "periodo":  "tiempo_extra"
+                                       }
+                                   ],
+                         "tarjetas":  [
+
+                                      ],
+                         "clavesPeriodisticas":  {
+                                                     "totalGoles":  4,
+                                                     "totalTarjetas":  0,
+                                                     "dominadorPosesion":  "ALEMANIA",
+                                                     "huboRoja":  false,
+                                                     "huboTiempoExtra":  true
+                                                 },
+                         "resumenPeriodistico":  "FRANCIA vs ALEMANIA: Francia 2 (4) - (3) 2 Alemania. Dominio de posesion: ALEMANIA (49%-51%). Goles: 4. Tarjetas: 0."
+                     },
+                     {
+                         "partidoId":  12,
+                         "partido":  {
+                                         "local":  "ESPAÑA",
+                                         "visitante":  "PAÍSES BAJOS"
+                                     },
+                         "fecha":  "05/07/2026",
+                         "estadio":  "AT\u0026T Stadium",
+                         "resultado":  "España 2 - 0 Países Bajos",
+                         "posesion":  {
+                                          "equipoLocal":  "ESPANA",
+                                          "posesionLocal":  62,
+                                          "equipoVisitante":  "PAISES BAJOS",
+                                          "posesionVisitante":  38
+                                      },
+                         "goles":  [
+                                       {
+                                           "minuto":  39,
+                                           "equipo":  "España",
+                                           "jugador":  "Pedri",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  81,
+                                           "equipo":  "España",
+                                           "jugador":  "Nico Williams",
+                                           "periodo":  "tiempo_reglamentario"
+                                       }
+                                   ],
+                         "tarjetas":  [
+
+                                      ],
+                         "clavesPeriodisticas":  {
+                                                     "totalGoles":  2,
+                                                     "totalTarjetas":  0,
+                                                     "dominadorPosesion":  "ESPANA",
+                                                     "huboRoja":  false,
+                                                     "huboTiempoExtra":  false
+                                                 },
+                         "resumenPeriodistico":  "ESPAÑA vs PAÍSES BAJOS: España 2 - 0 Países Bajos. Dominio de posesion: ESPANA (62%-38%). Goles: 2. Tarjetas: 0."
+                     },
+                     {
+                         "partidoId":  13,
+                         "partido":  {
+                                         "local":  "ARGENTINA",
+                                         "visitante":  "BRASIL"
+                                     },
+                         "fecha":  "08/07/2026",
+                         "estadio":  "MetLife Stadium",
+                         "resultado":  "Argentina 1 (5) - (4) 1 Brasil",
+                         "posesion":  {
+                                          "equipoLocal":  "ARGENTINA",
+                                          "posesionLocal":  48,
+                                          "equipoVisitante":  "BRASIL",
+                                          "posesionVisitante":  52
+                                      },
+                         "goles":  [
+                                       {
+                                           "minuto":  18,
+                                           "equipo":  "Brasil",
+                                           "jugador":  "Vinicius Jr",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  63,
+                                           "equipo":  "Argentina",
+                                           "jugador":  "Lionel Messi",
+                                           "periodo":  "tiempo_reglamentario"
+                                       }
+                                   ],
+                         "tarjetas":  [
+                                          {
+                                              "minuto":  115,
+                                              "tipo":  "ROJA",
+                                              "equipo":  "BRASIL",
+                                              "jugador":  "Gabriel Magalhaes",
+                                              "periodo":  "tiempo_extra"
+                                          }
+                                      ],
+                         "clavesPeriodisticas":  {
+                                                     "totalGoles":  2,
+                                                     "totalTarjetas":  1,
+                                                     "dominadorPosesion":  "BRASIL",
+                                                     "huboRoja":  true,
+                                                     "huboTiempoExtra":  true
+                                                 },
+                         "resumenPeriodistico":  "ARGENTINA vs BRASIL: Argentina 1 (5) - (4) 1 Brasil. Dominio de posesion: BRASIL (48%-52%). Goles: 2. Tarjetas: 1."
+                     },
+                     {
+                         "partidoId":  14,
+                         "partido":  {
+                                         "local":  "FRANCIA",
+                                         "visitante":  "ESPAÑA"
+                                     },
+                         "fecha":  "09/07/2026",
+                         "estadio":  "Mercedes-Benz Stadium",
+                         "resultado":  "Francia 2 - 1 España",
+                         "posesion":  {
+                                          "equipoLocal":  "FRANCIA",
+                                          "posesionLocal":  46,
+                                          "equipoVisitante":  "ESPANA",
+                                          "posesionVisitante":  54
+                                      },
+                         "goles":  [
+                                       {
+                                           "minuto":  14,
+                                           "equipo":  "Francia",
+                                           "jugador":  "Mbappé",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  52,
+                                           "equipo":  "España",
+                                           "jugador":  "Morata",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  89,
+                                           "equipo":  "Francia",
+                                           "jugador":  "Dembélé",
+                                           "periodo":  "tiempo_reglamentario"
+                                       }
+                                   ],
+                         "tarjetas":  [
+
+                                      ],
+                         "clavesPeriodisticas":  {
+                                                     "totalGoles":  3,
+                                                     "totalTarjetas":  0,
+                                                     "dominadorPosesion":  "ESPANA",
+                                                     "huboRoja":  false,
+                                                     "huboTiempoExtra":  false
+                                                 },
+                         "resumenPeriodistico":  "FRANCIA vs ESPAÑA: Francia 2 - 1 España. Dominio de posesion: ESPANA (46%-54%). Goles: 3. Tarjetas: 0."
+                     },
+                     {
+                         "partidoId":  15,
+                         "partido":  {
+                                         "local":  "ARGENTINA",
+                                         "visitante":  "FRANCIA"
+                                     },
+                         "fecha":  "12/07/2026",
+                         "estadio":  "MetLife Stadium",
+                         "resultado":  "Argentina 3 - 2 Francia",
+                         "posesion":  {
+                                          "equipoLocal":  "ARGENTINA",
+                                          "posesionLocal":  51,
+                                          "equipoVisitante":  "FRANCIA",
+                                          "posesionVisitante":  49
+                                      },
+                         "goles":  [
+                                       {
+                                           "minuto":  11,
+                                           "equipo":  "Francia",
+                                           "jugador":  "Mbappé",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  27,
+                                           "equipo":  "Argentina",
+                                           "jugador":  "Julián Álvarez",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  58,
+                                           "equipo":  "Argentina",
+                                           "jugador":  "Lautaro Martínez",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  79,
+                                           "equipo":  "Francia",
+                                           "jugador":  "Griezmann",
+                                           "periodo":  "tiempo_reglamentario"
+                                       },
+                                       {
+                                           "minuto":  109,
+                                           "equipo":  "Argentina",
+                                           "jugador":  "Lionel Messi",
+                                           "periodo":  "tiempo_extra"
+                                       }
+                                   ],
+                         "tarjetas":  [
+
+                                      ],
+                         "clavesPeriodisticas":  {
+                                                     "totalGoles":  5,
+                                                     "totalTarjetas":  0,
+                                                     "dominadorPosesion":  "ARGENTINA",
+                                                     "huboRoja":  false,
+                                                     "huboTiempoExtra":  true
+                                                 },
+                         "resumenPeriodistico":  "ARGENTINA vs FRANCIA: Argentina 3 - 2 Francia. Dominio de posesion: ARGENTINA (51%-49%). Goles: 5. Tarjetas: 0."
+                     }
+                 ]
+}

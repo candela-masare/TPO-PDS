@@ -1,19 +1,7 @@
-
-====================================================
-MUNDIAL 2026 - OCTAVOS DE FINAL
-====================================================
-
 PARTIDO: ARGENTINA vs MÉXICO
 Fecha: 28/06/2026
 Estadio: Hard Rock Stadium
 Resultado Final: Argentina 3 - 1 México
-
-----------------------------------------
-POSESIÓN DEL BALÓN
-----------------------------------------
-
-- Argentina: 63%
-- México: 37%
 
 ----------------------------------------
 GOLES EN LOS 90 MINUTOS
@@ -24,19 +12,6 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 61: Gol de Argentina - Lionel Messi
 - Minuto 84: Gol de Argentina - Lautaro Martínez
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
-
-- Minuto 26: Edson Álvarez (México)
-- Minuto 49: Rodrigo De Paul (Argentina)
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
-
 ====================================================
 
 PARTIDO: BRASIL vs URUGUAY
@@ -45,31 +20,12 @@ Estadio: Levi's Stadium
 Resultado Final: Brasil 2 - 0 Uruguay
 
 ----------------------------------------
-POSESIÓN DEL BALÓN
-----------------------------------------
-
-- Brasil: 59%
-- Uruguay: 41%
-
-----------------------------------------
 GOLES EN LOS 90 MINUTOS
 ----------------------------------------
 
 - Minuto 22: Gol de Brasil - Vinicius Jr
 - Minuto 73: Gol de Brasil - Rodrygo
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
-
-- Minuto 31: Federico Valverde (Uruguay)
-- Minuto 57: Casemiro (Brasil)
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ====================================================
 
@@ -77,13 +33,6 @@ PARTIDO: FRANCIA vs DINAMARCA
 Fecha: 29/06/2026
 Estadio: Mercedes-Benz Stadium
 Resultado Final: Francia 4 - 2 Dinamarca
-
-----------------------------------------
-POSESIÓN DEL BALÓN
-----------------------------------------
-
-- Francia: 57%
-- Dinamarca: 43%
 
 ----------------------------------------
 GOLES EN LOS 90 MINUTOS
@@ -96,18 +45,6 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 77: Gol de Dinamarca - Eriksen
 - Minuto 88: Gol de Francia - Giroud
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
-
-- Minuto 35: Theo Hernández (Francia)
-- Minuto 71: Christensen (Dinamarca)
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ====================================================
 
@@ -117,13 +54,6 @@ Estadio: AT&T Stadium
 Resultado Final: España 2 - 1 Croacia
 
 ----------------------------------------
-POSESIÓN DEL BALÓN
-----------------------------------------
-
-- España: 66%
-- Croacia: 34%
-
-----------------------------------------
 GOLES EN LOS 90 MINUTOS
 ----------------------------------------
 
@@ -131,18 +61,6 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 52: Gol de Croacia - Kramaric
 - Minuto 81: Gol de España - Nico Williams
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
-
-- Minuto 25: Rodri (España)
-- Minuto 69: Modric (Croacia)
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ====================================================
 
@@ -152,24 +70,11 @@ Estadio: SoFi Stadium
 Resultado Final: Portugal 1 (4) - (3) 1 Bélgica
 
 ----------------------------------------
-POSESIÓN DEL BALÓN
-----------------------------------------
-
-- Portugal: 51%
-- Bélgica: 49%
-
-----------------------------------------
 GOLES EN LOS 90 MINUTOS
 ----------------------------------------
 
 - Minuto 33: Gol de Bélgica - Lukaku
 - Minuto 74: Gol de Portugal - Cristiano Ronaldo
-
-----------------------------------------
-EVENTOS EN EL TIEMPO EXTRA
-----------------------------------------
-
-- Minuto 108: Tarjeta amarilla - Pepe (Portugal)
 
 ----------------------------------------
 PENALES
@@ -195,31 +100,12 @@ Estadio: Arrowhead Stadium
 Resultado Final: Inglaterra 2 - 0 Estados Unidos
 
 ----------------------------------------
-POSESIÓN DEL BALÓN
-----------------------------------------
-
-- Inglaterra: 54%
-- Estados Unidos: 46%
-
-----------------------------------------
 GOLES EN LOS 90 MINUTOS
 ----------------------------------------
 
 - Minuto 29: Gol de Inglaterra - Harry Kane
 - Minuto 70: Gol de Inglaterra - Foden
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
-
-- Minuto 42: Tyler Adams (Estados Unidos)
-- Minuto 67: Declan Rice (Inglaterra)
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ====================================================
 
@@ -227,13 +113,6 @@ PARTIDO: ALEMANIA vs JAPÓN
 Fecha: 01/07/2026
 Estadio: NRG Stadium
 Resultado Final: Alemania 3 - 2 Japón
-
-----------------------------------------
-POSESIÓN DEL BALÓN
-----------------------------------------
-
-- Alemania: 58%
-- Japón: 42%
 
 ----------------------------------------
 GOLES EN LOS 90 MINUTOS
@@ -245,18 +124,7 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 64: Gol de Japón - Kubo
 - Minuto 86: Gol de Alemania - Fullkrug
 
-----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
 
-- Minuto 39: Rudiger (Alemania)
-- Minuto 74: Tomiyasu (Japón)
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
 
 ====================================================
 
@@ -264,13 +132,6 @@ PARTIDO: PAÍSES BAJOS vs ITALIA
 Fecha: 01/07/2026
 Estadio: Gillette Stadium
 Resultado Final: Países Bajos 2 - 1 Italia
-
-----------------------------------------
-POSESIÓN DEL BALÓN
-----------------------------------------
-
-- Países Bajos: 47%
-- Italia: 53%
 
 ----------------------------------------
 GOLES EN LOS 90 MINUTOS
@@ -281,31 +142,13 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 89: Gol de Países Bajos - Depay
 
 ----------------------------------------
-TARJETAS AMARILLAS
-----------------------------------------
 
-- Minuto 27: Bastoni (Italia)
-- Minuto 78: Van Dijk (Países Bajos)
-
-----------------------------------------
-TARJETAS ROJAS
-----------------------------------------
-
-- No hubo expulsados.
-
-====================================================
-CUARTOS DE FINAL
 ====================================================
 
 PARTIDO: ARGENTINA vs INGLATERRA
+Fecha: 04/07/2026
+Estadio: MetLife Stadium
 Resultado Final: Argentina 2 - 1 Inglaterra
-
-----------------------------------------
-POSESIÓN DEL BALÓN
-----------------------------------------
-
-- Argentina: 56%
-- Inglaterra: 44%
 
 ----------------------------------------
 GOLES EN LOS 90 MINUTOS
@@ -315,17 +158,14 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 47: Gol de Inglaterra - Harry Kane
 - Minuto 78: Gol de Argentina - Lautaro Martínez
 
+
+
 ====================================================
 
 PARTIDO: BRASIL vs PORTUGAL
+Fecha: 04/07/2026
+Estadio: SoFi Stadium
 Resultado Final: Brasil 3 - 2 Portugal
-
-----------------------------------------
-POSESIÓN DEL BALÓN
-----------------------------------------
-
-- Brasil: 61%
-- Portugal: 39%
 
 ----------------------------------------
 GOLES EN LOS 90 MINUTOS
@@ -337,17 +177,14 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 67: Gol de Portugal - Rafael Leão
 - Minuto 88: Gol de Brasil - Endrick
 
+
+
 ====================================================
 
 PARTIDO: FRANCIA vs ALEMANIA
+Fecha: 05/07/2026
+Estadio: Mercedes-Benz Stadium
 Resultado Final: Francia 2 (4) - (3) 2 Alemania
-
-----------------------------------------
-POSESIÓN DEL BALÓN
-----------------------------------------
-
-- Francia: 53%
-- Alemania: 47%
 
 ----------------------------------------
 GOLES EN LOS 90 MINUTOS
@@ -356,7 +193,7 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 22: Gol de Francia - Mbappé
 - Minuto 71: Gol de Alemania - Musiala
 
-----------------------------------------
+
 EVENTOS EN EL TIEMPO EXTRA
 ----------------------------------------
 
@@ -366,14 +203,9 @@ EVENTOS EN EL TIEMPO EXTRA
 ====================================================
 
 PARTIDO: ESPAÑA vs PAÍSES BAJOS
+Fecha: 05/07/2026
+Estadio: AT&T Stadium
 Resultado Final: España 2 - 0 Países Bajos
-
-----------------------------------------
-POSESIÓN DEL BALÓN
-----------------------------------------
-
-- España: 62%
-- Países Bajos: 38%
 
 ----------------------------------------
 GOLES EN LOS 90 MINUTOS
@@ -382,19 +214,14 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 39: Gol de España - Pedri
 - Minuto 81: Gol de España - Nico Williams
 
-====================================================
-SEMIFINALES
+
+
 ====================================================
 
 PARTIDO: ARGENTINA vs BRASIL
+Fecha: 08/07/2026
+Estadio: MetLife Stadium
 Resultado Final: Argentina 1 (5) - (4) 1 Brasil
-
-----------------------------------------
-POSESIÓN DEL BALÓN
-----------------------------------------
-
-- Argentina: 52%
-- Brasil: 48%
 
 ----------------------------------------
 GOLES EN LOS 90 MINUTOS
@@ -402,6 +229,7 @@ GOLES EN LOS 90 MINUTOS
 
 - Minuto 18: Gol de Brasil - Vinicius Jr
 - Minuto 63: Gol de Argentina - Lionel Messi
+
 
 ----------------------------------------
 EVENTOS EN EL TIEMPO EXTRA
@@ -412,14 +240,9 @@ EVENTOS EN EL TIEMPO EXTRA
 ====================================================
 
 PARTIDO: FRANCIA vs ESPAÑA
+Fecha: 09/07/2026
+Estadio: Mercedes-Benz Stadium
 Resultado Final: Francia 2 - 1 España
-
-----------------------------------------
-POSESIÓN DEL BALÓN
-----------------------------------------
-
-- Francia: 55%
-- España: 45%
 
 ----------------------------------------
 GOLES EN LOS 90 MINUTOS
@@ -429,19 +252,13 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 52: Gol de España - Morata
 - Minuto 89: Gol de Francia - Dembélé
 
-====================================================
-FINAL DEL MUNDIAL
+
 ====================================================
 
 PARTIDO: ARGENTINA vs FRANCIA
+Fecha: 12/07/2026
+Estadio: MetLife Stadium
 Resultado Final: Argentina 3 - 2 Francia
-
-----------------------------------------
-POSESIÓN DEL BALÓN
-----------------------------------------
-
-- Argentina: 54%
-- Francia: 46%
 
 ----------------------------------------
 GOLES EN LOS 90 MINUTOS
@@ -451,6 +268,8 @@ GOLES EN LOS 90 MINUTOS
 - Minuto 27: Gol de Argentina - Julián Álvarez
 - Minuto 58: Gol de Argentina - Lautaro Martínez
 - Minuto 79: Gol de Francia - Griezmann
+
+----------------------------------------
 
 ----------------------------------------
 EVENTOS EN EL TIEMPO EXTRA
