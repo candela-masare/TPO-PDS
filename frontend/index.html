@@ -3,540 +3,390 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Copa Mundial 2026</title>
+  <title>Copa Mundial 2026 — Plataforma Deportiva</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:        #0d0d1a;
-      --card:      #1a1a2e;
-      --card2:     #16213e;
-      --rojo:      #c0392b;
-      --rojo2:     #e74c3c;
-      --oro:       #f39c12;
-      --texto:     #ecf0f1;
-      --gris:      #95a5a6;
-      --gris2:     #7f8c8d;
-      --verde:     #27ae60;
-      --amarillo:  #f1c40f;
-      --borde:     #2c3e50;
+      --bg:       #0d0d1a;
+      --card:     #1a1a2e;
+      --card2:    #16213e;
+      --rojo:     #c0392b;
+      --rojo2:    #e74c3c;
+      --oro:      #f39c12;
+      --texto:    #ecf0f1;
+      --gris:     #95a5a6;
+      --gris2:    #7f8c8d;
+      --verde:    #27ae60;
+      --amarillo: #f1c40f;
+      --borde:    #2c3e50;
     }
 
-    body {
-      background: var(--bg);
-      color: var(--texto);
-      font-family: 'Segoe UI', Arial, sans-serif;
+    body { background: var(--bg); color: var(--texto); font-family: 'Segoe UI', Arial, sans-serif; min-height: 100vh; }
+
+    /* ══════════════════════════════════════════
+       LOGIN SCREEN
+    ══════════════════════════════════════════ */
+    #login-screen {
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
     }
+    .login-logo { font-size: 3rem; margin-bottom: 8px; }
+    .login-titulo { font-size: 1.8rem; font-weight: 800; letter-spacing: 1px; }
+    .login-titulo span { color: var(--oro); }
+    .login-sub {
+      font-size: 0.75rem; color: var(--gris); letter-spacing: 2px;
+      text-transform: uppercase; margin-top: 4px; margin-bottom: 32px;
+    }
+    .login-pregunta {
+      font-size: 1rem; font-weight: 600; color: var(--gris);
+      text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px;
+    }
+    .roles-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      width: 100%;
+      max-width: 520px;
+    }
+    .rol-card {
+      background: var(--card);
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      padding: 24px 16px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .rol-card:hover {
+      border-color: var(--rojo);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 28px rgba(192,57,43,0.25);
+    }
+    .rol-icono   { font-size: 2.6rem; margin-bottom: 10px; display: block; }
+    .rol-nombre  { font-size: 1rem; font-weight: 700; margin-bottom: 6px; }
+    .rol-desc    { font-size: 0.73rem; color: var(--gris); line-height: 1.4; }
 
-    /* ── HEADER ── */
+    /* ══════════════════════════════════════════
+       APP SCREEN
+    ══════════════════════════════════════════ */
+    #app-screen { display: none; flex-direction: column; min-height: 100vh; }
+    #app-screen.visible { display: flex; }
+
     .header {
       background: linear-gradient(135deg, #1a0a0a 0%, #2d0808 50%, #1a0a0a 100%);
       border-bottom: 2px solid var(--rojo);
-      padding: 16px 20px 12px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      padding: 12px 16px;
+      position: sticky; top: 0; z-index: 100;
     }
     .header-inner {
-      max-width: 700px;
-      margin: 0 auto;
+      max-width: 700px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
     }
-    .header h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: 1px;
+    .header-left h1 { font-size: 1.25rem; font-weight: 700; }
+    .header-left h1 span { color: var(--oro); }
+    .header-rol {
+      font-size: 0.68rem; color: var(--gris);
+      text-transform: uppercase; letter-spacing: 1px; margin-top: 2px;
     }
-    .header h1 span {
-      color: var(--oro);
+    .btn-cambiar {
+      background: var(--borde); border: none; color: var(--gris);
+      font-size: 0.75rem; padding: 6px 12px; border-radius: 6px;
+      cursor: pointer; transition: background 0.2s;
     }
-    .header-sub {
-      font-size: 0.75rem;
-      color: var(--gris);
-      margin-top: 2px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
+    .btn-cambiar:hover { background: var(--rojo); color: #fff; }
 
-    /* ── NAV TABS ── */
     .nav-tabs {
-      background: var(--card);
-      border-bottom: 1px solid var(--borde);
-      display: flex;
-      max-width: 700px;
-      margin: 0 auto;
+      background: var(--card); border-bottom: 1px solid var(--borde);
+      display: flex; max-width: 700px; margin: 0 auto;
     }
     .nav-tab {
-      flex: 1;
-      padding: 13px 8px;
-      background: none;
-      border: none;
-      color: var(--gris);
-      font-size: 0.82rem;
-      font-weight: 600;
-      cursor: pointer;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      border-bottom: 3px solid transparent;
-      transition: color 0.2s, border-color 0.2s;
+      flex: 1; padding: 12px 6px; background: none; border: none;
+      color: var(--gris); font-size: 0.78rem; font-weight: 600; cursor: pointer;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      border-bottom: 3px solid transparent; transition: color 0.2s, border-color 0.2s;
     }
-    .nav-tab.activo {
-      color: var(--oro);
-      border-bottom-color: var(--oro);
-    }
-    .nav-tab:hover:not(.activo) {
-      color: var(--texto);
-    }
+    .nav-tab.activo { color: var(--oro); border-bottom-color: var(--oro); }
+    .nav-tab:hover:not(.activo) { color: var(--texto); }
 
-    /* ── CONTENIDO PRINCIPAL ── */
-    .main {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 0 0 80px;
-    }
+    .main { max-width: 700px; margin: 0 auto; padding-bottom: 40px; flex: 1; }
     .seccion { display: none; }
     .seccion.activa { display: block; }
 
-    /* ── SPINNER ── */
+    /* ══════════════════════════════════════════
+       COMPONENTES COMPARTIDOS
+    ══════════════════════════════════════════ */
     .spinner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 60px 20px;
-      color: var(--gris);
-      flex-direction: column;
-      gap: 14px;
+      display: flex; justify-content: center; align-items: center;
+      padding: 60px 20px; color: var(--gris); flex-direction: column; gap: 14px;
     }
     .spinner::before {
-      content: '';
-      width: 40px; height: 40px;
-      border: 4px solid var(--borde);
-      border-top-color: var(--rojo);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
+      content: ''; width: 36px; height: 36px;
+      border: 3px solid var(--borde); border-top-color: var(--rojo);
+      border-radius: 50%; animation: spin 0.8s linear infinite;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* ── CABECERA DE FASE ── */
+    .seccion-titulo {
+      padding: 12px 16px; font-size: 0.68rem; text-transform: uppercase;
+      letter-spacing: 2px; color: var(--gris); border-bottom: 1px solid var(--borde);
+      background: var(--card2);
+    }
+    .error-msg { padding: 30px 20px; text-align: center; color: var(--rojo2); font-size: 0.9rem; }
+
+    /* FASE HEADER (rojo) */
     .fase-header {
-      background: var(--rojo);
-      padding: 10px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      margin-top: 8px;
+      background: var(--rojo); padding: 9px 16px; margin-top: 8px;
     }
     .fase-header:first-child { margin-top: 0; }
-    .fase-fecha {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: #ffeaa7;
-      text-transform: capitalize;
-    }
-    .fase-nombre {
-      font-size: 0.68rem;
-      color: rgba(255,255,255,0.8);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+    .fase-fecha { font-size: 0.75rem; font-weight: 600; color: #ffeaa7; text-transform: capitalize; }
+    .fase-nombre { font-size: 0.65rem; color: rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 1px; }
 
-    /* ── TARJETA DE PARTIDO ── */
+    /* PARTIDO CARD */
     .partido-card {
-      background: var(--card);
-      border-bottom: 1px solid var(--borde);
-      padding: 14px 16px 12px;
-      cursor: pointer;
-      transition: background 0.15s;
+      background: var(--card); border-bottom: 1px solid var(--borde);
+      padding: 13px 16px 11px; cursor: pointer; transition: background 0.15s;
     }
     .partido-card:hover { background: var(--card2); }
-
     .partido-equipos {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-      gap: 8px;
+      display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px;
     }
-    .equipo-local {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .equipo-visitante {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      justify-content: flex-end;
-    }
-    .bandera {
-      font-size: 2rem;
-      line-height: 1;
-      flex-shrink: 0;
-    }
-    .equipo-info { display: flex; flex-direction: column; gap: 3px; }
-    .equipo-nombre {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--texto);
-    }
-    .equipo-visitante .equipo-info { text-align: right; }
+    .equipo-local  { display: flex; align-items: center; gap: 10px; }
+    .equipo-visitante { display: flex; align-items: center; gap: 10px; justify-content: flex-end; }
+    .bandera { font-size: 1.9rem; line-height: 1; flex-shrink: 0; }
+    .equipo-nombre { font-size: 0.9rem; font-weight: 600; }
+    .equipo-visitante .equipo-nombre { text-align: right; }
+    .marcador-centro { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+    .marcador-score { display: flex; align-items: center; gap: 8px; }
+    .gol-num { font-size: 1.7rem; font-weight: 700; color: #fff; min-width: 24px; text-align: center; }
+    .marcador-sep { font-size: 1.1rem; color: var(--gris); }
+    .marcador-label { font-size: 0.58rem; color: var(--gris); text-transform: uppercase; letter-spacing: 0.5px; }
+    .penales-badge { font-size: 0.62rem; background: var(--rojo); color: #fff; padding: 1px 6px; border-radius: 8px; }
+    .partido-estadio { text-align: center; font-size: 0.7rem; color: var(--gris2); margin-top: 7px; }
+    .partido-badges { display: flex; justify-content: center; gap: 6px; margin-top: 5px; }
+    .badge { font-size: 0.6rem; padding: 2px 7px; border-radius: 10px; font-weight: 600; }
+    .badge-extra { background: rgba(243,156,18,.2); color: var(--oro); border: 1px solid var(--oro); }
+    .badge-roja  { background: rgba(231,76,60,.2); color: var(--rojo2); border: 1px solid var(--rojo2); }
 
-    .marcador-centro {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-    }
-    .marcador-score {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .gol-num {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #fff;
-      min-width: 28px;
-      text-align: center;
-    }
-    .marcador-sep {
-      font-size: 1.2rem;
-      color: var(--gris);
-    }
-    .marcador-label {
-      font-size: 0.6rem;
-      color: var(--gris);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      white-space: nowrap;
-    }
-    .penales-badge {
-      font-size: 0.65rem;
-      background: var(--rojo);
-      color: #fff;
-      padding: 2px 6px;
-      border-radius: 10px;
-      margin-top: 2px;
-    }
+    /* EQUIPOS GRID */
+    .equipos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--borde); }
+    .equipo-card { background: var(--card); padding: 16px 14px; cursor: pointer; transition: background 0.15s; }
+    .equipo-card:hover { background: var(--card2); }
+    .equipo-card-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .equipo-card-bandera { font-size: 2rem; }
+    .equipo-card-nombre { font-size: 0.9rem; font-weight: 700; }
+    .equipo-card-stats { display: flex; gap: 10px; }
+    .stat-item { display: flex; flex-direction: column; align-items: center; }
+    .stat-val { font-size: 1.05rem; font-weight: 700; color: var(--oro); }
+    .stat-lbl { font-size: 0.58rem; color: var(--gris); text-transform: uppercase; }
+    .equipo-card-sub { font-size: 0.68rem; color: var(--gris); margin-top: 5px; }
 
-    .partido-estadio {
-      text-align: center;
-      font-size: 0.72rem;
-      color: var(--gris2);
-      margin-top: 8px;
+    /* TABLA RANKING */
+    .toggle-bar { display: flex; gap: 8px; padding: 12px 16px; background: var(--card2); border-bottom: 1px solid var(--borde); }
+    .toggle-btn {
+      flex: 1; padding: 8px; background: var(--borde); border: 1px solid var(--borde);
+      color: var(--gris); font-size: 0.78rem; font-weight: 600; border-radius: 6px; cursor: pointer;
+      transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.5px;
     }
-    .partido-badges {
-      display: flex;
-      justify-content: center;
-      gap: 6px;
-      margin-top: 6px;
-    }
-    .badge {
-      font-size: 0.62rem;
-      padding: 2px 7px;
-      border-radius: 10px;
-      font-weight: 600;
-    }
-    .badge-extra   { background: rgba(243,156,18,0.2); color: var(--oro); border: 1px solid var(--oro); }
-    .badge-roja    { background: rgba(231,76,60,0.2);  color: var(--rojo2); border: 1px solid var(--rojo2); }
-
-    /* ── TABLA RANKINGS ── */
-    .tabla-ranking {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .tabla-ranking thead tr {
-      background: var(--card2);
-      border-bottom: 2px solid var(--rojo);
-    }
-    .tabla-ranking th {
-      padding: 10px 8px;
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--gris);
-      text-align: center;
-    }
+    .toggle-btn.activo { background: var(--rojo); color: #fff; border-color: var(--rojo); }
+    .tabla-ranking { width: 100%; border-collapse: collapse; }
+    .tabla-ranking thead tr { background: var(--card2); border-bottom: 2px solid var(--rojo); }
+    .tabla-ranking th { padding: 10px 8px; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gris); text-align: center; }
     .tabla-ranking th:nth-child(2) { text-align: left; padding-left: 12px; }
-    .tabla-ranking td {
-      padding: 10px 8px;
-      font-size: 0.88rem;
-      text-align: center;
-      border-bottom: 1px solid var(--borde);
-    }
+    .tabla-ranking td { padding: 10px 8px; font-size: 0.86rem; text-align: center; border-bottom: 1px solid var(--borde); }
     .tabla-ranking td:nth-child(2) { text-align: left; padding-left: 12px; }
     .tabla-ranking tr:hover td { background: var(--card2); }
-    .pos-num {
-      font-weight: 700;
-      color: var(--gris);
-      min-width: 28px;
-    }
+    .pos-num { font-weight: 700; color: var(--gris); }
     .pos-num.top { color: var(--oro); }
-    .puntos-cel { font-weight: 700; color: var(--oro); }
+    .pts-cel { font-weight: 700; color: var(--oro); }
     .diff-pos { color: var(--verde); }
     .diff-neg { color: var(--rojo2); }
-    .ranking-bandera { margin-right: 8px; }
+    .rnk-flag { margin-right: 6px; }
 
-    /* ── TARJETA EQUIPO ── */
-    .equipos-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--borde);
+    /* ÁRBITROS */
+    .arbitro-row {
+      display: flex; align-items: center; gap: 12px; padding: 12px 16px;
+      border-bottom: 1px solid var(--borde); background: var(--card);
     }
-    .equipo-card {
-      background: var(--card);
-      padding: 18px 14px;
-      cursor: pointer;
-      transition: background 0.15s;
-    }
-    .equipo-card:hover { background: var(--card2); }
-    .equipo-card-top {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
-    .equipo-card-bandera { font-size: 2.2rem; }
-    .equipo-card-nombre {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--texto);
-    }
-    .equipo-card-stats {
-      display: flex;
-      gap: 12px;
-    }
-    .stat-item { display: flex; flex-direction: column; align-items: center; }
-    .stat-val  { font-size: 1.1rem; font-weight: 700; color: var(--oro); }
-    .stat-lbl  { font-size: 0.6rem; color: var(--gris); text-transform: uppercase; }
-    .equipo-card-jugadores {
-      font-size: 0.72rem;
-      color: var(--gris);
-      margin-top: 6px;
-    }
+    .arbitro-row:hover { background: var(--card2); }
+    .arbitro-num { font-size: 0.8rem; color: var(--gris); font-weight: 700; min-width: 24px; text-align: center; }
+    .arbitro-nombre { font-size: 0.9rem; font-weight: 600; }
+    .arbitro-nac { font-size: 0.72rem; color: var(--gris); margin-top: 2px; }
 
-    /* ── GOLEADORES ── */
-    .goleadores-list { padding: 0; }
+    /* GOLEADORES */
     .goleador-row {
-      display: grid;
-      grid-template-columns: 36px 1fr auto;
-      align-items: center;
-      gap: 12px;
-      padding: 13px 16px;
-      border-bottom: 1px solid var(--borde);
-      background: var(--card);
+      display: grid; grid-template-columns: 36px 1fr auto; align-items: center;
+      gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--borde); background: var(--card);
     }
     .goleador-row:hover { background: var(--card2); }
-    .goleador-pos {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--gris);
-      text-align: center;
-    }
+    .goleador-pos { font-size: 1rem; font-weight: 700; color: var(--gris); text-align: center; }
     .goleador-pos.top3 { color: var(--oro); }
-    .goleador-nombre { font-size: 0.92rem; font-weight: 600; }
-    .goleador-equipo { font-size: 0.75rem; color: var(--gris); margin-top: 2px; }
-    .goleador-goles {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--verde);
-    }
+    .goleador-nombre { font-size: 0.9rem; font-weight: 600; }
+    .goleador-equipo { font-size: 0.72rem; color: var(--gris); margin-top: 2px; }
+    .goleador-goles { font-size: 1.4rem; font-weight: 700; color: var(--verde); }
 
-    /* ── MODAL DETALLE ── */
+    /* MERCADOS */
+    .mercado-card {
+      background: var(--card); border-bottom: 1px solid var(--borde);
+      padding: 13px 16px; cursor: pointer; transition: background 0.15s;
+    }
+    .mercado-card:hover { background: var(--card2); }
+    .mercado-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+    .mercado-partido { font-size: 0.92rem; font-weight: 600; }
+    .mercado-info { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .mercado-label { font-size: 0.72rem; color: var(--gris); }
+    .mercado-dest { font-size: 0.75rem; font-weight: 600; color: var(--texto); }
+    .riesgo-badge { font-size: 0.65rem; padding: 3px 9px; border-radius: 10px; font-weight: 700; text-transform: uppercase; }
+    .riesgo-bajo  { background: rgba(39,174,96,.2);  color: #2ecc71; border: 1px solid #27ae60; }
+    .riesgo-medio { background: rgba(241,196,15,.2); color: #f1c40f; border: 1px solid #f39c12; }
+    .riesgo-alto  { background: rgba(231,76,60,.2);  color: var(--rojo2); border: 1px solid var(--rojo); }
+
+    /* REPORTE AVANZADO - lista */
+    .reporte-card {
+      background: var(--card); border-bottom: 1px solid var(--borde);
+      padding: 13px 16px; cursor: pointer; transition: background 0.15s;
+    }
+    .reporte-card:hover { background: var(--card2); }
+    .reporte-card-titulo { font-size: 0.92rem; font-weight: 700; margin-bottom: 4px; }
+    .reporte-card-sub { font-size: 0.72rem; color: var(--gris); }
+
+    /* ══════════════════════════════════════════
+       MODAL
+    ══════════════════════════════════════════ */
     .modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.85);
-      z-index: 200;
-      overflow-y: auto;
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.88); z-index: 200; overflow-y: auto;
     }
     .modal-overlay.visible { display: block; }
     .modal-box {
-      background: var(--card);
-      max-width: 560px;
-      margin: 20px auto;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid var(--borde);
+      background: var(--card); max-width: 560px; margin: 20px auto;
+      border-radius: 12px; overflow: hidden; border: 1px solid var(--borde);
     }
-    .modal-header {
+
+    /* modal header - partido */
+    .modal-hdr {
       background: linear-gradient(135deg, #2d0808, #1a0808);
-      padding: 20px 18px 16px;
-      border-bottom: 2px solid var(--rojo);
+      padding: 18px 16px 14px; border-bottom: 2px solid var(--rojo);
     }
-    .modal-fase {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--gris);
-      margin-bottom: 14px;
-    }
-    .modal-equipos {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-      gap: 10px;
-    }
-    .modal-equipo { display: flex; flex-direction: column; align-items: center; gap: 8px; }
-    .modal-bandera { font-size: 3rem; }
-    .modal-nombre  { font-size: 1rem; font-weight: 700; text-align: center; }
-    .modal-marcador {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-    }
-    .modal-score {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .modal-gol { font-size: 2.5rem; font-weight: 700; }
-    .modal-sep { font-size: 1.5rem; color: var(--gris); }
-    .modal-penales { font-size: 0.8rem; color: var(--oro); font-weight: 600; }
-    .modal-label { font-size: 0.65rem; color: var(--gris); text-transform: uppercase; letter-spacing: 1px; }
-    .modal-meta {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      margin-top: 10px;
-      font-size: 0.75rem;
-      color: var(--gris);
-    }
-    .modal-meta-sep { color: var(--borde); }
+    .modal-fase-lbl { font-size: 0.62rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gris); margin-bottom: 12px; }
+    .modal-equipos-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px; }
+    .modal-eq { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .modal-eq-flag { font-size: 2.8rem; }
+    .modal-eq-name { font-size: 0.95rem; font-weight: 700; text-align: center; }
+    .modal-score-col { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .modal-score-nums { display: flex; align-items: center; gap: 8px; }
+    .modal-score-n { font-size: 2.4rem; font-weight: 700; }
+    .modal-score-sep { font-size: 1.3rem; color: var(--gris); }
+    .modal-pen-txt { font-size: 0.75rem; color: var(--oro); font-weight: 600; }
+    .modal-score-lbl { font-size: 0.6rem; color: var(--gris); text-transform: uppercase; letter-spacing: 1px; }
+    .modal-meta { text-align: center; font-size: 0.72rem; color: var(--gris); margin-top: 10px; }
 
-    .modal-body { padding: 16px; }
+    .modal-body { padding: 15px 16px; }
 
-    /* Posesión */
-    .posesion-bar { margin-bottom: 18px; }
-    .posesion-label {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.72rem;
-      color: var(--gris);
-      margin-bottom: 6px;
-    }
-    .posesion-label span { font-size: 0.85rem; font-weight: 700; color: var(--texto); }
-    .posesion-track {
-      height: 8px;
-      background: var(--borde);
-      border-radius: 4px;
-      overflow: hidden;
-      display: flex;
-    }
-    .posesion-fill-local  { background: var(--rojo);  transition: width 0.6s; }
-    .posesion-fill-visit  { background: var(--gris2); transition: width 0.6s; }
+    /* posesión */
+    .posesion-row { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--gris); margin-bottom: 5px; }
+    .posesion-row span { font-size: 0.85rem; font-weight: 700; color: var(--texto); }
+    .posesion-track { height: 7px; background: var(--borde); border-radius: 4px; overflow: hidden; display: flex; margin-bottom: 14px; }
+    .posesion-local { background: var(--rojo); }
+    .posesion-visit { background: var(--gris2); }
 
-    /* Timeline */
-    .timeline-titulo {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--gris);
-      margin-bottom: 10px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid var(--borde);
-    }
-    .timeline { position: relative; margin-bottom: 18px; }
-    .timeline-evento {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 7px 0;
-      border-bottom: 1px solid rgba(44,62,80,0.5);
-    }
-    .timeline-min {
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--gris);
-      min-width: 36px;
-      text-align: right;
-      flex-shrink: 0;
-    }
-    .timeline-icono { font-size: 1.1rem; flex-shrink: 0; }
-    .timeline-info { flex: 1; }
-    .timeline-jugador { font-size: 0.88rem; font-weight: 600; }
-    .timeline-equipo  { font-size: 0.72rem; color: var(--gris); }
+    /* timeline */
+    .tl-titulo { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--gris); margin-bottom: 8px; padding-bottom: 5px; border-bottom: 1px solid var(--borde); }
+    .tl-evento { display: flex; align-items: center; gap: 10px; padding: 6px 0; border-bottom: 1px solid rgba(44,62,80,0.5); }
+    .tl-min { font-size: 0.7rem; font-weight: 700; color: var(--gris); min-width: 32px; text-align: right; flex-shrink: 0; }
+    .tl-icon { font-size: 1.05rem; flex-shrink: 0; }
+    .tl-jugador { font-size: 0.86rem; font-weight: 600; }
+    .tl-equipo { font-size: 0.7rem; color: var(--gris); }
 
-    /* Resumen */
+    /* mercado stats */
+    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+    .stat-box { background: var(--card2); border-radius: 8px; padding: 10px 12px; text-align: center; }
+    .stat-box-val { font-size: 1.4rem; font-weight: 700; color: var(--oro); }
+    .stat-box-lbl { font-size: 0.65rem; color: var(--gris); text-transform: uppercase; margin-top: 2px; }
+    .stat-fila { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--borde); font-size: 0.84rem; }
+    .stat-fila-lbl { color: var(--gris); }
+    .stat-fila-val { font-weight: 600; }
+    .si-badge  { color: var(--verde); }
+    .no-badge  { color: var(--rojo2); }
+
+    /* reporte analista */
+    .reporte-seccion { margin-bottom: 16px; }
+    .reporte-seccion-titulo { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--oro); font-weight: 700; margin-bottom: 8px; padding-bottom: 5px; border-bottom: 1px solid var(--borde); }
+    .reporte-fila { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid rgba(44,62,80,0.5); font-size: 0.84rem; }
+    .reporte-fila-lbl { color: var(--gris); }
+    .reporte-fila-val { font-weight: 600; }
+
+    /* resumen periodístico */
     .resumen-box {
-      background: var(--card2);
-      border-left: 3px solid var(--rojo);
-      padding: 12px 14px;
-      border-radius: 4px;
-      font-size: 0.82rem;
-      line-height: 1.5;
-      color: var(--gris);
+      background: var(--card2); border-left: 3px solid var(--rojo);
+      padding: 11px 13px; border-radius: 4px; font-size: 0.8rem; line-height: 1.55; color: var(--gris);
     }
 
-    .modal-cerrar-btn {
-      display: block;
-      width: 100%;
-      padding: 14px;
-      background: var(--borde);
-      border: none;
-      color: var(--texto);
-      font-size: 0.88rem;
-      cursor: pointer;
-      transition: background 0.2s;
+    .modal-cerrar {
+      display: block; width: 100%; padding: 13px;
+      background: var(--borde); border: none; color: var(--texto);
+      font-size: 0.86rem; cursor: pointer; transition: background 0.2s;
     }
-    .modal-cerrar-btn:hover { background: var(--rojo); }
-
-    .seccion-titulo {
-      padding: 14px 16px 10px;
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--gris);
-      border-bottom: 1px solid var(--borde);
-      background: var(--card2);
-    }
-    .error-msg {
-      padding: 30px 20px;
-      text-align: center;
-      color: var(--rojo2);
-      font-size: 0.9rem;
-    }
+    .modal-cerrar:hover { background: var(--rojo); }
   </style>
 </head>
 <body>
 
-<div class="header">
-  <div class="header-inner">
-    <h1>Copa Mundial <span>2026</span></h1>
-    <div class="header-sub">Plataforma Deportiva · Octavos → Final</div>
+<!-- ═══════════════════════════════════════
+     PANTALLA DE LOGIN
+═══════════════════════════════════════ -->
+<div id="login-screen">
+  <div class="login-logo">⚽</div>
+  <div class="login-titulo">Copa Mundial <span>2026</span></div>
+  <div class="login-sub">Plataforma Deportiva · Octavos → Final</div>
+  <div class="login-pregunta">¿Con qué perfil ingresás?</div>
+  <div class="roles-grid">
+    <div class="rol-card" onclick="entrar('aficionado')">
+      <span class="rol-icono">🏟️</span>
+      <div class="rol-nombre">Aficionado</div>
+      <div class="rol-desc">Partidos, equipos, tabla de posiciones y árbitros</div>
+    </div>
+    <div class="rol-card" onclick="entrar('periodista')">
+      <span class="rol-icono">📰</span>
+      <div class="rol-nombre">Periodista</div>
+      <div class="rol-desc">Informes periodísticos con posesión, goles y resúmenes</div>
+    </div>
+    <div class="rol-card" onclick="entrar('apuestas')">
+      <span class="rol-icono">💰</span>
+      <div class="rol-nombre">Casa de Apuestas</div>
+      <div class="rol-desc">Mercados, cuotas, tarjetas y análisis de riesgo</div>
+    </div>
+    <div class="rol-card" onclick="entrar('analista')">
+      <span class="rol-icono">📊</span>
+      <div class="rol-nombre">Analista Deportivo</div>
+      <div class="rol-desc">Rankings avanzados y reportes estadísticos por partido</div>
+    </div>
   </div>
 </div>
 
-<nav>
-  <div class="nav-tabs">
-    <button class="nav-tab activo" onclick="cambiarTab('partidos')">⚽ Partidos</button>
-    <button class="nav-tab" onclick="cambiarTab('equipos')">🏆 Equipos</button>
-    <button class="nav-tab" onclick="cambiarTab('rankings')">📊 Rankings</button>
-    <button class="nav-tab" onclick="cambiarTab('goleadores')">🥅 Goleadores</button>
+<!-- ═══════════════════════════════════════
+     PANTALLA APP
+═══════════════════════════════════════ -->
+<div id="app-screen">
+  <div class="header">
+    <div class="header-inner">
+      <div class="header-left">
+        <h1>Copa Mundial <span>2026</span></h1>
+        <div class="header-rol" id="header-rol-txt"></div>
+      </div>
+      <button class="btn-cambiar" onclick="volverLogin()">← Cambiar perfil</button>
+    </div>
   </div>
-</nav>
-
-<main class="main">
-  <section id="sec-partidos" class="seccion activa">
-    <div class="spinner">Cargando partidos...</div>
-  </section>
-  <section id="sec-equipos" class="seccion">
-    <div class="spinner">Cargando equipos...</div>
-  </section>
-  <section id="sec-rankings" class="seccion">
-    <div class="spinner">Cargando rankings...</div>
-  </section>
-  <section id="sec-goleadores" class="seccion">
-    <div class="spinner">Cargando goleadores...</div>
-  </section>
-</main>
+  <nav><div class="nav-tabs" id="nav-tabs"></div></nav>
+  <main class="main" id="main-content"></main>
+</div>
 
 <!-- MODAL -->
-<div id="modal" class="modal-overlay" onclick="cerrarModal(event)">
+<div id="modal" class="modal-overlay" onclick="cerrarModalFondo(event)">
   <div class="modal-box" id="modal-box"></div>
 </div>
 
@@ -549,245 +399,244 @@ const BANDERAS = {
   'Portugal':'🇵🇹','Bélgica':'🇧🇪','Inglaterra':'🏴󠁧󠁢󠁥󠁮󠁧󠁿','Estados Unidos':'🇺🇸',
   'Alemania':'🇩🇪','Japón':'🇯🇵','Países Bajos':'🇳🇱','Italia':'🇮🇹'
 };
+const bandera = n => BANDERAS[n] || '🏳';
 
-function bandera(nombre) {
-  return BANDERAS[nombre] || '🏳';
+const DIAS  = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+const MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+
+function fmtFecha(s) {
+  if (!s) return '';
+  const [d,m,y] = s.split('/');
+  const f = new Date(+y, +m-1, +d);
+  return `${DIAS[f.getDay()]}, ${d} de ${MESES[+m-1]} de ${y}`;
 }
 
-const DIAS = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
-const MESES = ['enero','febrero','marzo','abril','mayo','junio','julio',
-               'agosto','septiembre','octubre','noviembre','diciembre'];
+function parsarMarcador(res) {
+  const rPen  = /(\d+)\s*\((\d+)\)\s*-\s*\((\d+)\)\s*(\d+)/;
+  const mPen  = res && res.match(rPen);
+  if (mPen) return { gl:+mPen[1], pL:+mPen[2], pV:+mPen[3], gv:+mPen[4], pen:true };
+  const rNorm = /(\d+)\s*-\s*(\d+)/;
+  const mN    = res && res.match(rNorm);
+  if (mN)  return { gl:+mN[1], gv:+mN[2], pen:false };
+  return { gl:0, gv:0, pen:false };
+}
 
-function formatFecha(str) {
-  if (!str) return '';
-  const [d, m, y] = str.split('/');
-  const fecha = new Date(+y, +m - 1, +d);
-  return `${DIAS[fecha.getDay()]}, ${d} de ${MESES[+m - 1]} de ${y}`;
+const FASE_ORDEN = ['OCTAVOS DE FINAL','CUARTOS DE FINAL','SEMIFINALES','FINAL'];
+
+const MERCADO_LABELS = {
+  'mas_de_3_5_goles': 'Más de 3.5 goles',
+  'empate_en_90_y_definicion_extendida': 'Empate + prórroga',
+  'habra_tarjeta_roja': 'Habrá tarjeta roja',
+  'mas_de_1_5_tarjetas': 'Más de 1.5 tarjetas',
+  'mercado_conservador': 'Mercado conservador'
+};
+const fmtMercado = m => MERCADO_LABELS[m] || m;
+
+const ROLES = {
+  aficionado: { nombre: 'Aficionado',        icono: '🏟️', tabs: [
+    { id:'partidos',   label:'⚽ Partidos' },
+    { id:'equipos',    label:'🏆 Equipos'  },
+    { id:'rankings',   label:'📊 Rankings' },
+    { id:'arbitros',   label:'⚖️ Árbitros' }
+  ]},
+  periodista: { nombre: 'Periodista',         icono: '📰', tabs: [
+    { id:'informes',   label:'📰 Informes' }
+  ]},
+  apuestas:   { nombre: 'Casa de Apuestas',   icono: '💰', tabs: [
+    { id:'mercados',   label:'💰 Mercados' }
+  ]},
+  analista:   { nombre: 'Analista Deportivo', icono: '📊', tabs: [
+    { id:'rankings',   label:'📊 Rankings' },
+    { id:'reporte',    label:'📋 Reporte'  }
+  ]}
+};
+
+let rolActual = null;
+let tabActual = null;
+const cache   = {};
+
+// ── LOGIN / LOGOUT ──────────────────────────────────────────────────────────
+function entrar(rol) {
+  rolActual = rol;
+  tabActual = ROLES[rol].tabs[0].id;
+  cache[rol] = {};
+
+  document.getElementById('login-screen').style.display  = 'none';
+  const app = document.getElementById('app-screen');
+  app.classList.add('visible');
+
+  const info = ROLES[rol];
+  document.getElementById('header-rol-txt').textContent = info.icono + ' ' + info.nombre;
+
+  renderTabs(rol);
+  activarTab(tabActual);
+}
+
+function volverLogin() {
+  rolActual = null; tabActual = null;
+  document.getElementById('app-screen').classList.remove('visible');
+  document.getElementById('login-screen').style.display = 'flex';
+  document.getElementById('nav-tabs').innerHTML    = '';
+  document.getElementById('main-content').innerHTML = '';
+}
+
+// ── TABS ────────────────────────────────────────────────────────────────────
+function renderTabs(rol) {
+  const nav = document.getElementById('nav-tabs');
+  nav.innerHTML = ROLES[rol].tabs.map(t =>
+    `<button class="nav-tab" id="tab-btn-${t.id}" onclick="activarTab('${t.id}')">${t.label}</button>`
+  ).join('');
+}
+
+function activarTab(tabId) {
+  tabActual = tabId;
+  document.querySelectorAll('.nav-tab').forEach(b => b.classList.toggle('activo', b.id === 'tab-btn-' + tabId));
+
+  const main = document.getElementById('main-content');
+  if (!cache[rolActual][tabId]) {
+    cache[rolActual][tabId] = true;
+    main.innerHTML = `<div id="sec-${tabId}" class="seccion activa"><div class="spinner">Cargando...</div></div>`;
+    cargar(tabId);
+  } else {
+    document.querySelectorAll('.seccion').forEach(s => s.classList.toggle('activa', s.id === 'sec-' + tabId));
+  }
+}
+
+async function cargar(tabId) {
+  const fn = {
+    partidos: cargarPartidos,
+    equipos:  cargarEquipos,
+    rankings: () => cargarRankings('puntos'),
+    arbitros: cargarArbitros,
+    informes: cargarInformes,
+    mercados: cargarMercados,
+    reporte:  cargarListaReporte
+  };
+  if (fn[tabId]) await fn[tabId]();
 }
 
 async function fetchJSON(url) {
   const r = await fetch(url);
-  if (!r.ok) throw new Error(`HTTP ${r.status}`);
+  if (!r.ok) throw new Error('HTTP ' + r.status);
   return r.json();
 }
 
-// ── TABS ──
-const TABS = ['partidos','equipos','rankings','goleadores'];
-const cargado = {};
+function sec(id) { return document.getElementById('sec-' + id); }
 
-function cambiarTab(tab) {
-  TABS.forEach(t => {
-    document.getElementById('sec-' + t).classList.toggle('activa', t === tab);
-    document.querySelectorAll('.nav-tab').forEach((btn, i) => {
-      btn.classList.toggle('activo', TABS[i] === tab);
-    });
-  });
-  if (!cargado[tab]) { cargado[tab] = true; cargarSeccion(tab); }
-}
-
-function cargarSeccion(tab) {
-  if (tab === 'partidos')   cargarPartidos();
-  if (tab === 'equipos')    cargarEquipos();
-  if (tab === 'rankings')   cargarRankings();
-  if (tab === 'goleadores') cargarGoleadores();
-}
-
-// ── PARTIDOS ──
+// ══════════════════════════════════════════════════════════════════════════════
+//  AFICIONADO — PARTIDOS
+// ══════════════════════════════════════════════════════════════════════════════
 async function cargarPartidos() {
-  const sec = document.getElementById('sec-partidos');
   try {
     const partidos = await fetchJSON(API + '/partidos');
-    const porFase = {};
-    const ordenFase = ['OCTAVOS DE FINAL','CUARTOS DE FINAL','SEMIFINALES','FINAL'];
-
+    const grupos = {};
     for (const p of partidos) {
-      if (!porFase[p.fase]) porFase[p.fase] = { fecha: p.fecha, partidos: [] };
-      porFase[p.fase].partidos.push(p);
+      if (!grupos[p.fase]) grupos[p.fase] = [];
+      grupos[p.fase].push(p);
     }
-
     let html = '';
-    for (const fase of ordenFase) {
-      const grupo = porFase[fase];
-      if (!grupo) continue;
-      const fechaMostrar = grupo.partidos.length > 1
-        ? formatFecha(grupo.partidos[0].fecha) + ' - ' + formatFecha(grupo.partidos[grupo.partidos.length-1].fecha)
-        : formatFecha(grupo.partidos[0].fecha);
-
-      html += `<div class="fase-header">
-        <div class="fase-fecha">${fechaMostrar}</div>
-        <div class="fase-nombre">${fase}</div>
-      </div>`;
-
-      for (const p of grupo.partidos) {
-        const info = parsarResultado(p.resultado);
-        const badgeExtra = p.huboTiempoExtra ? `<span class="badge badge-extra">⏱ Prórroga</span>` : '';
-        const badgeRoja  = p.huboRoja ? `<span class="badge badge-roja">🟥 Roja</span>` : '';
-        const penalesHtml = info.penales
-          ? `<div class="penales-badge">Pen: ${info.penalesLocal} - ${info.penalesVisitante}</div>`
-          : '';
-
-        html += `<div class="partido-card" onclick="abrirDetalle(${p.id})">
-          <div class="partido-equipos">
-            <div class="equipo-local">
-              <span class="bandera">${bandera(p.local)}</span>
-              <div class="equipo-info">
-                <span class="equipo-nombre">${p.local}</span>
-              </div>
-            </div>
-            <div class="marcador-centro">
-              <div class="marcador-score">
-                <span class="gol-num">${info.golesLocal}</span>
-                <span class="marcador-sep">·</span>
-                <span class="gol-num">${info.golesVisitante}</span>
-              </div>
-              <div class="marcador-label">Puntuación final</div>
-              ${penalesHtml}
-            </div>
-            <div class="equipo-visitante">
-              <div class="equipo-info">
-                <span class="equipo-nombre">${p.visitante}</span>
-              </div>
-              <span class="bandera">${bandera(p.visitante)}</span>
-            </div>
-          </div>
-          <div class="partido-estadio">🏟️ ${p.estadio}</div>
-          ${(badgeExtra || badgeRoja) ? `<div class="partido-badges">${badgeExtra}${badgeRoja}</div>` : ''}
-        </div>`;
-      }
+    for (const fase of FASE_ORDEN) {
+      if (!grupos[fase]) continue;
+      const g = grupos[fase];
+      const fechas = [...new Set(g.map(p=>p.fecha))];
+      const fechaStr = fechas.length > 1
+        ? fmtFecha(fechas[0]).replace(/,.*/, '') + ' - ' + fmtFecha(fechas[fechas.length-1])
+        : fmtFecha(fechas[0]);
+      html += `<div class="fase-header"><div class="fase-fecha">${fechaStr}</div><div class="fase-nombre">${fase}</div></div>`;
+      for (const p of g) html += htmlPartidoCard(p);
     }
-    sec.innerHTML = html;
-  } catch (e) {
-    sec.innerHTML = `<div class="error-msg">Error al cargar partidos: ${e.message}</div>`;
-  }
+    sec('partidos').innerHTML = html;
+  } catch(e) { sec('partidos').innerHTML = `<div class="error-msg">Error: ${e.message}</div>`; }
 }
 
-function parsarResultado(res) {
-  if (!res) return { golesLocal: 0, golesVisitante: 0, penales: false };
-  const regPen = /(\d+)\s*\((\d+)\)\s*-\s*\((\d+)\)\s*(\d+)/;
-  const mPen = res.match(regPen);
-  if (mPen) {
-    return { golesLocal: +mPen[1], penalesLocal: +mPen[2], penalesVisitante: +mPen[3], golesVisitante: +mPen[4], penales: true };
-  }
-  const regNorm = /(\d+)\s*-\s*(\d+)/;
-  const mNorm = res.match(regNorm);
-  if (mNorm) return { golesLocal: +mNorm[1], golesVisitante: +mNorm[2], penales: false };
-  return { golesLocal: 0, golesVisitante: 0, penales: false };
+function htmlPartidoCard(p) {
+  const m   = parsarMarcador(p.resultado);
+  const pen = m.pen ? `<div class="penales-badge">Pen: ${m.pL}–${m.pV}</div>` : '';
+  const bEx = p.huboTiempoExtra ? `<span class="badge badge-extra">⏱ Prórroga</span>` : '';
+  const bRj = p.huboRoja ? `<span class="badge badge-roja">🟥 Roja</span>` : '';
+  return `<div class="partido-card" onclick="abrirPartido(${p.id})">
+    <div class="partido-equipos">
+      <div class="equipo-local">
+        <span class="bandera">${bandera(p.local)}</span>
+        <span class="equipo-nombre">${p.local}</span>
+      </div>
+      <div class="marcador-centro">
+        <div class="marcador-score">
+          <span class="gol-num">${m.gl}</span>
+          <span class="marcador-sep">·</span>
+          <span class="gol-num">${m.gv}</span>
+        </div>
+        <div class="marcador-label">Puntuación final</div>
+        ${pen}
+      </div>
+      <div class="equipo-visitante">
+        <span class="equipo-nombre">${p.visitante}</span>
+        <span class="bandera">${bandera(p.visitante)}</span>
+      </div>
+    </div>
+    <div class="partido-estadio">🏟 ${p.estadio}</div>
+    ${(bEx||bRj) ? `<div class="partido-badges">${bEx}${bRj}</div>` : ''}
+  </div>`;
 }
 
-// ── DETALLE PARTIDO ──
-async function abrirDetalle(id) {
-  const modal = document.getElementById('modal');
-  const box   = document.getElementById('modal-box');
-  box.innerHTML = '<div class="spinner" style="padding:40px">Cargando...</div>';
-  modal.classList.add('visible');
-  document.body.style.overflow = 'hidden';
-
+async function abrirPartido(id) {
+  abrirModal('<div class="spinner" style="padding:40px">Cargando...</div>');
   try {
     const p = await fetchJSON(API + '/partidos/' + id);
-    const info = parsarResultado(p.resultado);
+    const m = parsarMarcador(p.resultado);
+    const pen = m.pen ? `<div class="modal-pen-txt">Penales: ${m.pL} – ${m.pV}</div>` : '';
 
-    // Combinar goles + tarjetas en timeline
-    const timeline = [
-      ...p.goles.map(g => ({ ...g, tipo: 'GOL' })),
-      ...p.tarjetas.map(t => ({ ...t }))
-    ].sort((a, b) => a.minuto - b.minuto);
+    const tl = [
+      ...p.goles.map(g=>({...g, tipo:'GOL'})),
+      ...p.tarjetas
+    ].sort((a,b)=>a.minuto-b.minuto);
 
-    const iconoEvento = (ev) => {
-      if (ev.tipo === 'GOL') return '⚽';
-      if (ev.tipo === 'AMARILLA') return '🟨';
-      if (ev.tipo === 'ROJA') return '🟥';
-      return '🎯';
-    };
+    const tlHtml = tl.map(ev => {
+      const ic = ev.tipo==='GOL' ? '⚽' : ev.tipo==='AMARILLA' ? '🟨' : '🟥';
+      return `<div class="tl-evento">
+        <span class="tl-min">${ev.minuto}'</span>
+        <span class="tl-icon">${ic}</span>
+        <div><div class="tl-jugador">${ev.jugador||'—'}</div><div class="tl-equipo">${ev.equipo||''}</div></div>
+      </div>`;
+    }).join('') || '<div style="color:var(--gris);font-size:.82rem;padding:6px 0">Sin eventos registrados</div>';
 
-    const timelineHtml = timeline.map(ev => `
-      <div class="timeline-evento">
-        <span class="timeline-min">${ev.minuto}'</span>
-        <span class="timeline-icono">${iconoEvento(ev)}</span>
-        <div class="timeline-info">
-          <div class="timeline-jugador">${ev.jugador || '—'}</div>
-          <div class="timeline-equipo">${ev.equipo || ''}</div>
-        </div>
-      </div>
-    `).join('');
-
-    const penalesHtml = info.penales
-      ? `<div class="modal-penales">Penales: ${info.penalesLocal} - ${info.penalesVisitante}</div>`
-      : '';
-
-    const resumenHtml = p.resumen
-      ? `<div class="timeline-titulo" style="margin-top:18px">Resumen periodístico</div>
-         <div class="resumen-box">${p.resumen}</div>`
-      : '';
-
-    box.innerHTML = `
-      <div class="modal-header">
-        <div class="modal-fase">${p.fase}</div>
-        <div class="modal-equipos">
-          <div class="modal-equipo">
-            <div class="modal-bandera">${bandera(p.local)}</div>
-            <div class="modal-nombre">${p.local}</div>
+    setModal(`
+      <div class="modal-hdr">
+        <div class="modal-fase-lbl">${p.fase}</div>
+        <div class="modal-equipos-row">
+          <div class="modal-eq"><div class="modal-eq-flag">${bandera(p.local)}</div><div class="modal-eq-name">${p.local}</div></div>
+          <div class="modal-score-col">
+            <div class="modal-score-nums"><span class="modal-score-n">${m.gl}</span><span class="modal-score-sep">-</span><span class="modal-score-n">${m.gv}</span></div>
+            ${pen}<div class="modal-score-lbl">Resultado final</div>
           </div>
-          <div class="modal-marcador">
-            <div class="modal-score">
-              <span class="modal-gol">${info.golesLocal}</span>
-              <span class="modal-sep">-</span>
-              <span class="modal-gol">${info.golesVisitante}</span>
-            </div>
-            ${penalesHtml}
-            <div class="modal-label">Resultado final</div>
-          </div>
-          <div class="modal-equipo">
-            <div class="modal-bandera">${bandera(p.visitante)}</div>
-            <div class="modal-nombre">${p.visitante}</div>
-          </div>
+          <div class="modal-eq"><div class="modal-eq-flag">${bandera(p.visitante)}</div><div class="modal-eq-name">${p.visitante}</div></div>
         </div>
-        <div class="modal-meta">
-          📅 ${formatFecha(p.fecha)}
-          <span class="modal-meta-sep">|</span>
-          🏟️ ${p.estadio}
-        </div>
+        <div class="modal-meta">📅 ${fmtFecha(p.fecha)} &nbsp;|&nbsp; 🏟 ${p.estadio}</div>
       </div>
       <div class="modal-body">
-        <div class="posesion-bar">
-          <div class="posesion-label">
-            <div>${bandera(p.local)} <span>${p.posesionLocal}%</span> Posesión</div>
-            <div>Posesión <span>${p.posesionVisitante}%</span> ${bandera(p.visitante)}</div>
-          </div>
-          <div class="posesion-track">
-            <div class="posesion-fill-local"  style="width:${p.posesionLocal}%"></div>
-            <div class="posesion-fill-visit"  style="width:${p.posesionVisitante}%"></div>
-          </div>
+        <div class="posesion-row"><div>${bandera(p.local)} <span>${p.posesionLocal}%</span></div><div><span>${p.posesionVisitante}%</span> ${bandera(p.visitante)}</div></div>
+        <div class="posesion-track">
+          <div class="posesion-local" style="width:${p.posesionLocal}%"></div>
+          <div class="posesion-visit" style="width:${p.posesionVisitante}%"></div>
         </div>
-        <div class="timeline-titulo">Línea de tiempo</div>
-        <div class="timeline">
-          ${timelineHtml || '<div style="color:var(--gris);font-size:0.85rem;padding:8px 0">Sin eventos registrados</div>'}
-        </div>
-        ${resumenHtml}
+        <div class="tl-titulo">Línea de tiempo</div>
+        <div>${tlHtml}</div>
       </div>
-      <button class="modal-cerrar-btn" onclick="cerrarModal()">✕ Cerrar</button>
-    `;
-  } catch (e) {
-    box.innerHTML = `<div class="error-msg">Error: ${e.message}</div>
-      <button class="modal-cerrar-btn" onclick="cerrarModal()">✕ Cerrar</button>`;
-  }
+      <button class="modal-cerrar" onclick="cerrarModal()">✕ Cerrar</button>
+    `);
+  } catch(e) { setModal(`<div class="error-msg">Error: ${e.message}</div><button class="modal-cerrar" onclick="cerrarModal()">✕ Cerrar</button>`); }
 }
 
-function cerrarModal(evt) {
-  if (evt && evt.target !== document.getElementById('modal')) return;
-  document.getElementById('modal').classList.remove('visible');
-  document.body.style.overflow = '';
-}
-
-// ── EQUIPOS ──
+// ══════════════════════════════════════════════════════════════════════════════
+//  AFICIONADO — EQUIPOS
+// ══════════════════════════════════════════════════════════════════════════════
 async function cargarEquipos() {
-  const sec = document.getElementById('sec-equipos');
   try {
     const equipos = await fetchJSON(API + '/equipos');
-    let html = '<div class="seccion-titulo">Seleccionados — Copa Mundial 2026</div>';
-    html += '<div class="equipos-grid">';
+    let html = '<div class="seccion-titulo">Seleccionados — Copa Mundial 2026</div><div class="equipos-grid">';
     for (const e of equipos) {
-      const diff = e.diferencia >= 0 ? '+' + e.diferencia : e.diferencia;
-      const diffClass = e.diferencia >= 0 ? 'diff-pos' : 'diff-neg';
+      const diff = e.diferencia >= 0 ? '+'+e.diferencia : e.diferencia;
+      const dc = e.diferencia >= 0 ? 'diff-pos' : 'diff-neg';
       html += `<div class="equipo-card" onclick="abrirEquipo('${encodeURIComponent(e.clave)}')">
         <div class="equipo-card-top">
           <span class="equipo-card-bandera">${bandera(e.nombre)}</span>
@@ -797,149 +646,342 @@ async function cargarEquipos() {
           <div class="stat-item"><span class="stat-val">${e.puntos}</span><span class="stat-lbl">Pts</span></div>
           <div class="stat-item"><span class="stat-val">${e.golesAFavor}</span><span class="stat-lbl">GF</span></div>
           <div class="stat-item"><span class="stat-val">${e.golesEnContra}</span><span class="stat-lbl">GC</span></div>
-          <div class="stat-item"><span class="stat-val ${diffClass}">${diff}</span><span class="stat-lbl">DG</span></div>
+          <div class="stat-item"><span class="stat-val ${dc}">${diff}</span><span class="stat-lbl">DG</span></div>
         </div>
-        <div class="equipo-card-jugadores">👥 ${e.cantidadJugadores} jugadores</div>
+        <div class="equipo-card-sub">👥 ${e.cantidadJugadores} jugadores</div>
       </div>`;
     }
-    html += '</div>';
-    sec.innerHTML = html;
-  } catch (e) {
-    sec.innerHTML = `<div class="error-msg">Error: ${e.message}</div>`;
-  }
+    sec('equipos').innerHTML = html + '</div>';
+  } catch(e) { sec('equipos').innerHTML = `<div class="error-msg">Error: ${e.message}</div>`; }
 }
 
 async function abrirEquipo(claveEnc) {
-  const clave = decodeURIComponent(claveEnc);
-  const modal = document.getElementById('modal');
-  const box   = document.getElementById('modal-box');
-  box.innerHTML = '<div class="spinner" style="padding:40px">Cargando...</div>';
-  modal.classList.add('visible');
-  document.body.style.overflow = 'hidden';
-
+  abrirModal('<div class="spinner" style="padding:40px">Cargando...</div>');
   try {
     const eq = await fetchJSON(API + '/equipos/' + claveEnc);
-    const diff = eq.diferencia >= 0 ? '+' + eq.diferencia : eq.diferencia;
-    const diffClass = eq.diferencia >= 0 ? 'diff-pos' : 'diff-neg';
-
-    const posiciones = {};
-    for (const j of eq.jugadores) {
-      if (!posiciones[j.posicion]) posiciones[j.posicion] = [];
-      posiciones[j.posicion].push(j);
-    }
-
-    let jugadoresHtml = '';
-    for (const pos of Object.keys(posiciones)) {
-      jugadoresHtml += `<div class="timeline-titulo" style="margin-top:14px">${pos}</div>`;
-      for (const j of posiciones[pos]) {
-        const golesIcon = j.goles > 0 ? `⚽ ${j.goles}` : '';
-        const amIcon = j.tarjetasAmarillas > 0 ? ` 🟨 ${j.tarjetasAmarillas}` : '';
-        const rojaIcon = j.tarjetasRojas > 0 ? ` 🟥 ${j.tarjetasRojas}` : '';
-        jugadoresHtml += `<div class="timeline-evento">
-          <span class="timeline-jugador">${j.nombre}</span>
-          <span style="color:var(--gris);font-size:0.75rem;margin-left:auto">${golesIcon}${amIcon}${rojaIcon}</span>
-        </div>`;
+    const diff = eq.diferencia >= 0 ? '+'+eq.diferencia : eq.diferencia;
+    const dc = eq.diferencia >= 0 ? 'diff-pos' : 'diff-neg';
+    const porPos = {};
+    for (const j of eq.jugadores) { if (!porPos[j.posicion]) porPos[j.posicion]=[]; porPos[j.posicion].push(j); }
+    let jugHtml = '';
+    for (const pos of Object.keys(porPos)) {
+      jugHtml += `<div class="tl-titulo" style="margin-top:12px">${pos}</div>`;
+      for (const j of porPos[pos]) {
+        const stats = [j.goles>0?`⚽ ${j.goles}`:'', j.tarjetasAmarillas>0?`🟨 ${j.tarjetasAmarillas}`:'', j.tarjetasRojas>0?`🟥 ${j.tarjetasRojas}`:''].filter(Boolean).join(' ');
+        jugHtml += `<div class="tl-evento"><div class="tl-jugador" style="flex:1">${j.nombre}</div><span style="color:var(--gris);font-size:.72rem">${stats}</span></div>`;
       }
     }
-
-    box.innerHTML = `
-      <div class="modal-header">
+    setModal(`
+      <div class="modal-hdr">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px">
-          <span style="font-size:3.5rem">${bandera(eq.nombre)}</span>
-          <div>
-            <div style="font-size:1.4rem;font-weight:700">${eq.nombre}</div>
-            <div style="font-size:0.75rem;color:var(--gris)">Fundación: ${eq.anioFundacion || 'N/A'}</div>
-          </div>
+          <span style="font-size:3.2rem">${bandera(eq.nombre)}</span>
+          <div><div style="font-size:1.3rem;font-weight:700">${eq.nombre}</div><div style="font-size:.72rem;color:var(--gris)">Fundación: ${eq.anioFundacion||'N/A'}</div></div>
         </div>
-        <div style="display:flex;gap:20px;justify-content:center">
+        <div style="display:flex;gap:18px;justify-content:center">
           <div class="stat-item"><span class="stat-val">${eq.puntos}</span><span class="stat-lbl">Puntos</span></div>
-          <div class="stat-item"><span class="stat-val">${eq.golesAFavor}</span><span class="stat-lbl">Goles F.</span></div>
-          <div class="stat-item"><span class="stat-val">${eq.golesEnContra}</span><span class="stat-lbl">Goles C.</span></div>
-          <div class="stat-item"><span class="stat-val ${diffClass}">${diff}</span><span class="stat-lbl">Diferencia</span></div>
+          <div class="stat-item"><span class="stat-val">${eq.golesAFavor}</span><span class="stat-lbl">GF</span></div>
+          <div class="stat-item"><span class="stat-val">${eq.golesEnContra}</span><span class="stat-lbl">GC</span></div>
+          <div class="stat-item"><span class="stat-val ${dc}">${diff}</span><span class="stat-lbl">DG</span></div>
           <div class="stat-item"><span class="stat-val">${eq.jugadores.length}</span><span class="stat-lbl">Jugadores</span></div>
         </div>
       </div>
-      <div class="modal-body">
-        <div class="timeline-titulo">Plantilla</div>
-        <div class="timeline">${jugadoresHtml}</div>
-      </div>
-      <button class="modal-cerrar-btn" onclick="cerrarModal()">✕ Cerrar</button>
-    `;
-  } catch (e) {
-    box.innerHTML = `<div class="error-msg">Error: ${e.message}</div>
-      <button class="modal-cerrar-btn" onclick="cerrarModal()">✕ Cerrar</button>`;
-  }
+      <div class="modal-body"><div class="tl-titulo">Plantilla</div>${jugHtml}</div>
+      <button class="modal-cerrar" onclick="cerrarModal()">✕ Cerrar</button>
+    `);
+  } catch(e) { setModal(`<div class="error-msg">Error: ${e.message}</div><button class="modal-cerrar" onclick="cerrarModal()">✕ Cerrar</button>`); }
 }
 
-// ── RANKINGS ──
-async function cargarRankings() {
-  const sec = document.getElementById('sec-rankings');
+// ══════════════════════════════════════════════════════════════════════════════
+//  AFICIONADO — RANKINGS
+// ══════════════════════════════════════════════════════════════════════════════
+async function cargarRankings(criterio) {
+  const url = criterio === 'goles' ? API + '/rankings/goles' : API + '/rankings';
   try {
-    const rankings = await fetchJSON(API + '/rankings');
-    let html = `
-      <div class="seccion-titulo">Tabla de posiciones — por puntos</div>
-      <table class="tabla-ranking">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Equipo</th>
-            <th>Pts</th>
-            <th>GF</th>
-            <th>GC</th>
-            <th>DG</th>
-          </tr>
-        </thead>
-        <tbody>
-    `;
+    const rankings = await fetchJSON(url);
+    const toggle = rolActual === 'analista' ? `
+      <div class="toggle-bar">
+        <button class="toggle-btn ${criterio==='puntos'?'activo':''}" onclick="recargarRankings('puntos')">Por Puntos</button>
+        <button class="toggle-btn ${criterio==='goles'?'activo':''}" onclick="recargarRankings('goles')">Por Goles</button>
+      </div>` : '<div class="seccion-titulo">Tabla de posiciones — por puntos</div>';
+
+    let html = toggle + `<table class="tabla-ranking"><thead><tr><th>#</th><th>Equipo</th><th>Pts</th><th>GF</th><th>GC</th><th>DG</th></tr></thead><tbody>`;
     for (const r of rankings) {
-      const posClass = r.posicion <= 3 ? 'top3 top' : '';
-      const diff = r.diferencia >= 0 ? '+' + r.diferencia : r.diferencia;
-      const diffClass = r.diferencia >= 0 ? 'diff-pos' : 'diff-neg';
+      const pc = r.posicion <= 3 ? 'top' : '';
+      const diff = r.diferencia >= 0 ? '+'+r.diferencia : r.diferencia;
+      const dc = r.diferencia >= 0 ? 'diff-pos' : 'diff-neg';
       html += `<tr>
-        <td><span class="pos-num ${posClass}">${r.posicion}</span></td>
-        <td><span class="ranking-bandera">${bandera(r.nombre)}</span>${r.nombre}</td>
-        <td><span class="puntos-cel">${r.puntos}</span></td>
-        <td>${r.golesAFavor}</td>
-        <td>${r.golesEnContra}</td>
-        <td class="${diffClass}">${diff}</td>
+        <td><span class="pos-num ${pc}">${r.posicion}</span></td>
+        <td><span class="rnk-flag">${bandera(r.nombre)}</span>${r.nombre}</td>
+        <td><span class="pts-cel">${r.puntos}</span></td>
+        <td>${r.golesAFavor}</td><td>${r.golesEnContra}</td>
+        <td class="${dc}">${diff}</td>
       </tr>`;
     }
-    html += '</tbody></table>';
-    sec.innerHTML = html;
-  } catch (e) {
-    sec.innerHTML = `<div class="error-msg">Error: ${e.message}</div>`;
-  }
+    sec('rankings').innerHTML = html + '</tbody></table>';
+  } catch(e) { sec('rankings').innerHTML = `<div class="error-msg">Error: ${e.message}</div>`; }
 }
 
-// ── GOLEADORES ──
-async function cargarGoleadores() {
-  const sec = document.getElementById('sec-goleadores');
+function recargarRankings(criterio) {
+  sec('rankings').innerHTML = '<div class="spinner">Cargando...</div>';
+  cargarRankings(criterio);
+}
+
+// ══════════════════════════════════════════════════════════════════════════════
+//  AFICIONADO — ÁRBITROS
+// ══════════════════════════════════════════════════════════════════════════════
+async function cargarArbitros() {
   try {
-    const goleadores = await fetchJSON(API + '/goleadores');
-    let html = '<div class="seccion-titulo">Tabla de goleadores — Copa Mundial 2026</div>';
-    html += '<div class="goleadores-list">';
-    for (const g of goleadores) {
-      const posClass = g.posicion <= 3 ? 'top3' : '';
-      const medal = g.posicion === 1 ? '🥇' : g.posicion === 2 ? '🥈' : g.posicion === 3 ? '🥉' : g.posicion;
-      html += `<div class="goleador-row">
-        <div class="goleador-pos ${posClass}">${medal}</div>
-        <div>
-          <div class="goleador-nombre">${g.jugador}</div>
-          <div class="goleador-equipo">${bandera(g.equipo)} ${g.equipo}</div>
-        </div>
-        <div class="goleador-goles">${g.goles}</div>
+    const arbitros = await fetchJSON(API + '/arbitros');
+    let html = '<div class="seccion-titulo">Árbitros asignados — Copa Mundial 2026</div>';
+    for (const a of arbitros) {
+      html += `<div class="arbitro-row">
+        <span class="arbitro-num">${a.id}</span>
+        <div><div class="arbitro-nombre">${a.nombre} ${a.apellido}</div><div class="arbitro-nac">🌍 ${a.nacionalidad}</div></div>
       </div>`;
     }
-    html += '</div>';
-    sec.innerHTML = html;
-  } catch (e) {
-    sec.innerHTML = `<div class="error-msg">Error: ${e.message}</div>`;
-  }
+    sec('arbitros').innerHTML = html;
+  } catch(e) { sec('arbitros').innerHTML = `<div class="error-msg">Error: ${e.message}</div>`; }
 }
 
-// Carga inicial
-cargarSeccion('partidos');
-cargado['partidos'] = true;
+// ══════════════════════════════════════════════════════════════════════════════
+//  PERIODISTA — INFORMES
+// ══════════════════════════════════════════════════════════════════════════════
+async function cargarInformes() {
+  try {
+    const partidos = await fetchJSON(API + '/partidos');
+    let html = '<div class="seccion-titulo">Informes periodísticos — 15 partidos</div>';
+    for (const p of partidos) {
+      const m = parsarMarcador(p.resultado);
+      html += `<div class="partido-card" onclick="abrirInforme(${p.id})">
+        <div class="partido-equipos">
+          <div class="equipo-local"><span class="bandera">${bandera(p.local)}</span><span class="equipo-nombre">${p.local}</span></div>
+          <div class="marcador-centro">
+            <div class="marcador-score"><span class="gol-num">${m.gl}</span><span class="marcador-sep">·</span><span class="gol-num">${m.gv}</span></div>
+            <div class="marcador-label">${p.fase}</div>
+            ${m.pen?`<div class="penales-badge">Pen: ${m.pL}–${m.pV}</div>`:''}
+          </div>
+          <div class="equipo-visitante"><span class="equipo-nombre">${p.visitante}</span><span class="bandera">${bandera(p.visitante)}</span></div>
+        </div>
+        <div class="partido-estadio">🏟 ${p.estadio} &nbsp;·&nbsp; 📅 ${fmtFecha(p.fecha)}</div>
+      </div>`;
+    }
+    sec('informes').innerHTML = html;
+  } catch(e) { sec('informes').innerHTML = `<div class="error-msg">Error: ${e.message}</div>`; }
+}
+
+async function abrirInforme(id) {
+  abrirModal('<div class="spinner" style="padding:40px">Cargando...</div>');
+  try {
+    const p = await fetchJSON(API + '/partidos/' + id);
+    const m = parsarMarcador(p.resultado);
+    const pen = m.pen ? `<div class="modal-pen-txt">Penales: ${m.pL} – ${m.pV}</div>` : '';
+    const tl = [...p.goles.map(g=>({...g,tipo:'GOL'})), ...p.tarjetas].sort((a,b)=>a.minuto-b.minuto);
+    const tlHtml = tl.map(ev => {
+      const ic = ev.tipo==='GOL'?'⚽':ev.tipo==='AMARILLA'?'🟨':'🟥';
+      return `<div class="tl-evento"><span class="tl-min">${ev.minuto}'</span><span class="tl-icon">${ic}</span><div><div class="tl-jugador">${ev.jugador||'—'}</div><div class="tl-equipo">${ev.equipo||''}</div></div></div>`;
+    }).join('') || '<div style="color:var(--gris);font-size:.82rem;padding:6px 0">Sin eventos</div>';
+
+    setModal(`
+      <div class="modal-hdr">
+        <div class="modal-fase-lbl">📰 Informe Periodístico — ${p.fase}</div>
+        <div class="modal-equipos-row">
+          <div class="modal-eq"><div class="modal-eq-flag">${bandera(p.local)}</div><div class="modal-eq-name">${p.local}</div></div>
+          <div class="modal-score-col">
+            <div class="modal-score-nums"><span class="modal-score-n">${m.gl}</span><span class="modal-score-sep">-</span><span class="modal-score-n">${m.gv}</span></div>
+            ${pen}<div class="modal-score-lbl">Resultado final</div>
+          </div>
+          <div class="modal-eq"><div class="modal-eq-flag">${bandera(p.visitante)}</div><div class="modal-eq-name">${p.visitante}</div></div>
+        </div>
+        <div class="modal-meta">📅 ${fmtFecha(p.fecha)} &nbsp;|&nbsp; 🏟 ${p.estadio}</div>
+      </div>
+      <div class="modal-body">
+        <div class="posesion-row">
+          <div>${bandera(p.local)} <span>${p.posesionLocal}%</span> Posesión</div>
+          <div>Posesión <span>${p.posesionVisitante}%</span> ${bandera(p.visitante)}</div>
+        </div>
+        <div class="posesion-track">
+          <div class="posesion-local" style="width:${p.posesionLocal}%"></div>
+          <div class="posesion-visit" style="width:${p.posesionVisitante}%"></div>
+        </div>
+        <div style="font-size:.75rem;color:var(--gris);margin-bottom:12px">Dominador de posesión: <strong style="color:var(--texto)">${p.dominadorPosesion}</strong></div>
+        <div class="tl-titulo">Crónica del partido</div>
+        <div style="margin-bottom:14px">${tlHtml}</div>
+        <div class="tl-titulo">Resumen periodístico</div>
+        <div class="resumen-box">${p.resumen}</div>
+      </div>
+      <button class="modal-cerrar" onclick="cerrarModal()">✕ Cerrar</button>
+    `);
+  } catch(e) { setModal(`<div class="error-msg">Error: ${e.message}</div><button class="modal-cerrar" onclick="cerrarModal()">✕ Cerrar</button>`); }
+}
+
+// ══════════════════════════════════════════════════════════════════════════════
+//  CASA DE APUESTAS — MERCADOS
+// ══════════════════════════════════════════════════════════════════════════════
+async function cargarMercados() {
+  try {
+    const mercados = await fetchJSON(API + '/mercados');
+    let html = '<div class="seccion-titulo">Mercados de apuestas — 15 partidos</div>';
+    for (const m of mercados) {
+      const mr = parsarMarcador(m.resultado);
+      html += `<div class="mercado-card" onclick="abrirMercado(${m.id})">
+        <div class="mercado-top">
+          <div class="mercado-partido">${bandera(m.local)} ${m.local} <span style="color:var(--gris)">vs</span> ${m.visitante} ${bandera(m.visitante)}</div>
+          <span class="riesgo-badge riesgo-${m.riesgo}">${m.riesgo.toUpperCase()}</span>
+        </div>
+        <div class="mercado-info">
+          <span class="mercado-label">Marcador:</span>
+          <span class="mercado-dest">${mr.gl} - ${mr.gv}${mr.pen?` (Pen: ${mr.pL}-${mr.pV})`:''}</span>
+          <span class="mercado-label" style="margin-left:8px">Mercado:</span>
+          <span class="mercado-dest">${fmtMercado(m.mercadoDestacado)}</span>
+        </div>
+        <div style="font-size:.68rem;color:var(--gris2);margin-top:5px">⚽ ${m.totalGoles} goles &nbsp;·&nbsp; ${m.fase}</div>
+      </div>`;
+    }
+    sec('mercados').innerHTML = html;
+  } catch(e) { sec('mercados').innerHTML = `<div class="error-msg">Error: ${e.message}</div>`; }
+}
+
+async function abrirMercado(id) {
+  abrirModal('<div class="spinner" style="padding:40px">Cargando...</div>');
+  try {
+    const m = await fetchJSON(API + '/mercados/' + id);
+    const mr = parsarMarcador(m.resultado);
+    const pen = mr.pen ? `<div class="modal-pen-txt">Penales: ${mr.pL} – ${mr.pV}</div>` : '';
+    setModal(`
+      <div class="modal-hdr">
+        <div class="modal-fase-lbl">💰 Mercado de Apuestas — ${m.fase}</div>
+        <div class="modal-equipos-row">
+          <div class="modal-eq"><div class="modal-eq-flag">${bandera(m.local)}</div><div class="modal-eq-name">${m.local}</div></div>
+          <div class="modal-score-col">
+            <div class="modal-score-nums"><span class="modal-score-n">${mr.gl}</span><span class="modal-score-sep">-</span><span class="modal-score-n">${mr.gv}</span></div>
+            ${pen}<div class="modal-score-lbl">Resultado final</div>
+          </div>
+          <div class="modal-eq"><div class="modal-eq-flag">${bandera(m.visitante)}</div><div class="modal-eq-name">${m.visitante}</div></div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="stat-grid">
+          <div class="stat-box"><div class="stat-box-val">${m.totalGoles}</div><div class="stat-box-lbl">Total goles</div></div>
+          <div class="stat-box"><div class="stat-box-val">${m.totalTarjetas}</div><div class="stat-box-lbl">Total tarjetas</div></div>
+          <div class="stat-box"><div class="stat-box-val">${m.golesLocal}</div><div class="stat-box-lbl">Goles ${m.local}</div></div>
+          <div class="stat-box"><div class="stat-box-val">${m.golesVisitante}</div><div class="stat-box-lbl">Goles ${m.visitante}</div></div>
+        </div>
+        <div class="stat-fila"><span class="stat-fila-lbl">Ambos equipos anotaron</span><span class="stat-fila-val ${m.ambosAnotaron?'si-badge':'no-badge'}">${m.ambosAnotaron?'✔ SÍ':'✘ NO'}</span></div>
+        <div class="stat-fila"><span class="stat-fila-lbl">🟨 Tarjetas amarillas</span><span class="stat-fila-val">${m.tarjetasAmarillas}</span></div>
+        <div class="stat-fila"><span class="stat-fila-lbl">🟥 Tarjetas rojas</span><span class="stat-fila-val">${m.tarjetasRojas}</span></div>
+        <div class="stat-fila">
+          <span class="stat-fila-lbl">Posesión</span>
+          <span class="stat-fila-val">${m.local} ${m.posesionLocal}% — ${m.visitante} ${m.posesionVisitante}%</span>
+        </div>
+        <div class="stat-fila"><span class="stat-fila-lbl">Dominador posesión</span><span class="stat-fila-val">${m.dominadorPosesion}</span></div>
+        <div class="stat-fila"><span class="stat-fila-lbl">Hubo tarjeta roja</span><span class="stat-fila-val ${m.huboRoja?'si-badge':'no-badge'}">${m.huboRoja?'✔ SÍ':'✘ NO'}</span></div>
+        <div class="stat-fila"><span class="stat-fila-lbl">Hubo tiempo extra</span><span class="stat-fila-val ${m.huboTiempoExtra?'si-badge':'no-badge'}">${m.huboTiempoExtra?'✔ SÍ':'✘ NO'}</span></div>
+        <div style="margin-top:14px;display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="font-size:.68rem;color:var(--gris);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px">Mercado destacado</div>
+            <div style="font-size:.95rem;font-weight:700">${fmtMercado(m.mercadoDestacado)}</div>
+          </div>
+          <span class="riesgo-badge riesgo-${m.riesgo}" style="font-size:.75rem;padding:5px 12px">Riesgo ${m.riesgo.toUpperCase()}</span>
+        </div>
+      </div>
+      <button class="modal-cerrar" onclick="cerrarModal()">✕ Cerrar</button>
+    `);
+  } catch(e) { setModal(`<div class="error-msg">Error: ${e.message}</div><button class="modal-cerrar" onclick="cerrarModal()">✕ Cerrar</button>`); }
+}
+
+// ══════════════════════════════════════════════════════════════════════════════
+//  ANALISTA — RANKINGS (reutiliza cargarRankings con toggle)
+// ══════════════════════════════════════════════════════════════════════════════
+// cargarRankings() ya maneja el toggle del analista
+
+// ══════════════════════════════════════════════════════════════════════════════
+//  ANALISTA — REPORTE
+// ══════════════════════════════════════════════════════════════════════════════
+async function cargarListaReporte() {
+  try {
+    const partidos = await fetchJSON(API + '/partidos');
+    let html = '<div class="seccion-titulo">Seleccioná un partido para el reporte avanzado</div>';
+    for (const p of partidos) {
+      const m = parsarMarcador(p.resultado);
+      html += `<div class="reporte-card" onclick="abrirReporte(${p.id})">
+        <div class="reporte-card-titulo">${bandera(p.local)} ${p.local} ${m.gl} – ${m.gv} ${p.visitante} ${bandera(p.visitante)}</div>
+        <div class="reporte-card-sub">${p.fase} &nbsp;·&nbsp; ${fmtFecha(p.fecha)} &nbsp;·&nbsp; ${p.estadio}</div>
+      </div>`;
+    }
+    sec('reporte').innerHTML = html;
+  } catch(e) { sec('reporte').innerHTML = `<div class="error-msg">Error: ${e.message}</div>`; }
+}
+
+async function abrirReporte(id) {
+  abrirModal('<div class="spinner" style="padding:40px">Generando reporte...</div>');
+  try {
+    const r = await fetchJSON(API + '/reporte/' + id);
+    const m = parsarMarcador(r.resultado);
+    const pen = m.pen ? ` (Pen: ${m.pL}–${m.pV})` : '';
+    const dc = r.posesionLocal >= r.posesionVisitante ? 'diff-pos' : 'diff-neg';
+
+    setModal(`
+      <div class="modal-hdr">
+        <div class="modal-fase-lbl">📊 Reporte Avanzado — ${r.fase}</div>
+        <div class="modal-equipos-row">
+          <div class="modal-eq"><div class="modal-eq-flag">${bandera(r.local)}</div><div class="modal-eq-name">${r.local}</div></div>
+          <div class="modal-score-col">
+            <div class="modal-score-nums"><span class="modal-score-n">${m.gl}</span><span class="modal-score-sep">-</span><span class="modal-score-n">${m.gv}</span></div>
+            ${m.pen?`<div class="modal-pen-txt">Pen: ${m.pL}–${m.pV}</div>`:''}<div class="modal-score-lbl">Resultado final</div>
+          </div>
+          <div class="modal-eq"><div class="modal-eq-flag">${bandera(r.visitante)}</div><div class="modal-eq-name">${r.visitante}</div></div>
+        </div>
+        <div class="modal-meta">📅 ${fmtFecha(r.fecha)} &nbsp;|&nbsp; 🏟 ${r.estadio}</div>
+      </div>
+      <div class="modal-body">
+        <div class="reporte-seccion">
+          <div class="reporte-seccion-titulo">Resumen del Partido</div>
+          <div class="reporte-fila"><span class="reporte-fila-lbl">Resultado</span><span class="reporte-fila-val">${r.resultado}</span></div>
+          <div class="reporte-fila"><span class="reporte-fila-lbl">Total de eventos</span><span class="reporte-fila-val">${r.totalEventos}</span></div>
+        </div>
+        <div class="reporte-seccion">
+          <div class="reporte-seccion-titulo">Análisis Estadístico (Decorator)</div>
+          <div class="reporte-fila"><span class="reporte-fila-lbl">Promedio goles por equipo</span><span class="reporte-fila-val" style="color:var(--oro)">${r.promedioGoles}</span></div>
+          <div class="reporte-fila">
+            <span class="reporte-fila-lbl">Goleador del partido</span>
+            <span class="reporte-fila-val">${r.golesGoleador>0 ? r.goleadorPartido+' ('+r.golesGoleador+' ⚽) · '+r.equipoGoleador : 'Sin goleadores'}</span>
+          </div>
+        </div>
+        <div class="reporte-seccion">
+          <div class="reporte-seccion-titulo">Posesión del Balón</div>
+          <div class="posesion-row"><div>${bandera(r.local)} <span>${r.posesionLocal}%</span></div><div><span>${r.posesionVisitante}%</span> ${bandera(r.visitante)}</div></div>
+          <div class="posesion-track">
+            <div class="posesion-local" style="width:${r.posesionLocal}%"></div>
+            <div class="posesion-visit" style="width:${r.posesionVisitante}%"></div>
+          </div>
+          <div class="reporte-fila"><span class="reporte-fila-lbl">Dominador</span><span class="reporte-fila-val">${r.dominadorPosesion}</span></div>
+        </div>
+        <div class="reporte-seccion">
+          <div class="reporte-seccion-titulo">Incidencias</div>
+          <div class="reporte-fila"><span class="reporte-fila-lbl">Total tarjetas</span><span class="reporte-fila-val">${r.totalTarjetas}</span></div>
+          <div class="reporte-fila"><span class="reporte-fila-lbl">Tarjeta roja</span><span class="reporte-fila-val ${r.huboRoja?'si-badge':'no-badge'}">${r.huboRoja?'✔ SÍ':'✘ NO'}</span></div>
+          <div class="reporte-fila"><span class="reporte-fila-lbl">Tiempo extra</span><span class="reporte-fila-val ${r.huboTiempoExtra?'si-badge':'no-badge'}">${r.huboTiempoExtra?'✔ SÍ':'✘ NO'}</span></div>
+        </div>
+      </div>
+      <button class="modal-cerrar" onclick="cerrarModal()">✕ Cerrar</button>
+    `);
+  } catch(e) { setModal(`<div class="error-msg">Error: ${e.message}</div><button class="modal-cerrar" onclick="cerrarModal()">✕ Cerrar</button>`); }
+}
+
+// ══════════════════════════════════════════════════════════════════════════════
+//  MODAL HELPERS
+// ══════════════════════════════════════════════════════════════════════════════
+function abrirModal(contenido) {
+  setModal(contenido);
+  document.getElementById('modal').classList.add('visible');
+  document.body.style.overflow = 'hidden';
+}
+function setModal(html) { document.getElementById('modal-box').innerHTML = html; }
+function cerrarModal()  {
+  document.getElementById('modal').classList.remove('visible');
+  document.body.style.overflow = '';
+}
+function cerrarModalFondo(e) { if (e.target === document.getElementById('modal')) cerrarModal(); }
 </script>
 </body>
 </html>
