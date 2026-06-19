@@ -1,0 +1,342 @@
+﻿{
+    "fuente":  "datos_apuestas_mundial",
+    "archivosRelacionados":  [
+                                 "estadisticas_partidos_mundial.json",
+                                 "posesion_balon_mundial.txt",
+                                 "tarjetas_mundial.csv",
+                                 "datos_periodisticos_mundial.json"
+                             ],
+    "totalPartidos":  15,
+    "mercados":  [
+                     {
+                         "partidoId":  1,
+                         "partido":  {
+                                         "local":  "ARGENTINA",
+                                         "visitante":  "MÉXICO"
+                                     },
+                         "resultado":  "Argentina 3 - 1 México",
+                         "totalGoles":  4,
+                         "golesLocal":  3,
+                         "golesVisitante":  1,
+                         "ambosEquiposAnotaron":  true,
+                         "totalTarjetas":  2,
+                         "tarjetasAmarillas":  2,
+                         "tarjetasRojas":  0,
+                         "huboRoja":  false,
+                         "huboTiempoExtra":  false,
+                         "posesionLocal":  58,
+                         "posesionVisitante":  42,
+                         "dominadorPosesion":  "ARGENTINA",
+                         "mercadoDestacado":  "mas_de_3_5_goles",
+                         "riesgoParaCuota":  "medio"
+                     },
+                     {
+                         "partidoId":  2,
+                         "partido":  {
+                                         "local":  "BRASIL",
+                                         "visitante":  "URUGUAY"
+                                     },
+                         "resultado":  "Brasil 2 - 0 Uruguay",
+                         "totalGoles":  2,
+                         "golesLocal":  2,
+                         "golesVisitante":  0,
+                         "ambosEquiposAnotaron":  false,
+                         "totalTarjetas":  2,
+                         "tarjetasAmarillas":  2,
+                         "tarjetasRojas":  0,
+                         "huboRoja":  false,
+                         "huboTiempoExtra":  false,
+                         "posesionLocal":  61,
+                         "posesionVisitante":  39,
+                         "dominadorPosesion":  "BRASIL",
+                         "mercadoDestacado":  "mas_de_1_5_tarjetas",
+                         "riesgoParaCuota":  "medio"
+                     },
+                     {
+                         "partidoId":  3,
+                         "partido":  {
+                                         "local":  "FRANCIA",
+                                         "visitante":  "DINAMARCA"
+                                     },
+                         "resultado":  "Francia 4 - 2 Dinamarca",
+                         "totalGoles":  6,
+                         "golesLocal":  4,
+                         "golesVisitante":  2,
+                         "ambosEquiposAnotaron":  true,
+                         "totalTarjetas":  2,
+                         "tarjetasAmarillas":  2,
+                         "tarjetasRojas":  0,
+                         "huboRoja":  false,
+                         "huboTiempoExtra":  false,
+                         "posesionLocal":  54,
+                         "posesionVisitante":  46,
+                         "dominadorPosesion":  "FRANCIA",
+                         "mercadoDestacado":  "mas_de_3_5_goles",
+                         "riesgoParaCuota":  "medio"
+                     },
+                     {
+                         "partidoId":  4,
+                         "partido":  {
+                                         "local":  "ESPAÑA",
+                                         "visitante":  "CROACIA"
+                                     },
+                         "resultado":  "España 2 - 1 Croacia",
+                         "totalGoles":  3,
+                         "golesLocal":  2,
+                         "golesVisitante":  1,
+                         "ambosEquiposAnotaron":  true,
+                         "totalTarjetas":  2,
+                         "tarjetasAmarillas":  2,
+                         "tarjetasRojas":  0,
+                         "huboRoja":  false,
+                         "huboTiempoExtra":  false,
+                         "posesionLocal":  63,
+                         "posesionVisitante":  37,
+                         "dominadorPosesion":  "ESPANA",
+                         "mercadoDestacado":  "mas_de_1_5_tarjetas",
+                         "riesgoParaCuota":  "medio"
+                     },
+                     {
+                         "partidoId":  5,
+                         "partido":  {
+                                         "local":  "PORTUGAL",
+                                         "visitante":  "BÉLGICA"
+                                     },
+                         "resultado":  "Portugal 1 (4) - (3) 1 Bélgica",
+                         "totalGoles":  2,
+                         "golesLocal":  1,
+                         "golesVisitante":  1,
+                         "ambosEquiposAnotaron":  true,
+                         "totalTarjetas":  0,
+                         "tarjetasAmarillas":  0,
+                         "tarjetasRojas":  0,
+                         "huboRoja":  false,
+                         "huboTiempoExtra":  false,
+                         "posesionLocal":  52,
+                         "posesionVisitante":  48,
+                         "dominadorPosesion":  "PORTUGAL",
+                         "mercadoDestacado":  "mercado_conservador",
+                         "riesgoParaCuota":  "bajo"
+                     },
+                     {
+                         "partidoId":  6,
+                         "partido":  {
+                                         "local":  "INGLATERRA",
+                                         "visitante":  "ESTADOS UNIDOS"
+                                     },
+                         "resultado":  "Inglaterra 2 - 0 Estados Unidos",
+                         "totalGoles":  2,
+                         "golesLocal":  2,
+                         "golesVisitante":  0,
+                         "ambosEquiposAnotaron":  false,
+                         "totalTarjetas":  2,
+                         "tarjetasAmarillas":  2,
+                         "tarjetasRojas":  0,
+                         "huboRoja":  false,
+                         "huboTiempoExtra":  false,
+                         "posesionLocal":  57,
+                         "posesionVisitante":  43,
+                         "dominadorPosesion":  "INGLATERRA",
+                         "mercadoDestacado":  "mas_de_1_5_tarjetas",
+                         "riesgoParaCuota":  "medio"
+                     },
+                     {
+                         "partidoId":  7,
+                         "partido":  {
+                                         "local":  "ALEMANIA",
+                                         "visitante":  "JAPÓN"
+                                     },
+                         "resultado":  "Alemania 3 - 2 Japón",
+                         "totalGoles":  5,
+                         "golesLocal":  3,
+                         "golesVisitante":  2,
+                         "ambosEquiposAnotaron":  true,
+                         "totalTarjetas":  2,
+                         "tarjetasAmarillas":  2,
+                         "tarjetasRojas":  0,
+                         "huboRoja":  false,
+                         "huboTiempoExtra":  false,
+                         "posesionLocal":  65,
+                         "posesionVisitante":  35,
+                         "dominadorPosesion":  "ALEMANIA",
+                         "mercadoDestacado":  "mas_de_3_5_goles",
+                         "riesgoParaCuota":  "medio"
+                     },
+                     {
+                         "partidoId":  8,
+                         "partido":  {
+                                         "local":  "PAÍSES BAJOS",
+                                         "visitante":  "ITALIA"
+                                     },
+                         "resultado":  "Países Bajos 2 - 1 Italia",
+                         "totalGoles":  3,
+                         "golesLocal":  2,
+                         "golesVisitante":  1,
+                         "ambosEquiposAnotaron":  true,
+                         "totalTarjetas":  2,
+                         "tarjetasAmarillas":  2,
+                         "tarjetasRojas":  0,
+                         "huboRoja":  false,
+                         "huboTiempoExtra":  false,
+                         "posesionLocal":  55,
+                         "posesionVisitante":  45,
+                         "dominadorPosesion":  "PAISES BAJOS",
+                         "mercadoDestacado":  "mas_de_1_5_tarjetas",
+                         "riesgoParaCuota":  "medio"
+                     },
+                     {
+                         "partidoId":  9,
+                         "partido":  {
+                                         "local":  "ARGENTINA",
+                                         "visitante":  "INGLATERRA"
+                                     },
+                         "resultado":  "Argentina 2 - 1 Inglaterra",
+                         "totalGoles":  3,
+                         "golesLocal":  2,
+                         "golesVisitante":  1,
+                         "ambosEquiposAnotaron":  true,
+                         "totalTarjetas":  0,
+                         "tarjetasAmarillas":  0,
+                         "tarjetasRojas":  0,
+                         "huboRoja":  false,
+                         "huboTiempoExtra":  false,
+                         "posesionLocal":  56,
+                         "posesionVisitante":  44,
+                         "dominadorPosesion":  "ARGENTINA",
+                         "mercadoDestacado":  "mercado_conservador",
+                         "riesgoParaCuota":  "bajo"
+                     },
+                     {
+                         "partidoId":  10,
+                         "partido":  {
+                                         "local":  "BRASIL",
+                                         "visitante":  "PORTUGAL"
+                                     },
+                         "resultado":  "Brasil 3 - 2 Portugal",
+                         "totalGoles":  5,
+                         "golesLocal":  3,
+                         "golesVisitante":  2,
+                         "ambosEquiposAnotaron":  true,
+                         "totalTarjetas":  0,
+                         "tarjetasAmarillas":  0,
+                         "tarjetasRojas":  0,
+                         "huboRoja":  false,
+                         "huboTiempoExtra":  false,
+                         "posesionLocal":  53,
+                         "posesionVisitante":  47,
+                         "dominadorPosesion":  "BRASIL",
+                         "mercadoDestacado":  "mas_de_3_5_goles",
+                         "riesgoParaCuota":  "medio"
+                     },
+                     {
+                         "partidoId":  11,
+                         "partido":  {
+                                         "local":  "FRANCIA",
+                                         "visitante":  "ALEMANIA"
+                                     },
+                         "resultado":  "Francia 2 (4) - (3) 2 Alemania",
+                         "totalGoles":  4,
+                         "golesLocal":  2,
+                         "golesVisitante":  2,
+                         "ambosEquiposAnotaron":  true,
+                         "totalTarjetas":  0,
+                         "tarjetasAmarillas":  0,
+                         "tarjetasRojas":  0,
+                         "huboRoja":  false,
+                         "huboTiempoExtra":  true,
+                         "posesionLocal":  49,
+                         "posesionVisitante":  51,
+                         "dominadorPosesion":  "ALEMANIA",
+                         "mercadoDestacado":  "empate_en_90_y_definicion_extendida",
+                         "riesgoParaCuota":  "alto"
+                     },
+                     {
+                         "partidoId":  12,
+                         "partido":  {
+                                         "local":  "ESPAÑA",
+                                         "visitante":  "PAÍSES BAJOS"
+                                     },
+                         "resultado":  "España 2 - 0 Países Bajos",
+                         "totalGoles":  2,
+                         "golesLocal":  2,
+                         "golesVisitante":  0,
+                         "ambosEquiposAnotaron":  false,
+                         "totalTarjetas":  0,
+                         "tarjetasAmarillas":  0,
+                         "tarjetasRojas":  0,
+                         "huboRoja":  false,
+                         "huboTiempoExtra":  false,
+                         "posesionLocal":  62,
+                         "posesionVisitante":  38,
+                         "dominadorPosesion":  "ESPANA",
+                         "mercadoDestacado":  "mercado_conservador",
+                         "riesgoParaCuota":  "bajo"
+                     },
+                     {
+                         "partidoId":  13,
+                         "partido":  {
+                                         "local":  "ARGENTINA",
+                                         "visitante":  "BRASIL"
+                                     },
+                         "resultado":  "Argentina 1 (5) - (4) 1 Brasil",
+                         "totalGoles":  2,
+                         "golesLocal":  1,
+                         "golesVisitante":  1,
+                         "ambosEquiposAnotaron":  true,
+                         "totalTarjetas":  1,
+                         "tarjetasAmarillas":  0,
+                         "tarjetasRojas":  1,
+                         "huboRoja":  true,
+                         "huboTiempoExtra":  true,
+                         "posesionLocal":  48,
+                         "posesionVisitante":  52,
+                         "dominadorPosesion":  "BRASIL",
+                         "mercadoDestacado":  "empate_en_90_y_definicion_extendida",
+                         "riesgoParaCuota":  "alto"
+                     },
+                     {
+                         "partidoId":  14,
+                         "partido":  {
+                                         "local":  "FRANCIA",
+                                         "visitante":  "ESPAÑA"
+                                     },
+                         "resultado":  "Francia 2 - 1 España",
+                         "totalGoles":  3,
+                         "golesLocal":  2,
+                         "golesVisitante":  1,
+                         "ambosEquiposAnotaron":  true,
+                         "totalTarjetas":  0,
+                         "tarjetasAmarillas":  0,
+                         "tarjetasRojas":  0,
+                         "huboRoja":  false,
+                         "huboTiempoExtra":  false,
+                         "posesionLocal":  46,
+                         "posesionVisitante":  54,
+                         "dominadorPosesion":  "ESPANA",
+                         "mercadoDestacado":  "mercado_conservador",
+                         "riesgoParaCuota":  "bajo"
+                     },
+                     {
+                         "partidoId":  15,
+                         "partido":  {
+                                         "local":  "ARGENTINA",
+                                         "visitante":  "FRANCIA"
+                                     },
+                         "resultado":  "Argentina 3 - 2 Francia",
+                         "totalGoles":  5,
+                         "golesLocal":  3,
+                         "golesVisitante":  2,
+                         "ambosEquiposAnotaron":  true,
+                         "totalTarjetas":  0,
+                         "tarjetasAmarillas":  0,
+                         "tarjetasRojas":  0,
+                         "huboRoja":  false,
+                         "huboTiempoExtra":  true,
+                         "posesionLocal":  51,
+                         "posesionVisitante":  49,
+                         "dominadorPosesion":  "ARGENTINA",
+                         "mercadoDestacado":  "empate_en_90_y_definicion_extendida",
+                         "riesgoParaCuota":  "alto"
+                     }
+                 ]
+}

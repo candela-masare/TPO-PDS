@@ -1,0 +1,16 @@
+partido_id,equipo_local,equipo_visitante,tipo_tarjeta,minuto,equipo,jugador,periodo
+1,ARGENTINA,MEXICO,AMARILLA,26,MEXICO,Edson Alvarez,tiempo_reglamentario
+1,ARGENTINA,MEXICO,AMARILLA,49,ARGENTINA,Rodrigo De Paul,tiempo_reglamentario
+2,BRASIL,URUGUAY,AMARILLA,31,URUGUAY,Federico Valverde,tiempo_reglamentario
+2,BRASIL,URUGUAY,AMARILLA,57,BRASIL,Casemiro,tiempo_reglamentario
+3,FRANCIA,DINAMARCA,AMARILLA,35,FRANCIA,Theo Hernandez,tiempo_reglamentario
+3,FRANCIA,DINAMARCA,AMARILLA,71,DINAMARCA,Christensen,tiempo_reglamentario
+4,ESPANA,CROACIA,AMARILLA,25,ESPANA,Rodri,tiempo_reglamentario
+4,ESPANA,CROACIA,AMARILLA,69,CROACIA,Modric,tiempo_reglamentario
+6,INGLATERRA,ESTADOS UNIDOS,AMARILLA,42,ESTADOS UNIDOS,Tyler Adams,tiempo_reglamentario
+6,INGLATERRA,ESTADOS UNIDOS,AMARILLA,67,INGLATERRA,Declan Rice,tiempo_reglamentario
+7,ALEMANIA,JAPON,AMARILLA,39,ALEMANIA,Rudiger,tiempo_reglamentario
+7,ALEMANIA,JAPON,AMARILLA,74,JAPON,Tomiyasu,tiempo_reglamentario
+8,PAISES BAJOS,ITALIA,AMARILLA,27,ITALIA,Bastoni,tiempo_reglamentario
+8,PAISES BAJOS,ITALIA,AMARILLA,78,PAISES BAJOS,Van Dijk,tiempo_reglamentario
+13,ARGENTINA,BRASIL,ROJA,115,BRASIL,Gabriel Magalhaes,tiempo_extra

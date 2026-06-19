@@ -1,0 +1,3876 @@
+BASE DE DATOS - EQUIPOS DESDE OCTAVOS DE FINAL
+Nota: Planteles armados con jugadores reales y clubes reales/reconocibles para usar como datos de prueba.
+No representa una convocatoria oficial definitiva del Mundial 2026.
+
+====================================================
+PAÍS: ARGENTINA
+Fundación de la federación: 1893
+Sede principal: Buenos Aires
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Emiliano Martínez
+   Nombre completo: Emiliano Martínez
+   Posición: Arquero
+   Equipo: ARGENTINA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. Gerónimo Rulli
+   Nombre completo: Gerónimo Rulli
+   Posición: Arquero
+   Equipo: ARGENTINA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. Franco Armani
+   Nombre completo: Franco Armani
+   Posición: Arquero
+   Equipo: ARGENTINA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. Nahuel Molina
+   Nombre completo: Nahuel Molina
+   Posición: Lateral derecho
+   Equipo: ARGENTINA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+5. Gonzalo Montiel
+   Nombre completo: Gonzalo Montiel
+   Posición: Lateral derecho
+   Equipo: ARGENTINA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+6. Cristian Romero
+   Nombre completo: Cristian Romero
+   Posición: Defensor central
+   Equipo: ARGENTINA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+7. Nicolás Otamendi
+   Nombre completo: Nicolás Otamendi
+   Posición: Defensor central
+   Equipo: ARGENTINA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+8. Lisandro Martínez
+   Nombre completo: Lisandro Martínez
+   Posición: Defensor central
+   Equipo: ARGENTINA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. Germán Pezzella
+   Nombre completo: Germán Pezzella
+   Posición: Defensor central
+   Equipo: ARGENTINA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+10. Marcos Acuña
+   Nombre completo: Marcos Acuña
+   Posición: Lateral izquierdo
+   Equipo: ARGENTINA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. Nicolás Tagliafico
+   Nombre completo: Nicolás Tagliafico
+   Posición: Lateral izquierdo
+   Equipo: ARGENTINA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. Rodrigo De Paul
+   Nombre completo: Rodrigo De Paul
+   Posición: Mediocampista
+   Equipo: ARGENTINA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 2
+   Tarjetas rojas: 0
+
+13. Leandro Paredes
+   Nombre completo: Leandro Paredes
+   Posición: Mediocampista
+   Equipo: ARGENTINA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+14. Enzo Fernández
+   Nombre completo: Enzo Fernández
+   Posición: Mediocampista
+   Equipo: ARGENTINA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. Alexis Mac Allister
+   Nombre completo: Alexis Mac Allister
+   Posición: Mediocampista
+   Equipo: ARGENTINA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. Exequiel Palacios
+   Nombre completo: Exequiel Palacios
+   Posición: Mediocampista
+   Equipo: ARGENTINA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. Giovani Lo Celso
+   Nombre completo: Giovani Lo Celso
+   Posición: Mediocampista
+   Equipo: ARGENTINA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+18. Guido Rodríguez
+   Nombre completo: Guido Rodríguez
+   Posición: Mediocampista
+   Equipo: ARGENTINA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+19. Thiago Almada
+   Nombre completo: Thiago Almada
+   Posición: Mediapunta
+   Equipo: ARGENTINA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Lionel Messi
+   Nombre completo: Lionel Messi
+   Posición: Delantero
+   Equipo: ARGENTINA
+   Partidos jugados: 2
+   Goles: 3
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Ángel Di María
+   Nombre completo: Ángel Di María
+   Posición: Extremo
+   Equipo: ARGENTINA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. Julián Álvarez
+   Nombre completo: Julián Álvarez
+   Posición: Delantero
+   Equipo: ARGENTINA
+   Partidos jugados: 2
+   Goles: 3
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Lautaro Martínez
+   Nombre completo: Lautaro Martínez
+   Posición: Delantero
+   Equipo: ARGENTINA
+   Partidos jugados: 2
+   Goles: 3
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Nicolás González
+   Nombre completo: Nicolás González
+   Posición: Extremo
+   Equipo: ARGENTINA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+25. Alejandro Garnacho
+   Nombre completo: Alejandro Garnacho
+   Posición: Extremo
+   Equipo: ARGENTINA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. Paulo Dybala
+   Nombre completo: Paulo Dybala
+   Posición: Delantero
+   Equipo: ARGENTINA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+====================================================
+PAÍS: BRASIL
+Fundación de la federación: 1914
+Sede principal: Río de Janeiro
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Alisson Becker
+   Nombre completo: Alisson Becker
+   Posición: Arquero
+   Equipo: BRASIL
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. Ederson Moraes
+   Nombre completo: Ederson Moraes
+   Posición: Arquero
+   Equipo: BRASIL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. Bento Krepski
+   Nombre completo: Bento Krepski
+   Posición: Arquero
+   Equipo: BRASIL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. Danilo
+   Nombre completo: Danilo
+   Posición: Lateral derecho
+   Equipo: BRASIL
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+5. Yan Couto
+   Nombre completo: Yan Couto
+   Posición: Lateral derecho
+   Equipo: BRASIL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+6. Marquinhos
+   Nombre completo: Marquinhos
+   Posición: Defensor central
+   Equipo: BRASIL
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+7. Gabriel Magalhães
+   Nombre completo: Gabriel Magalhães
+   Posición: Defensor central
+   Equipo: BRASIL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+8. Éder Militão
+   Nombre completo: Éder Militão
+   Posición: Defensor central
+   Equipo: BRASIL
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. Bremer
+   Nombre completo: Bremer
+   Posición: Defensor central
+   Equipo: BRASIL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+10. Lucas Beraldo
+   Nombre completo: Lucas Beraldo
+   Posición: Defensor central
+   Equipo: BRASIL
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. Guilherme Arana
+   Nombre completo: Guilherme Arana
+   Posición: Lateral izquierdo
+   Equipo: BRASIL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. Wendell
+   Nombre completo: Wendell
+   Posición: Lateral izquierdo
+   Equipo: BRASIL
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+13. Casemiro
+   Nombre completo: Casemiro
+   Posición: Mediocampista
+   Equipo: BRASIL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+14. Bruno Guimarães
+   Nombre completo: Bruno Guimarães
+   Posición: Mediocampista
+   Equipo: BRASIL
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. Lucas Paquetá
+   Nombre completo: Lucas Paquetá
+   Posición: Mediocampista
+   Equipo: BRASIL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. João Gomes
+   Nombre completo: João Gomes
+   Posición: Mediocampista
+   Equipo: BRASIL
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. Douglas Luiz
+   Nombre completo: Douglas Luiz
+   Posición: Mediocampista
+   Equipo: BRASIL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+18. Andreas Pereira
+   Nombre completo: Andreas Pereira
+   Posición: Mediocampista
+   Equipo: BRASIL
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+19. Vinicius Jr
+   Nombre completo: Vinicius Jr
+   Posición: Extremo
+   Equipo: BRASIL
+   Partidos jugados: 2
+   Goles: 3
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Rodrygo
+   Nombre completo: Rodrygo
+   Posición: Extremo
+   Equipo: BRASIL
+   Partidos jugados: 2
+   Goles: 2
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Raphinha
+   Nombre completo: Raphinha
+   Posición: Extremo
+   Equipo: BRASIL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. Gabriel Martinelli
+   Nombre completo: Gabriel Martinelli
+   Posición: Extremo
+   Equipo: BRASIL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Neymar Jr
+   Nombre completo: Neymar Jr
+   Posición: Delantero
+   Equipo: BRASIL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Endrick
+   Nombre completo: Endrick
+   Posición: Delantero
+   Equipo: BRASIL
+   Partidos jugados: 1
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+25. Richarlison
+   Nombre completo: Richarlison
+   Posición: Delantero
+   Equipo: BRASIL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. Savinho
+   Nombre completo: Savinho
+   Posición: Extremo
+   Equipo: BRASIL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+====================================================
+PAÍS: FRANCIA
+Fundación de la federación: 1919
+Sede principal: París
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Mike Maignan
+   Nombre completo: Mike Maignan
+   Posición: Arquero
+   Equipo: FRANCIA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. Brice Samba
+   Nombre completo: Brice Samba
+   Posición: Arquero
+   Equipo: FRANCIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. Alphonse Areola
+   Nombre completo: Alphonse Areola
+   Posición: Arquero
+   Equipo: FRANCIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. Jules Koundé
+   Nombre completo: Jules Koundé
+   Posición: Defensor
+   Equipo: FRANCIA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+5. William Saliba
+   Nombre completo: William Saliba
+   Posición: Defensor central
+   Equipo: FRANCIA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+6. Dayot Upamecano
+   Nombre completo: Dayot Upamecano
+   Posición: Defensor central
+   Equipo: FRANCIA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+7. Ibrahima Konaté
+   Nombre completo: Ibrahima Konaté
+   Posición: Defensor central
+   Equipo: FRANCIA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+8. Lucas Hernández
+   Nombre completo: Lucas Hernández
+   Posición: Defensor
+   Equipo: FRANCIA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. Theo Hernández
+   Nombre completo: Theo Hernández
+   Posición: Lateral izquierdo
+   Equipo: FRANCIA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+10. Jonathan Clauss
+   Nombre completo: Jonathan Clauss
+   Posición: Lateral derecho
+   Equipo: FRANCIA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. Benjamin Pavard
+   Nombre completo: Benjamin Pavard
+   Posición: Defensor
+   Equipo: FRANCIA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. Aurélien Tchouaméni
+   Nombre completo: Aurélien Tchouaméni
+   Posición: Mediocampista
+   Equipo: FRANCIA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+13. Eduardo Camavinga
+   Nombre completo: Eduardo Camavinga
+   Posición: Mediocampista
+   Equipo: FRANCIA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+14. Adrien Rabiot
+   Nombre completo: Adrien Rabiot
+   Posición: Mediocampista
+   Equipo: FRANCIA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. N'Golo Kanté
+   Nombre completo: N'Golo Kanté
+   Posición: Mediocampista
+   Equipo: FRANCIA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. Warren Zaïre-Emery
+   Nombre completo: Warren Zaïre-Emery
+   Posición: Mediocampista
+   Equipo: FRANCIA
+   Partidos jugados: 4
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. Youssouf Fofana
+   Nombre completo: Youssouf Fofana
+   Posición: Mediocampista
+   Equipo: FRANCIA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+18. Antoine Griezmann
+   Nombre completo: Antoine Griezmann
+   Posición: Mediapunta
+   Equipo: FRANCIA
+   Partidos jugados: 4
+   Goles: 3
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+19. Kylian Mbappé
+   Nombre completo: Kylian Mbappé
+   Posición: Delantero
+   Equipo: FRANCIA
+   Partidos jugados: 2
+   Goles: 4
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Ousmane Dembélé
+   Nombre completo: Ousmane Dembélé
+   Posición: Extremo
+   Equipo: FRANCIA
+   Partidos jugados: 2
+   Goles: 2
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Marcus Thuram
+   Nombre completo: Marcus Thuram
+   Posición: Delantero
+   Equipo: FRANCIA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. Randal Kolo Muani
+   Nombre completo: Randal Kolo Muani
+   Posición: Delantero
+   Equipo: FRANCIA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Kingsley Coman
+   Nombre completo: Kingsley Coman
+   Posición: Extremo
+   Equipo: FRANCIA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Bradley Barcola
+   Nombre completo: Bradley Barcola
+   Posición: Extremo
+   Equipo: FRANCIA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+25. Olivier Giroud
+   Nombre completo: Olivier Giroud
+   Posición: Delantero
+   Equipo: FRANCIA
+   Partidos jugados: 2
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. Christopher Nkunku
+   Nombre completo: Christopher Nkunku
+   Posición: Delantero
+   Equipo: FRANCIA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+====================================================
+PAÍS: ESPAÑA
+Fundación de la federación: 1909
+Sede principal: Madrid
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Unai Simón
+   Nombre completo: Unai Simón
+   Posición: Arquero
+   Equipo: ESPAÑA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. David Raya
+   Nombre completo: David Raya
+   Posición: Arquero
+   Equipo: ESPAÑA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. Álex Remiro
+   Nombre completo: Álex Remiro
+   Posición: Arquero
+   Equipo: ESPAÑA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. Dani Carvajal
+   Nombre completo: Dani Carvajal
+   Posición: Lateral derecho
+   Equipo: ESPAÑA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+5. Pedro Porro
+   Nombre completo: Pedro Porro
+   Posición: Lateral derecho
+   Equipo: ESPAÑA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+6. Robin Le Normand
+   Nombre completo: Robin Le Normand
+   Posición: Defensor central
+   Equipo: ESPAÑA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+7. Aymeric Laporte
+   Nombre completo: Aymeric Laporte
+   Posición: Defensor central
+   Equipo: ESPAÑA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+8. Pau Cubarsí
+   Nombre completo: Pau Cubarsí
+   Posición: Defensor central
+   Equipo: ESPAÑA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. Nacho Fernández
+   Nombre completo: Nacho Fernández
+   Posición: Defensor central
+   Equipo: ESPAÑA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+10. Alejandro Grimaldo
+   Nombre completo: Alejandro Grimaldo
+   Posición: Lateral izquierdo
+   Equipo: ESPAÑA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. Marc Cucurella
+   Nombre completo: Marc Cucurella
+   Posición: Lateral izquierdo
+   Equipo: ESPAÑA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. Rodri
+   Nombre completo: Rodri
+   Posición: Mediocampista
+   Equipo: ESPAÑA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 2
+   Tarjetas rojas: 0
+
+13. Martín Zubimendi
+   Nombre completo: Martín Zubimendi
+   Posición: Mediocampista
+   Equipo: ESPAÑA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+14. Fabián Ruiz
+   Nombre completo: Fabián Ruiz
+   Posición: Mediocampista
+   Equipo: ESPAÑA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. Pedri
+   Nombre completo: Pedri
+   Posición: Mediocampista
+   Equipo: ESPAÑA
+   Partidos jugados: 2
+   Goles: 2
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. Gavi
+   Nombre completo: Gavi
+   Posición: Mediocampista
+   Equipo: ESPAÑA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. Mikel Merino
+   Nombre completo: Mikel Merino
+   Posición: Mediocampista
+   Equipo: ESPAÑA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+18. Álex Baena
+   Nombre completo: Álex Baena
+   Posición: Mediocampista
+   Equipo: ESPAÑA
+   Partidos jugados: 3
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+19. Dani Olmo
+   Nombre completo: Dani Olmo
+   Posición: Mediapunta
+   Equipo: ESPAÑA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Fermín López
+   Nombre completo: Fermín López
+   Posición: Mediocampista
+   Equipo: ESPAÑA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Lamine Yamal
+   Nombre completo: Lamine Yamal
+   Posición: Extremo
+   Equipo: ESPAÑA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. Nico Williams
+   Nombre completo: Nico Williams
+   Posición: Extremo
+   Equipo: ESPAÑA
+   Partidos jugados: 2
+   Goles: 2
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Álvaro Morata
+   Nombre completo: Álvaro Morata
+   Posición: Delantero
+   Equipo: ESPAÑA
+   Partidos jugados: 2
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Mikel Oyarzabal
+   Nombre completo: Mikel Oyarzabal
+   Posición: Delantero
+   Equipo: ESPAÑA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+25. Ferran Torres
+   Nombre completo: Ferran Torres
+   Posición: Extremo
+   Equipo: ESPAÑA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. Joselu Mato
+   Nombre completo: Joselu Mato
+   Posición: Delantero
+   Equipo: ESPAÑA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+====================================================
+PAÍS: PORTUGAL
+Fundación de la federación: 1914
+Sede principal: Lisboa
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Diogo Costa
+   Nombre completo: Diogo Costa
+   Posición: Arquero
+   Equipo: PORTUGAL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. Rui Patrício
+   Nombre completo: Rui Patrício
+   Posición: Arquero
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. José Sá
+   Nombre completo: José Sá
+   Posición: Arquero
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. João Cancelo
+   Nombre completo: João Cancelo
+   Posición: Lateral
+   Equipo: PORTUGAL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+5. Diogo Dalot
+   Nombre completo: Diogo Dalot
+   Posición: Lateral derecho
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+6. Nuno Mendes
+   Nombre completo: Nuno Mendes
+   Posición: Lateral izquierdo
+   Equipo: PORTUGAL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+7. Pepe
+   Nombre completo: Pepe
+   Posición: Defensor central
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+8. Rúben Dias
+   Nombre completo: Rúben Dias
+   Posición: Defensor central
+   Equipo: PORTUGAL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. António Silva
+   Nombre completo: António Silva
+   Posición: Defensor central
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+10. Gonçalo Inácio
+   Nombre completo: Gonçalo Inácio
+   Posición: Defensor central
+   Equipo: PORTUGAL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. João Palhinha
+   Nombre completo: João Palhinha
+   Posición: Mediocampista
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. Rúben Neves
+   Nombre completo: Rúben Neves
+   Posición: Mediocampista
+   Equipo: PORTUGAL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+13. Vitinha
+   Nombre completo: Vitinha
+   Posición: Mediocampista
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+14. Bruno Fernandes
+   Nombre completo: Bruno Fernandes
+   Posición: Mediocampista
+   Equipo: PORTUGAL
+   Partidos jugados: 2
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. Bernardo Silva
+   Nombre completo: Bernardo Silva
+   Posición: Mediocampista
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. Matheus Nunes
+   Nombre completo: Matheus Nunes
+   Posición: Mediocampista
+   Equipo: PORTUGAL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. João Neves
+   Nombre completo: João Neves
+   Posición: Mediocampista
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+18. Otávio
+   Nombre completo: Otávio
+   Posición: Mediocampista
+   Equipo: PORTUGAL
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+19. Cristiano Ronaldo
+   Nombre completo: Cristiano Ronaldo
+   Posición: Delantero
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Rafael Leão
+   Nombre completo: Rafael Leão
+   Posición: Extremo
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Diogo Jota
+   Nombre completo: Diogo Jota
+   Posición: Delantero
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. João Félix
+   Nombre completo: João Félix
+   Posición: Delantero
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Pedro Neto
+   Nombre completo: Pedro Neto
+   Posición: Extremo
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Francisco Conceição
+   Nombre completo: Francisco Conceição
+   Posición: Extremo
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+25. Gonçalo Ramos
+   Nombre completo: Gonçalo Ramos
+   Posición: Delantero
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. Trincão
+   Nombre completo: Trincão
+   Posición: Extremo
+   Equipo: PORTUGAL
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+====================================================
+PAÍS: INGLATERRA
+Fundación de la federación: 1863
+Sede principal: Londres
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Jordan Pickford
+   Nombre completo: Jordan Pickford
+   Posición: Arquero
+   Equipo: INGLATERRA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. Aaron Ramsdale
+   Nombre completo: Aaron Ramsdale
+   Posición: Arquero
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. Dean Henderson
+   Nombre completo: Dean Henderson
+   Posición: Arquero
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. Kyle Walker
+   Nombre completo: Kyle Walker
+   Posición: Lateral derecho
+   Equipo: INGLATERRA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+5. Trent Alexander-Arnold
+   Nombre completo: Trent Alexander-Arnold
+   Posición: Lateral derecho
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+6. John Stones
+   Nombre completo: John Stones
+   Posición: Defensor central
+   Equipo: INGLATERRA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+7. Marc Guéhi
+   Nombre completo: Marc Guéhi
+   Posición: Defensor central
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+8. Ezri Konsa
+   Nombre completo: Ezri Konsa
+   Posición: Defensor central
+   Equipo: INGLATERRA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. Harry Maguire
+   Nombre completo: Harry Maguire
+   Posición: Defensor central
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+10. Luke Shaw
+   Nombre completo: Luke Shaw
+   Posición: Lateral izquierdo
+   Equipo: INGLATERRA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. Ben Chilwell
+   Nombre completo: Ben Chilwell
+   Posición: Lateral izquierdo
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. Declan Rice
+   Nombre completo: Declan Rice
+   Posición: Mediocampista
+   Equipo: INGLATERRA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+13. Jude Bellingham
+   Nombre completo: Jude Bellingham
+   Posición: Mediocampista
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+14. Conor Gallagher
+   Nombre completo: Conor Gallagher
+   Posición: Mediocampista
+   Equipo: INGLATERRA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. Kobbie Mainoo
+   Nombre completo: Kobbie Mainoo
+   Posición: Mediocampista
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. Phil Foden
+   Nombre completo: Phil Foden
+   Posición: Mediapunta
+   Equipo: INGLATERRA
+   Partidos jugados: 2
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. Cole Palmer
+   Nombre completo: Cole Palmer
+   Posición: Mediapunta
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+18. James Maddison
+   Nombre completo: James Maddison
+   Posición: Mediapunta
+   Equipo: INGLATERRA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+19. Bukayo Saka
+   Nombre completo: Bukayo Saka
+   Posición: Extremo
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Jack Grealish
+   Nombre completo: Jack Grealish
+   Posición: Extremo
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Anthony Gordon
+   Nombre completo: Anthony Gordon
+   Posición: Extremo
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. Marcus Rashford
+   Nombre completo: Marcus Rashford
+   Posición: Extremo
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Harry Kane
+   Nombre completo: Harry Kane
+   Posición: Delantero
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 2
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Ollie Watkins
+   Nombre completo: Ollie Watkins
+   Posición: Delantero
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+25. Ivan Toney
+   Nombre completo: Ivan Toney
+   Posición: Delantero
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. Jarrod Bowen
+   Nombre completo: Jarrod Bowen
+   Posición: Extremo
+   Equipo: INGLATERRA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+====================================================
+PAÍS: ALEMANIA
+Fundación de la federación: 1900
+Sede principal: Frankfurt
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Manuel Neuer
+   Nombre completo: Manuel Neuer
+   Posición: Arquero
+   Equipo: ALEMANIA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. Marc-André ter Stegen
+   Nombre completo: Marc-André ter Stegen
+   Posición: Arquero
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. Oliver Baumann
+   Nombre completo: Oliver Baumann
+   Posición: Arquero
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. Joshua Kimmich
+   Nombre completo: Joshua Kimmich
+   Posición: Lateral derecho
+   Equipo: ALEMANIA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+5. Antonio Rüdiger
+   Nombre completo: Antonio Rüdiger
+   Posición: Defensor central
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+6. Jonathan Tah
+   Nombre completo: Jonathan Tah
+   Posición: Defensor central
+   Equipo: ALEMANIA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+7. Nico Schlotterbeck
+   Nombre completo: Nico Schlotterbeck
+   Posición: Defensor central
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+8. Waldemar Anton
+   Nombre completo: Waldemar Anton
+   Posición: Defensor central
+   Equipo: ALEMANIA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. David Raum
+   Nombre completo: David Raum
+   Posición: Lateral izquierdo
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+10. Maximilian Mittelstädt
+   Nombre completo: Maximilian Mittelstädt
+   Posición: Lateral izquierdo
+   Equipo: ALEMANIA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. Robin Gosens
+   Nombre completo: Robin Gosens
+   Posición: Lateral izquierdo
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. İlkay Gündoğan
+   Nombre completo: İlkay Gündoğan
+   Posición: Mediocampista
+   Equipo: ALEMANIA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+13. Toni Kroos
+   Nombre completo: Toni Kroos
+   Posición: Mediocampista
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+14. Robert Andrich
+   Nombre completo: Robert Andrich
+   Posición: Mediocampista
+   Equipo: ALEMANIA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. Pascal Groß
+   Nombre completo: Pascal Groß
+   Posición: Mediocampista
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. Florian Wirtz
+   Nombre completo: Florian Wirtz
+   Posición: Mediapunta
+   Equipo: ALEMANIA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. Jamal Musiala
+   Nombre completo: Jamal Musiala
+   Posición: Mediapunta
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 2
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+18. Leroy Sané
+   Nombre completo: Leroy Sané
+   Posición: Extremo
+   Equipo: ALEMANIA
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+19. Serge Gnabry
+   Nombre completo: Serge Gnabry
+   Posición: Extremo
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Kai Havertz
+   Nombre completo: Kai Havertz
+   Posición: Delantero
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 2
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Niclas Füllkrug
+   Nombre completo: Niclas Füllkrug
+   Posición: Delantero
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. Thomas Müller
+   Nombre completo: Thomas Müller
+   Posición: Delantero
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Deniz Undav
+   Nombre completo: Deniz Undav
+   Posición: Delantero
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Chris Führich
+   Nombre completo: Chris Führich
+   Posición: Extremo
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+25. Maximilian Beier
+   Nombre completo: Maximilian Beier
+   Posición: Delantero
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. Emre Can
+   Nombre completo: Emre Can
+   Posición: Mediocampista
+   Equipo: ALEMANIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+====================================================
+PAÍS: PAÍSES BAJOS
+Fundación de la federación: 1889
+Sede principal: Zeist
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Bart Verbruggen
+   Nombre completo: Bart Verbruggen
+   Posición: Arquero
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. Justin Bijlow
+   Nombre completo: Justin Bijlow
+   Posición: Arquero
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. Mark Flekken
+   Nombre completo: Mark Flekken
+   Posición: Arquero
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. Denzel Dumfries
+   Nombre completo: Denzel Dumfries
+   Posición: Lateral derecho
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+5. Jeremie Frimpong
+   Nombre completo: Jeremie Frimpong
+   Posición: Lateral derecho
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+6. Virgil van Dijk
+   Nombre completo: Virgil van Dijk
+   Posición: Defensor central
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+7. Matthijs de Ligt
+   Nombre completo: Matthijs de Ligt
+   Posición: Defensor central
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+8. Stefan de Vrij
+   Nombre completo: Stefan de Vrij
+   Posición: Defensor central
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. Micky van de Ven
+   Nombre completo: Micky van de Ven
+   Posición: Defensor central
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+10. Nathan Aké
+   Nombre completo: Nathan Aké
+   Posición: Defensor
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. Daley Blind
+   Nombre completo: Daley Blind
+   Posición: Defensor
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. Ian Maatsen
+   Nombre completo: Ian Maatsen
+   Posición: Lateral izquierdo
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+13. Frenkie de Jong
+   Nombre completo: Frenkie de Jong
+   Posición: Mediocampista
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+14. Tijjani Reijnders
+   Nombre completo: Tijjani Reijnders
+   Posición: Mediocampista
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. Jerdy Schouten
+   Nombre completo: Jerdy Schouten
+   Posición: Mediocampista
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. Ryan Gravenberch
+   Nombre completo: Ryan Gravenberch
+   Posición: Mediocampista
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. Xavi Simons
+   Nombre completo: Xavi Simons
+   Posición: Mediapunta
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+18. Teun Koopmeiners
+   Nombre completo: Teun Koopmeiners
+   Posición: Mediocampista
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 2
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+19. Cody Gakpo
+   Nombre completo: Cody Gakpo
+   Posición: Extremo
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Memphis Depay
+   Nombre completo: Memphis Depay
+   Posición: Delantero
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Donyell Malen
+   Nombre completo: Donyell Malen
+   Posición: Extremo
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. Steven Bergwijn
+   Nombre completo: Steven Bergwijn
+   Posición: Extremo
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Brian Brobbey
+   Nombre completo: Brian Brobbey
+   Posición: Delantero
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Wout Weghorst
+   Nombre completo: Wout Weghorst
+   Posición: Delantero
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+25. Noa Lang
+   Nombre completo: Noa Lang
+   Posición: Extremo
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. Joshua Zirkzee
+   Nombre completo: Joshua Zirkzee
+   Posición: Delantero
+   Equipo: PAÍSES BAJOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+====================================================
+PAÍS: MÉXICO
+Fundación de la federación: 1927
+Sede principal: Ciudad de México
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Guillermo Ochoa
+   Nombre completo: Guillermo Ochoa
+   Posición: Arquero
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. Luis Malagón
+   Nombre completo: Luis Malagón
+   Posición: Arquero
+   Equipo: MÉXICO
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. Julio González
+   Nombre completo: Julio González
+   Posición: Arquero
+   Equipo: MÉXICO
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. Jorge Sánchez
+   Nombre completo: Jorge Sánchez
+   Posición: Lateral derecho
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+5. Kevin Álvarez
+   Nombre completo: Kevin Álvarez
+   Posición: Lateral derecho
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+6. César Montes
+   Nombre completo: César Montes
+   Posición: Defensor central
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+7. Johan Vásquez
+   Nombre completo: Johan Vásquez
+   Posición: Defensor central
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+8. Jesús Orozco Chiquete
+   Nombre completo: Jesús Orozco Chiquete
+   Posición: Defensor central
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. Néstor Araujo
+   Nombre completo: Néstor Araujo
+   Posición: Defensor central
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+10. Gerardo Arteaga
+   Nombre completo: Gerardo Arteaga
+   Posición: Lateral izquierdo
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. Jesús Gallardo
+   Nombre completo: Jesús Gallardo
+   Posición: Lateral izquierdo
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. Edson Álvarez
+   Nombre completo: Edson Álvarez
+   Posición: Mediocampista
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+13. Luis Chávez
+   Nombre completo: Luis Chávez
+   Posición: Mediocampista
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+14. Erick Sánchez
+   Nombre completo: Erick Sánchez
+   Posición: Mediocampista
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. Luis Romo
+   Nombre completo: Luis Romo
+   Posición: Mediocampista
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. Orbelín Pineda
+   Nombre completo: Orbelín Pineda
+   Posición: Mediocampista
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. Carlos Rodríguez
+   Nombre completo: Carlos Rodríguez
+   Posición: Mediocampista
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+18. Roberto Alvarado
+   Nombre completo: Roberto Alvarado
+   Posición: Extremo
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+19. Uriel Antuna
+   Nombre completo: Uriel Antuna
+   Posición: Extremo
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Hirving Lozano
+   Nombre completo: Hirving Lozano
+   Posición: Extremo
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Julián Quiñones
+   Nombre completo: Julián Quiñones
+   Posición: Delantero
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. Santiago Giménez
+   Nombre completo: Santiago Giménez
+   Posición: Delantero
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Henry Martín
+   Nombre completo: Henry Martín
+   Posición: Delantero
+   Equipo: MÉXICO
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Raúl Jiménez
+   Nombre completo: Raúl Jiménez
+   Posición: Delantero
+   Equipo: MÉXICO
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+25. Diego Lainez
+   Nombre completo: Diego Lainez
+   Posición: Extremo
+   Equipo: MÉXICO
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. César Huerta
+   Nombre completo: César Huerta
+   Posición: Extremo
+   Equipo: MÉXICO
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+====================================================
+PAÍS: URUGUAY
+Fundación de la federación: 1900
+Sede principal: Montevideo
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Sergio Rochet
+   Nombre completo: Sergio Rochet
+   Posición: Arquero
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. Franco Israel
+   Nombre completo: Franco Israel
+   Posición: Arquero
+   Equipo: URUGUAY
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. Santiago Mele
+   Nombre completo: Santiago Mele
+   Posición: Arquero
+   Equipo: URUGUAY
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. José María Giménez
+   Nombre completo: José María Giménez
+   Posición: Defensor central
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+5. Ronald Araújo
+   Nombre completo: Ronald Araújo
+   Posición: Defensor central
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+6. Sebastián Cáceres
+   Nombre completo: Sebastián Cáceres
+   Posición: Defensor central
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+7. Mathías Olivera
+   Nombre completo: Mathías Olivera
+   Posición: Lateral izquierdo
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+8. Matías Viña
+   Nombre completo: Matías Viña
+   Posición: Lateral izquierdo
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. Nahitan Nández
+   Nombre completo: Nahitan Nández
+   Posición: Lateral derecho
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+10. Guillermo Varela
+   Nombre completo: Guillermo Varela
+   Posición: Lateral derecho
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. Lucas Olaza
+   Nombre completo: Lucas Olaza
+   Posición: Lateral izquierdo
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. Federico Valverde
+   Nombre completo: Federico Valverde
+   Posición: Mediocampista
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+13. Rodrigo Bentancur
+   Nombre completo: Rodrigo Bentancur
+   Posición: Mediocampista
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+14. Manuel Ugarte
+   Nombre completo: Manuel Ugarte
+   Posición: Mediocampista
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. Nicolás de la Cruz
+   Nombre completo: Nicolás de la Cruz
+   Posición: Mediocampista
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. Giorgian de Arrascaeta
+   Nombre completo: Giorgian de Arrascaeta
+   Posición: Mediapunta
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. Facundo Pellistri
+   Nombre completo: Facundo Pellistri
+   Posición: Extremo
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+18. Agustín Canobbio
+   Nombre completo: Agustín Canobbio
+   Posición: Extremo
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+19. Maximiliano Araújo
+   Nombre completo: Maximiliano Araújo
+   Posición: Extremo
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Cristian Olivera
+   Nombre completo: Cristian Olivera
+   Posición: Extremo
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Darwin Núñez
+   Nombre completo: Darwin Núñez
+   Posición: Delantero
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. Luis Suárez
+   Nombre completo: Luis Suárez
+   Posición: Delantero
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Edinson Cavani
+   Nombre completo: Edinson Cavani
+   Posición: Delantero
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Brian Rodríguez
+   Nombre completo: Brian Rodríguez
+   Posición: Extremo
+   Equipo: URUGUAY
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+25. Matías Vecino
+   Nombre completo: Matías Vecino
+   Posición: Mediocampista
+   Equipo: URUGUAY
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. Emiliano Martínez Toranza
+   Nombre completo: Emiliano Martínez Toranza
+   Posición: Mediocampista
+   Equipo: URUGUAY
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+====================================================
+PAÍS: DINAMARCA
+Fundación de la federación: 1889
+Sede principal: Brøndby
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Kasper Schmeichel
+   Nombre completo: Kasper Schmeichel
+   Posición: Arquero
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. Frederik Rønnow
+   Nombre completo: Frederik Rønnow
+   Posición: Arquero
+   Equipo: DINAMARCA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. Mads Hermansen
+   Nombre completo: Mads Hermansen
+   Posición: Arquero
+   Equipo: DINAMARCA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. Joakim Mæhle
+   Nombre completo: Joakim Mæhle
+   Posición: Lateral
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+5. Alexander Bah
+   Nombre completo: Alexander Bah
+   Posición: Lateral derecho
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+6. Andreas Christensen
+   Nombre completo: Andreas Christensen
+   Posición: Defensor central
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+7. Jannik Vestergaard
+   Nombre completo: Jannik Vestergaard
+   Posición: Defensor central
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+8. Victor Nelsson
+   Nombre completo: Victor Nelsson
+   Posición: Defensor central
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. Joachim Andersen
+   Nombre completo: Joachim Andersen
+   Posición: Defensor central
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+10. Simon Kjær
+   Nombre completo: Simon Kjær
+   Posición: Defensor central
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. Rasmus Kristensen
+   Nombre completo: Rasmus Kristensen
+   Posición: Lateral derecho
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. Christian Eriksen
+   Nombre completo: Christian Eriksen
+   Posición: Mediocampista
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+13. Pierre-Emile Højbjerg
+   Nombre completo: Pierre-Emile Højbjerg
+   Posición: Mediocampista
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+14. Thomas Delaney
+   Nombre completo: Thomas Delaney
+   Posición: Mediocampista
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. Morten Hjulmand
+   Nombre completo: Morten Hjulmand
+   Posición: Mediocampista
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. Mathias Jensen
+   Nombre completo: Mathias Jensen
+   Posición: Mediocampista
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. Christian Nørgaard
+   Nombre completo: Christian Nørgaard
+   Posición: Mediocampista
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+18. Jesper Lindstrøm
+   Nombre completo: Jesper Lindstrøm
+   Posición: Mediapunta
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+19. Andreas Skov Olsen
+   Nombre completo: Andreas Skov Olsen
+   Posición: Extremo
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Mikkel Damsgaard
+   Nombre completo: Mikkel Damsgaard
+   Posición: Extremo
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Rasmus Højlund
+   Nombre completo: Rasmus Højlund
+   Posición: Delantero
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. Jonas Wind
+   Nombre completo: Jonas Wind
+   Posición: Delantero
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Yussuf Poulsen
+   Nombre completo: Yussuf Poulsen
+   Posición: Delantero
+   Equipo: DINAMARCA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Kasper Dolberg
+   Nombre completo: Kasper Dolberg
+   Posición: Delantero
+   Equipo: DINAMARCA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+25. Mohamed Daramy
+   Nombre completo: Mohamed Daramy
+   Posición: Extremo
+   Equipo: DINAMARCA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. Jacob Bruun Larsen
+   Nombre completo: Jacob Bruun Larsen
+   Posición: Extremo
+   Equipo: DINAMARCA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+====================================================
+PAÍS: CROACIA
+Fundación de la federación: 1912
+Sede principal: Zagreb
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Dominik Livaković
+   Nombre completo: Dominik Livaković
+   Posición: Arquero
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. Ivica Ivušić
+   Nombre completo: Ivica Ivušić
+   Posición: Arquero
+   Equipo: CROACIA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. Nediljko Labrović
+   Nombre completo: Nediljko Labrović
+   Posición: Arquero
+   Equipo: CROACIA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. Josip Juranović
+   Nombre completo: Josip Juranović
+   Posición: Lateral derecho
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+5. Josip Stanišić
+   Nombre completo: Josip Stanišić
+   Posición: Defensor
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+6. Joško Gvardiol
+   Nombre completo: Joško Gvardiol
+   Posición: Defensor
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+7. Martin Erlić
+   Nombre completo: Martin Erlić
+   Posición: Defensor central
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+8. Marin Pongračić
+   Nombre completo: Marin Pongračić
+   Posición: Defensor central
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. Duje Ćaleta-Car
+   Nombre completo: Duje Ćaleta-Car
+   Posición: Defensor central
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+10. Borna Sosa
+   Nombre completo: Borna Sosa
+   Posición: Lateral izquierdo
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. Domagoj Vida
+   Nombre completo: Domagoj Vida
+   Posición: Defensor central
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. Luka Modrić
+   Nombre completo: Luka Modrić
+   Posición: Mediocampista
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+13. Mateo Kovačić
+   Nombre completo: Mateo Kovačić
+   Posición: Mediocampista
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+14. Marcelo Brozović
+   Nombre completo: Marcelo Brozović
+   Posición: Mediocampista
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. Mario Pašalić
+   Nombre completo: Mario Pašalić
+   Posición: Mediocampista
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. Lovro Majer
+   Nombre completo: Lovro Majer
+   Posición: Mediocampista
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. Luka Sučić
+   Nombre completo: Luka Sučić
+   Posición: Mediocampista
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+18. Nikola Vlašić
+   Nombre completo: Nikola Vlašić
+   Posición: Mediocampista
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+19. Martin Baturina
+   Nombre completo: Martin Baturina
+   Posición: Mediocampista
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Ivan Perišić
+   Nombre completo: Ivan Perišić
+   Posición: Extremo
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Andrej Kramarić
+   Nombre completo: Andrej Kramarić
+   Posición: Delantero
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. Bruno Petković
+   Nombre completo: Bruno Petković
+   Posición: Delantero
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Ante Budimir
+   Nombre completo: Ante Budimir
+   Posición: Delantero
+   Equipo: CROACIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Marko Pjaca
+   Nombre completo: Marko Pjaca
+   Posición: Extremo
+   Equipo: CROACIA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+25. Mislav Oršić
+   Nombre completo: Mislav Oršić
+   Posición: Extremo
+   Equipo: CROACIA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. Marco Pašalić
+   Nombre completo: Marco Pašalić
+   Posición: Extremo
+   Equipo: CROACIA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+====================================================
+PAÍS: BÉLGICA
+Fundación de la federación: 1895
+Sede principal: Bruselas
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Thibaut Courtois
+   Nombre completo: Thibaut Courtois
+   Posición: Arquero
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. Koen Casteels
+   Nombre completo: Koen Casteels
+   Posición: Arquero
+   Equipo: BÉLGICA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. Matz Sels
+   Nombre completo: Matz Sels
+   Posición: Arquero
+   Equipo: BÉLGICA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. Timothy Castagne
+   Nombre completo: Timothy Castagne
+   Posición: Lateral derecho
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+5. Thomas Meunier
+   Nombre completo: Thomas Meunier
+   Posición: Lateral derecho
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+6. Wout Faes
+   Nombre completo: Wout Faes
+   Posición: Defensor central
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+7. Jan Vertonghen
+   Nombre completo: Jan Vertonghen
+   Posición: Defensor central
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+8. Arthur Theate
+   Nombre completo: Arthur Theate
+   Posición: Defensor
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. Zeno Debast
+   Nombre completo: Zeno Debast
+   Posición: Defensor central
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+10. Maxim De Cuyper
+   Nombre completo: Maxim De Cuyper
+   Posición: Lateral izquierdo
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. Aster Vranckx
+   Nombre completo: Aster Vranckx
+   Posición: Mediocampista
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. Kevin De Bruyne
+   Nombre completo: Kevin De Bruyne
+   Posición: Mediocampista
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+13. Youri Tielemans
+   Nombre completo: Youri Tielemans
+   Posición: Mediocampista
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+14. Amadou Onana
+   Nombre completo: Amadou Onana
+   Posición: Mediocampista
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. Orel Mangala
+   Nombre completo: Orel Mangala
+   Posición: Mediocampista
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. Leandro Trossard
+   Nombre completo: Leandro Trossard
+   Posición: Extremo
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. Jérémy Doku
+   Nombre completo: Jérémy Doku
+   Posición: Extremo
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+18. Johan Bakayoko
+   Nombre completo: Johan Bakayoko
+   Posición: Extremo
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+19. Charles De Ketelaere
+   Nombre completo: Charles De Ketelaere
+   Posición: Mediapunta
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Yannick Carrasco
+   Nombre completo: Yannick Carrasco
+   Posición: Extremo
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Romelu Lukaku
+   Nombre completo: Romelu Lukaku
+   Posición: Delantero
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. Loïs Openda
+   Nombre completo: Loïs Openda
+   Posición: Delantero
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Michy Batshuayi
+   Nombre completo: Michy Batshuayi
+   Posición: Delantero
+   Equipo: BÉLGICA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Dodi Lukebakio
+   Nombre completo: Dodi Lukebakio
+   Posición: Extremo
+   Equipo: BÉLGICA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+25. Alexis Saelemaekers
+   Nombre completo: Alexis Saelemaekers
+   Posición: Extremo
+   Equipo: BÉLGICA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. Hans Vanaken
+   Nombre completo: Hans Vanaken
+   Posición: Mediocampista
+   Equipo: BÉLGICA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+====================================================
+PAÍS: ESTADOS UNIDOS
+Fundación de la federación: 1913
+Sede principal: Chicago
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Matt Turner
+   Nombre completo: Matt Turner
+   Posición: Arquero
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. Ethan Horvath
+   Nombre completo: Ethan Horvath
+   Posición: Arquero
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. Zack Steffen
+   Nombre completo: Zack Steffen
+   Posición: Arquero
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. Sergiño Dest
+   Nombre completo: Sergiño Dest
+   Posición: Lateral derecho
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+5. Joe Scally
+   Nombre completo: Joe Scally
+   Posición: Lateral derecho
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+6. Antonee Robinson
+   Nombre completo: Antonee Robinson
+   Posición: Lateral izquierdo
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+7. Tim Ream
+   Nombre completo: Tim Ream
+   Posición: Defensor central
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+8. Chris Richards
+   Nombre completo: Chris Richards
+   Posición: Defensor central
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. Cameron Carter-Vickers
+   Nombre completo: Cameron Carter-Vickers
+   Posición: Defensor central
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+10. Miles Robinson
+   Nombre completo: Miles Robinson
+   Posición: Defensor central
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. Walker Zimmerman
+   Nombre completo: Walker Zimmerman
+   Posición: Defensor central
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. Tyler Adams
+   Nombre completo: Tyler Adams
+   Posición: Mediocampista
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+13. Weston McKennie
+   Nombre completo: Weston McKennie
+   Posición: Mediocampista
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+14. Yunus Musah
+   Nombre completo: Yunus Musah
+   Posición: Mediocampista
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. Gio Reyna
+   Nombre completo: Gio Reyna
+   Posición: Mediapunta
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. Malik Tillman
+   Nombre completo: Malik Tillman
+   Posición: Mediocampista
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. Luca de la Torre
+   Nombre completo: Luca de la Torre
+   Posición: Mediocampista
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+18. Brenden Aaronson
+   Nombre completo: Brenden Aaronson
+   Posición: Mediocampista
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+19. Christian Pulisic
+   Nombre completo: Christian Pulisic
+   Posición: Extremo
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Timothy Weah
+   Nombre completo: Timothy Weah
+   Posición: Extremo
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Haji Wright
+   Nombre completo: Haji Wright
+   Posición: Delantero
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. Folarin Balogun
+   Nombre completo: Folarin Balogun
+   Posición: Delantero
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Ricardo Pepi
+   Nombre completo: Ricardo Pepi
+   Posición: Delantero
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Josh Sargent
+   Nombre completo: Josh Sargent
+   Posición: Delantero
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+25. Cade Cowell
+   Nombre completo: Cade Cowell
+   Posición: Extremo
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. Kevin Paredes
+   Nombre completo: Kevin Paredes
+   Posición: Extremo
+   Equipo: ESTADOS UNIDOS
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+====================================================
+PAÍS: JAPÓN
+Fundación de la federación: 1921
+Sede principal: Tokio
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Zion Suzuki
+   Nombre completo: Zion Suzuki
+   Posición: Arquero
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. Daiya Maekawa
+   Nombre completo: Daiya Maekawa
+   Posición: Arquero
+   Equipo: JAPÓN
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. Keisuke Osako
+   Nombre completo: Keisuke Osako
+   Posición: Arquero
+   Equipo: JAPÓN
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. Takehiro Tomiyasu
+   Nombre completo: Takehiro Tomiyasu
+   Posición: Defensor
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+5. Ko Itakura
+   Nombre completo: Ko Itakura
+   Posición: Defensor central
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+6. Hiroki Ito
+   Nombre completo: Hiroki Ito
+   Posición: Defensor
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+7. Shogo Taniguchi
+   Nombre completo: Shogo Taniguchi
+   Posición: Defensor central
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+8. Yukinari Sugawara
+   Nombre completo: Yukinari Sugawara
+   Posición: Lateral derecho
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. Yuta Nakayama
+   Nombre completo: Yuta Nakayama
+   Posición: Lateral izquierdo
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+10. Seiya Maikuma
+   Nombre completo: Seiya Maikuma
+   Posición: Lateral derecho
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. Daiki Hashioka
+   Nombre completo: Daiki Hashioka
+   Posición: Lateral derecho
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. Wataru Endo
+   Nombre completo: Wataru Endo
+   Posición: Mediocampista
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+13. Hidemasa Morita
+   Nombre completo: Hidemasa Morita
+   Posición: Mediocampista
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+14. Ao Tanaka
+   Nombre completo: Ao Tanaka
+   Posición: Mediocampista
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. Daichi Kamada
+   Nombre completo: Daichi Kamada
+   Posición: Mediocampista
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. Reo Hatate
+   Nombre completo: Reo Hatate
+   Posición: Mediocampista
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. Takumi Minamino
+   Nombre completo: Takumi Minamino
+   Posición: Mediapunta
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+18. Takefusa Kubo
+   Nombre completo: Takefusa Kubo
+   Posición: Extremo
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+19. Kaoru Mitoma
+   Nombre completo: Kaoru Mitoma
+   Posición: Extremo
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Ritsu Doan
+   Nombre completo: Ritsu Doan
+   Posición: Extremo
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Junya Ito
+   Nombre completo: Junya Ito
+   Posición: Extremo
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. Keito Nakamura
+   Nombre completo: Keito Nakamura
+   Posición: Extremo
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Ayase Ueda
+   Nombre completo: Ayase Ueda
+   Posición: Delantero
+   Equipo: JAPÓN
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Kyogo Furuhashi
+   Nombre completo: Kyogo Furuhashi
+   Posición: Delantero
+   Equipo: JAPÓN
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+25. Daizen Maeda
+   Nombre completo: Daizen Maeda
+   Posición: Delantero
+   Equipo: JAPÓN
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. Yuki Ohashi
+   Nombre completo: Yuki Ohashi
+   Posición: Delantero
+   Equipo: JAPÓN
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+====================================================
+PAÍS: ITALIA
+Fundación de la federación: 1898
+Sede principal: Roma
+
+LISTA DE 26 CONVOCADOS
+----------------------------------------------------
+
+1. Gianluigi Donnarumma
+   Nombre completo: Gianluigi Donnarumma
+   Posición: Arquero
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+2. Guglielmo Vicario
+   Nombre completo: Guglielmo Vicario
+   Posición: Arquero
+   Equipo: ITALIA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+3. Alex Meret
+   Nombre completo: Alex Meret
+   Posición: Arquero
+   Equipo: ITALIA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+4. Giovanni Di Lorenzo
+   Nombre completo: Giovanni Di Lorenzo
+   Posición: Lateral derecho
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+5. Matteo Darmian
+   Nombre completo: Matteo Darmian
+   Posición: Defensor
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+6. Alessandro Bastoni
+   Nombre completo: Alessandro Bastoni
+   Posición: Defensor central
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 1
+   Tarjetas rojas: 0
+
+7. Gianluca Mancini
+   Nombre completo: Gianluca Mancini
+   Posición: Defensor central
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+8. Alessandro Buongiorno
+   Nombre completo: Alessandro Buongiorno
+   Posición: Defensor central
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+9. Riccardo Calafiori
+   Nombre completo: Riccardo Calafiori
+   Posición: Defensor
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+10. Federico Dimarco
+   Nombre completo: Federico Dimarco
+   Posición: Lateral izquierdo
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+11. Andrea Cambiaso
+   Nombre completo: Andrea Cambiaso
+   Posición: Lateral
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+12. Nicolò Barella
+   Nombre completo: Nicolò Barella
+   Posición: Mediocampista
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+13. Jorginho
+   Nombre completo: Jorginho
+   Posición: Mediocampista
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+14. Manuel Locatelli
+   Nombre completo: Manuel Locatelli
+   Posición: Mediocampista
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+15. Davide Frattesi
+   Nombre completo: Davide Frattesi
+   Posición: Mediocampista
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+16. Lorenzo Pellegrini
+   Nombre completo: Lorenzo Pellegrini
+   Posición: Mediocampista
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+17. Sandro Tonali
+   Nombre completo: Sandro Tonali
+   Posición: Mediocampista
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+18. Bryan Cristante
+   Nombre completo: Bryan Cristante
+   Posición: Mediocampista
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+19. Federico Chiesa
+   Nombre completo: Federico Chiesa
+   Posición: Extremo
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 1
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+20. Mattia Zaccagni
+   Nombre completo: Mattia Zaccagni
+   Posición: Extremo
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+21. Domenico Berardi
+   Nombre completo: Domenico Berardi
+   Posición: Extremo
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+22. Giacomo Raspadori
+   Nombre completo: Giacomo Raspadori
+   Posición: Delantero
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+23. Mateo Retegui
+   Nombre completo: Mateo Retegui
+   Posición: Delantero
+   Equipo: ITALIA
+   Partidos jugados: 1
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+24. Moise Kean
+   Nombre completo: Moise Kean
+   Posición: Delantero
+   Equipo: ITALIA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+25. Riccardo Orsolini
+   Nombre completo: Riccardo Orsolini
+   Posición: Extremo
+   Equipo: ITALIA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
+26. Stephan El Shaarawy
+   Nombre completo: Stephan El Shaarawy
+   Posición: Extremo
+   Equipo: ITALIA
+   Partidos jugados: 0
+   Goles: 0
+   Tarjetas amarillas: 0
+   Tarjetas rojas: 0
+
