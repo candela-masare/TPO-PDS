@@ -1,11 +1,19 @@
 package menus;
 
+import estrategia.CriterioPorPuntos;
+import fuentes.AdaptadorTxtMundial;
+import modelo.Ranking;
+import servicio.PlataformaDeportiva;
+
+import java.util.List;
 import java.util.Scanner;
 
 // Submenú de consola para consultar rankings de equipos (opciones pendientes de implementar).
 public class MenuRankings {
 
     private Scanner scanner;
+    private PlataformaDeportiva plataforma =
+            new PlataformaDeportiva(new AdaptadorTxtMundial());
 
     public MenuRankings() {
         this(new Scanner(System.in));
@@ -27,15 +35,7 @@ public class MenuRankings {
             switch (opcion) {
 
                 case 1:
-
-                    break;
-
-                case 2:
-
-                    break;
-
-                case 3:
-
+                    mostrarRankingPorPuntos();
                     break;
             }
 
@@ -50,5 +50,19 @@ public class MenuRankings {
         System.out.println("0. Volver");
     }
 
+    private void mostrarRankingPorPuntos() {
+
+        plataforma.setCriterioRanking(new CriterioPorPuntos());
+        mostrarRanking(plataforma.generarRanking(plataforma.obtenerEquipos()));
+    }
+
+    private void mostrarRanking(List<Ranking> rankings) {
+
+        System.out.println("\n=== RANKING POR PUNTOS ===");
+
+        for (Ranking ranking : rankings) {
+            System.out.println(ranking);
+        }
+    }
 
 }
