@@ -22,6 +22,7 @@
       --borde:    #2c3e50;
     }
 
+    html, body { width: 100%; overflow-x: hidden; }
     body { background: var(--bg); color: var(--texto); font-family: 'Segoe UI', Arial, sans-serif; min-height: 100vh; }
 
     /* ══════════════════════════════════════════
@@ -81,7 +82,7 @@
     /* ══════════════════════════════════════════
        APP SCREEN
     ══════════════════════════════════════════ */
-    #app-screen { display: none; flex-direction: column; min-height: 100vh; }
+    #app-screen { display: none; flex-direction: column; min-height: 100vh; width: 100%; overflow-x: hidden; }
     #app-screen.visible { display: flex; }
 
     .header {
@@ -91,10 +92,11 @@
       position: sticky; top: 0; z-index: 100;
     }
     .header-inner {
-      max-width: 700px; margin: 0 auto;
+      width: 100%; max-width: 700px; margin: 0 auto;
       display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; min-width: 0;
     }
-    .brand-heading { display: flex; align-items: center; gap: 12px; }
+    .brand-heading { display: flex; align-items: center; gap: 12px; min-width: 0; }
     .header-left h1 { font-size: 1.25rem; font-weight: 700; }
     .header-left h1 span { color: var(--oro); }
     .header-rol {
@@ -105,12 +107,13 @@
       background: var(--borde); border: none; color: var(--gris);
       font-size: 0.75rem; padding: 6px 12px; border-radius: 6px;
       cursor: pointer; transition: background 0.2s;
+      flex-shrink: 0;
     }
     .btn-cambiar:hover { background: var(--rojo); color: #fff; }
 
     .nav-tabs {
       background: var(--card); border-bottom: 1px solid var(--borde);
-      display: flex; max-width: 700px; margin: 0 auto;
+      display: flex; width: 100%; max-width: 700px; margin: 0 auto;
     }
     .nav-tab {
       flex: 1; padding: 12px 6px; background: none; border: none;
@@ -121,7 +124,7 @@
     .nav-tab.activo { color: var(--oro); border-bottom-color: var(--oro); }
     .nav-tab:hover:not(.activo) { color: var(--texto); }
 
-    .main { max-width: 700px; margin: 0 auto; padding-bottom: 40px; flex: 1; }
+    .main { width: 100%; max-width: 700px; margin: 0 auto; padding-bottom: 40px; flex: 1; overflow-x: hidden; }
     .seccion { display: none; }
     .seccion.activa { display: block; }
 
@@ -161,10 +164,10 @@
     }
     .partido-card:hover { background: var(--card2); }
     .partido-equipos {
-      display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 8px;
+      display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 8px;
     }
-    .equipo-local  { display: flex; align-items: center; gap: 10px; }
-    .equipo-visitante { display: flex; align-items: center; gap: 10px; justify-content: flex-end; }
+    .equipo-local  { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .equipo-visitante { display: flex; align-items: center; gap: 10px; justify-content: flex-end; min-width: 0; }
     .bandera { line-height: 1; flex-shrink: 0; }
     .flag-img {
       width: 34px;
@@ -179,7 +182,7 @@
       width: 46px;
       height: 32px;
     }
-    .equipo-nombre { font-size: 0.9rem; font-weight: 600; }
+    .equipo-nombre { font-size: 0.9rem; font-weight: 600; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .equipo-visitante .equipo-nombre { text-align: right; }
     .marcador-centro { display: flex; flex-direction: column; align-items: center; gap: 3px; }
     .marcador-score { display: flex; align-items: center; gap: 8px; }
@@ -206,15 +209,36 @@
     .stat-lbl { font-size: 0.58rem; color: var(--gris); text-transform: uppercase; }
     .equipo-card-sub { font-size: 0.68rem; color: var(--gris); margin-top: 5px; }
     /* TABLA RANKING */
-    .toggle-bar { display: flex; gap: 8px; padding: 12px 16px; background: var(--card2); border-bottom: 1px solid var(--borde); }
+    .toggle-bar { display: flex; gap: 8px; padding: 12px 16px; background: var(--card2); border-bottom: 1px solid var(--borde); max-width: 100%; }
     .toggle-btn {
       flex: 1; padding: 8px; background: var(--borde); border: 1px solid var(--borde);
       color: var(--gris); font-size: 0.78rem; font-weight: 600; border-radius: 6px; cursor: pointer;
       transition: all 0.2s; text-transform: uppercase; letter-spacing: 0.5px;
     }
     .toggle-btn.activo { background: var(--rojo); color: #fff; border-color: var(--rojo); }
-    .filtro-fases { overflow-x: auto; }
-    .filtro-fases .toggle-btn { min-width: 96px; white-space: nowrap; }
+    .filtro-fases { overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; }
+    .filtro-fases .toggle-btn { flex: 0 0 144px; white-space: nowrap; }
+
+    @media (max-width: 480px) {
+      .header { padding: 10px 12px; }
+      .brand-logo-header { width: 40px; height: 40px; }
+      .header-left { min-width: 0; }
+      .header-left h1 { font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .header-rol { font-size: 0.62rem; }
+      .btn-cambiar { max-width: 132px; white-space: normal; line-height: 1.15; }
+      .nav-tab { font-size: 0.72rem; padding: 11px 4px; }
+      .partido-card { padding: 13px 12px 11px; }
+      .partido-equipos { gap: 6px; }
+      .flag-img { width: 28px; height: 20px; }
+      .equipo-local, .equipo-visitante { gap: 7px; }
+      .equipo-nombre { font-size: 0.82rem; }
+      .gol-num { font-size: 1.55rem; min-width: 20px; }
+      .marcador-score { gap: 6px; }
+      .marcador-label { font-size: 0.52rem; }
+      .partido-estadio { font-size: 0.66rem; }
+      .filtro-fases { padding: 10px 12px; }
+      .filtro-fases .toggle-btn { flex-basis: 136px; }
+    }
     .tabla-ranking { width: 100%; border-collapse: collapse; }
     .tabla-ranking thead tr { background: var(--card2); border-bottom: 2px solid var(--rojo); }
     .tabla-ranking th { padding: 10px 8px; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gris); text-align: center; }
