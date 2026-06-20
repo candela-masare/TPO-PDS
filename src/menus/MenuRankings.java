@@ -1,5 +1,6 @@
 package menus;
 
+import estrategia.CriterioPorGoles;
 import estrategia.CriterioPorPuntos;
 import fuentes.AdaptadorTxtMundial;
 import modelo.Ranking;
@@ -37,6 +38,11 @@ public class MenuRankings {
                 case 1:
                     mostrarRankingPorPuntos();
                     break;
+
+                case 2:
+                    mostrarRankingPorGoles();
+                    break;
+                    
             }
 
         } while (opcion != 0);
@@ -48,6 +54,8 @@ public class MenuRankings {
         System.out.println("\n=== RANKINGS ===");
         System.out.println("1. Ranking por puntos");
         System.out.println("0. Volver");
+        System.out.println("0. Volver");
+        System.out.println("Elige una opcion: ");
     }
 
     private void mostrarRankingPorPuntos() {
@@ -58,11 +66,22 @@ public class MenuRankings {
 
     private void mostrarRanking(List<Ranking> rankings) {
 
-        System.out.println("\n=== RANKING POR PUNTOS ===");
+        System.out.println("\n=== RANKING ===");
 
         for (Ranking ranking : rankings) {
             System.out.println(ranking);
         }
+    }
+
+     private void mostrarRankingPorGoles() {
+
+        plataforma.setCriterioRanking(new CriterioPorGoles());
+
+        mostrarRanking(
+                plataforma.generarRanking(
+                        plataforma.obtenerEquipos()
+                )
+        );
     }
 
 }

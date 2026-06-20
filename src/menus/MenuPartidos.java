@@ -3,6 +3,7 @@ package menus;
 import fuentes.AdaptadorTxtMundial;
 import interfaces.ProveedorDatosDeportivos;
 import modelo.Partido;
+import utils.UtilsConsola;
 
 import java.util.List;
 import java.util.Scanner;
@@ -88,7 +89,7 @@ public class MenuPartidos {
 
         System.out.print("\nSeleccione partido: ");
 
-        int indice = scanner.nextInt() - 1;
+        int indice =UtilsConsola.leerEntero(scanner) - 1;
 
         if (indice < 0 || indice >= partidos.size()) {
 

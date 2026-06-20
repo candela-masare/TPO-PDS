@@ -5,6 +5,7 @@ import factory.AnalistaDeportivoFactory;
 import factory.CasaApuestaFactory;
 import factory.PeriodistaFactory;
 import factory.UsuarioFactory;
+import fuentes.AdaptadorCsvArbitros;
 import fuentes.AdaptadorCsvLiga;
 import fuentes.AdaptadorCsvTarjetas;
 import fuentes.AdaptadorJsonApuestas;
@@ -13,6 +14,7 @@ import fuentes.AdaptadorJsonPeriodistico;
 import fuentes.AdaptadorTxtMundial;
 import fuentes.AdaptadorTxtPosesion;
 import interfaces.IUsuario;
+import interfaces.ProveedorArbitros;
 import interfaces.ProveedorDatosDeportivos;
 import interfaces.Repositorio;
 import interfaces.VistaTiempoReal;
@@ -77,6 +79,9 @@ public class Main {
             System.out.println("2. Ejecutar demo completa");
             System.out.println("3. Iniciar servidor web (http://localhost:8080)");
             System.out.println("0. Salir");
+
+            System.out.println("\n");
+            System.out.println("Seleccione una opcion: ");
 
             opcion = scanner.nextInt();
 
@@ -332,20 +337,10 @@ public class Main {
     }
 
     private static List<Arbitro> cargarArbitros() {
-        try {
-            List<Arbitro> arbitros = new ArrayList<>();
-            List<String> lineas = Files.readAllLines(Paths.get(RUTA_ARBITROS), StandardCharsets.UTF_8);
+        ProveedorArbitros proveedor =
+                new AdaptadorCsvArbitros();
 
-            for (int i = 1; i < lineas.size(); i++) {
-                String[] columnas = lineas.get(i).split(",", -1);
-                if (columnas.length >= 4) {
-                    arbitros.add(new Arbitro(columnas[0], columnas[1], columnas[2], columnas[3]));
-                }
-            }
-
-            return arbitros;
-        } catch (IOException e) {
-            throw new RuntimeException("No se pudo leer el archivo de arbitros: " + RUTA_ARBITROS, e);
-        }
+        return proveedor.obtenerArbitros();
     }
+    
 }

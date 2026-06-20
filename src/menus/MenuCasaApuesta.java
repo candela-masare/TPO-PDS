@@ -2,6 +2,7 @@ package menus;
 
 import fuentes.AdaptadorJsonApuestas;
 import modelo.CasaApuesta;
+import utils.UtilsConsola;
 
 import java.util.List;
 import java.util.Scanner;
@@ -52,6 +53,8 @@ public class MenuCasaApuesta {
         System.out.println("1. Ver mercados disponibles");
         System.out.println("2. Ver detalle de un mercado");
         System.out.println("0. Volver");
+        System.out.println("\n");
+        System.out.println("Elige una opcion: ");
     }
 
     private void mostrarMercados() {
@@ -86,7 +89,7 @@ public class MenuCasaApuesta {
 
         System.out.print("\nSeleccione mercado: ");
 
-        int indice = scanner.nextInt() - 1;
+        int indice =UtilsConsola.leerEntero(scanner) - 1;
 
         if (indice < 0 || indice >= mercados.size()) {
             System.out.println("Mercado inexistente");

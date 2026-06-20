@@ -64,6 +64,8 @@ public class MenuAnalista {
         System.out.println("2. Ranking por goles");
         System.out.println("3. Reporte avanzado de un partido");
         System.out.println("0. Volver");
+        System.out.println("\n");
+        System.out.println("Elige una opcion: ");
     }
 
     private void mostrarRankingPorPuntos() {

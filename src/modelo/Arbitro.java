@@ -2,19 +2,19 @@ package modelo;
 
 public class Arbitro {
 
-    private String id;
+    private int id;
     private String nombre;
     private String apellido;
     private String nacionalidad;
 
-    public Arbitro(String id, String nombre, String apellido, String nacionalidad) {
+    public Arbitro(int id, String nombre, String apellido, String nacionalidad) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.nacionalidad = nacionalidad;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 

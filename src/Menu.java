@@ -77,6 +77,8 @@ public class Menu {
         System.out.println("3. Casa de Apuestas");
         System.out.println("4. Analista Deportivo");
         System.out.println("0. Salir");
+        System.out.println("\n");
+        System.out.println("Elige una opcion: ");
     }
 
 
