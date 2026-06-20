@@ -2,6 +2,7 @@ package menus;
 
 import fuentes.AdaptadorJsonPeriodistico;
 import modelo.Periodista;
+import utils.UtilsConsola;
 
 import java.util.List;
 import java.util.Scanner;
@@ -53,6 +54,8 @@ public class MenuPeriodista {
         System.out.println("1. Ver informes periodisticos");
         System.out.println("2. Ver detalle de un informe");
         System.out.println("0. Volver");
+        System.out.println("\n");
+        System.out.println("Elige una opcion: ");
     }
 
     private void mostrarInformes() {
@@ -87,7 +90,7 @@ public class MenuPeriodista {
 
         System.out.print("\nSeleccione informe: ");
 
-        int indice = scanner.nextInt() - 1;
+        int indice = UtilsConsola.leerEntero(scanner) - 1;
 
         if (indice < 0 || indice >= informes.size()) {
             System.out.println("Informe inexistente");

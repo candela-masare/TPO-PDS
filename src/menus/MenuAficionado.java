@@ -1,8 +1,13 @@
 package menus;
 
 import modelo.Aficionado;
+import modelo.Equipo;
 
+import java.util.List;
 import java.util.Scanner;
+
+import fuentes.AdaptadorTxtMundial;
+import interfaces.ProveedorDatosDeportivos;
 
 // Submenú de consola para el perfil Aficionado: equipos, rankings, partidos y árbitros.
 public class MenuAficionado {
@@ -31,6 +36,7 @@ public class MenuAficionado {
             switch (opcion) {
 
                 case 1:
+                    mostrarEquipos();
 
                     break;
 
@@ -59,7 +65,29 @@ public class MenuAficionado {
         System.out.println("3. Partidos");
         System.out.println("4. Árbitros");
         System.out.println("0. Volver");
+        System.out.println("\n");
+        System.out.println("Elige una opcion: ");
     }
+
+    private void mostrarEquipos() {
+
+        ProveedorDatosDeportivos proveedor =
+                new AdaptadorTxtMundial();
+
+        List<Equipo> equipos =
+                proveedor.obtenerEquipos();
+
+
+        System.out.println("\n=== EQUIPOS PARTICIPANTES ===");
+
+        for (Equipo equipo : equipos) {
+
+            System.out.println(
+                    "- " + equipo.getNombre()
+            );
+        }
+    }
+
 
 
 }
