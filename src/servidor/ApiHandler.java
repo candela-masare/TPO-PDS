@@ -321,6 +321,9 @@ public class ApiHandler implements HttpHandler {
               .append("\"mercadoDestacado\":\"").append(escJson(m.getMercadoDestacado())).append("\",")
               .append("\"riesgo\":\"").append(escJson(m.getRiesgoParaCuota())).append("\",")
               .append("\"totalGoles\":").append(m.getTotalGoles()).append(",")
+              .append("\"golesLocal\":").append(m.getGolesLocal()).append(",")
+              .append("\"golesVisitante\":").append(m.getGolesVisitante()).append(",")
+              .append("\"totalTarjetas\":").append(m.getTotalTarjetas()).append(",")
               .append("\"fase\":\"").append(fase(m.getPartidoId())).append("\"")
               .append("}");
         }

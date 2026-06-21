@@ -18,6 +18,8 @@ import interfaces.ProveedorArbitros;
 import interfaces.ProveedorDatosDeportivos;
 import interfaces.Repositorio;
 import interfaces.VistaTiempoReal;
+import java.util.List;
+import java.util.Scanner;
 import modelo.Arbitro;
 import modelo.Equipo;
 import modelo.EventoPartido;
@@ -28,14 +30,6 @@ import modelo.TipoEvento;
 import persistencia.RepositorioEnMemoria;
 import servicio.PlataformaDeportiva;
 import vista.PantallaPartido;
-
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 // Punto de entrada principal. Acepta argumentos de línea de comandos para distintos modos:
 //   "servidor"   → arranca el servidor HTTP (VS Code: config "Servidor Web")
@@ -69,6 +63,8 @@ public class Main {
 
     private static void mostrarInicio() {
 
+        servidor.ServidorHttp.iniciarEnSegundoPlano();
+
         Scanner scanner = new Scanner(System.in);
         int opcion;
 
@@ -77,7 +73,6 @@ public class Main {
             System.out.println("\n=== INICIO ===");
             System.out.println("1. Abrir menu interactivo");
             System.out.println("2. Ejecutar demo completa");
-            System.out.println("3. Iniciar servidor web (http://localhost:8080)");
             System.out.println("0. Salir");
 
             System.out.println("\n");
@@ -94,17 +89,11 @@ public class Main {
                 case 2:
                     ejecutarDemoCompleta();
                     break;
-
-                case 3:
-                    try {
-                        servidor.ServidorHttp.iniciar();
-                    } catch (Exception e) {
-                        System.err.println("Error al iniciar el servidor: " + e.getMessage());
-                    }
-                    break;
             }
 
         } while (opcion != 0);
+
+        System.exit(0);
     }
 
     private static void ejecutarDemoCompleta() {

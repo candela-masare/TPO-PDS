@@ -291,6 +291,36 @@
     .riesgo-medio { background: rgba(241,196,15,.2); color: #f1c40f; border: 1px solid #f39c12; }
     .riesgo-alto  { background: rgba(231,76,60,.2);  color: var(--rojo2); border: 1px solid var(--rojo); }
 
+    #sec-mercados { padding-bottom: 100px; }
+    .mercado-acciones { display: flex; justify-content: flex-end; margin-top: 9px; }
+    .cupon-add-btn {
+      background: transparent; color: var(--oro); border: 1px solid var(--oro);
+      border-radius: 8px; padding: 6px 13px; font-size: 0.72rem; font-weight: 700;
+      cursor: pointer; transition: all 0.15s;
+    }
+    .cupon-add-btn:hover { background: rgba(243,156,18,.15); }
+    .cupon-add-btn.en-cupon { background: var(--oro); color: #1a0808; }
+
+    .cupon-bar {
+      display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 150;
+      background: var(--card2); border-top: 1px solid var(--oro);
+      padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+      align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .cupon-bar.visible { display: flex; }
+    .cupon-bar-info { font-size: 0.9rem; font-weight: 700; }
+    .cupon-bar-info span { color: var(--oro); }
+    .cupon-bar-btn {
+      background: var(--oro); color: #1a0808; border: none; border-radius: 8px;
+      padding: 11px 20px; font-size: 0.85rem; font-weight: 700; cursor: pointer;
+    }
+    .cupon-bar-btn:disabled { opacity: 0.4; cursor: default; }
+
+    .cupon-item { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 9px 0; border-bottom: 1px solid var(--borde); }
+    .cupon-item-nom { font-size: 0.86rem; font-weight: 600; }
+    .cupon-total { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; padding-top: 12px; border-top: 2px solid var(--oro); }
+    .cupon-total-lbl { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gris); }
+
     /* REPORTE AVANZADO - lista */
     .reporte-card {
       background: var(--card); border-bottom: 1px solid var(--borde);
@@ -300,9 +330,6 @@
     .reporte-card-titulo { font-size: 0.92rem; font-weight: 700; margin-bottom: 4px; }
     .reporte-card-sub { font-size: 0.72rem; color: var(--gris); }
 
-    /* ══════════════════════════════════════════
-       MODAL
-    ══════════════════════════════════════════ */
     .modal-overlay {
       display: none; position: fixed; inset: 0;
       background: rgba(0,0,0,0.88); z-index: 200; overflow-y: auto;
@@ -313,7 +340,7 @@
       border-radius: 12px; overflow: hidden; border: 1px solid var(--borde);
     }
 
-    /* modal header - partido */
+    /* header del partido */
     .modal-hdr {
       background: linear-gradient(135deg, #2d0808, #1a0808);
       padding: 18px 16px 14px; border-bottom: 2px solid var(--rojo);
@@ -503,6 +530,11 @@
 </div>
 
 <!-- MODAL -->
+<div id="cupon-bar" class="cupon-bar">
+  <div class="cupon-bar-info">🎟️ Cupón: <span id="cupon-count">0</span></div>
+  <button class="cupon-bar-btn" id="cupon-bar-btn" onclick="abrirCupon()" disabled>Armar cupón</button>
+</div>
+
 <div id="modal" class="modal-overlay" onclick="cerrarModalFondo(event)">
   <div class="modal-box" id="modal-box"></div>
 </div>
@@ -593,6 +625,54 @@ const MERCADO_LABELS = {
 };
 const fmtMercado = m => MERCADO_LABELS[m] || m;
 
+const VOL_LABEL = { bajo:'baja', medio:'media', alto:'alta' };
+const VOL_PESO  = { bajo:1, medio:2, alto:3 };
+const volLabel  = r => VOL_LABEL[r] || r;
+
+function volCombinada(riesgos) {
+  if (!riesgos.length) return null;
+  const prom = volPuntaje(riesgos);
+  if (prom < 1.5) return 'bajo';
+  if (prom < 2.5) return 'medio';
+  return 'alto';
+}
+
+function volPuntaje(riesgos) {
+  if (!riesgos.length) return 0;
+  return riesgos.reduce((s, r) => s + (VOL_PESO[r] || 0), 0) / riesgos.length;
+}
+
+function rondaDe(id) { if (id <= 8) return 1; if (id <= 12) return 2; if (id <= 14) return 3; return 4; }
+function redondear1(x) { return Math.round(x * 10) / 10; }
+function proximos() { return mercadosCache.filter(m => rondaDe(m.id) >= 2); }
+
+function historialEquipo(equipo, rondaActual) {
+  let pj = 0, gf = 0, gc = 0, tarj = 0;
+  for (const m of mercadosCache) {
+    if (rondaDe(m.id) >= rondaActual) continue;
+    if (m.local === equipo)        { pj++; gf += m.golesLocal;     gc += m.golesVisitante; tarj += m.totalTarjetas; }
+    else if (m.visitante === equipo){ pj++; gf += m.golesVisitante; gc += m.golesLocal;     tarj += m.totalTarjetas; }
+  }
+  const avg = n => pj ? n / pj : 0;
+  return { pj, gf, gc, tarj, avgGF: avg(gf), avgGC: avg(gc), avgTarj: avg(tarj) };
+}
+
+function pronosticoDe(m) {
+  const ronda = rondaDe(m.id);
+  const hl = historialEquipo(m.local, ronda);
+  const hv = historialEquipo(m.visitante, ronda);
+  const gEstL = redondear1((hl.avgGF + hv.avgGC) / 2);
+  const gEstV = redondear1((hv.avgGF + hl.avgGC) / 2);
+  const tot = gEstL + gEstV;
+  const probL = tot <= 0 ? 50 : Math.round(gEstL / tot * 100);
+  const probV = 100 - probL;
+  const tarjEst = redondear1((hl.avgTarj + hv.avgTarj) / 2);
+  const margen = Math.abs(probL - probV);
+  const vol = margen < 20 ? 'alto' : (margen < 50 ? 'medio' : 'bajo');
+  const just = `${m.local} llega con ${hl.gf} GF, ${hl.gc} GC en ${hl.pj} partido(s); ${m.visitante} con ${hv.gf} GF, ${hv.gc} GC en ${hv.pj} partido(s).`;
+  return { id: m.id, fase: m.fase, local: m.local, visitante: m.visitante, probL, probV, gEstL, gEstV, tarjEst, vol, just };
+}
+
 const ROLES = {
   aficionado: { nombre: 'Aficionado',        icono: '🏟️', tabs: [
     { id:'partidos',   label:'⚽ Partidos' },
@@ -617,12 +697,15 @@ let tabActual = null;
 const cache   = {};
 let partidosCache = [];
 let fasePartidosActual = 'TODOS';
+let mercadosCache = [];
+let cuponIds = new Set();
 
 // ── LOGIN / LOGOUT ──────────────────────────────────────────────────────────
 function entrar(rol) {
   rolActual = rol;
   tabActual = ROLES[rol].tabs[0].id;
   cache[rol] = {};
+  cuponIds.clear();
   if (rol === 'aficionado') fasePartidosActual = 'TODOS';
 
   document.getElementById('login-screen').style.display  = 'none';
@@ -638,6 +721,8 @@ function entrar(rol) {
 
 function volverLogin() {
   rolActual = null; tabActual = null;
+  cuponIds.clear();
+  actualizarCuponBar();
   document.getElementById('app-screen').classList.remove('visible');
   document.getElementById('login-screen').style.display = 'flex';
   document.getElementById('nav-tabs').innerHTML    = '';
@@ -674,6 +759,8 @@ function activarTab(tabId) {
     cache[rolActual][tabId] = true;
     cargar(tabId);
   }
+
+  actualizarCuponBar();
 }
 
 async function cargar(tabId) {
@@ -1096,74 +1183,121 @@ function textoPeriodo(periodo) {
 
 async function cargarMercados() {
   try {
-    const mercados = await fetchJSON(API + '/mercados');
-    let html = '<div class="seccion-titulo">Mercados de apuestas — 15 partidos</div>';
-    for (const m of mercados) {
-      const mr = parsarMarcador(m.resultado);
-      html += `<div class="mercado-card" onclick="abrirMercado(${m.id})">
-        <div class="mercado-top">
-          <div class="mercado-partido">${bandera(m.local)} ${m.local} <span style="color:var(--gris)">vs</span> ${m.visitante} ${bandera(m.visitante)}</div>
-          <span class="riesgo-badge riesgo-${m.riesgo}">${m.riesgo.toUpperCase()}</span>
-        </div>
-        <div class="mercado-info">
-          <span class="mercado-label">Marcador:</span>
-          <span class="mercado-dest">${mr.gl} - ${mr.gv}${mr.pen?` (Pen: ${mr.pL}-${mr.pV})`:''}</span>
-          <span class="mercado-label" style="margin-left:8px">Mercado:</span>
-          <span class="mercado-dest">${fmtMercado(m.mercadoDestacado)}</span>
-        </div>
-        <div style="font-size:.68rem;color:var(--gris2);margin-top:5px">⚽ ${m.totalGoles} goles &nbsp;·&nbsp; ${m.fase}</div>
-      </div>`;
-    }
-    sec('mercados').innerHTML = html;
+    mercadosCache = await fetchJSON(API + '/mercados');
+    renderMercados();
   } catch(e) { sec('mercados').innerHTML = `<div class="error-msg">Error: ${e.message}</div>`; }
 }
 
-async function abrirMercado(id) {
-  abrirModal('<div class="spinner" style="padding:40px">Cargando...</div>');
-  try {
-    const m = await fetchJSON(API + '/mercados/' + id);
-    const mr = parsarMarcador(m.resultado);
-    const pen = mr.pen ? `<div class="modal-pen-txt">Penales: ${mr.pL} – ${mr.pV}</div>` : '';
-    setModal(`
-      <div class="modal-hdr">
-        <div class="modal-fase-lbl">💰 Mercado de Apuestas — ${m.fase}</div>
-        <div class="modal-equipos-row">
-          <div class="modal-eq"><div class="modal-eq-flag">${bandera(m.local)}</div><div class="modal-eq-name">${m.local}</div></div>
-          <div class="modal-score-col">
-            <div class="modal-score-nums"><span class="modal-score-n">${mr.gl}</span><span class="modal-score-sep">-</span><span class="modal-score-n">${mr.gv}</span></div>
-            ${pen}<div class="modal-score-lbl">Resultado final</div>
-          </div>
-          <div class="modal-eq"><div class="modal-eq-flag">${bandera(m.visitante)}</div><div class="modal-eq-name">${m.visitante}</div></div>
-        </div>
+function renderMercados() {
+  let html = '<div class="seccion-titulo">Próximos partidos — pronósticos de la casa</div>';
+  for (const m of proximos()) {
+    const p = pronosticoDe(m);
+    const enCupon = cuponIds.has(m.id);
+    html += `<div class="mercado-card" onclick="abrirMercado(${m.id})">
+      <div class="mercado-top">
+        <div class="mercado-partido">${bandera(m.local)} ${m.local} <span style="color:var(--gris)">vs</span> ${m.visitante} ${bandera(m.visitante)}</div>
+        <span class="riesgo-badge riesgo-${p.vol}">${volLabel(p.vol).toUpperCase()}</span>
       </div>
-      <div class="modal-body">
-        <div class="stat-grid">
-          <div class="stat-box"><div class="stat-box-val">${m.totalGoles}</div><div class="stat-box-lbl">Total goles</div></div>
-          <div class="stat-box"><div class="stat-box-val">${m.totalTarjetas}</div><div class="stat-box-lbl">Total tarjetas</div></div>
-          <div class="stat-box"><div class="stat-box-val">${m.golesLocal}</div><div class="stat-box-lbl">Goles ${m.local}</div></div>
-          <div class="stat-box"><div class="stat-box-val">${m.golesVisitante}</div><div class="stat-box-lbl">Goles ${m.visitante}</div></div>
-        </div>
-        <div class="stat-fila"><span class="stat-fila-lbl">Ambos equipos anotaron</span><span class="stat-fila-val ${m.ambosAnotaron?'si-badge':'no-badge'}">${m.ambosAnotaron?'✔ SÍ':'✘ NO'}</span></div>
-        <div class="stat-fila"><span class="stat-fila-lbl">🟨 Tarjetas amarillas</span><span class="stat-fila-val">${m.tarjetasAmarillas}</span></div>
-        <div class="stat-fila"><span class="stat-fila-lbl">🟥 Tarjetas rojas</span><span class="stat-fila-val">${m.tarjetasRojas}</span></div>
-        <div class="stat-fila">
-          <span class="stat-fila-lbl">Posesión</span>
-          <span class="stat-fila-val">${m.local} ${m.posesionLocal}% — ${m.visitante} ${m.posesionVisitante}%</span>
-        </div>
-        <div class="stat-fila"><span class="stat-fila-lbl">Dominador posesión</span><span class="stat-fila-val">${m.dominadorPosesion}</span></div>
-        <div class="stat-fila"><span class="stat-fila-lbl">Hubo tarjeta roja</span><span class="stat-fila-val ${m.huboRoja?'si-badge':'no-badge'}">${m.huboRoja?'✔ SÍ':'✘ NO'}</span></div>
-        <div class="stat-fila"><span class="stat-fila-lbl">Hubo tiempo extra</span><span class="stat-fila-val ${m.huboTiempoExtra?'si-badge':'no-badge'}">${m.huboTiempoExtra?'✔ SÍ':'✘ NO'}</span></div>
-        <div style="margin-top:14px;display:flex;justify-content:space-between;align-items:center">
-          <div>
-            <div style="font-size:.68rem;color:var(--gris);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px">Mercado destacado</div>
-            <div style="font-size:.95rem;font-weight:700">${fmtMercado(m.mercadoDestacado)}</div>
-          </div>
-          <span class="riesgo-badge riesgo-${m.riesgo}" style="font-size:.75rem;padding:5px 12px">Riesgo ${m.riesgo.toUpperCase()}</span>
-        </div>
+      <div class="mercado-info">
+        <span class="mercado-label">Prob:</span>
+        <span class="mercado-dest">${p.probL}% - ${p.probV}%</span>
+        <span class="mercado-label" style="margin-left:8px">Goles est:</span>
+        <span class="mercado-dest">${p.gEstL.toFixed(1)} - ${p.gEstV.toFixed(1)}</span>
       </div>
-      <button class="modal-cerrar" onclick="cerrarModal()">✕ Cerrar</button>
-    `);
-  } catch(e) { setModal(`<div class="error-msg">Error: ${e.message}</div><button class="modal-cerrar" onclick="cerrarModal()">✕ Cerrar</button>`); }
+      <div style="font-size:.68rem;color:var(--gris2);margin-top:5px">📅 ${m.fase}</div>
+      <div class="mercado-acciones">
+        <button class="cupon-add-btn ${enCupon?'en-cupon':''}" onclick="event.stopPropagation();toggleCupon(${m.id},this)">${enCupon?'✓ En el cupón':'+ Cupón'}</button>
+      </div>
+    </div>`;
+  }
+  sec('mercados').innerHTML = html;
+  actualizarCuponBar();
+}
+
+function toggleCupon(id, btn) {
+  if (cuponIds.has(id)) {
+    cuponIds.delete(id);
+    btn.classList.remove('en-cupon');
+    btn.textContent = '+ Cupón';
+  } else {
+    cuponIds.add(id);
+    btn.classList.add('en-cupon');
+    btn.textContent = '✓ En el cupón';
+  }
+  actualizarCuponBar();
+}
+
+function actualizarCuponBar() {
+  const bar = document.getElementById('cupon-bar');
+  const visible = rolActual === 'apuestas' && tabActual === 'mercados';
+  bar.classList.toggle('visible', visible);
+  document.getElementById('cupon-count').textContent = cuponIds.size;
+  document.getElementById('cupon-bar-btn').disabled = cuponIds.size === 0;
+}
+
+function abrirCupon() {
+  const seleccion = proximos().filter(m => cuponIds.has(m.id)).map(pronosticoDe);
+  if (!seleccion.length) return;
+  const riesgos = seleccion.map(p => p.vol);
+  const combinada = volCombinada(riesgos);
+  const puntaje = volPuntaje(riesgos);
+  const filas = seleccion.map(p => `
+    <div class="cupon-item">
+      <span class="cupon-item-nom">${bandera(p.local)} ${p.local} vs ${p.visitante} ${bandera(p.visitante)}</span>
+      <span class="riesgo-badge riesgo-${p.vol}">${volLabel(p.vol).toUpperCase()}</span>
+    </div>`).join('');
+  abrirModal(`
+    <div class="modal-hdr">
+      <div class="modal-fase-lbl">🎟️ Mi cupón combinado</div>
+      <div style="font-size:.95rem;font-weight:700">${seleccion.length} partido(s) seleccionado(s)</div>
+    </div>
+    <div class="modal-body">
+      ${filas}
+      <div class="cupon-total">
+        <span class="cupon-total-lbl">Riesgo del cupón</span>
+        <span class="riesgo-badge riesgo-${combinada}" style="font-size:.8rem;padding:6px 14px">${volLabel(combinada).toUpperCase()} · ${puntaje.toFixed(2)} / 3.00</span>
+      </div>
+    </div>
+    <button class="modal-cerrar" onclick="cerrarModal()">✕ Cerrar</button>
+  `);
+}
+
+function abrirMercado(id) {
+  const m = mercadosCache.find(x => x.id === id);
+  if (!m) return;
+  const p = pronosticoDe(m);
+  const enCupon = cuponIds.has(id);
+  abrirModal(`
+    <div class="modal-hdr">
+      <div class="modal-fase-lbl">💰 Pronóstico — ${m.fase}</div>
+      <div class="modal-equipos-row">
+        <div class="modal-eq"><div class="modal-eq-flag">${bandera(m.local)}</div><div class="modal-eq-name">${m.local}</div></div>
+        <div class="modal-score-col">
+          <div style="font-size:1.4rem;font-weight:700;color:var(--gris)">VS</div>
+          <div class="modal-score-lbl">Próximo partido</div>
+        </div>
+        <div class="modal-eq"><div class="modal-eq-flag">${bandera(m.visitante)}</div><div class="modal-eq-name">${m.visitante}</div></div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div class="stat-fila"><span class="stat-fila-lbl">Probabilidad ${m.local}</span><span class="stat-fila-val">${p.probL}%</span></div>
+      <div class="stat-fila"><span class="stat-fila-lbl">Probabilidad ${m.visitante}</span><span class="stat-fila-val">${p.probV}%</span></div>
+      <div class="stat-fila"><span class="stat-fila-lbl">Goles estimados</span><span class="stat-fila-val">${p.gEstL.toFixed(1)} - ${p.gEstV.toFixed(1)}</span></div>
+      <div class="stat-fila"><span class="stat-fila-lbl">Tarjetas estimadas</span><span class="stat-fila-val">${p.tarjEst.toFixed(1)}</span></div>
+      <div class="stat-fila"><span class="stat-fila-lbl">Volatilidad estimada</span><span class="riesgo-badge riesgo-${p.vol}" style="font-size:.75rem;padding:5px 12px">${volLabel(p.vol).toUpperCase()}</span></div>
+      <div style="margin-top:12px;padding:10px 12px;background:var(--card2);border-radius:8px;font-size:.76rem;color:var(--gris);line-height:1.5">
+        <strong style="color:var(--texto)">Por qué:</strong> ${p.just}
+      </div>
+      <button class="cupon-bar-btn" style="width:100%;margin-top:14px" onclick="agregarDesdeModal(${m.id})">${enCupon?'✓ Ya está en el cupón':'+ Agregar al cupón'}</button>
+    </div>
+    <button class="modal-cerrar" onclick="cerrarModal()">✕ Cerrar</button>
+  `);
+}
+
+function agregarDesdeModal(id) {
+  cuponIds.add(id);
+  renderMercados();
+  cerrarModal();
 }
 
 // ══════════════════════════════════════════════════════════════════════════════
