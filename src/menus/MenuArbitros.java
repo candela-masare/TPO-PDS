@@ -11,7 +11,7 @@ import modelo.Arbitro;
 import modelo.Partido;
 import utils.UtilsConsola;
 
-// Submenú de consola para consultar árbitros y asignaciones (opciones pendientes de implementar).
+// Submenú de consola para consultar árbitros 
 public class MenuArbitros {
 
     private Scanner scanner;

@@ -9,7 +9,7 @@ import servicio.PlataformaDeportiva;
 import java.util.List;
 import java.util.Scanner;
 
-// Submenú de consola para consultar rankings de equipos (opciones pendientes de implementar).
+// Submenú de consola para consultar rankings de equipos 
 public class MenuRankings {
 
     private Scanner scanner;
@@ -42,7 +42,7 @@ public class MenuRankings {
                 case 2:
                     mostrarRankingPorGoles();
                     break;
-                    
+
             }
 
         } while (opcion != 0);

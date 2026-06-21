@@ -2,7 +2,7 @@ package modelo;
 
 import interfaces.CanalDistribucion;
 
-// OBSERVER canal: publica eventos del partido como notificaciones push de una aplicación móvil.
+
 public class AppMovil implements CanalDistribucion {
 
     private String plataforma;

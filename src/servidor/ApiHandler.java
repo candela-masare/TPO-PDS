@@ -30,19 +30,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-// Handler REST de la API. Construye JSON manualmente (sin librerías externas, coherente con el resto del proyecto).
-// Rutas disponibles:
-//   GET /api/partidos              – lista de 15 partidos
-//   GET /api/partidos/{id}         – detalle con goles, tarjetas, posesión y resumen
-//   GET /api/equipos               – todos los equipos ordenados por puntos
-//   GET /api/equipos/{clave}       – detalle de un equipo con plantilla completa
-//   GET /api/rankings              – tabla por puntos (Strategy: CriterioPorPuntos)
-//   GET /api/rankings/goles        – tabla por goles (Strategy: CriterioPorGoles)
-//   GET /api/goleadores            – tabla de goleadores agregada de todos los partidos
-//   GET /api/mercados              – mercados de apuestas (todos los partidos)
-//   GET /api/mercados/{id}         – detalle del mercado de un partido
-//   GET /api/reporte/{id}          – reporte analítico equivalente a la cadena Decorator
-//   GET /api/arbitros              – lista de árbitros desde data/arbitros.csv
+
 public class ApiHandler implements HttpHandler {
 
     // Tabla de normalización de nombres: clave sin tilde en mayúsculas → nombre con formato correcto.

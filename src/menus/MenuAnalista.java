@@ -2,23 +2,29 @@ package menus;
 
 import estrategia.CriterioPorGoles;
 import estrategia.CriterioPorPuntos;
+import fuentes.AdaptadorCsvLiga;
 import fuentes.AdaptadorTxtMundial;
 import modelo.AnalistaDeportivo;
 import modelo.Equipo;
+import modelo.Jugador;
 import modelo.Partido;
 import modelo.Ranking;
 import servicio.PlataformaDeportiva;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-// Submenú de consola para el perfil Analista Deportivo: rankings por Strategy y reporte avanzado por Decorator.
+// Submenú de consola para el perfil Analista Deportivo: rankings por Strategy 
 public class MenuAnalista {
 
     private AnalistaDeportivo analista;
     private Scanner scanner;
     private PlataformaDeportiva plataforma =
             new PlataformaDeportiva(new AdaptadorTxtMundial());
+
+    private PlataformaDeportiva plataformaLiga =
+        new PlataformaDeportiva(new AdaptadorCsvLiga());
 
     public MenuAnalista(AnalistaDeportivo analista) {
         this(analista, new Scanner(System.in));
@@ -51,6 +57,14 @@ public class MenuAnalista {
                 case 3:
                     mostrarReportePartido();
                     break;
+                case 4:
+                    mostrarInformacionEquipo();
+                    break;
+                case 5:
+                    mostrarInformacionJugador();
+                    break;
+
+
             }
 
         } while (opcion != 0);
@@ -63,6 +77,8 @@ public class MenuAnalista {
         System.out.println("1. Ranking por puntos");
         System.out.println("2. Ranking por goles");
         System.out.println("3. Reporte avanzado de un partido");
+        System.out.println("4. Consultar informacion de un equipo");
+        System.out.println("5. Consultar informacion de un jugador");
         System.out.println("0. Volver");
         System.out.println("\n");
         System.out.println("Elige una opcion: ");
@@ -130,4 +146,148 @@ public class MenuAnalista {
     private List<Equipo> obtenerEquipos() {
         return plataforma.obtenerEquipos();
     }
+
+    private void mostrarInformacionEquipo() {
+
+        
+
+        List<Equipo> equipos =
+            plataformaLiga.obtenerEquipos();
+
+        System.out.println("\n=== EQUIPOS DISPONIBLES ===");
+
+        for (int i = 0; i < equipos.size(); i++) {
+
+        System.out.println(
+                (i + 1) + ". "
+                        + equipos.get(i).getNombre()
+        );
+
+        }
+
+        System.out.print("\nSeleccione equipo: ");
+
+        int indice = scanner.nextInt() - 1;
+
+        if (indice < 0 || indice >= equipos.size()) {
+
+        System.out.println("Equipo inexistente");
+        return;
+
+        }
+
+        Equipo equipo = equipos.get(indice);
+
+        System.out.println("\n=== INFORMACION DEL EQUIPO ===");
+        System.out.println("Nombre: " + equipo.getNombre());
+        System.out.println("Puntos: " + equipo.getPuntos());
+        System.out.println("Goles a favor: " + equipo.getGolesAFavor());
+        System.out.println("Goles en contra: " + equipo.getGolesEnContra());
+
+
+    }
+
+    private void mostrarInformacionJugador() {
+
+
+        List<Equipo> equipos = plataformaLiga.obtenerEquipos();
+
+
+        // Selección de equipo
+
+        System.out.println("\n=== EQUIPOS DISPONIBLES ===");
+
+        for (int i = 0; i < equipos.size(); i++) {
+
+        System.out.println(
+                (i + 1) + ". "
+                + equipos.get(i).getNombre()
+        );
+        }
+
+
+        System.out.print("\nSeleccione equipo: ");
+
+        int indiceEquipo = scanner.nextInt() - 1;
+
+
+        if (indiceEquipo < 0 || indiceEquipo >= equipos.size()) {
+
+        System.out.println("Equipo inexistente");
+        return;
+        }
+
+
+        Equipo equipoSeleccionado = equipos.get(indiceEquipo);
+
+
+
+        // Obtener jugadores del equipo elegido
+
+        List<Jugador> jugadores =
+            equipoSeleccionado.getListaJugadores();
+
+
+
+        System.out.println("\n=== JUGADORES DE "
+            + equipoSeleccionado.getNombre()
+            + " ===");
+
+
+        for (int i = 0; i < jugadores.size(); i++) {
+
+        System.out.println(
+                (i + 1) + ". "
+                + jugadores.get(i).getNombreCompleto()
+        );
+        }
+
+
+
+        System.out.print("\nSeleccione jugador: ");
+
+        int indiceJugador = scanner.nextInt() - 1;
+
+
+        if (indiceJugador < 0 || indiceJugador >= jugadores.size()) {
+
+        System.out.println("Jugador inexistente");
+        return;
+        }
+
+
+
+        Jugador jugador = jugadores.get(indiceJugador);
+
+
+
+        // Mostrar información
+
+        System.out.println("\n=== INFORMACION DEL JUGADOR ===");
+
+        System.out.println("Nombre: "
+            + jugador.getNombreCompleto());
+
+        System.out.println("Equipo: "
+            + equipoSeleccionado.getNombre());
+
+        System.out.println("Posicion: "
+            + jugador.getPosicion());
+
+        System.out.println("Goles: "
+            + jugador.getGoles());
+
+        System.out.println("Tarjetas amarillas: "
+            + jugador.getTarjetasAmarillas());
+
+        System.out.println("Tarjetas rojas: "
+            + jugador.getTarjetasRojas());
+        
+
+    }
+
+    
+
+
+
 }

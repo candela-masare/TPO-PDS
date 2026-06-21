@@ -3,8 +3,7 @@ package vista;
 import interfaces.VistaTiempoReal;
 import modelo.EventoPartido;
 
-// Implementacion concreta de VistaTiempoReal.
-// Muestra los eventos del partido y el marcador actualizado en pantalla.
+
 public class PantallaPartido implements VistaTiempoReal {
 
     private String nombre;

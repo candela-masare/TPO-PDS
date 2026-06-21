@@ -1,9 +1,6 @@
 package modelo;
 
-/**
- * Representa una entrada en la tabla de posiciones: combina la posición
- * asignada con los datos del equipo en ese momento del torneo.
- */
+
 public class Ranking {
 
     private int posicion;
