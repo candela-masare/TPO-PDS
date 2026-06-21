@@ -1,7 +1,9 @@
 package menus;
 
+import fuentes.AdaptadorJsonEstadisticas;
 import fuentes.AdaptadorTxtMundial;
 import interfaces.ProveedorDatosDeportivos;
+import modelo.EventoPartido;
 import modelo.Partido;
 import utils.UtilsConsola;
 
@@ -80,34 +82,46 @@ public class MenuPartidos {
     private void mostrarDetallePartido() {
 
         ProveedorDatosDeportivos fuente =
-                new AdaptadorTxtMundial();
+            new AdaptadorJsonEstadisticas();
 
-        List<Partido> partidos =
-                fuente.obtenerPartidosEnVivo();
+    List<Partido> partidos =
+            fuente.obtenerPartidosEnVivo();
 
-        mostrarPartidos();
+    mostrarPartidos();
 
-        System.out.print("\nSeleccione partido: ");
+    System.out.print("\nSeleccione partido: ");
 
-        int indice =UtilsConsola.leerEntero(scanner) - 1;
+    int indice = UtilsConsola.leerEntero(scanner) - 1;
 
-        if (indice < 0 || indice >= partidos.size()) {
+    if (indice < 0 || indice >= partidos.size()) {
 
-            System.out.println("Partido inexistente");
-            return;
-        }
+        System.out.println("Partido inexistente");
+        return;
+    }
 
-        Partido partido = partidos.get(indice);
+    Partido partido = partidos.get(indice);
 
-        System.out.println("\n=== DETALLE ===");
-        System.out.println("Local: "
-                + partido.getEquipoLocal().getNombre());
+    System.out.println("\n=== DETALLE ===");
+    System.out.println("Local: "
+            + partido.getEquipoLocal().getNombre());
 
-        System.out.println("Visitante: "
-                + partido.getEquipoVisitante().getNombre());
+    System.out.println("Visitante: "
+            + partido.getEquipoVisitante().getNombre());
 
-        System.out.println("Resultado: "
-                + partido.getResultado());
+    System.out.println("Resultado: "
+            + partido.getResultado());
+
+    System.out.println("\n=== EVENTOS ===");
+
+    for (EventoPartido evento : partido.getEventos()) {
+
+        System.out.println(
+                evento.getMinuto() + "' - "
+                + evento.getTipo()
+                + " - "
+                + evento.getAutor().getNombreCompleto()
+        );
+    }
     }
 
 

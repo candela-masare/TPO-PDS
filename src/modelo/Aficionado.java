@@ -2,8 +2,7 @@ package modelo;
 
 import interfaces.IUsuario;
 
-// OBSERVER concreto: reacciona a eventos del partido priorizando a su jugador preferido,
-// luego a su equipo, y de lo contrario muestra un mensaje genérico de seguimiento.
+
 public class Aficionado implements IUsuario {
 
     private String nombre;

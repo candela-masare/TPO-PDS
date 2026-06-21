@@ -2,7 +2,7 @@ package modelo;
 
 import interfaces.IUsuario;
 
-// OBSERVER concreto: recibe eventos del partido y evalúa su impacto táctico en profundidad.
+
 public class AnalistaDeportivo implements IUsuario {
 
     private String nombre;

@@ -4,9 +4,7 @@ import com.sun.net.httpserver.HttpServer;
 
 import java.net.InetSocketAddress;
 
-// Arranca el servidor HTTP embebido de Java (sin dependencias externas).
-// /api  → ApiHandler  (REST JSON)
-// /     → ArchivoHandler (archivos estáticos del frontend)
+
 public class ServidorHttp {
 
     private static final int PUERTO = 8080;

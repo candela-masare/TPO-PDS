@@ -17,10 +17,8 @@ import reporte.ReporteConTopJugadores;
 import java.util.ArrayList;
 import java.util.List;
 
-// Orquestador central de la plataforma. Combina tres patrones:
-//   OBSERVER   – actúa como suscriptor que reenvía eventos a los CanalDistribucion registrados.
-//   STRATEGY   – usa un CriterioRanking intercambiable para ordenar la tabla de posiciones.
-//   DECORATOR  – construye reportes avanzados encadenando capas sobre ReporteBasico.
+
+
 public class PlataformaDeportiva implements IUsuario {
 
     private ProveedorDatosDeportivos proveedor;

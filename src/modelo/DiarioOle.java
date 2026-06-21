@@ -2,7 +2,7 @@ package modelo;
 
 import interfaces.CanalDistribucion;
 
-// OBSERVER canal: publica eventos del partido con el formato editorial del Diario Olé.
+
 public class DiarioOle implements CanalDistribucion {
 
     @Override
